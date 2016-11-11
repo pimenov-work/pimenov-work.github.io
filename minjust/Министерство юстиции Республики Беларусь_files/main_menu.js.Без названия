@@ -1,0 +1,42 @@
+function activate_main_menu(type, hide_delay, show_delay) {
+  $(document).ready(function () {
+    var hide_timer;
+    var show_timer;
+    if (type == "click") {
+      $(document).ready(function () {
+        $(window).click(function() {
+          clearTimeout(show_timer);
+          hide_timer = setTimeout(function() {
+            $(".nav .menu-item").removeClass("open");
+          }, hide_delay);
+        });
+        $(".nav .menu-item").click(function(event) {
+          event.stopPropagation();
+          var self = this;
+          clearTimeout(show_timer);
+          show_timer = setTimeout(function () {
+            clearTimeout(hide_timer);
+            $(".nav .menu-item").removeClass("open");
+            $(self).addClass("open");
+          }, show_delay);
+        });
+      });
+    } else if (type == "hover") {
+      $(".nav .menu-item").on("mouseenter", function () {
+        var self = this;
+        clearTimeout(show_timer);
+        show_timer = setTimeout(function () {
+          clearTimeout(hide_timer);
+          $(".nav .menu-item").removeClass("open");
+          $(self).addClass("open");
+        }, show_delay);
+      }).on("mouseleave", function () {
+        var self = this;
+        clearTimeout(show_timer);
+        hide_timer = setTimeout(function () {
+          $(self).removeClass("open");
+        }, hide_delay);
+      });
+    }
+  });
+}
