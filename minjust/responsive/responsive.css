@@ -85,20 +85,17 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   .link.registration-link {
     position: relative;
-    top: -25px;
   }
 
   .login {
-    display: block;
     float: left;
-    vertical-align: top;
+    vertical-align: baseline;
     position: relative;
     padding: 10px 10px 15px 25px;
     margin: -10px 8px 0 0;
     background-image: url(http://minjust.gov.by/static/main/img/key.png);
     background-position: 8px 13px;
     background-repeat: no-repeat;
-    cursor: pointer;
   }
 
   .main-header .links .col-1 {
@@ -236,7 +233,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
             transform-origin: 50% 50%;
   }
 
-  .link {
+  .menu-item .link {
     height: 70px !important;
     line-height: 70px !important;
   }
