@@ -30,6 +30,10 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     background-image: none !important;
   }
 
+  .page-up {
+    display: none;
+  }
+
   /*** Basic end ***/
 
 
@@ -84,18 +88,22 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   }
 
   .link.registration-link {
+    margin-top: -100px !important;
     position: relative;
+    top: -25px;
   }
 
   .login {
+    display: block;
     float: left;
-    vertical-align: baseline;
+    vertical-align: top;
     position: relative;
     padding: 10px 10px 15px 25px;
     margin: -10px 8px 0 0;
     background-image: url(http://minjust.gov.by/static/main/img/key.png);
     background-position: 8px 13px;
     background-repeat: no-repeat;
+    cursor: pointer;
   }
 
   .main-header .links .col-1 {
@@ -188,7 +196,6 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   .nav .menu-item a.link {
     margin: 0 0 0 0 !important;
     display: block;
-    z-index: 0;
   }
 
   .nav-search-holder {
@@ -233,7 +240,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
             transform-origin: 50% 50%;
   }
 
-  .menu-item .link {
+  .link {
     height: 70px !important;
     line-height: 70px !important;
   }
@@ -260,10 +267,10 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   .sub-menu {
     width: 100% !important;
     margin: 25px 0 10px 0;
-    display: block !important;
+    /*display: block !important;
     -webkit-transform: scaleY(0);
         -ms-transform: scaleY(0);
-            transform: scaleY(0);
+            transform: scaleY(0);*/
     text-align: center !important;
     box-shadow: 0 10px 10px lightgray !important;
   }
@@ -583,7 +590,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     border-bottom: none;
 }
 
-  /*** Interview end***/
+  /*** Interview end ***/
 
 
   /*** Link-holder ***/
@@ -684,11 +691,180 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     width: 100%;
     height: auto;
     margin: 0 auto !important;
+    padding: 0 auto !important;
+  }
+
+  .page_content {
+
   }
 
   .main-content-block .header {
     margin-left: -5%;
     text-align: center;
+  }
+
+  /* Sovet page */
+
+  .breadcrumb {
+    width: 90%;
+    margin: 0 auto 20px auto;
+	}
+
+  .page-content > h1 {
+  	width: 90%;
+  	margin: 0 auto;
+  }
+
+  .main-container .aside, 
+  .main-container .content {
+  	float: none !important;
+  }
+
+  .page-content .aside .menu li a {
+  	padding: 10px;
+  }
+
+  .page-content .aside .menu li a {
+  	border-bottom: 1px lightgrey solid;
+  }
+
+  .page-content .container .content {
+    width: 100%;
+    padding: 0 !important;
+	}
+
+	.page-content .container .content p,
+	.page-content .container .content strong {
+		width: 100%;
+	}
+
+	.page-content .container .content strong {
+		width: 100%;
+	}
+
+	.page-content .container {
+		width: 90%;
+		margin: 0 auto !important;
+	}
+
+  .main-container .aside {
+  	width: 100%;
+  	margin: 0 !important;
+  }
+
+  .main-container .aside .menu,
+  .main-container .aside .block {
+  	border: 1px lightgrey solid;
+  }
+
+  .main-container .aside .title {
+  	margin-left: 0;
+  	text-align: center;
+  }
+
+  .main-container .aside .block {
+  	background: ;
+  }
+
+  .social-links {
+  	float: none !important;
+  	position: static !important;
+  }
+
+  .social-links a {
+  	background: pink !important;
+  }
+
+  .page-content {
+    min-height: 0;
+    padding: 0;
+	}
+
+	/* Contact */
+
+	#map {
+		display: none;
+	}
+
+  .mobile-map {
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px lightgray solid;
+  }
+
+  /* Staff */
+
+  .responsive .aside {
+    float: right;
+  }
+
+  .employees.qs-object-list {
+    
+  }
+
+  .employees.qs-object-list .photo {
+    background: lightgrey;
+    float: none !important;
+    margin: 0 auto !important;
+  }
+
+  .employees.qs-object-list a {
+    display: block;
+    width: 100%;
+    margin: 15px 0 0 0;
+    font-size: 18px !important;
+    border: none;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .employees.qs-object-list *:after {
+    content: '';
+    width: 100%;
+    display: block;
+    clear: both;
+  }
+
+  .employees.qs-object-list li {
+    padding: 20px 0 0 0 !important;
+  }
+
+  .employees.qs-object-list p {
+    width: 100%;
+    margin: 10px 0 !important;
+    text-align: center;
+  }
+
+  .employees.qs-object-list p span {
+    margin: 0 0 10px 0 !important;
+    display: block !important;
+  }
+
+  .employees.qs-object-list p br {
+    display: none;
+  }
+
+  #page-search-form {
+    width: 100% !important;
+  }
+
+  .page-content input.page-search {
+    width: 100% !important;
+    padding: 10px 0 !important;
+    text-align: center;
+  }
+
+  .pagination * {
+
+  }
+
+  .pagination .load-more-button {
+    margin: 0 auto !important;
+    padding: 7px 0;
+    text-align: center !important;
+    display: block;
   }
 
 }
@@ -782,6 +958,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   .nav {
     margin-top: 0 !important;
+    background: red;
   }
 
   /*** Wrapper end ***/
@@ -848,12 +1025,13 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   .sub-menu {
     width: 100vw !important;
     margin: 185px 0 10px 0 !important;
-    display: block !important;
+    /*display: block !important;
     -webkit-transform: scaleY(0);
         -ms-transform: scaleY(0);
-            transform: scaleY(0);
+            transform: scaleY(0);*/
     text-align: center !important;
     box-shadow: 0 10px 10px lightgray !important;
+    transform: translate3d(0, 0, 0);
   }
 
   .nav .menu-item:nth-of-type(6) .sub-menu,
@@ -1021,17 +1199,8 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     margin-top: 155px !important;
   }
 
-
 }
 
-
-@media all and (max-width: 380px) {
-
-  .col-right {
-    right: -7px;
-  }
-
-}
 
 @media all and (max-width: 380px) {
 
@@ -1053,6 +1222,10 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   .nav .menu-item .sub-menu {
     margin-top: 5px !important;
     position: static !important;
+  }
+
+   .col-right {
+    right: -7px;
   }
 
   .nav .menu-item:nth-of-type(6) .sub-menu,

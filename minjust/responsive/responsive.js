@@ -6,25 +6,23 @@ for( i = 0; i < show_more.length; i++ ) {
   show_more[i].addEventListener('click', openSubMenu); // show_more listener
 }
 
-var closedElement = 'matrix(1, 0, 0, 0, 0, 0)'; // State of closed element
-var openElement = 'scaleY(1)'; // State of open element
+var closedElement = 'none'; // State of closed element
+var openElement = 'block'; // State of open element
 
 function openSubMenu() {
   var current_sub_menu = this.nextElementSibling; // Sub-menu near show_more element
-  var state_of_element = getComputedStyle(current_sub_menu).transform; // Get state of sub-menu
+  var state_of_element = getComputedStyle(current_sub_menu).display; // Get state of sub-menu
   for( i = 0; i < sub_menu.length; i++ ) {
-    sub_menu[i].style.transform = closedElement; // At first close all sub-menu
+    sub_menu[i].style.display = closedElement; // At first close all sub-menu
   }
   for( i = 0; i < show_more.length; i++ ) {
     show_more[i].style.transform = 'rotateX(0)'; // Then reset all show_more elements
   }
   if (state_of_element == closedElement) {
-    current_sub_menu.style.transform = openElement; // And then open sub-menu under show_more element
+    current_sub_menu.style.display = openElement; // And then open sub-menu under show_more element
     this.style.transform = 'rotateX(180deg)'; // and transform current show_more-element
   }
 }
-
-
 
 var slider_item = document.querySelectorAll('.main-slider .items .item'); // All slider items
 var item_content = document.querySelectorAll('.item .content'); // All content
