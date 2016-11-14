@@ -82,26 +82,29 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   }
 
   .col-1.header-user-links {
-    height: 50px;
-    width: 230px;
+    height: auto;
+    width: 250px;
     margin-left: 15px;
   }
 
+  .col-1.header-user-links * {
+    line-height: 1 !important;
+  }
+
   .link.registration-link {
-    margin-top: -100px !important;
     position: relative;
-    top: -25px;
+    top: 0;
   }
 
   .login {
     display: block;
     float: left;
-    vertical-align: top;
+    vertical-align: middle;
     position: relative;
-    padding: 10px 10px 15px 25px;
-    margin: -10px 8px 0 0;
+    padding: 0 10px 0 25px;
+    margin: 0 8px 0 0;
     background-image: url(http://minjust.gov.by/static/main/img/key.png);
-    background-position: 8px 13px;
+    background-position: 8px 5px;
     background-repeat: no-repeat;
     cursor: pointer;
   }
