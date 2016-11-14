@@ -326,6 +326,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   }
 
   .main-slider .item {
+    height: auto;
     padding-left: 5% !important;
   }
 
@@ -336,6 +337,10 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     height: auto;
   }
 
+  .main-slider * {
+    z-index: 1 !important;
+  }
+
   .items:after {
     content: '';
     width: 100%;
@@ -344,10 +349,11 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   }
 
   .items .item {
-    height: 40px;
-    padding: 0 0 0 25px;
+    height: auto;
+    padding: 0 0 0 0 !important;
     line-height: 40px;
     border-bottom: 1px lightgrey solid;
+    text-align: center;
   }
 
   .main-slider .item {
@@ -366,23 +372,38 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     width: 100%;
     height: auto !important;
     padding: 0 0 60px 0;
-    position: absolute !important;
-    left: 0 !important;
-    top: 205px;
-    -webkit-transform: scaleY(0);
-        -ms-transform: scaleY(0);
-            transform: scaleY(0);
-    box-shadow: 0 10px 10px lightgray;
+    position: static !important;
+    left: 0;
+    top: 0;
+    border-top: 1px lightgrey solid;
   }
 
   .items .item .content .block,
   .items .item .content .additional-info {
     width: 90%;
     height: auto;
-    display: block;
+    display: block !important;
     float: none;
     text-align: center;
-    padding: 0 10px;
+    background: none;
+  }
+
+  .items .item .content .additional-info * {
+    padding: 0;
+  }
+
+  .main-slider .content {
+    display: none;
+    position: static !important;
+  }
+
+  .main-slider .content ul {
+    padding: 0;
+  }
+
+  .main-slider .content ul li {
+    margin: 5px 0 0 0;
+    padding: 0;
   }
 
   .items .item .content .block ul li {
@@ -394,8 +415,8 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   }
 
   .button-holder {
-    min-width: 300px;
-    width: 60% !important;
+    min-width: 100%;
+    width: 100%;
     height: auto !important;
     margin: 30px auto !important;
     position: relative;
@@ -420,7 +441,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   }
 
   .main-slider .btn {
-    width: auto;
+    width: 100%;
   }
 
   .button-holder .text {
@@ -431,7 +452,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     margin-left: auto;
     margin-right: auto;
     list-style: none;
-    text-align: center !important;
+    text-align: left !important;
   }
 
   .main-slider .content .additional-info ul {
