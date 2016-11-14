@@ -271,12 +271,11 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     -webkit-transform: scaleY(0);
         -ms-transform: scaleY(0);
             transform: scaleY(0);*/
-    text-align: center !important;
-    box-shadow: 0 10px 10px lightgray !important;
-  }
+    text-align: center !important;  }
 
   .sub-menu .sub-menu-columns {
     padding: 0 30px;
+    margin: 0;
   }
 
   .sub-menu .column {
@@ -958,7 +957,6 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   .nav {
     margin-top: 0 !important;
-    background: red;
   }
 
   /*** Wrapper end ***/
@@ -1025,13 +1023,13 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   .sub-menu {
     width: 100vw !important;
     margin: 185px 0 10px 0 !important;
+    padding: 0 0 20px 0;
     /*display: block !important;
     -webkit-transform: scaleY(0);
         -ms-transform: scaleY(0);
             transform: scaleY(0);*/
     text-align: center !important;
-    box-shadow: 0 10px 10px lightgray !important;
-    transform: translate3d(0, 0, 0);
+    border-bottom: 3px grey solid;
   }
 
   .nav .menu-item:nth-of-type(6) .sub-menu,
@@ -1163,7 +1161,8 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   .nav .menu-item {
     width: 50%;
-    height: 65px !important;
+    height: auto !important;
+    min-height: 65px;
     margin: 0 auto;
     text-align: center;
     background: none;
@@ -1206,7 +1205,8 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   .nav .menu-item {
     width: 100%;
-    height: 65px !important;
+    height: auto !important;
+    min-height: 65px;
     margin: 0 auto;
     text-align: center;
     background: none;
