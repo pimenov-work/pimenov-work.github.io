@@ -1,4 +1,6 @@
-window.addEventListener('load', initResposiveScript);
+if (window.innerWidth <= 980) {
+  window.addEventListener('load', initResposiveScript);
+}
 
 function initResposiveScript() {
  

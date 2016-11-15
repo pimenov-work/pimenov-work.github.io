@@ -319,6 +319,15 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   /*** Main slider ***/
 
+  .main-slider .item:hover .content { /* Mobile fix */
+    display: none;
+    z-index: auto;
+  }
+  .main-slider .item.active .content { /* Mobile fix */
+    display: none;
+    z-index: auto;
+  }
+
   .main-slider {
     width: 100% !important;
     max-width: 100vw !important;
@@ -350,6 +359,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   .items .item {
     height: auto;
+    min-height: 40px;
     padding: 0 0 0 0 !important;
     line-height: 40px;
     border-bottom: 1px lightgrey solid;
