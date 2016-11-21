@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0040)http://minjust.gov.by/ru/ministry/staff/ -->
+<!-- saved from url=(0050)http://minjust.gov.by/ru/main-structure-minjust/1/ -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
         <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta name="theme-color" content="#5c97bf">
         <meta name="yandex-verification" content="0d51fc9a01651f2b">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <title>Министерство юстиции Республики Беларусь</title>
         
             <meta name="description" content="">
@@ -25,10 +24,6 @@
                 <link rel="stylesheet" type="text/css" href="./Министерство юстиции Республики Беларусь_files/main.css" media="screen">
                 <link rel="stylesheet" type="text/css" href="./Министерство юстиции Республики Беларусь_files/chosen.css" media="screen">
                 <link rel="stylesheet" type="text/css" href="./Министерство юстиции Республики Беларусь_files/jquery-ui.min.css" media="screen">
-
-                <!-- Responsive styles -->
-                <link rel="stylesheet" href="responsive/responsive.css">
-
                 <!--[if gt IE 6]><link rel="stylesheet" type="text/css" href="/static/main/css/ie.css" media="screen" /><![endif]-->
                 <script type="text/javascript" async="" src="./Министерство юстиции Республики Беларусь_files/watch.js.Без названия"></script><script type="text/javascript" async="" src="./Министерство юстиции Республики Беларусь_files/analytics.js.Без названия"></script><script async="" src="./Министерство юстиции Республики Беларусь_files/gtm.js.Без названия"></script><script src="./Министерство юстиции Республики Беларусь_files/jquery-1.8.2.min.js.Без названия"></script>
                 <script src="./Министерство юстиции Республики Беларусь_files/chosen.jquery.min.js.Без названия"></script>
@@ -42,11 +37,40 @@
             <script src="./Министерство юстиции Республики Беларусь_files/loader.js.Без названия"></script>
         
     
-    <script type="text/javascript" src="./Министерство юстиции Республики Беларусь_files/pagination.js.Без названия"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $('div.pagination div.load-more-button').click(function () {
+                    var pagination_link = $(this);
+                    if (pagination_link.prop('disabled'))
+                        return;
+                    $.ajax({
+                        data: {
+                            page: pagination_link.attr('data-next-page-number')
+                        },
+                        success: function (result) {
+                            $('.qs-object-list > .clear').before(result);
+                            var page_num = pagination_link.attr('data-page-num');
+                            page_num++;
+                            if (page_num >= pagination_link.attr('data-max-pages')) {
+                                pagination_link.remove();
+                            } else {
+                                pagination_link.attr('data-page-num', page_num);
+                                pagination_link.attr('data-next-page-number', (page_num + 1));
+                            }
+                        }
+                    }).done(function() {
+                        pagination_link.prop('disabled', false);
+                    });
+                    pagination_link.prop('disabled', true);
+                });
+            });
+        </script>
+    
 
-
-    <style type="text/css">/* This is not a zero-length file! */</style><style type="text/css">/* This is not a zero-length file! */</style></head>
-    <body class='responsive'> <!-- Responsive -->
+    <style type="text/css">/* This is not a zero-length file! */</style><style type="text/css">/* This is not a zero-length file! */</style>
+    <link rel="stylesheet" href="responsive/responsive.css">
+    </head>
+    <body class="main-structure-minjust__1 responsive-table"> <!-- Responsive -->
         
     <!-- Google Tag Manager -->
     <noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-MX2P2B"
@@ -76,7 +100,7 @@
         <div class="login-form">
           <form id="top_login_form">
             <input type="hidden" name="csrfmiddlewaretoken" value="rOwdYs9AD5aPiKRl13iqxau7WcE6LHPb">
-            <input name="next" type="hidden" value="/ru/ministry/staff/">
+            <input name="next" type="hidden" value="/ru/main-structure-minjust/1/">
             <input name="username" type="text" placeholder="Логин"><br>
             <input name="password" type="password" placeholder="Пароль">
             <a href="javascript:void(0)" class="submit-emulator slim"></a>
@@ -176,7 +200,7 @@
         <a href="http://minjust.gov.by/en/">En</a>
       
     </div>
-    <a class="sitemap" href="http://minjust.gov.by/ru/ministry/staff/#" style="display: none;"><img src="./Министерство юстиции Республики Беларусь_files/icon-sitemap.png"></a>
+    <a class="sitemap" href="http://minjust.gov.by/ru/main-structure-minjust/1/#" style="display: none;"><img src="./Министерство юстиции Республики Беларусь_files/icon-sitemap.png"></a>
   </div>
   
     <div class="col-right social-banners">
@@ -226,14 +250,14 @@
                       
 <div id="main-menu-nav" class="nav">
   <div class="menu-item" style="width:0px;"></div>
-
-  <label class="menu_button" for="menu_button"> Навигация по сайту </label>
-
-  <input class="menu_button_checkbox" type="checkbox" id="menu_button">
   
-    <div class="menu-item action-open-menu">
+    <div class="menu-item
+                
+                
+                
+                ">
 
-      <a class="link">
+      <a class="link" href="http://minjust.gov.by/ru/ministry/">
         <div class="inline">О Министерстве</div>
       </a>
       <div class="sub-menu">
@@ -289,7 +313,11 @@
       </div>
     </div>
   
-    <div class="menu-item">
+    <div class="menu-item
+                
+                
+                
+                ">
 
       <a class="link" href="http://minjust.gov.by/ru/activities-of-the-ministry/">
         <div class="inline">Деятельность</div>
@@ -451,9 +479,13 @@
       </div>
     </div>
   
-    <div class="menu-item                 action-open-menu">
+    <div class="menu-item
+                
+                
+                
+                ">
 
-      <a class="link">
+      <a class="link" href="http://minjust.gov.by/ru/reference-information/">
         <div class="inline">Справочная<br>информация</div>
       </a>
       <div class="sub-menu">
@@ -517,9 +549,13 @@
       </div>
     </div>
   
-    <div class="menu-item                 action-open-menu">
+    <div class="menu-item
+                
+                
+                
+                ">
 
-      <a class="link">
+      <a class="link" href="http://minjust.gov.by/ru/news-and-events/">
         <div class="inline">Новости и<br>события</div>
       </a>
       <div class="sub-menu">
@@ -577,9 +613,13 @@
       </div>
     </div>
   
-    <div class="menu-item                 action-open-menu                 green">
+    <div class="menu-item
+                
+                green
+                
+                ">
 
-      <a class="link">
+      <a class="link" href="http://minjust.gov.by/ru/electronic-services/">
         <div class="inline">Электронные<br>услуги</div>
       </a>
       <div class="sub-menu">
@@ -651,269 +691,171 @@
             
     <div class="main-container">
         
-            
-                <div class="breadcrumb">
-    
-        
-            <a href="http://minjust.gov.by/ru/">Главная</a>
-        
-        /
-    
-        
-            Руководство министерства
-        
-        
-    
-</div>
-            
-        
+    <div class="breadcrumb">
+        <a href="http://minjust.gov.by/ru/">
+            Главная
+        </a> /
+        <a href="http://minjust.gov.by/ru/main-structure-minjust/">
+            Структура центрального аппарата
+        </a>
+        / Управление адвокатуры и лицензирования юридической деятельности
+    </div>
+
         <div class="page-content">
             
-    <h1>Руководство министерства</h1>
-    <div class="container employee-list">
-        <div class="page-description">
-            Данный раздел содержит список руководителей Министерства.
-        </div>
+    <h1>Управление адвокатуры и лицензирования юридической деятельности</h1>
+    <div class="container organisation">
+        <div class="content">
+            <div class="content-block">
+                
+                    <div style="float: left"><img width="200px" src="./Министерство юстиции Республики Беларусь_files/1ed0e12a320dd33013f443732b920f6b.jpg"></div>
+                
+                <div style="padding: 0 0 0 230px">
+                    <b>Руководитель:</b><br>Старовойтов Николай Михайлович<br>
 
-         <div class="content">
+                    
+                        <b>Телефон:</b><br>
+                        +375-17 200-84-71<br>
+                        <br>
+                    
+                </div>
+                <div class="clear"></div>
+            </div>
             
-<form id="page-search-form" action="javascript:force_search(); void(0);" method="POST">
-    <input id="page-search-form-query" type="text" name="search_query" class="page-search" placeholder="Найти по точному совпадению">
-</form>
-    <script>
-        $(document).ready(function() {
-            var loader = Loader.get_loader();
-            loader.on_before_load(function() {
-                return {search_query: $("#page-search-form-query").val()};
-            });
-            var change_timer;
-            var search_on_index = function(force) {
-                var search_input = $("#page-search-form-query");
-                if (force || $(search_input).val() == $(search_input).attr('data')) {
-                    clearTimeout(change_timer);
-                    $(search_input).attr('data', $(search_input).val());
-                    $('.content .qs-object-list').html('<div style="width:100%; text-align:center; margin-top:20px;"><img src="/static/main/img/loader.gif"></div>');
-                    loader.load(function(output) {
-                      if (output) {
-                        $('.content .qs-object-list').html(output);
-                      }
-                    });
-                }
-            };
-            $("#page-search-form-query").live("change paste keyup", function(){
-                var search_input = "#page-search-form-query";
-                if ($(search_input).val() != $(search_input).attr('data')) {
-                    $(search_input).attr('data', $(search_input).val());
-                    clearTimeout(change_timer);
-                    change_timer = setTimeout(search_on_index, 1000)
-                }
-            });
-            window.force_search = function() { search_on_index(true); };
-        });
-    </script>
             
+                <div class="content-block">
+                    <h2>Состав управления</h2>
+                    <table border="1" cellpadding="1" cellspacing="1" style="width:600px">
+	<tbody>
+		<tr>
+			<td colspan="3" style="text-align:center"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif"><strong>Управление адвокатуры и лицензирования юридической деятельности</strong></span></span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">Начальник управления&nbsp;<br>
+			<strong>Старовойтов<br>
+			Николай Михайлович</strong></span></span></td>
+			<td style="text-align:center"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">к. 322</span></span></td>
+			<td style="text-align:center"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">тел. 200-84-71</span></span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">Зам. начальника управления&nbsp;<br>
+			<strong>Михалевич<br>
+			Жанна Леонидовна</strong></span></span></td>
+			<td style="text-align:center"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">к. 309</span></span></td>
+			<td style="text-align:center"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">тел. 200-86-09</span></span></td>
+		</tr>
+		<tr>
+			<td><span style="font-family:arial,helvetica,sans-serif; font-size:14px">Консультант</span><br>
+			<span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif"><strong>Крайнова<br>
+			Оксана Владимировна</strong></span></span></td>
+			<td style="text-align:center"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">к. 309</span></span></td>
+			<td style="text-align:center"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">тел. 200-86-09</span></span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">Консультант<br>
+			<strong>Булах<br>
+			Татьяна Александровна</strong></span></span></td>
+			<td style="text-align:center"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">к. 308</span></span></td>
+			<td style="text-align:center"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">тел. 200-99-82</span></span></td>
+		</tr>
+		<tr>
+			<td colspan="3" style="text-align:center"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif"><strong>Отдел адвокатуры</strong></span></span></td>
+		</tr>
+		<tr>
+			<td><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">Начальник отдела<br>
+			<strong>Ильина<br>
+			Елена Александровна&nbsp;</strong></span></span></td>
+			<td style="text-align:center"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">к. 310</span></span></td>
+			<td style="text-align:center"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">тел. 200-68-66</span></span></td>
+		</tr>
+		<tr>
+			<td>
+			<div><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">Консультант</span></span></div>
 
-            <ul class="employees qs-object-list">
-                <div class="entity-list">
-    
+			<div><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif"><strong>Подлесская</strong></span></span></div>
 
-    <li>
-        <div class="photo" style="background-image: url(/media/jpg/ae/4c/ae4c31630e7265243899336b9e383c05.jpg); "></div>
-        <a href="http://minjust.gov.by/ru/ministry/staff/69/">Слижевский Олег Леонидович</a>
-        <p>
-            <span>Министр юстиции</span>
-            <br>Приемная:&nbsp;+375-17 306-37-28
-        </p>
-        <div class="clear"></div>
-    </li>
+			<div><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif"><strong>Диана Александровна</strong></span></span></div>
+			</td>
+			<td style="text-align:center"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">к. 308</span></span></td>
+			<td style="text-align:center"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">тел. 200-99-82</span></span></td>
+		</tr>
+		<tr>
+			<td>
+			<p><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">Консультант<br>
+			<strong>Шевчёнок<br>
+			Елена Владимировна</strong></span></span></p>
+			</td>
+			<td style="text-align:center"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">к. 523</span></span></td>
+			<td style="text-align:center"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">тел. 200-76-84</span></span></td>
+		</tr>
+	</tbody>
+</table>
 
-    <li>
-        <div class="photo" style="background-image: url(/media/jpg/30/86/30864b5dd1368ff307ff8115ea24cbcb.jpg); "></div>
-        <a href="http://minjust.gov.by/ru/ministry/staff/70/">Климович Алексей Александрович</a>
-        <p>
-            <span>Помощник Министра</span>
-            <br>Приемная:&nbsp;+375 17 200-18-32
-        </p>
-        <div class="clear"></div>
-    </li>
+                </div>
+            
+            
+                <div class="content-block">
+                    <h2>Основные задачи</h2>
+                    <p style="text-align:justify">Управление адвокатуры и лицензирования юридической деятельности в соответствии с возложенными на него задачами:</p>
 
-    <li>
-        <div class="photo" style="background-image: url(/media/jpg/cf/34/cf34fabdaf526e731e5f694bb07a73ee.jpg); "></div>
-        <a href="http://minjust.gov.by/ru/ministry/staff/67/">Задиран Сергей Владимирович</a>
-        <p>
-            <span>Первый заместитель Министра</span>
-            <br>Приемная:&nbsp;+375-17 200-90-42
-        </p>
-        <div class="clear"></div>
-    </li>
+<ul>
+	<li style="text-align:justify">Обеспечивает выдачу специальных разрешений (лицензий):</li>
+</ul>
 
-    <li>
-        <div class="photo" style="background-image: url(/media/jpg/13/52/1352c35cc8d328901b933e83f14e6cdd.jpg); "></div>
-        <a href="http://minjust.gov.by/ru/ministry/staff/79/">Авдеев Андрей Дмитриевич</a>
-        <p>
-            <span>Заместитель Министра</span>
-            <br>Приемная:&nbsp;+375-17 200-96-84
-        </p>
-        <div class="clear"></div>
-    </li>
+<div style="text-align: justify; margin-left: 40px;">на осуществление адвокатской деятельности;</div>
 
-    <li>
-        <div class="photo" style="background-image: url(/media/jpg/af/bf/afbf8cb753ba53fed3518f5daace529a.jpg); "></div>
-        <a href="http://minjust.gov.by/ru/ministry/staff/66/">Тушинский Игорь Геронинович</a>
-        <p>
-            <span>Заместитель Министра</span>
-            <br>Приемная :&nbsp;+375-17 211-01-24
-        </p>
-        <div class="clear"></div>
-    </li>
+<div style="text-align: justify; margin-left: 40px;">на осуществление деятельности по оказанию юридических услуг с указанием составляющей лицензируемый вид деятельности услуги - юридические услуги;</div>
 
-    <li>
-        <div class="photo" style="background-image: url(/media/jpg/e1/b4/e1b42f61db729e2ddb6b9948164898f4.jpg); "></div>
-        <a href="http://minjust.gov.by/ru/ministry/staff/73/">Адамушко Владимир Иванович</a>
-        <p>
-            <span>Директор Департамента по архивам и делопроизводству</span>
-            <br>Рабочий:&nbsp;+375-17 200-88-30
-        </p>
-        <div class="clear"></div>
-    </li>
+<div style="text-align: justify; margin-left: 40px;">на осуществление деятельности по оказанию юридических услуг с указанием составляющей лицензируемый вид деятельности услуг - риэлтерских услуг;</div>
 
-    <li>
-        <div class="photo" style="background-image: url(/media/jpg/c8/0a/c80a8832bdc80fc2096bcc5c0e4efecc.jpg); "></div>
-        <a href="http://minjust.gov.by/ru/ministry/staff/100/">Алёшин Алексей Алексеевич</a>
-        <p>
-            <span>Начальник управления международного сотрудничества</span>
-            <br>Рабочий:&nbsp;+375-17 200-88-29
-        </p>
-        <div class="clear"></div>
-    </li>
+<ul>
+	<li style="text-align:justify">обеспечивает работу Комиссии по вопросам лицензирования деятельности по оказанию юридических услуг с указанием составляющей - юридические услуги, Комиссии по вопросам лицензирования деятельности по оказанию юридических услуг с указанием составляющей - риэлтерские услуги, а также Комиссии по вопросам оказания юридических услуг;</li>
+	<li style="text-align:justify">осуществляет контроль за соблюдением законодательства лицами, осуществляющими адвокатскую деятельность, юридическими лицами, оказывающими риэлтерские услуги, юридическими лицами и индивидуальными предпринимателями, оказывающими юридические услуги;</li>
+	<li style="text-align:justify">систематизирует и формирует банк данных нормативных правовых актов Республики Беларусь, поступающих в официальных источниках опубликования правовой информации.</li>
+</ul>
 
-    <li>
-        <div class="photo" style="background-image: url(/media/jpg/29/d0/29d0f23a11df29b0103bd98880260003.jpg); "></div>
-        <a href="http://minjust.gov.by/ru/ministry/staff/76/">Захарова Жанна Владимировна</a>
-        <p>
-            <span>Начальник управления нотариата и загсов</span>
-            <br>Рабочий:&nbsp;+375-17 200-84-00
-        </p>
-        <div class="clear"></div>
-    </li>
+                </div>
+            
+            
+            
+            
+                <div class="content-block">
+                    <h2>Нормативные правовые акты, регламентирующие деятельность организации</h2>
+                    <ul>
+	<li style="text-align:justify"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">Закон Республики Беларусь "Об адвокатуре и адвокатской деятельности в Республике Беларусь" от 30 декабря 2011 года (вступил в силу с 6 апреля 2012 года);</span></span></li>
+	<li style="text-align:justify"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">Указ Президента Республики Беларусь от 1 сентября 2010 г. № 450 "О лицензировании отдельных видов деятельности";</span></span></li>
+	<li style="text-align:justify"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">Указ Президента Республики Беларусь от 16 ноября № 510 "О совершенствовании контрольной (надзорной) деятельности в Республике Беларусь";</span></span></li>
+	<li style="text-align:justify"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">Указ Президента Республики Беларусь от 9 января 2006 г. № 15 "О риэлтерской деятельности в Республике Беларусь";</span></span></li>
+	<li style="text-align:justify"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif"><span style="color:rgb(0, 0, 0)">постановление Министерства юстиции Республики Беларусь от 7 марта 2014г. № 58 "О некоторых вопросах лицензирования деятельности по оказанию юридических услуг"</span>;</span></span></li>
+	<li style="text-align:justify"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">постановление Министерства юстиции Республики Беларусь от 01 июня 2009 г. № 42 "О некоторых мерах по совершенствованию риэлтерской деятельности".</span></span></li>
+</ul>
 
-    <li>
-        <div class="photo" style="background-image: url(/media/jpg/b5/ab/b5abe8e9bdd92ee12417f43099a2e55a.jpg); "></div>
-        <a href="http://minjust.gov.by/ru/ministry/staff/103/">Кадышев Александр Васильевич</a>
-        <p>
-            <span>Начальник Главного управления делами</span>
-            <br>Рабочий:&nbsp;+375-17 200-06-18
-        </p>
-        <div class="clear"></div>
-    </li>
-
-    <li>
-        <div class="photo" style="background-image: url(/media/jpg/a1/7a/a17a38028281122198f5df687c33b4a8.jpg); "></div>
-        <a href="http://minjust.gov.by/ru/ministry/staff/77/">Кириченко Елена Ольдовна</a>
-        <p>
-            <span>Начальник управления по вопросам некоммерческих организаций</span>
-            <br>Рабочий:&nbsp;+375-17 200-62-51
-        </p>
-        <div class="clear"></div>
-    </li>
-
-    <div class="pagination-marker" style="display: none;"></div>
-</div>
-
-<div class="pagination">
-    
-        <div class="load-more-button" data-form="&quot;&quot;" data-next-page-number="2" data-max-pages="3" data-page-num="1">
-        Еще 10
+                </div>
+            
+            
         </div>
-    
-    <div class="page-up">
-        <span>В начало страницы</span>&nbsp;↑
-    </div>
-</div>
-<div class="clear"></div>
-
-
-            </ul>
-        </div>
-
+        
         <div class="aside">
-            
-    <div class="title">
-        Должность сотрудника:
-    </div>
-    <div class="menu" data="fk_field">
-        <ul>
-            
-                <li class="selected">
-                    <a class="aside-menu-objects-filter" href="http://minjust.gov.by/ru/ministry/staff/">
-                        Все&nbsp;
-                        <span>(21)</span>
-                    </a>
-                </li>
-            
-                <li>
-                    <a class="aside-menu-objects-filter" href="http://minjust.gov.by/ru/ministry/staff/filter/1" data="1">
-                        Министр&nbsp;
-                        <span>(1)</span>
-                    </a>
-                </li>
-            
-                <li>
-                    <a class="aside-menu-objects-filter" href="http://minjust.gov.by/ru/ministry/staff/filter/21" data="21">
-                        Помощник Министра&nbsp;
-                        <span>(1)</span>
-                    </a>
-                </li>
-            
-                <li>
-                    <a class="aside-menu-objects-filter" href="http://minjust.gov.by/ru/ministry/staff/filter/22" data="22">
-                        Первый  заместитель Министра&nbsp;
-                        <span>(1)</span>
-                    </a>
-                </li>
-            
-                <li>
-                    <a class="aside-menu-objects-filter" href="http://minjust.gov.by/ru/ministry/staff/filter/23" data="23">
-                        Заместитель Министра&nbsp;
-                        <span>(2)</span>
-                    </a>
-                </li>
-            
-                <li>
-                    <a class="aside-menu-objects-filter" href="http://minjust.gov.by/ru/ministry/staff/filter/24" data="24">
-                        Руководитель структурного подразделения&nbsp;
-                        <span>(12)</span>
-                    </a>
-                </li>
-            
-                <li>
-                    <a class="aside-menu-objects-filter" href="http://minjust.gov.by/ru/ministry/staff/filter/25" data="25">
-                        Главное управление принудительного исполнения&nbsp;
-                        <span>(4)</span>
-                    </a>
-                </li>
-            
-        </ul>
-    </div>
-
-            
 
     <div class="block">
         <div class="title">Последние новости</div>
         <ul>
             
+                <li><a href="http://minjust.gov.by/ru/news/800/">9 ноября 2016 г. в г. Брянске (Российская Федерация) состоялись профессиональная встреча руководителей архивных служб и государственных архивных учреждений Российской Федерации и Республики Беларусь и совместное заседание коллегий Федерального архивного агентства Российской Федерации и Департамента по архивам и делопроизводству Министерства юстиции Республики Беларусь</a></li>
+            
+                <li><a href="http://minjust.gov.by/ru/news/798/">О государственной регистрации общественного объединения</a></li>
+            
                 <li><a href="http://minjust.gov.by/ru/news/796/">22 ноября 2016 года состоится «прямая телефонная линия» по теме «Разъяснение вопросов создания и деятельности общественных объединений и фондов»</a></li>
-            
-                <li><a href="http://minjust.gov.by/ru/news/794/">22 ноября 2016 года состоится «прямая телефонная линия» по теме «Формирование резерва кадров в системе юстиции»</a></li>
-            
-                <li><a href="http://minjust.gov.by/ru/news/792/">О встрече Министра юстиции с работниками открытого акционерного общества «Мостодрев» и проведении выездного приема граждан в г. Мосты Гродненской области</a></li>
             
         </ul>
     </div>
-
-        </div>
-
+</div>
+        <div class="clear"></div>
+        
+        <div class="clear"></div>
     </div>
+    <div class="clear"></div>
+
 
         </div>
     </div>
@@ -1052,8 +994,6 @@
             });
         </script>
     
- <a href="https://metrika.yandex.ru/stat/?id=38960170&amp;from=informer" target="_blank" rel="nofollow"><img src="./Министерство юстиции Республики Беларусь_files/3_1_B9ECFFFF_99CCFFFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:38960170,lang:&#39;ru&#39;});return false}catch(e){}"></a>   <script type="text/javascript" id="">(function(d,b,a){(b[a]=b[a]||[]).push(function(){try{b.yaCounter38960170=new Ya.Metrika({id:38960170,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})}catch(a){}});var e=d.getElementsByTagName("script")[0],c=d.createElement("script");a=function(){e.parentNode.insertBefore(c,e)};c.type="text/javascript";c.async=!0;c.src="https://mc.yandex.ru/metrika/watch.js";"[object Opera]"==b.opera?d.addEventListener("DOMContentLoaded",a,!1):a()})(document,window,"yandex_metrika_callbacks");</script> <noscript>&lt;div&gt;&lt;img src="https://mc.yandex.ru/watch/38960170" style="position:absolute; left:-9999px;" alt=""&gt;&lt;/div&gt;</noscript> 
-
-<script src="responsive/responsive.js"></script>
-
+ <a href="https://metrika.yandex.ru/stat/?id=38960170&amp;from=informer" target="_blank" rel="nofollow"><img src="./Министерство юстиции Республики Беларусь_files/3_1_B9ECFFFF_99CCFFFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:38960170,lang:&#39;ru&#39;});return false}catch(e){}"></a>   <script type="text/javascript" id="">(function(d,b,a){(b[a]=b[a]||[]).push(function(){try{b.yaCounter38960170=new Ya.Metrika({id:38960170,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})}catch(a){}});var e=d.getElementsByTagName("script")[0],c=d.createElement("script");a=function(){e.parentNode.insertBefore(c,e)};c.type="text/javascript";c.async=!0;c.src="https://mc.yandex.ru/metrika/watch.js";"[object Opera]"==b.opera?d.addEventListener("DOMContentLoaded",a,!1):a()})(document,window,"yandex_metrika_callbacks");</script> <noscript>&lt;div&gt;&lt;img src="https://mc.yandex.ru/watch/38960170" style="position:absolute; left:-9999px;" alt=""&gt;&lt;/div&gt;</noscript>
+ <script src="responsive/responsive.js"></script>
  </body></html>
