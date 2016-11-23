@@ -1124,10 +1124,20 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   }
 
   ul.schedule-list .entity-list .name {
-    width: calc(100% - 102px);
+    width: calc(100% - 62px);
     min-height: 82px;
-    float: right;
+    margin: 0 0 0 62px;
+    float: none;
     text-align: right;
+  }
+
+  ul.schedule-list .entity-list .name * {
+    display: block;
+    border: none;
+  }
+
+  ul.schedule-list .entity-list .name br {
+    display: none;
   }
 
   ul.schedule-list .entity-list .time-info:after,
@@ -1144,8 +1154,8 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   ul.schedule-list .entity-list .time-info {
     width: 100%;
+    margin: 15px 0;
     float: none;
-    background: rgba(100, 0, 0, 0.3);
   }
 
   ul.schedule-list .entity-list li .button {
@@ -1168,7 +1178,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   }
 
   .employee .info .photo {
-    float: none;
+    float: left;
     background-color: lightgrey;
   }
 
@@ -1183,6 +1193,49 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   .employee p {
     text-align: left !important;
+  }
+
+  /* Egr */
+
+  .egr-responsive .text-page .content table {
+    width: 100%;
+    margin: 0 !important;
+    box-sizing: border-box;
+  }
+  
+  .egr-responsive .text-page .content table tbody td {
+    padding: 13px 5px;
+  }
+
+  /* Mediation */
+
+  .mediation p {
+    margin-left: 0 !important;
+    text-align: left !important;
+  }
+
+  /* Mediation organizations */
+
+  .mediation_organizations table {
+    width: 100% !important;
+    font-size: 12px;
+  }
+
+  .mediation_organizations table * {
+    padding: 10px !important;
+  }
+
+  /* Work-with-associations-foundations */
+
+  .news-page-list .news .description {
+    width: 100%;
+  }
+
+  /* Responsive images block */
+
+  .responsive_images p img {
+    width: 100% !important;
+    height: 60vw !important;
   }
 
 }
