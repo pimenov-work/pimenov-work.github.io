@@ -1238,6 +1238,77 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     height: 60vw !important;
   }
 
+  /* Justice of belarus journal */
+
+  .justice-of-belarus-journal img {
+    float: none !important;
+  }
+
+  .responsive_table table {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .responsive_table table * {
+    font-size: 12px !important;
+  }
+
+  .responsive_table table tbody td {
+    padding: 12px 6px !important;
+  }
+
+  /* Responsive table */
+
+  .responsive_table_2 table {
+    width: 100% !important;
+    font-size: 16px;
+    border-top: 1px grey solid;
+  }
+
+  .responsive_table_2 table tr {
+    display: block;
+    margin: 10px 0 0 0 !important;
+    border-bottom: none;
+    background: none !important;
+  }
+
+  .responsive_table_2 table td {
+    width: 100% !important;
+    height: auto !important;
+    padding: 10px 0!important;
+    display: block;
+    border: none;
+    border-bottom: 1px grey solid;
+  }
+
+  .responsive_table_2 table br {
+    display: none;
+  }
+
+  .responsive_table_2 table p {
+    width: 100%;
+    padding: 0 5px 0 0 !important;
+    -webkit-margin-before: 0 !important;
+    -webkit-margin-after: 0 !important;
+    -webkit-margin-start: 0 !important;
+    -webkit-margin-end: 0 !important;
+  }
+
+  .remove_inline_styles *[style] {
+    width: auto !important;
+    margin-left: 0 !important;
+  }
+
+  /* Departments */
+
+  .structure .cells .column {
+    width: 100%;
+  }
+
+  .structure-map-holder .map {
+    display: none;
+  }
+
 }
 
 
