@@ -1352,15 +1352,13 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   .entity-list.rates .item a {
     width: 100%;
     display: block;
-    
   }
 
   .entity-list.rates .price {
-    width: auto;
+    width: calc(100% - 160px);
+    margin: 15px auto 20px auto;
     padding: 3px 10px;
-    margin: 15px 0 20px 0;
     position: static;
-    float: none;
   }
 
   .entity-list .icon {
