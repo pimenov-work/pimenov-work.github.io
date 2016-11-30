@@ -4,7 +4,6 @@
 }
 
 a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
-  background: red;
   display: none;
 }
 
@@ -52,6 +51,10 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   .main-header .flag {
     padding: 0 !important;
+  }
+
+  .col-right.social-banners {
+    display: none;
   }
 
 
@@ -132,24 +135,12 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     border-bottom: 1px white dashed !important;
   }
 
-  /* National emblem */
-  .logo {
-    position: relative;
-    width: 290px;
-    height: 130px;
-    float: left;
-    margin: 0 0 0 5px;
-    background: url(http://minjust.gov.by/static/main/img/logo.png) no-repeat left center;
-  }
-
-  .logo .logo-text {
-    width: 130px;
-    top: 0;
-    font-size: 1em;
-    letter-spacing: 1px;
-  }
-
   /* Phones & shedule */
+
+  html .main-header .wrapper {
+    height: auto !important;
+    margin: 50px 0 20px 0 !important;
+  }
 
   .main-header .wrapper .info {
     position: relative;
@@ -176,6 +167,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     margin-top: 50px !important;
     box-shadow: none !important;
     border: none !important;
+    display: none;
   }
 
   .nav:after {
@@ -531,10 +523,6 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   .main-content-block.news {
     padding-bottom: 70px;
-  }
-
-  main-content-block.news .button-holder {
-    background: red;
   }
 
   .main-content-block .button-holder a {
@@ -1309,90 +1297,72 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     display: none;
   }
 
-  /* State duties */
+  .form-container .form-item .label {
+    width: 100%;
+    text-align: left;
+  }
 
-  .page-filter {
+  .form-container .form-item .control,
+  .form-container .form-item .control input {
     width: 100%;
   }
 
-  .page-filter a {
-    width: 33%;
-    display: block;
-    float: left;
-    text-align: center;
+  .form-container .form-item .control input {
+    padding: 10px 0;
   }
 
-  .page-filter a:last-of-type {
-    display: none;
-  }
-
-  .page-filter li {
+  .form-container .button-holder {
     width: 100%;
-    height: 100%;
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-    float: none !important;
   }
 
-  .page-filter ul li .hover-div {
+  body {
+    position: relative
+  }
+
+  /* Mobile UI */
+
+  .mobile-header {
     width: 100%;
-    height: 100%;
-    left: 0;
+    height: 70px;
+    padding: 12px 0 0 0;
+    position: fixed;
     top: 0;
+    z-index: 100;
+    background: #2d66a4;
+    border-bottom: 1px grey solid;
+    line-height: 25px;
   }
 
-  .entity-list.rates.qs-object-list {
-    
+  .mobile-header .logo {
+    width: calc(100% - 100px) !important;
+    margin-top: 0;
   }
 
-  .entity-list.rates .item {
-    padding: 0;
+  .mobile-header .logo-text {
+    width: 100% !important;
   }
 
-  .entity-list.rates .item a {
+  .mobile-header > a {
     width: 100%;
+    height: 70px;
     display: block;
-    
+    text-align: left;
+    font-size: 18px;
+    line-height: 50px !important;
+    color: white;
   }
 
-  .entity-list.rates .price {
-    width: auto;
-    padding: 3px 10px;
-    margin: 15px 0 20px 0;
-    position: static;
-    float: none;
+  .mobile-header .mobile-menu_logo {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 20px;
+    top: 21px;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTM3IDEwMCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTM3IDEwMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnN0MHtmaWxsOiNGRkZGRkY7fTwvc3R5bGU+PHJlY3QgY2xhc3M9InN0MCIgd2lkdGg9IjEzNyIgaGVpZ2h0PSIxOCIvPjxyZWN0IHk9IjQxIiBjbGFzcz0ic3QwIiB3aWR0aD0iMTM3IiBoZWlnaHQ9IjE4Ii8+PHJlY3QgeT0iODIiIGNsYXNzPSJzdDAiIHdpZHRoPSIxMzciIGhlaWdodD0iMTgiLz48L3N2Zz4=') no-repeat center;
+    z-index: 1000;
   }
 
-  .entity-list .icon {
-    float: left;
-    margin: 0 12px 0 0;
-    padding: 12px 0;
-  }
-
-  .entity-list.rates *:after {
-    content: '';
-    width: 100%;
-    display: block;
-    clear: both;
-  }
-
-  .main-header {
-    padding-top: 15px !important;
-  }
-
-  .main-header .wrapper {
-    margin-top: 0 !important;
-  }
-
-  .main-header .links {
-    display: none;
-  }
-
-  .main-header .header-text-line {
-    margin: 0;
-  }
-
-  body .main-header .wrapper .info {
+  .main-header .wrapper .info:nth-of-type(2) {
     margin-top: 0 !important;
   }
 
@@ -1401,18 +1371,102 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   }
 
   .main-header .wrapper .info p {
-    margin: 5px 0;
+    margin: 2px 0;
   }
 
-  .main-header .wrapper .info a {
-    margin-bottom: 15px;
-    display: inline-block;
+  /* National emblem */
+  .logo {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 5px;
+    position: absolute;
+    left: 0;
+    float: none;
+    background: none;
+  }
+
+  .logo .logo-text {
+    width: 100% !important;
+    left: 20px;
+    top: 0;
+    font-size: 1em;
+    letter-spacing: 1px;
+  }
+
+  .main-header .wrapper {
+    margin: 80px 0 0px 0;
+    height: auto !important;
+  }
+
+  .main-header * {
+    font-size: 16px !important;
+  }
+
+  .logo {
+    width: 90%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .logo .logo-text {
+    width: 100%;
+    left: 20px;
+  }
+
+  .main-header .wrapper .info {
+    width: 90%;
+    left: 0;
+    margin: 15px 0 0 25px !important;
+    padding: 0;
+    position: static !important;
+    display: block;
+    text-align: left;
+  }
+
+  .nav .menu-item {
+    width: 50%;
+    height: auto !important;
+    min-height: 65px;
+    margin: 0 auto;
+    text-align: center;
+    background: none;
+    box-sizing: border-box;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .nav .menu-item .link {
+    height: 40px !important;
+    line-height: 40px !important;
+  }
+
+  .nav .menu-item .link .inline {
+    width: 100%;
+  }
+
+  .nav .menu-item .link * {
+    font-size: 14px !important;
+  }
+
+  .nav .menu-item .link br {
+    display: none;
+  }
+
+  .nav .menu-item .sub-menu {
+    margin-top: 159px !important;
+  } 
+
+  .nav .menu-item:nth-of-type(6) .sub-menu,
+  .nav .menu-item:nth-of-type(7) .sub-menu,
+  .nav .menu-item:nth-of-type(8) .sub-menu {
+    margin-top: 159px !important;
   }
 
 }
 
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 980px) { /* Necessary duplication */
 
   .main-header .flag {
     background: #2d66a4 !important;
@@ -1465,16 +1519,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     height: 185px !important;
   }
 
-  .logo {
-    width: 150px;
-    left: 0;
-    top: -5px;
-    background: none;
-    z-index: 100;
-  }
-
   .logo .logo-text {
-    width: ;
     position: relative;
     left: 18px;
     font-family: Helvetica, Sans-Serif;
@@ -1671,76 +1716,20 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 }
 
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 520px) {
+  /* Mobile header */
 
-  .main-header .wrapper {
-    margin: 80px 0 0px 0;
-    height: auto !important;
+  .mobile-header > a {
+    line-height: 1;
   }
-
-  .main-header * {
-    font-size: 16px !important;
-  }
-
-  .logo {
-    width: 90%;
-    height: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
-  .logo .logo-text {
+  .mobile-header > a {
     width: 100%;
-    left: 20px;
-  }
-
-  .main-header .wrapper .info {
-    width: 90%;
-    left: 0;
-    margin: 15px 0 0 25px !important;
-    padding: 0;
-    position: static !important;
+    height: 70px;
     display: block;
     text-align: left;
-  }
-
-  .nav .menu-item {
-    width: 50%;
-    height: auto !important;
-    min-height: 65px;
-    margin: 0 auto;
-    text-align: center;
-    background: none;
-    box-sizing: border-box;
-    box-shadow: none !important;
-    border: none !important;
-  }
-
-  .nav .menu-item .link {
-    height: 40px !important;
-    line-height: 40px !important;
-  }
-
-  .nav .menu-item .link .inline {
-    width: 100%;
-  }
-
-  .nav .menu-item .link * {
-    font-size: 14px !important;
-  }
-
-  .nav .menu-item .link br {
-    display: none;
-  }
-
-  .nav .menu-item .sub-menu {
-    margin-top: 159px !important;
-  } 
-
-  .nav .menu-item:nth-of-type(6) .sub-menu,
-  .nav .menu-item:nth-of-type(7) .sub-menu,
-  .nav .menu-item:nth-of-type(8) .sub-menu {
-    margin-top: 159px !important;
+    font-size: 18px;
+    line-height: 30px  !important;
+    color: white;
   }
 
 }
@@ -1782,36 +1771,6 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   .nav .menu-item .sub-menu .shadow {
     display: none;
-  }
-
-  /* State duties */
-
-  .page-filter a {
-    width: 100%;
-    display: block;
-    float: left;
-    text-align: center;
-  }
-
-  .page-filter a:last-of-type {
-    display: none;
-  }
-
-  .page-filter li {
-    width: 100%;
-    height: 100%;
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-    float: none !important;
-    line-height: 0 !important
-  }
-
-  .page-filter ul li .hover-div {
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    line-height: 40px !important
   }
 
 }

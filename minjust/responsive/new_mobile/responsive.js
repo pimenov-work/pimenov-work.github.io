@@ -56,10 +56,41 @@ function initResposiveScript() {
 
 }
 
+
+var links	= document.getElementsByClassName('links');
+
+// links[0].removeChild(x_element[0]);
+
+// list.insertBefore(newLi, list.children[1]);
+
+// Desktop elements that need to replace
+var mobile_title = document.querySelectorAll('.main-header .wrapper > a');
+
+// Create mobile menu and mobile elements
+var mobile_header = document.createElement('div'),
+		mobile_menu_logo = document.createElement('div');
+
+// Set all needed classes
+mobile_header.classList.add('mobile-header');
+mobile_menu_logo.classList.add('mobile-menu_logo');
+
+// Add mobile_menu to page
+document.body.appendChild(mobile_header);
+
+// Add or replace elements to mobile_menu
+mobile_header.appendChild(mobile_title[0]);
+mobile_header.appendChild(mobile_menu_logo);
+
+mobile_menu_logo.addEventListener('click', openMobileMenu);
+
+function openMobileMenu() {
+	alert("!");
+}
+
 // Replace header elements
 
 var info = document.querySelectorAll('.info'),
-    info_hotline = document.querySelectorAll('.info.hotline'),
-    info_parent = document.querySelectorAll('.main-header .wrapper');
+		info_hotline = document.querySelectorAll('.info.hotline'),
+		info_parent = document.querySelectorAll('.main-header .wrapper');
 
 info_parent[0].insertBefore(info_hotline[0], info[0]);
