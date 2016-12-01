@@ -1244,6 +1244,8 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     float: none !important;
   }
 
+  /*
+
   .responsive_table table {
     width: 100% !important;
     margin: 0 !important;
@@ -1257,7 +1259,11 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     padding: 12px 6px !important;
   }
 
+  */
+
   /* Responsive table */
+
+  /*
 
   .responsive_table_2 table {
     width: 100% !important;
@@ -1293,6 +1299,8 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     -webkit-margin-start: 0 !important;
     -webkit-margin-end: 0 !important;
   }
+
+  */
 
   .remove_inline_styles *[style] {
     width: auto !important;
@@ -1363,8 +1371,9 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   .entity-list .icon {
     float: left;
-    margin: 0 12px 0 0;
-    padding: 12px 0;
+    margin: 5px 12px 0 0;
+    padding: 0;
+    font-size: 10px; 
   }
 
   .entity-list.rates *:after {
@@ -1399,7 +1408,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   }
 
   .main-header .wrapper .info p {
-    margin: 5px 0;
+    margin: 0;
   }
 
   .main-header .wrapper .info a {
@@ -1407,10 +1416,79 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     display: inline-block;
   }
 
+  /* Table basic */
+
+  /* table {
+    width: 100% !important;
+    height: auto !important;
+  } */
+
+  table {
+    display: block;
+    width: 100% !important;
+    overflow-x: scroll !important;
+  }
+
+  table tbody {
+    min-width: 980px !important;
+  }
+
+  /* Document Samples */
+
+  .entity-list .description {
+    text-indent: 60px;
+  }
+
+  .entity-list .info {
+    position: static;
+  }
+
+  /* Subscribe */
+
+  .form-container,
+  .form-container .form-item,
+  .form-container .form-item .control,
+  .form-container .form-item .control * {
+    width: 100% !important;
+  }
+
+  .form-container .form-item .control input,
+  .form-container .form-item .control .button {
+    width: 100% !important;
+    padding: 10px 0 !important;
+    text-align: center;
+  }
+
+  /* Photo blog */
+
+  .photo-page-list .item .description {
+    width: 100%;
+    text-indent: 0;
+  }
+
+  .photo-page-list .preview {
+    display: none;
+  }
+
+  .photo-page-list .item .date {
+    margin-top: 15px;
+  }
+
+  *[style='text-align: justify; margin-left: 40px;'],
+  *[style='text-align: justify; margin-left: 80px;'] {
+    margin-left: 0 !important;
+  }
+
+  /* Social links */
+
+  .social-links {
+    display: none;
+  }
+
 }
 
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 767px) {
 
   .main-header .flag {
     background: #2d66a4 !important;
@@ -1669,7 +1747,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 }
 
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 767px) {
 
   .main-header .wrapper {
     margin: 80px 0 0px 0;

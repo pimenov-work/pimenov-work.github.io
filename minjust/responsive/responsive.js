@@ -54,12 +54,12 @@ function initResposiveScript() {
     }
   }
 
+  // Replace header elements
+
+  var info = document.querySelectorAll('.info'),
+      info_hotline = document.querySelectorAll('.info.hotline'),
+      info_parent = document.querySelectorAll('.main-header .wrapper');
+
+  info_parent[0].insertBefore(info_hotline[0], info[0]);
+
 }
-
-// Replace header elements
-
-var info = document.querySelectorAll('.info'),
-    info_hotline = document.querySelectorAll('.info.hotline'),
-    info_parent = document.querySelectorAll('.main-header .wrapper');
-
-info_parent[0].insertBefore(info_hotline[0], info[0]);
