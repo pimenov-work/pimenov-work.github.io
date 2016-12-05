@@ -1,0 +1,267 @@
+/****** Reset or hide basic-version elements ******/
+
+/*** Basic ***/
+
+.accessibility * {
+	color: black !important;
+}
+
+body {
+	background: white;
+}
+
+/*** Basic end ***/
+
+
+/*** Remove elements ***/
+
+.accessibility .main-slider,
+.accessibility .flag,
+.accessibility .links,
+.accessibility .info,
+.accessibility .link-holder,
+.accessibility .main-content-block .button-holder,
+.accessibility .main-content-block .content-item .photo,
+.accessibility img,
+.accessibility .footer .contact,
+.accessibility .footer .about h4 {
+	display: none;
+}
+
+/*** Remove elements ***/
+
+
+/*** Backgrounds & border & gradients ***/
+
+.accessibility .main-header,
+.accessibility .body,
+.accessibility .search-holder,
+.accessibility .nav .menu-item.green,
+.search-holder .search-button {
+	background: white;
+}
+
+.accessibility .main-container,
+.accessibility .search-holder {
+	box-shadow: none;
+}
+
+.accessibility .nav {
+	border: none;
+}
+
+/*** Backgrounds end ***/
+
+/****** Reset or hide basic-version elements end ******/
+
+
+/****** Accessibility elements ******/
+
+.accessibility .menu-bar {
+	height: 100px;
+	background: #e5e5e5 !important;
+}
+
+.accessibility .menu-bar * {
+	background: inherit !important;
+}
+
+.accessibility .main-header .logo {
+	background: url('images/logo.png') no-repeat 50px center;
+	filter: grayscale(1);
+	-webkit-filter: grayscale(1);
+}
+
+.accessibility .logo-text {
+	width: auto;
+	left: 190px;
+	top: 30px;
+	font-size: 30px;
+	font-weight: 600;
+	letter-spacing: 0;
+}
+
+.accessibility .nav .menu-item {
+	width: 16.666%;
+	box-shadow: none;
+	border-top: 3px black solid;
+	border-bottom: 3px black solid;
+	font-size: 20px;
+	text-align: center;
+}
+
+.nav .menu-item.green.open {
+	box-shadow: none;
+}
+
+.accessibility .nav .menu-item a {
+	padding: 0;
+	display: block;
+}
+
+.accessibility .nav-search-holder {
+	width: 100%;
+	position: static;
+	background: grey;
+	color: black !important;
+	display: none;
+}
+
+.accessibility ::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0);
+}
+.accessibility ::-moz-placeholder {
+  color: rgba(0, 0, 0, 0);
+}
+.accessibility ::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0);
+}
+.accessibility ::-moz-placeholder {
+  color: rgba(0, 0, 0, 0);
+}
+
+.accessibility .sub-menu {
+	display: none !important;
+}
+
+.accessibility .search-holder input.search {
+	width: 70%;
+	margin: 0;
+	border: 1px black solid;
+}
+
+.accessibility .search-holder .search-button {
+	width: 20%;
+	position: static;
+	float: right;
+	border: 3px black solid;
+	box-sizing: border-box;
+	line-height: 45px;
+	background: none !important;
+}
+
+.accessibility .main-content-block .header .icon {
+	display: none;
+}
+
+.accessibility .main-content-block p {
+	display: none;
+}
+
+.accessibility .main-content-block .content-item {
+	width: 90%;
+	margin-bottom: 30px;
+}
+
+.accessibility .main-content-block .content-item h4 {
+	margin-bottom: 10px;
+}
+
+.accessibility .main-content-block .content-item a {
+	display: none;
+}
+
+.accessibility .main-content-block .content-item .date {
+	margin: 0 15px 0 0;
+	float: left;
+	line-height: 1.5;
+}
+
+.accessibility .main-content-block .button-holder a {
+	display: none;
+	border: 3px black solid;
+	background: none !important;
+}
+
+.accessibility .main-content-block.photo .content-item {
+	position: relative;
+}
+
+.accessibility .main-content-block.interview p {
+	display: block;
+}
+
+.accessibility .voting-holder .checkbox .check {
+	border: 1px black solid;
+	background: none;
+}
+
+.accessibility .voting-holder .checkbox .text {
+	width: 90%;
+}
+
+.accessibility .main-content-block {
+	border: none;
+}
+
+.accessibility .footer {
+	height: auto;
+	margin-bottom: 30px;
+	position: static;
+}
+
+.accessibility .footer .about {
+	float: none;
+	margin: 0;
+}
+
+.accessibility .footer .about ul {
+	height: 70px;
+	border-top: 2px lightgrey solid;
+	border-bottom: 2px lightgrey solid;
+}
+
+.accessibility .footer .about ul:after {
+	content: '';
+	width: 100%;
+	display: block;
+	clear: both;
+}
+
+.accessibility .footer .about ul li {
+	width: 20%;
+	height: 100%;
+	float: left;
+	border: none !important;
+	text-align: center;
+	line-height: 70px;
+}
+
+.accessibility .footer .about ul li a {
+	display: block;
+	height: 100%;
+	border: none;
+}
+
+.accessibility .footer .content .holder {
+	border: none;
+}
+
+.accessibility .body {
+	padding-bottom: 0;
+}
+
+.accessibility .main-content-block {
+	padding: 25px 0 0 0;
+}
+
+.accessibility .main-content-block .content-item.last {
+	margin-bottom: 0;
+}
+
+.accessibility .footer .content .holder { /* Replace this */
+	display: none;
+}
+
+/****** Accessibility elements end ******/
+
+
+/****** Accessibility rules ******/
+
+p, h1, h2, h3,
+h4, h5, h6,
+span, .text {
+	max-width: 620px; /* Content width */
+}
+
+/****** Accessibility rules end ******/
