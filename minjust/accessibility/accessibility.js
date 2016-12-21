@@ -159,7 +159,7 @@ function accessibility() {
 											 		'<li id="regular-version"> Обычная версия </li>' +
 											 		'<li id="accessibility-settings" class="accessibility-settings"> Настройки </li>' +
 											 		'<li> <a href="#"> Карта сайта </a> </li>' +
-											 		'<li> <a href="#"> Поиск </a> </li>' +
+											 		'<li> <a href="http://minjust.gov.by/ru/search/"> Поиск </a> </li>' +
 											 '</ul>';
 
 	header.insertBefore(menu_bar, header.firstChild);
