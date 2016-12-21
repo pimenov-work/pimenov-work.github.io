@@ -13,6 +13,32 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+
+    <script>
+        window.addEventListener('load',function() {
+            document.body.classList.remove('load');
+        });
+    </script>
+
+    <style>
+        body.load {
+            position: relative;
+            overflow: hidden;
+        }
+
+        body.load:after {
+            content: '';
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: white;
+            z-index: 1000;
+            overflow: hidden;
+        }
+    </style>
+
     <link rel="shortcut icon" href="http://minjust.gov.by/static/main/img/fav.png">
     <link rel="icon" href="http://minjust.gov.by/static/main/img/fav.png" type="image/x-icon">
     <link rel="icon" href="http://minjust.gov.by/static/main/img/favicon.png">
@@ -206,7 +232,7 @@
 
 </head>
 
-<body class="ru">
+<body class="ru load">
 
     <!-- Google Tag Manager -->
     <noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-MX2P2B" height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
