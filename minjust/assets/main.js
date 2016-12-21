@@ -1,3 +1,7 @@
+window.addEventListener('load',function() {
+	document.body.classList.remove('load');
+});
+
 mainInit();
 
 function mainInit() {

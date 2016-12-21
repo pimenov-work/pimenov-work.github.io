@@ -313,21 +313,21 @@ html body.accessibility.theme__lightblue-on-darkblue .footer a .logo-text {
 }
 
 .accessibility .menu-bar > ul li:nth-of-type(1) {
-	background-image: url('images/eye.png');
+	background-image: url('../img/eye.png');
 }
 
 .accessibility .menu-bar > ul li:nth-of-type(2) {
-	background-image: url('images/settings.png');
+	background-image: url('../img/settings.png');
 }
 
 .accessibility .menu-bar > ul li:nth-of-type(3) {
 	width: 26.333%;
-	background-image: url('images/list.png');
+	background-image: url('../img/list.png');
 }
 
 .accessibility .menu-bar > ul li:nth-of-type(4) {
 	width: 20.333%;
-	background-image: url('images/search.png') !important;
+	background-image: url('../img/search.png') !important;
 }
 
 .theme__lightblue-on-darkblue.accessibility .menu-bar > ul li:nth-of-type(1) {
@@ -525,7 +525,7 @@ html .accessibility .accessibility-settings-block div:last-child li:nth-of-type(
 
 .accessibility-settings-block div:last-child .selected {
 	padding-left: 40px;
-	background-image: url('images/check.svg');
+	background-image: url('../img/check.svg');
 	background-repeat: no-repeat;
 	background-position: 10px center;
 	background-size: 20px auto;
@@ -534,7 +534,7 @@ html .accessibility .accessibility-settings-block div:last-child li:nth-of-type(
 }
 
 .accessibility-settings-block div:last-child li:nth-of-type(2).selected {
-	background-image: url('images/check_invert.svg') !important;
+	background-image: url('../img/check_invert.svg') !important;
 }
 
 html .accessibility-settings-block div:last-child li:nth-of-type(3).selected {
@@ -627,7 +627,7 @@ html .accessibility-settings-block div:last-child li:nth-of-type(3).selected {
 }
 
 .accessibility .main-header .logo {
-	background: url('images/logo.png') no-repeat 50px center;
+	background: url('../img/logo.png') no-repeat 50px center;
 }
 
 .accessibility .footer {
@@ -636,7 +636,7 @@ html .accessibility-settings-block div:last-child li:nth-of-type(3).selected {
 }
 
 .accessibility .footer .logo {
-	background: url('images/logo.png') no-repeat 60px 30px;
+	background: url('../img/logo.png') no-repeat 60px 30px;
 	background-size: auto 50%;
 }
 
@@ -1043,7 +1043,7 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:hover * {
 	float: left;
 	line-height: 70px;
 	text-align: center;
-	background: #e5e5e5 url('images/to_top.png') no-repeat 20px center;
+	background: #e5e5e5 url('../img/to_top.png') no-repeat 20px center;
 	border: none;
 	box-shadow: none;
 	cursor: pointer;
