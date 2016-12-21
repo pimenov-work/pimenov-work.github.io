@@ -4,7 +4,6 @@
 }
 
 a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
-  background: red;
   display: none;
 }
 
@@ -238,7 +237,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   .show_more {
     height: 20px;
     line-height: 40px;
-    background: url('images/show_more_icon.png') no-repeat center center;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANIAAAAsCAMAAAAn3xYZAAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMAECAwQFBgcICPn6+/z9/vIxqCigAAAS1JREFUeAHd092KwyAUReFj1JgfE/P+TzuIQ2EYyrlaG8y6k9LSA/szW+xthefec7CXtKxns/j0ri3Z7IV83P0WM0v79fTOEm3WPkfUEv8e2I51Qlqx1DG1Pf2fYf9gLlqff33k8O1egBaNp53OtgBaNB4ngBaKx4mgxePx42nxeIynpcfD09Lj4Wnp8fC0hHjC7cwJoAXiiaVaHhvNAaAF4XEmapa28e26JYAWgMeb6O97v8a7RIAWg8ef6LKOHwNocXj8icZyNoAWicefKECLxeNPFKBF43ECaKF4nChaPB4/nhaPh6elxyOjxePR0uLx6GnxeNS0eDx6WjwePS0ej54Wj4enxeCZgBaPh6fF4+Fp8Xj0tHg8elo8Hj0tHo+eFo9HTovHI6elwvMDMkE3aV+xvo0AAAAASUVORK5CYII=') no-repeat center center;
     background-size: auto 100%;
     transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
@@ -505,6 +504,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     width: 84.5%;
     margin: 0 auto;
     position: static;
+    color: black;
   }
 
   /*** Search info block end ***/
@@ -649,6 +649,11 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     margin: 0 5px 15px 5px !important;
     border: 1px lightgray solid;
     box-sizing: border-box;
+  }
+
+  .link-holder div.banner img {
+    width: 100% !important;
+    height: 100% !important;
   }
 
   /*** Link-holder end ***/
@@ -846,7 +851,9 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   }
 
   .page-content input.page-search {
+    padding: 0 !important;
     font-size: 16px;
+    background: none !important;
   }
 
   .employees.qs-object-list .photo {
@@ -1233,7 +1240,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   /* Responsive images block */
 
-  .responsive_images p img {
+  img {
     width: 100% !important;
     height: 60vw !important;
   }
@@ -1243,64 +1250,6 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   .justice-of-belarus-journal img {
     float: none !important;
   }
-
-  /*
-
-  .responsive_table table {
-    width: 100% !important;
-    margin: 0 !important;
-  }
-
-  .responsive_table table * {
-    font-size: 12px !important;
-  }
-
-  .responsive_table table tbody td {
-    padding: 12px 6px !important;
-  }
-
-  */
-
-  /* Responsive table */
-
-  /*
-
-  .responsive_table_2 table {
-    width: 100% !important;
-    font-size: 16px;
-    border-top: 1px grey solid;
-  }
-
-  .responsive_table_2 table tr {
-    display: block;
-    margin: 10px 0 0 0 !important;
-    border-bottom: none;
-    background: none !important;
-  }
-
-  .responsive_table_2 table td {
-    width: 100% !important;
-    height: auto !important;
-    padding: 10px 0!important;
-    display: block;
-    border: none;
-    border-bottom: 1px grey solid;
-  }
-
-  .responsive_table_2 table br {
-    display: none;
-  }
-
-  .responsive_table_2 table p {
-    width: 100%;
-    padding: 0 5px 0 0 !important;
-    -webkit-margin-before: 0 !important;
-    -webkit-margin-after: 0 !important;
-    -webkit-margin-start: 0 !important;
-    -webkit-margin-end: 0 !important;
-  }
-
-  */
 
   .remove_inline_styles *[style] {
     width: auto !important;
@@ -1418,11 +1367,6 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   /* Table basic */
 
-  /* table {
-    width: 100% !important;
-    height: auto !important;
-  } */
-
   table {
     display: block;
     width: 100% !important;
@@ -1435,8 +1379,10 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   /* Document Samples */
 
-  .entity-list .description {
-    text-indent: 60px;
+  .entity-list .item > a {
+    position: static;
+    margin-bottom: 30px;
+    float: right;
   }
 
   .entity-list .info {
@@ -1483,6 +1429,68 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   .social-links {
     display: none;
+  }
+
+  .entity-list .icon {
+    float: left;
+    margin: 5px 12px 0 0;
+    padding: 0;
+    font-size: 10px;
+  }
+
+  .photo-viewer .viewer {
+    display: none !important;
+  }
+
+  .photo-viewer .scrollable {
+    width: 100%;
+    height: auto;
+  }
+
+  .photo-viewer .scrollable .items {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+
+  .photo-viewer .scrollable .items > div {
+    margin: 0;
+    float: none;
+  }
+
+  .photo-viewer .scrollable .thumb {
+    width: 100%;
+    height: calc(83vw / 1.5) !important;
+    margin: 15px 0 0 0;
+    position: static;
+    float: none;
+    background-color: grey;
+  }
+
+  .photo-viewer * {
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  .photo-viewer .scrollable {
+    overflow: visible;
+  }
+
+  .question-list li .answer {
+    margin: 0;
+  }
+
+  .question-list li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .question-list li .figure {
+    display: none;
+  }
+
+  .question-list li .question .show-btn {
+    display: block;
   }
 
 }
@@ -1569,6 +1577,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   .main-header .wrapper .info.hotline {
     margin-top: 20px;
+    margin-bottom: 10px !important;
   }
 
   .main-header {
@@ -1806,7 +1815,12 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   }
 
   .nav .menu-item .link br {
-    display: none;
+    content: '';
+    white-space: normal;
+  }
+
+  .nav .menu-item .link br:after {
+    content: '\00a0';
   }
 
   .nav .menu-item .sub-menu {
@@ -1817,6 +1831,21 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   .nav .menu-item:nth-of-type(7) .sub-menu,
   .nav .menu-item:nth-of-type(8) .sub-menu {
     margin-top: 159px !important;
+  }
+
+  .search-options-holder {
+    width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .search-options-holder * {
+    width: 100% !important;
+    float: none;
+    margin-left: 0 !important;
+    margin-top: 20px;
+    box-sizing: border-box;
+    text-align: left !important;
   }
 
 }

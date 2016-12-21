@@ -1,13 +1,18 @@
-function accessibilityInit() {
+//function accessibilityInit() {
 
 // Global
 var root = document.getElementsByClassName('body')[0];
+var doc_root = document.getElementsByTagName('html')[0];
 
 
 function accessibility() {
 
 	////// Set accessibility //////
 	document.body.classList.add('accessibility');
+	
+	// Default styles
+	document.body.classList.add('font-small');
+	document.body.classList.add('theme__black-on-white');
 
 	////// Find elements //////
 	var header = document.querySelectorAll('.main-header .container')[0];
@@ -101,6 +106,10 @@ function accessibilitySettingsInit() {
 
 	accessibilitySettingsActions();
 
+	// Watch for state of settings
+	var font_size_state;
+	var letter_spacing_state;
+
 	function accessibilitySettingsActions() {
 		accessibility_settings_block.addEventListener('click', chooseStyle);
 
@@ -119,11 +128,11 @@ function accessibilitySettingsInit() {
 					font_family[i].classList.remove('selected');
 				}
 				if(target.classList.contains('sans-serif')) {
-					alert("sans-serif")
 					target.classList.add('selected');
+					root.style.fontFamily = 'sans-serif';
 				} else if(target.classList.contains('serif')) {
-					alert("serif")
 					target.classList.add('selected');
+					root.style.fontFamily = 'serif';
 				}
 			}
 
@@ -133,14 +142,32 @@ function accessibilitySettingsInit() {
 					font_size[i].classList.remove('selected');
 				}
 				if(target.classList.contains('small')) {
-					alert("small")
 					target.classList.add('selected');
+					doc_root.style.fontSize = '18px';
+					root.classList.remove('big-font-mode');
+					root.classList.remove('medium-font-mode');
+					font_size_state = 'small';
+					root.classList.add('font-small');
+					root.classList.remove('font-medium');
+					root.classList.remove('font-big');
 				} else if(target.classList.contains('medium')) {
-					alert("medium")
 					target.classList.add('selected');
+					doc_root.style.fontSize = '22px';
+					root.classList.add('medium-font-mode');
+					root.classList.remove('font-small');
+					root.classList.add('font-medium');
+					root.classList.remove('font-big');
+					root.classList.remove('big-font-mode');
+					font_size_state = 'medium';
 				} else if(target.classList.contains('big')) {
-					alert("big")
 					target.classList.add('selected');
+					doc_root.style.fontSize = '26px';
+					root.classList.add('big-font-mode');
+					root.classList.remove('font-small');
+					root.classList.remove('font-medium');
+					root.classList.add('font-big');
+					root.classList.remove('medium-font-mode');
+					font_size_state = 'big';
 				}
 			}
 
@@ -150,14 +177,17 @@ function accessibilitySettingsInit() {
 					letter_spacing[i].classList.remove('selected');
 				}
 				if(target.classList.contains('letter-spacing-default')) {
-					alert("letter-spacing-default")
+					doc_root.style.letterSpacing = '0';
 					target.classList.add('selected');
+					letter_spacing_state = 'default';
 				} else if(target.classList.contains('letter-spacing-medium')) {
-					alert("letter-spacing-medium")
+					doc_root.style.letterSpacing = '1px';
 					target.classList.add('selected');
+					letter_spacing_state = 'medium';
 				} else if(target.classList.contains('letter-spacing-big')) {
-					alert("letter-spacing-big")
+					doc_root.style.letterSpacing = '2px';
 					target.classList.add('selected');
+					letter_spacing_state = 'big';
 				}
 			}
 
@@ -167,15 +197,32 @@ function accessibilitySettingsInit() {
 					theme_color[i].classList.remove('selected');
 				}
 				if(target.classList.contains('black-on-white')) {
-					alert("black-on-white")
+					document.body.classList.add('theme__black-on-white');
+					document.body.classList.remove('theme__white-on-black');
+					document.body.classList.remove('theme__lightblue-on-darkblue');
 					target.classList.add('selected');
 				} else if(target.classList.contains('white-on-black')) {
-					alert("white-on-black")
+					document.body.classList.add('theme__white-on-black');
+					document.body.classList.remove('theme__black-on-white');
+					document.body.classList.remove('theme__lightblue-on-darkblue');
 					target.classList.add('selected');
 				} else if(target.classList.contains('lightblue-on-darkblue')) {
-					alert("lightblue-on-darkblue")
+					document.body.classList.remove('theme__white-on-black');
+					document.body.classList.remove('theme__black-on-white');
+					document.body.classList.add('theme__lightblue-on-darkblue');
 					target.classList.add('selected');
 				}
+			}
+
+			if(letter_spacing_state == 'medium' && font_size_state == 'medium') {
+				accessibility_settings_block.classList.add('settings-fix');
+			} else if(letter_spacing_state == 'big' && font_size_state == 'medium') {
+				alert('!')
+				accessibility_settings_block.classList.add('settings-fix__second');
+			}
+			 else {
+				accessibility_settings_block.classList.remove('settings-fix');
+				accessibility_settings_block.classList.remove('settings-fix__second');
 			}
 
 		}
@@ -186,3 +233,5 @@ function accessibilitySettingsInit() {
 accessibilitySettingsInit();
 
 }
+
+accessibilityInit()

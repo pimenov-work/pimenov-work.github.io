@@ -507,10 +507,16 @@ input.hide:checked + label.button:not(:hover) {
 	background-color: #44b154;
 	border: #44b154 solid 1px;
 }
+.pagination {
+  text-align: center;
+}
+.content .pagination{
+  text-align: inherit;
+}
 .load-more-button {
 	display: inline-block; zoom: 1; *display: inline;
 	position: relative;
-	margin: 0 15px 0 200px;
+	margin: 0 15px 0 15px;
 	padding: 20px 80px;
 
 	color: #137ff7;
@@ -522,6 +528,9 @@ input.hide:checked + label.button:not(:hover) {
 	transition: 		all .1s ease;
 
 	cursor: pointer;
+}
+.content .load-more-button {
+  margin-left: 200px;
 }
 .load-more-button:hover {
 	color: #fff;
@@ -539,13 +548,16 @@ input.hide:checked + label.button:not(:hover) {
 	text-align: center;
 }
 .page-up {
-	display: inline-block; zoom: 1; *display: inline;
+	display: inline-block;
+  zoom: 1;
 	position: relative;
 	color: #137ff7;
 
 	cursor: pointer;
-    float: right;
-   margin: 20px;
+  margin: 20px;
+}
+.content .page-up {
+  float: right;
 }
 .page-up span {
 	padding: 0 0 2px 0;
@@ -2820,8 +2832,7 @@ a.logout:hover span {
 }
 .search-options-holder .options .item {
 	position: relative;
-/* 	float: left;  */
-	margin: 0 0 10px 20px;
+	margin: 0 20px 10px 20px;
 }
 .search-options-holder .options .col-1 {
 	position: relative;
@@ -2836,7 +2847,7 @@ a.logout:hover span {
 .search-options-holder .options .label {
 	display: inline-block; zoom: 1; *display: inline;
 	vertical-align: middle;
-  width: 180px;
+  width: 195px;
 	margin: 0 15px 0 0;
 
 	text-align: right;
@@ -2855,6 +2866,9 @@ a.logout:hover span {
 	-moz-box-shadow: 	0 2px 2px 0 rgba(0, 0, 0, 0.1) inset;
 	-o-box-shadow: 		0 2px 2px 0 rgba(0, 0, 0, 0.1) inset;
 	box-shadow: 		0 2px 2px 0 rgba(0, 0, 0, 0.1) inset;
+}
+.search-options-holder .options input.huge{
+	width: 695px;
 }
 .search-options-holder .options input.middle {
 	width: 270px;
@@ -3017,6 +3031,7 @@ a.logout:hover span {
 	float: right;
 	color: #1c9c34;
   margin: 7px 0 0 0;
+  display: none;
 }
 /* ----------------------------------------------------------------------- SEARCH RESULT */
 
@@ -4059,6 +4074,13 @@ ul.schedule-list li .button:hover {
 	margin: 50px 0 0px 0;
 	padding: 0 0 40px 0;
 	text-align: center;
+}
+.form-container .double-aligned.button-holder {
+  margin-left: 212px;
+  text-align: left;
+}
+.form-container .double-aligned.button-holder .button {
+  width: 185px;
 }
 .form-container .central-message {
 	position: relative;
