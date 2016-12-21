@@ -33,8 +33,11 @@
 	border-bottom: 1px white solid !important;
 }
 
-.theme__white-on-black .main a:hover {
-	border-bottom: 1px transparent solid !important;
+html body.accessibility .main a {
+	border-bottom: none !important;
+}
+
+html body.accessibility.theme__white-on-black .main a:hover {
 	color: black !important;
 	background-color: white !important;
 }
@@ -123,9 +126,48 @@
 	color: white !important;
 }
 
+.accessibility .qs-object-list a:hover *,
+.accessibility .qs-object-list a:hover {
+	background-color: transparent !important;
+}
+
+.accessibility.theme__black-on-white .qs-object-list a *,
+.accessibility.theme__black-on-white .qs-object-list a {
+	background-color: transparent !important;
+	color: black !important;
+}
+
+.accessibility.theme__white-on-black .qs-object-list a *,
+.accessibility.theme__white-on-black .qs-object-list a {
+	background-color: transparent !important;
+	color: white !important;
+}
+
+.accessibility.theme__white-on-black .qs-object-list a:hover *,
+.accessibility.theme__white-on-black .qs-object-list a:hover {
+	background-color: transparent !important;
+	color: white !important;
+}
+
+.accessibility.theme__lightblue-on-darkblue .qs-object-list a *,
+.accessibility.theme__lightblue-on-darkblue .qs-object-list a,
+.accessibility.theme__lightblue-on-darkblue .qs-object-list a:hover *,
+.accessibility.theme__lightblue-on-darkblue .qs-object-list a:hover {
+	background-color: transparent !important;
+	color: #91cdfd !important;
+}
+
 .accessibility.theme__white-on-black a:hover {
 	background-color: white !important;
 	color: black !important;
+}
+
+html body.accessibility.theme__white-on-black .footer a .logo-text {
+	color: white !important;
+}
+
+html body.accessibility.theme__lightblue-on-darkblue .footer a .logo-text {
+	color: #91cdfd !important;
 }
 
 .accessibility.theme__white-on-black a:hover * {
@@ -340,7 +382,7 @@
 	left: calc((100% - 980px) / 2);
 	top: 100px;
 	z-index: 10;
-	border: 3px #e5e5e5 solid;
+	border: 3px #e5e5e5 solid !important;
 	border-top: none;
 }
 
@@ -604,6 +646,26 @@ html .accessibility-settings-block div:last-child li:nth-of-type(3).selected {
 	left: 150px;
 	font-size: 20px;
 	text-align: left;
+}
+
+html .accessibility a .logo-text {
+	color: black !important;
+	background-color: transparent !important;
+}
+
+html body.accessibility.theme__white-on-black .wrapper a .logo-text {
+	color: white !important;
+	background-color: transparent !important;
+}
+
+html body.accessibility.theme__lightblue-on-darkblue .wrapper a .logo-text {
+	color: #91cdfd !important;
+	background-color: transparent !important;
+}
+
+html body.accessibility.theme__white-on-black .wrapper .logo {
+	color: white !important;
+	background-color: transparent !important;
 }
 
 .accessibility .logo-text {

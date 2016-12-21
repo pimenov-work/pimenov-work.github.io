@@ -28,7 +28,8 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     background-image: none !important;
   }
 
-  .page-up {
+  .page-up,
+  .social-block {
     display: none;
   }
 
@@ -218,13 +219,15 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   .nav-search-holder input {
     width: 100%;
+    text-align: center;
   }
 
   .nav-search-holder input.search {
     width: 90%;
     width: calc(100% - 55px);
     padding: 7px 0;
-    background: none;
+    background: #3d9af1;
+    border: none !important;
   }
 
   /* Responsive navigation elements */
@@ -358,6 +361,10 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     width: 100%;
     display: block;
     clear: both;
+  }
+
+  .main-content-block .header .icon {
+    display: none;
   }
 
   .items .item {
@@ -627,7 +634,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   .main-content-block {
     border-bottom: none;
-}
+  }
 
   /*** Interview end ***/
 
@@ -896,6 +903,10 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   .employees.qs-object-list p br {
     display: none;
+  }
+
+  .employee .photo {
+    margin-right: 20px !important;
   }
 
   #page-search-form {
@@ -1196,7 +1207,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   .employee h2 {
     margin: 0 0 20px 0;
     padding: 0 !important;
-}
+  }
 
   .employee p {
     text-align: left !important;
@@ -1491,6 +1502,29 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   .question-list li .question .show-btn {
     display: block;
+  }
+
+  .search-options-holder {
+    width: 90%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .search-options-holder * {
+    width: 100% !important;
+    float: none;
+    margin-left: 0 !important;
+    margin-top: 20px;
+    box-sizing: border-box;
+    text-align: left !important;
+  }
+
+  .search-options-holder input[type="submit"] {
+    display: none;
+  }
+
+  .search-options-holder .button {
+    text-align: center !important;
   }
 
 }
@@ -1833,21 +1867,13 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     margin-top: 159px !important;
   }
 
-  .search-options-holder {
-    width: 90%;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
+}
 
-  .search-options-holder * {
-    width: 100% !important;
-    float: none;
-    margin-left: 0 !important;
-    margin-top: 20px;
-    box-sizing: border-box;
-    text-align: left !important;
+@media all and (max-width: 500px) {
+  .employee .photo {
+    float: none !important;
+    margin: 0 auto !important;
   }
-
 }
 
 
