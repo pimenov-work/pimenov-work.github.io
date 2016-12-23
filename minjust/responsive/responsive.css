@@ -128,6 +128,10 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     color: white;
   }
 
+  .footer .contact {
+    margin-right: 20px !important;
+  }
+
   .header-user-links a span {
     border-bottom: 1px white dashed !important;
   }
@@ -151,6 +155,10 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   /* Phones & shedule */
 
+  .main-header {
+    background-color: #2d66a4 !important;
+  }
+
   .main-header .wrapper .info {
     position: relative;
     width: auto;
@@ -173,7 +181,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     position: relative;
     width: 100%;
     height: auto !important;
-    margin-top: 50px !important;
+    margin-top: 0px !important;
     box-shadow: none !important;
     border: none !important;
   }
@@ -225,6 +233,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   .nav-search-holder input.search {
     width: 90%;
     width: calc(100% - 55px);
+    margin-top: 15px !important;
     padding: 7px 0;
     background: #3d9af1;
     border: none !important;
@@ -234,20 +243,61 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   .menu-item {
     width: 100%;
-    height: 105px !important;
+    height: 80px !important;
   }
 
-  .show_more {
-    height: 20px;
-    line-height: 40px;
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANIAAAAsCAMAAAAn3xYZAAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMAECAwQFBgcICPn6+/z9/vIxqCigAAAS1JREFUeAHd092KwyAUReFj1JgfE/P+TzuIQ2EYyrlaG8y6k9LSA/szW+xthefec7CXtKxns/j0ri3Z7IV83P0WM0v79fTOEm3WPkfUEv8e2I51Qlqx1DG1Pf2fYf9gLlqff33k8O1egBaNp53OtgBaNB4ngBaKx4mgxePx42nxeIynpcfD09Lj4Wnp8fC0hHjC7cwJoAXiiaVaHhvNAaAF4XEmapa28e26JYAWgMeb6O97v8a7RIAWg8ef6LKOHwNocXj8icZyNoAWicefKECLxeNPFKBF43ECaKF4nChaPB4/nhaPh6elxyOjxePR0uLx6GnxeNS0eDx6WjwePS0ej54Wj4enxeCZgBaPh6fF4+Fp8Xj0tHg8elo8Hj0tHo+eFo9HTovHI6elwvMDMkE3aV+xvo0AAAAASUVORK5CYII=') no-repeat center center;
-    background-size: auto 100%;
-    transition: -webkit-transform 0.3s;
-    transition: transform 0.3s;
-    transition: transform 0.3s, -webkit-transform 0.3s;
-    -webkit-transform-origin: 50% 50%;
-        -ms-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
+  html body .nav .menu-item {
+    width: calc(25% - 0.1px);
+    min-height: 55px;
+    padding-top: 4px;
+    border-left: 1px white solid !important;
+    border-top: 1px white solid !important;
+    box-sizing: border-box !important;
+    border-bottom: 1px white solid !important;
+    background-color: #3d9af1;
+    color: black !important;
+  }
+
+  .main-container a {
+    padding-right: 17px;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAZCAYAAADuWXTMAAABZElEQVQ4jZXUP0hWURgH4Ef9EAyFBAWbcnJSN6ckMTUIwj9DaJKJUyBSoIMN4RY0CCrREgihoJOKgxWCSCKGg9AQbblIkIMoRFKJ1HDuR5/Cp+e+072c88B7fue9t8CT4zpMohf7UlQhpnALG6hOi+9jBzXYQm0avI9mrONa0sGNWAw/cAcLKMcq7sZi+I1uvMYVLOFhLIZTPMJzZPAGI7E4W8/wOHkexwsUxGJ4iQf4g1FMoygWwxw68BMDWERJLIb3aMEB2vEOV2MxbOMm9tCED6iKxfBFuMq/qMdcGlyDeSH1z+iLxQ3YxHV8FI7wLQa3YA2VWEErDrk8sHt4izLMogvH2cWL8KBwxmJMoB8nuRvy4TG8StafYlhI+Uxlzr0XCmM56P9HMp2vtVxcjBnhLn+hB8v5YC4uFea2DUfoFKbowsqgQki0Ad+FP8qny2AWLyTwK25jNwYSAhpKWmxMA+EfNmVGvAjAT38AAAAASUVORK5CYII=') no-repeat right 2px;
+    background-size: auto 80%;
+    border-bottom: none;
+  }
+
+  html body .nav .menu-item:nth-of-type(2),
+  html body .nav .menu-item:nth-of-type(3) {
+    border-bottom: none !important;
+  }
+
+  html body .nav .menu-item:nth-of-type(2),
+  html body .nav .menu-item:nth-of-type(3),
+  html body .nav .menu-item:nth-of-type(4),
+  html body .nav .menu-item:nth-of-type(5) {
+    border-top: none !important;
+  }
+
+  html body .nav .menu-item:first-of-type {
+    border-left: none !important;
+  }
+
+  html body .nav .menu-item.green {
+    background: #3d9af1 !important;
+  }
+
+  html body .nav .menu-item * {
+    color: white;
+  }
+
+  .nav-search-holder input.search {
+    width: 90%;
+    margin-top: 16px;
+    margin-top: 0;
+    padding: 13px 0;
+    border: 1px white solid;
+    text-align: center;
+    background-color: white;
+    color: black !important;
   }
 
   .link {
@@ -283,6 +333,9 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
             transform: scaleY(0);*/
     text-align: center !important;
   }
+
+  .nav-search-holder ::-moz-input-placeholder { color: black !important; }
+  .nav-search-holder ::-webkit-input-placeholder { color: black !important; }
 
   .sub-menu .sub-menu-columns {
     padding: 0 30px;
@@ -526,13 +579,43 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     margin: 0 auto 20px auto;
     text-align: left;
     background: white;
+    box-shadow: none;
+    border: 1px lightgrey solid !important;
+  }
+
+  .main-content-block .content-item .date {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .main-content-block .content-item p {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .main-content-block .content-item h4 {
+    margin-bottom: 5px;
+  }
+
+  .main-content-block .content-item p:empty {
+    display: none;
+  }
+
+  .body .link-holder {
+    padding-top: 0;
+  }
+
+  .main-content-block.interview p {
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
   }
 
   .search-holder .search-button {
     width: 84.5%;
     margin: 0 auto;
     position: static;
-    color: black;
+    color: white !important;
+    box-shadow: none;
   }
 
   /*** Search info block end ***/
@@ -734,26 +817,10 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     background: url(http://minjust.gov.by/static/main/img/icon-draft.png) no-repeat 35px center !important;
   }
 
-  .footer .contact {
-    position: relative;
-    float: left;
-    margin: 0 0 20px 0;
-    font-size: 0.875em;
-    line-height: 1.75em;
-  }
-
   .main-container {
     box-shadow: none;
   }
 
-  .footer .about {
-    width: 90%;
-    position: relative;
-    float: left;
-    margin: 30px 0 30px 0;
-    font-size: 0.875em;
-    line-height: 1.75em;
-  }
 
   .footer .about * {
     float: left;
@@ -1553,6 +1620,10 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
 @media all and (max-width: 767px) {
 
+  .body {
+    background: white !important;
+  }
+
   .main-header .flag {
     background: #2d66a4 !important;
     background-image: none !important;
@@ -1661,11 +1732,16 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
 
   .nav-search-holder input.search {
     width: 90%;
+    margin-top: 0 !important;
     padding: 13px 0;
     border: 1px white solid;
     text-align: center;
     background-color: white;
     color: black !important;
+  }
+
+  html body .nav .menu-item * {
+    color: black;
   }
 
   .nav-search-holder ::-moz-input-placeholder { color: black !important; }
@@ -1815,6 +1891,78 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     width: auto !important;
   }
 
+  .menu-item {
+    width: 100%;
+    height: 105px !important;
+  }
+
+  html body .nav .menu-item {
+    width: 100% !important;
+    min-height: 50px;
+    padding-top: 4px;
+    border-bottom: 1px lightgrey solid !important;
+    background-color: white;
+    color: black !important;
+  }
+
+  html body .nav .menu-item:nth-of-type(2),
+  html body .nav .menu-item:nth-of-type(3) {
+    border-bottom: 1px lightgrey solid !important;
+  }
+
+  html body .nav .menu-item.green {
+    background: white !important;
+  }
+
+  .footer .contact {
+    position: relative;
+    float: left;
+    margin: 0 0px 20px 0;
+    font-size: 0.875em;
+    line-height: 1.75em;
+  }
+
+  html .footer .content .holder a {
+    position: static;
+    width: 100%;
+    height: 60px !important;
+    margin: 20px auto 0 auto;
+    padding: 0 0 0 10px;
+    font-size: 20px;
+    line-height: 60px;
+    color: white !important;
+    border: none;
+    background: #2bcd4e !important;
+  }
+
+  .footer .contact .label {
+    width: auto !important;
+    margin-right: 10px;
+  }
+
+  .footer .about {
+    width: 90%;
+    position: relative;
+    float: left;
+    margin: 0 0 30px 0;
+    font-size: 0.875em;
+    line-height: 1.75em;
+  }
+
+  .footer h4 {
+    margin: 0;
+  }
+
+  .footer .contact .text {
+    margin: 0;
+  }
+
+  .footer .contact a,
+  .footer .about a {
+    border-bottom: none !important;
+    text-decoration: underline !important;
+  }
+
 }
 
 
@@ -1852,7 +2000,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   }
 
   .nav .menu-item {
-    width: 50%;
+    width: 100%;
     height: auto !important;
     min-height: 65px;
     margin: 0 auto;
@@ -1861,6 +2009,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     box-sizing: border-box;
     box-shadow: none !important;
     border: none !important;
+    background: red;
   }
 
   .nav .menu-item .link {
