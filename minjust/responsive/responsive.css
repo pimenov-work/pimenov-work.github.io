@@ -368,12 +368,33 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   }
 
   .items .item {
+    width: calc(100% - 25px) !important;
     height: auto;
     min-height: 40px;
-    padding: 0 0 0 0 !important;
+    padding: 0 0 0 25px !important;
     line-height: 40px;
     border-bottom: 1px grey solid;
-    text-align: center;
+    text-align: left;
+  }
+
+  .items .item .content .block,
+  .items .item .content .additional-info {
+    width: 93% !important;
+  }
+
+  .items .item .content {
+    border: none !important;
+  }
+
+  .items .item .content .additional-info {
+    width: 95% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .items .item .block {
+    width: 100%;
+    margin: 0 0 0 0 !important;
   }
 
   .main-slider .item {
@@ -1633,15 +1654,22 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   .nav-search-holder {
     width: 100%;
     margin-top: 0;
-    padding: 15px 0;
+    padding: 13px 0;
     position: static;
     float: none;
   }
 
   .nav-search-holder input.search {
+    width: 90%;
+    padding: 13px 0;
     border: 1px white solid;
     text-align: center;
+    background-color: white;
+    color: black !important;
   }
+
+  .nav-search-holder ::-moz-input-placeholder { color: black !important; }
+  .nav-search-holder ::-webkit-input-placeholder { color: black !important; }
 
   .main-container .search-holder {
     width: 100vw !important;
@@ -1650,7 +1678,7 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   }
 
   .main-container .search {
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
   }
 

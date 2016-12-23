@@ -123,8 +123,6 @@ function initSettings() {
 		document.getElementsByClassName('lightblue-on-darkblue')[0].classList.add('selected');
 	}
 
-
-
 }
 
 
@@ -368,6 +366,9 @@ function accessibilitySettingsInit() {
 }
 
 accessibilitySettingsInit();
+
+var contacts_and_schedule = document.querySelectorAll('.accessibility .info a')[0];
+contacts_and_schedule.innerHTML = 'Контакты и режим работы'; // gettext('Contacts and schedule')
 
 }
 
