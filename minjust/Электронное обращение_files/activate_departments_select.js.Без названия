@@ -1,0 +1,47 @@
+var activate_departments_select = function(url, include_all) {
+  var reset_filling_form = function (num) {
+    $('div.stepper > div').each(function () {
+      $(this).removeClass('active');
+      if (parseInt($(this).text()) < num + 1) {
+        $(this).addClass('active')
+      }
+    });
+  };
+  var set_organizations = function (data) {
+    if (include_all) {
+      data.splice(0, 0, [-1, gettext('All')])
+    }
+    $('#id_department').html('');
+    var counter_text_template = ngettext("Displayed %s organization", "Displayed %s organizations", data.length);
+    var counter_text = interpolate(counter_text_template, [data.length]);
+    $('#org-counter').text(counter_text);
+    for (key in data) {
+      var option_html = '<option value="' + data[key][0] + '">' + data[key][1] + '</option>';
+      $('#id_department').append(option_html);
+    }
+    $('#id_department').trigger('chosen:updated');
+    reset_filling_form(3);
+  };
+  var refresh = function () {
+    var department_type = $('#id_department_type').val();
+    var region_id = $('#id_region').val();
+    if (department_type === null || department_type === undefined || department_type == "" ||
+        region_id === null || region_id === undefined || region_id == "") {
+      set_organizations([]);
+    } else {
+      $.ajax({
+        type: "GET",
+        url: url,
+        data: {
+          department_type: $('#id_department_type').val(),
+          region: $('#id_region').val()
+        },
+        success: set_organizations
+      });
+    }
+    return false;
+  }
+  $('#id_region').bind("change", refresh);
+  $('#id_department_type').bind("change", refresh);
+  refresh();
+}

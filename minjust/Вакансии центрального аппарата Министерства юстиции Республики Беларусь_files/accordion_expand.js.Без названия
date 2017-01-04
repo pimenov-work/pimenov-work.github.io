@@ -1,0 +1,8 @@
+jQuery(document).ready(function($) {
+    $('.accordion .item .date').live('click', function() {
+        var parent = $(this).parent('.item');
+        parent.find(".info").slideToggle(250, function() {
+            parent.toggleClass("active");
+        });
+    });
+});

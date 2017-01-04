@@ -2,6 +2,7 @@
 var root = document.getElementsByClassName('body')[0];
 var doc_root = document.getElementsByTagName('html')[0];
 
+window.addEventListener('load', changeContactBlock);
 window.addEventListener('load', initSettings);
 
 function initSettings() {
@@ -31,8 +32,8 @@ function initSettings() {
 			font_size[i].classList.remove('selected');
 		}
 		doc_root.style.fontSize = '18px';
-		root.classList.remove('big-font-mode');
-		root.classList.remove('medium-font-mode');
+		//root.classList.remove('big-font-mode');
+		//root.classList.remove('medium-font-mode');
 		root.classList.add('font-small');
 		root.classList.remove('font-medium');
 		root.classList.remove('font-big');
@@ -44,11 +45,11 @@ function initSettings() {
 			font_size[i].classList.remove('selected');
 		}
 		doc_root.style.fontSize = '22px';
-		root.classList.add('medium-font-mode');
+		//root.classList.add('medium-font-mode');
 		root.classList.remove('font-small');
 		root.classList.add('font-medium');
 		root.classList.remove('font-big');
-		root.classList.remove('big-font-mode');
+		//root.classList.remove('big-font-mode');
 		document.getElementsByClassName('medium')[0].classList.add('selected');
 	}
 
@@ -57,11 +58,11 @@ function initSettings() {
 			font_size[i].classList.remove('selected');
 		}
 		doc_root.style.fontSize = '26px';
-		root.classList.add('big-font-mode');
+		//root.classList.add('big-font-mode');
 		root.classList.remove('font-small');
 		root.classList.remove('font-medium');
 		root.classList.add('font-big');
-		root.classList.remove('medium-font-mode');
+		//root.classList.remove('medium-font-mode');
 		document.getElementsByClassName('big')[0].classList.add('selected');
 	}
 
@@ -128,6 +129,7 @@ function initSettings() {
 
 function accessibilityInit() {
 
+
 function accessibility() {
 
 	////// Set accessibility //////
@@ -148,21 +150,30 @@ function accessibility() {
 	////// Create or clone //////
 	var menu_bar = document.createElement('section'); // Create menu element on top of the page
 	var footer_logo = logo_link.cloneNode(true); // Clone header logo
-	page_up_button.innerHTML = 'наверх';
+	page_up_button.innerHTML = gettext('To top');
 
 	menu_bar.classList.add('menu-bar');
 
 	////// Content and structure //////
 	menu_bar.innerHTML = '<ul>' +
-											 		'<li id="regular-version"> Обычная версия </li>' +
-											 		'<li id="accessibility-settings" class="accessibility-settings"> Настройки </li>' +
-											 		'<li> <a href="#"> Карта сайта </a> </li>' +
-											 		'<li> <a href="http://minjust.gov.by/ru/search/"> Поиск </a> </li>' +
+											 		'<li id="regular-version">' +
+											 			gettext('Regular version')  +
+											 		'</li>' +
+											 		'<li id="accessibility-settings" class="accessibility-settings">' +
+											 			gettext('Settings')  +
+											 		'</li>' +
+											 		'<li>' +
+											 			'<a href="#">' + gettext('Site map') + '</a> </li>' +
+											 		'<li>' +
+											 			'<a href="http://minjust.gov.by/search/">' + gettext('Search')  + '</a>'
+											 		'</li>' +
 											 '</ul>';
 
 	header.insertBefore(menu_bar, header.firstChild);
 	footer.appendChild(footer_logo);
 	parent_of_page_up_button.insertBefore(page_up_button, first_link_footer);
+
+	footer.innerHTML += '<a href="http://minjust.gov.by" class="minf-link"> minjust.gov.by </a>';
 
 }
 
@@ -187,24 +198,62 @@ function accessibilitySettingsInit() {
 
 	var accessibility_settings = document.getElementById('accessibility-settings');
 	accessibility_settings.addEventListener('click', showAccessibilitySettings);
+	document.addEventListener('click', settingsClose);
+
+	var settings_state = 1;
+
 	function showAccessibilitySettings() {
-		accessibility_settings_block.classList.toggle('open-menu')
+		if ( settings_state % 2 != 0) {
+			accessibility_settings_block.classList.add('open-menu');
+			accessibility_settings.classList.add('menu-open-style');
+			alert(settings_state);
+			alert('Open!');
+			settings_state++;
+			return;
+		}
+		if ( settings_state % 2 == 0 ) {
+			accessibility_settings_block.classList.remove('open-menu');
+			accessibility_settings.classList.remove('menu-open-style');
+			alert(settings_state);
+			alert('Close!');
+			settings_state++;
+			return;
+		}
+	}
+
+	function settingsClose(e) {
+	var target = e.target;
+		if (target.id != 'about') {
+			while(target.tagName != 'HTML') {
+				if (target.id == 'settingsBlock' || target.id == 'accessibility-settings') {
+					return;
+				}
+				if(target.tagName == 'BODY') {
+					accessibility_settings_block.classList.remove('open-menu');
+					accessibility_settings.classList.remove('menu-open-style');
+					settings_state = 1;
+					return;
+				}
+			target = target.parentNode;
+			}
+		}
 	}
 
 	var accessibility_settings_block = document.createElement('div');
 	accessibility_settings_block.classList.add('accessibility-settings-block');
+	accessibility_settings_block.setAttribute('id', 'settingsBlock');
 	root.appendChild(accessibility_settings_block);
 
 	accessibility_settings_block.innerHTML = '' +
 												'<div class="font-family">' +
-													'<h5> Шрифт: </h5>' +
+													'<h5>' + gettext('Font') + '</h5>' +
 													'<ul>' +
-												 		'<li class="sans-serif selected"> Без засечек </li>' +
-												 		'<li class="serif"> С засечками </li>' +
+												 		'<li class="sans-serif selected">' + gettext('Serif') + '</li>' +
+												 		'<li class="serif">' + gettext('Sans-serif') + '</li>' +
 													'</ul>' +
 												'</div>' +
 												'<div class="font-size">' +
-											 		'<h5> Размер: </h5>' +
+											 		'<h5>' + gettext('Font size')  + '</h5>' +
 													'<ul>' +
 												 		'<li class="small selected"> A </li>' +
 												 		'<li class="medium"> A </li>' +
@@ -212,23 +261,35 @@ function accessibilitySettingsInit() {
 													'</ul>' +
 												'</div>' +
 												'<div class="letter-spacing">' +
-											 		'<h5> Межбуквенный интервал: </h5>' +
+											 		'<h5>' + gettext('Letter spacing') + '</h5>' +
 													'<ul>' +
-												 		'<li class="letter-spacing-default selected"> Стандартный </li>' +
-												 		'<li class="letter-spacing-medium"> Средний </li>' +
-												 		'<li class="letter-spacing-big"> Большой </li>' +
+												 		'<li class="letter-spacing-default selected">' + gettext('Default') + '</li>' +
+												 		'<li class="letter-spacing-medium">' + gettext('Middle') + '</li>' +
+												 		'<li class="letter-spacing-big">' + gettext('Big') + '</li>' +
 													'</ul>' +
 												'</div>' +
 												'<div class="theme-color">' +
-											 		'<h5> Цветовая схема: </h5>' +
+											 		'<h5>' + gettext('Theme') + '</h5>' +
 													'<ul>' +
-												 		'<li class="black-on-white selected"> Чёрным по белому </li>' +
-												 		'<li class="white-on-black"> Белым по чёрному </li>' +
-												 		'<li class="lightblue-on-darkblue"> Голубым по тёмно-синему </li>' +
+												 		'<li class="black-on-white selected">' + gettext('Black on white') + '</li>' +
+												 		'<li class="white-on-black">' + gettext('White on black') + '</li>' +
+												 		'<li class="lightblue-on-darkblue">' + gettext('Lightblue on darkblue') + '</li>' +
 													'</ul>' +
+													'<span id="close_element"></span>' +
 												'</div>';
 
 	accessibilitySettingsActions();
+
+
+
+	var close_element = document.getElementById('close_element');
+	close_element.addEventListener('click', closeSettingsWithIcon);
+
+	function closeSettingsWithIcon() {
+		accessibility_settings_block.classList.remove('open-menu');
+		accessibility_settings.classList.remove('menu-open-style');
+		settings_state = 1;
+	}
 
 	// Watch for state of settings
 	var font_size_state;
@@ -270,8 +331,8 @@ function accessibilitySettingsInit() {
 				if(target.classList.contains('small')) {
 					target.classList.add('selected');
 					doc_root.style.fontSize = '18px';
-					root.classList.remove('big-font-mode');
-					root.classList.remove('medium-font-mode');
+					//root.classList.remove('big-font-mode');
+					//root.classList.remove('medium-font-mode');
 					font_size_state = 'small';
 					root.classList.add('font-small');
 					root.classList.remove('font-medium');
@@ -280,21 +341,21 @@ function accessibilitySettingsInit() {
 				} else if(target.classList.contains('medium')) {
 					target.classList.add('selected');
 					doc_root.style.fontSize = '22px';
-					root.classList.add('medium-font-mode');
+					//root.classList.add('medium-font-mode');
 					root.classList.remove('font-small');
 					root.classList.add('font-medium');
 					root.classList.remove('font-big');
-					root.classList.remove('big-font-mode');
+					//root.classList.remove('big-font-mode');
 					font_size_state = 'medium';
 					localStorage.setItem('font_size_state', 'medium');
 				} else if(target.classList.contains('big')) {
 					target.classList.add('selected');
 					doc_root.style.fontSize = '26px';
-					root.classList.add('big-font-mode');
+					//root.classList.add('big-font-mode');
 					root.classList.remove('font-small');
 					root.classList.remove('font-medium');
 					root.classList.add('font-big');
-					root.classList.remove('medium-font-mode');
+					//root.classList.remove('medium-font-mode');
 					font_size_state = 'big';
 					localStorage.setItem('font_size_state', 'big');
 				}
@@ -350,14 +411,13 @@ function accessibilitySettingsInit() {
 			}
 
 			if(letter_spacing_state == 'medium' && font_size_state == 'medium') {
-				accessibility_settings_block.classList.add('settings-fix');
+				//accessibility_settings_block.classList.add('settings-fix');
 			} else if(letter_spacing_state == 'big' && font_size_state == 'medium') {
-				alert('!')
-				accessibility_settings_block.classList.add('settings-fix__second');
+				//accessibility_settings_block.classList.add('settings-fix__second');
 			}
 			 else {
-				accessibility_settings_block.classList.remove('settings-fix');
-				accessibility_settings_block.classList.remove('settings-fix__second');
+				//accessibility_settings_block.classList.remove('settings-fix');
+				//accessibility_settings_block.classList.remove('settings-fix__second');
 			}
 
 		}
@@ -367,9 +427,12 @@ function accessibilitySettingsInit() {
 
 accessibilitySettingsInit();
 
-var contacts_and_schedule = document.querySelectorAll('.accessibility .info a')[0];
-contacts_and_schedule.innerHTML = 'Контакты и режим работы'; // gettext('Contacts and schedule')
 
 }
 
 accessibilityInit();
+
+function changeContactBlock() {
+	var contacts_and_schedule = document.querySelectorAll('.accessibility .info a')[0];
+	contacts_and_schedule.innerHTML = gettext('Contacts and schedule');
+}

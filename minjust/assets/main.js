@@ -35,7 +35,9 @@ function dhtmlLoadStyles(url)	{
 
 var links_block = document.querySelectorAll('.main-header .links')[0];
 
-links_block.innerHTML += '<button class="go-to-special-version" id="go-to-special-version"> Версия для слабовидящих </button>';
+links_block.innerHTML += '<button class="go-to-special-version" id="go-to-special-version">' +
+gettext('Special version') +
+'</button>';
 var go_to_special_version = document.getElementById('go-to-special-version');
 
 go_to_special_version.addEventListener('click', goToSpecialVersion);

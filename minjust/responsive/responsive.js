@@ -30,6 +30,27 @@ function initResposiveScript() {
     }
   }
 
+  // Replace header elements
+
+  var info = document.querySelectorAll('.info'),
+      info_hotline = document.querySelectorAll('.info.hotline'),
+      info_parent = document.querySelectorAll('.main-header .wrapper');
+
+  info_parent[0].insertBefore(info_hotline[0], info[0]);
+
+
+  var disabled_links = document.querySelectorAll('.schedule-list a.button');
+
+  for ( i = 0; i < disabled_links.length; i++ ) {
+    disabled_links[i].addEventListener('click', regOnDesktopVersion);
+    disabled_links[i].removeAttribute('href');
+  }
+
+  function regOnDesktopVersion() {
+    alert('Записаться возможно лишь после регистрации на полной версии сайта.')
+  }
+
+
   var slider_item = document.querySelectorAll('.main-slider .items .item'); // All slider items
   var item_content = document.querySelectorAll('.item .content'); // All content
 
@@ -53,13 +74,5 @@ function initResposiveScript() {
       this.style.fontWeight = 'bold';
     }
   }
-
-  // Replace header elements
-
-  var info = document.querySelectorAll('.info'),
-      info_hotline = document.querySelectorAll('.info.hotline'),
-      info_parent = document.querySelectorAll('.main-header .wrapper');
-
-  info_parent[0].insertBefore(info_hotline[0], info[0]);
 
 }

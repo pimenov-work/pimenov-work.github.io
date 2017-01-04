@@ -21,7 +21,7 @@
     </script>
 
     <style>
-        body.load {
+        /*body.load {
             position: relative;
             overflow: hidden;
         }
@@ -30,13 +30,13 @@
             content: '';
             width: 100vw;
             height: 100vh;
-            position: absolute;
+            position: fixed;
             left: 0;
             top: 0;
             background: white;
             z-index: 1000;
             overflow: hidden;
-        }
+        }*/
     </style>
 
     <link rel="shortcut icon" href="http://minjust.gov.by/static/main/img/fav.png">
@@ -925,9 +925,11 @@
                     </div>
                 </div>
                 <script>
-                    activate_main_menu("hover",
-                            "400",
-                            "500");
+                    if (window.innerWidth > 980) {
+                        activate_main_menu("hover",
+                                "400",
+                                "500");
+                    }
                 </script>
 
 
@@ -1751,6 +1753,7 @@
     </script>
 
     <!-- Accessibility scrips -->
+    <script src="assets/helpers.js"></script>
     <script src="assets/main.js"></script>
 
 </body>

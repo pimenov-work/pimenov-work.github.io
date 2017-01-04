@@ -1,0 +1,31 @@
+jQuery(document).ready(function($) {
+    var last_ajax = null;
+    $('div.pagination div.load-more-button').live('click', function() {
+        if (last_ajax)
+            last_ajax.abort();
+        var pagination_link = $(this);
+        if (pagination_link.prop('disabled'))
+            return;
+        var loader = Loader.get_loader();
+        var data = JSON.parse(pagination_link.attr('data-form') || "{}") || {};
+        data['page'] = pagination_link.attr('data-next-page-number');
+        last_ajax = loader.load(function(output) {
+            if (!output) {
+              pagination_link.remove();
+              return;
+            }
+            $('div.content div.entity-list .pagination-marker').before(output);
+            var page_num = pagination_link.attr('data-page-num');
+            page_num++;
+            if (page_num >= pagination_link.attr('data-max-pages')) {
+                pagination_link.remove();
+            } else {
+                pagination_link.attr('data-page-num', page_num);
+                pagination_link.attr('data-next-page-number', (page_num + 1));
+            }
+        }, data).done(function() {
+            pagination_link.prop('disabled', false);
+        });
+        pagination_link.prop('disabled', true);
+    });
+});
