@@ -1,0 +1,3 @@
+export const SET_LOCALE_START = 'intl/SET_LOCALE_START';
+export const SET_LOCALE_SUCCESS = 'intl/SET_LOCALE_SUCCESS';
+export const SET_LOCALE_ERROR = 'intl/SET_LOCALE_ERROR';

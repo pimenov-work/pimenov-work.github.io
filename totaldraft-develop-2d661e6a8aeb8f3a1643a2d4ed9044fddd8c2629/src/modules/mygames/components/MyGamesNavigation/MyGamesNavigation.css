@@ -1,0 +1,53 @@
+@import '../../../../components/styles/variables.css';
+
+.root {
+  position: relative;
+}
+
+.navItem {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin: 0 60px 0 0;
+  color: #a6a6a6;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    color: #111;
+  }
+}
+
+.navItemIsActive {
+  composes: navItem;
+  color: #111;
+  font-family: var(--font-family-bold);
+}
+
+.isPrizeAvailable {
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: -11px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--orange-color);
+  }
+}
+
+@media (--small-viewport) {
+  .root {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px;
+  }
+
+  .navItem {
+    margin: 0 10px 10px;
+    font-size: 0.875em;
+  }
+}

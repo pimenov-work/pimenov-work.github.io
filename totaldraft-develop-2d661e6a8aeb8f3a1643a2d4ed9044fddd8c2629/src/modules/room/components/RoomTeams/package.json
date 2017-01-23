@@ -1,0 +1,6 @@
+{
+  "name": "RoomTeams",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./RoomTeams.js"
+}

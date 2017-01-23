@@ -1,0 +1,320 @@
+@import '../styles/variables.css';
+@import '../styles/elements.css';
+
+.root {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 60px 0;
+  background: #fff;
+  box-sizing: border-box;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.avatar {
+  flex: none;
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background-color: #eee;
+  background-image: url('/images/userpic.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.avatarUpload {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  position: relative;
+  height: 100%;
+  padding: 0 40px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 0.75em;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 50%;
+  transition: opacity 0.1s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.username {
+  position: relative;
+  max-width: 400px;
+  margin-bottom: 10px;
+  color: #111;
+  font-size: 1.125em;
+  font-family: var(--font-family-bold);
+  text-transform: uppercase;
+}
+
+.errorMessage {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 75%;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  color: #a7a7a7;
+  font-size: 0.75em;
+  line-height: 1.5em;
+  text-align: left;
+  transition: opacity 0.1s ease-in;
+  opacity: 0;
+}
+
+.errorMessageIsActive {
+  opacity: 1;
+}
+
+.usermail {
+  position: relative;
+  max-width: 400px;
+  margin-bottom: 10px;
+  color: #a7a7a7;
+  font-size: 0.75em;
+  font-family: var(--font-family-base);
+  text-transform: uppercase;
+}
+
+.form {
+  position: relative;
+  max-width: 600px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.formHeader {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.formHeaderLabel {
+  margin: 0 30px;
+  color: #a7a7a7;
+  font-size: 1em;
+  text-transform: uppercase;
+  transition: all 0.1s ease-out;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    color: #111;
+  }
+}
+
+.formHeaderLabelIsSelected {
+  color: #111;
+  font-family: var(--font-family-bold);
+}
+
+.formCheckbox {
+  width: 270px;
+}
+
+.formSection {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+
+  input {
+    width: 240px;
+    font-size: 0.875em;
+    border: solid 1px #a6a6a6;
+
+    &:hover {
+      border: solid 1px #111;
+    }
+
+    &:focus {
+      border: solid 1px #111;
+    }
+  }
+}
+
+.formSectionCentered {
+  composes: formSection;
+  justify-content: center;
+}
+
+.inputIsError {
+  color: #e89091;
+  border: solid 1px #e89091;
+}
+
+.formBlock {
+  display: none;
+  margin-bottom: 40px;
+}
+
+.formBlockIsActive {
+  composes: formBlock;
+  display: block;
+}
+
+.submitBtn {
+  composes: baseBtn;
+  margin: 0;
+  padding: 0 35px;
+  color: var(--green-color);
+  border: var(--green-color) solid 1px;
+
+  &:hover {
+    color: #fff;
+    background-color: var(--green-color);
+  }
+}
+
+.languages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  margin: 0 30px;
+  opacity: 0.35;
+  transition: opacity 0.1s ease-out;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+.languageIsActive {
+  opacity: 1;
+  pointer-events: none;
+
+  .languageFlag {
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .languageTitle {
+    svg {
+      display: inline;
+    }
+  }
+}
+
+.languageFlag {
+  width: 60px;
+  height: 60px;
+  margin: 0 0 15px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #eee;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.languageTitle {
+  color: #111;
+  font-size: 0.875em;
+  font-family: var(--font-family-bold);
+  text-transform: uppercase;
+
+  svg {
+    display: none;
+    width: 12px;
+    height: 12px;
+    margin: -2px 0 0 10px;
+
+    path {
+      fill: #4dcc65;
+    }
+  }
+}
+
+@media (--small-viewport) {
+  .root {
+    position: relative;
+    bottom: auto;
+    min-height: 100vh;
+    padding: 20px 0 0;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .form {
+    width: 100%;
+    padding: 0 20px;
+    margin: 20px 0;
+    box-sizing: border-box;
+  }
+
+  .formHeader {
+    margin: 0 0 20px;
+  }
+
+  .formHeaderLabel {
+    margin: 0 10px;
+  }
+
+  .formBlock {
+    margin: 0 0 20px;
+  }
+
+  .errorMessage {
+    position: relative;
+    left: auto;
+    top: auto;
+    max-width: 240px;
+    width: auto;
+    margin: 10px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .formSection {
+    input {
+      position: relative;
+      margin: 0 auto;
+      font-size: 16px;
+    }
+  }
+
+  .formSectionCentered {
+    flex-direction: column;
+    margin: 0 0 10px;
+  }
+}

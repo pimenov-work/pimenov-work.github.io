@@ -1,0 +1,51 @@
+@import '../../styles/variables.css';
+
+.tournamentList {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.tournament {
+  margin: 20px 30px;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.5 ease-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.tournamentLogo {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (--small-viewport) {
+  .tournamentList {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .tournament {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .tournamentLogo {
+    margin: 0 0 10px;
+  }
+}

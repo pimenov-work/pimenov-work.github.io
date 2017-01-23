@@ -1,0 +1,19 @@
+<html>
+  <script>
+    const name = 'auth_response';
+    const matches = document.cookie.match(new RegExp(
+      '(?:^|; )' + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + '=([^;]*)'
+    ));
+    const response = matches ? decodeURIComponent(matches[1]) : undefined;
+
+    if (opener && response) {
+      let res = JSON.parse(decodeURIComponent(response));
+      try {
+        opener.receiveSocialToken(res);
+        close();
+      } catch (e) {
+        console.log('Error', e);
+      }
+    }
+  </script>
+</html>

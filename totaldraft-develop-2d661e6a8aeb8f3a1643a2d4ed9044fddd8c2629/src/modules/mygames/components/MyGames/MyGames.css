@@ -1,0 +1,45 @@
+@import '../../../../components/styles/variables.css';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  position: relative;
+  padding: 30px 40px;
+  box-shadow: 0 1px 0 0 #e9e9e9;
+  z-index: 1;
+}
+
+.games {
+  position: relative;
+  overflow-y: auto;
+  height: calc(100% - 80px);
+}
+
+@media (--small-viewport) {
+  .root {
+    height: auto;
+    min-height: calc(100vh - 60px);
+  }
+
+  .header {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .games {
+    height: auto;
+    overflow: visible;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "TeamBuilderField",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./TeamBuilderField.js"
+}

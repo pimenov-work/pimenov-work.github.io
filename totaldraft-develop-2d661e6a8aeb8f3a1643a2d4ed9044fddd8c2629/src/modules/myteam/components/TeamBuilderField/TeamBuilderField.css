@@ -1,0 +1,127 @@
+@import '../../../../components/styles/variables.css';
+
+.root {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  height: 100%;
+  z-index: 3;
+}
+
+.propImg {
+  position: relative;
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  height: calc(100%);
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.reserve {
+  position: relative;
+  height: calc(100%);
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  background-color: #138930;
+}
+
+.fieldBackground {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/football-field.svg');
+  background-size: 90% 90%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.position {
+  height: 19%;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  box-sizing: border-box;
+  text-align: center;
+  user-select: none;
+}
+
+.positionForward {
+  composes: position;
+}
+
+.positionMidfielders {
+  composes: position;
+}
+
+.positionDefenders {
+  composes: position;
+}
+
+.positionGoalkeepers {
+  composes: position;
+}
+
+.player {
+  position: relative;
+  display: inline-block;
+  width: 22%;
+  padding: 0 1.5%;
+  overflow: hidden;
+  box-sizing: border-box;
+  cursor: grab;
+}
+
+.playerAvatar {
+  position: relative;
+  display: inline-block;
+  width: 80%;
+  height: 0;
+  padding-bottom: 80%;
+  background: #5bac6f;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.playerFakeAvatar {
+  composes: playerAvatar;
+  background-size: cover;
+  background-image: url(http://s5o.ru/storage/simple/ru/edt/99/71/83/47/rueeaf72e0f3a.jpeg);
+}
+
+.playerPosition {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -10px;
+  color: #fff;
+  font-size: 0.875em;
+  line-height: 20px;
+  text-align: center;
+}
+
+.playerName {
+  color: #fff;
+  font-size: 0.625em;
+}

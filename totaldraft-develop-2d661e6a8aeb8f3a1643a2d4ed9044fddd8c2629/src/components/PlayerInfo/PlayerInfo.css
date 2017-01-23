@@ -1,0 +1,458 @@
+@import '../styles/variables.css';
+
+.root {
+  display: flex;
+  flex-grow: 4;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 65%;
+  box-sizing: border-box;
+  background-color: #fff;
+  transform: translate3d(100%, 0, 0);
+  transition: all 0.25s ease-out;
+  z-index: 5;
+  user-select: none;
+}
+
+.isActive {
+  box-shadow: -10px 0 30px 0 rgba(0, 0, 0, 0.1), -1px 0 0 0 #eee inset;
+  transform: translate3d(0, 0, 0);
+}
+
+.isReadOnly {
+  width: 75%;
+
+  .addBtn {
+    display: none;
+  }
+
+  .removeBtn {
+    display: none;
+  }
+}
+
+.isCompareMode {
+  width: 100%;
+  box-shadow: -1px 0 0 0 #eee inset;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: none;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px 20px 0;
+  box-sizing: border-box;
+}
+
+.addBtn {
+  padding: 8px 20px;
+  color: var(--green-color);
+  font-size: 0.875em;
+  text-transform: uppercase;
+  border: var(--green-color) solid 1px;
+  border-radius: 20px;
+  transition: all 0.1s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    color: #fff;
+    background-color: var(--green-color);
+
+    svg path {
+      stroke: #fff;
+    }
+  }
+
+  svg {
+    margin: -2px 8px 0 0;
+
+    path {
+      transition: all 0.1s ease-out;
+      stroke: var(--green-color);
+    }
+  }
+}
+
+.removeBtn {
+  padding: 8px 20px;
+  color: var(--red-color);
+  font-size: 0.875em;
+  text-transform: uppercase;
+  border: var(--red-color) solid 1px;
+  border-radius: 20px;
+  transition: all 0.1s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    color: #fff;
+    background-color: var(--red-color);
+
+    svg path {
+      stroke: #fff;
+    }
+  }
+
+  svg {
+    margin: -2px 0 0 8px;
+
+    path {
+      transition: all 0.1s ease-out;
+      stroke: var(--red-color);
+    }
+  }
+}
+
+.playerNumber {
+  position: absolute;
+  z-index: 5;
+  top: 16px;
+  right: 0;
+  left: 5px;
+  margin: 0 auto;
+  font-family: 'ProximaNova-Bold', Helvetica, Arial, sans-serif;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  text-shadow: 0 0 1px #000;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  font-size: 2em;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.description {
+  display: flex;
+  flex: none;
+  position: relative;
+  margin-bottom: 10px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.avatar {
+  flex: none;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+  border-radius: 50%;
+
+  img {
+    height: 90%;
+  }
+}
+
+.name {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-family: var(--font-family-bold);
+  font-size: 0.875em;
+}
+
+.position {
+  margin: 0 0 5px;
+  color: #a6a6a6;
+  font-size: 0.625em;
+  text-transform: uppercase;
+}
+
+.club {
+  display: flex;
+
+  .clubLogo {
+    height: 32px;
+  }
+
+  .playerInfo {
+    margin-left: 10px;
+  }
+}
+
+.clubName {
+  font-size: 0.875em;
+}
+
+.stats {
+  flex-shrink: 0;
+  position: relative;
+  overflow-y: auto;
+}
+
+.overallSection {
+  margin: 0 20px 20px;
+  display: flex;
+  align-items: center;
+
+  .label {
+    margin-right: 15px;
+    color: #a6a6a6;
+    font-size: 0.875em;
+    text-transform: uppercase;
+  }
+
+  .value {
+    font-size: 1.125em;
+    white-space: nowrap;
+  }
+}
+
+.statsSection {
+  display: flex;
+  position: relative;
+  margin: 0 0 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.statsItem {
+  position: relative;
+  width: 33%;
+  height: auto;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.statsItemKey {
+  margin: 0 0 8px;
+  color: #a6a6a6;
+  font-size: 0.625em;
+  text-transform: uppercase;
+}
+
+.statsItemValue {
+  display: flex;
+  align-items: center;
+  font-size: 1.125em;
+}
+
+.playerStats {
+  position: relative;
+  height: 40px;
+  margin: 0 10px;
+}
+
+.cardShape {
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 17px;
+  margin: -3px 3px 0 0;
+  border-radius: 2px;
+}
+
+.redCard {
+  margin: 0 7px 0 0;
+
+  .cardShape {
+    background: #f00;
+  }
+}
+
+.yellowCard {
+  margin: 0 7px 0 0;
+
+  .cardShape {
+    background: #f7ca18;
+  }
+}
+
+.statsTable {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  position: relative;
+  width: 100%;
+}
+
+.statsTableHeader {
+  display: flex;
+  flex-shrink: 0;
+  align-items: stretch;
+  align-content: stretch;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: #a6a6a6;
+  font-size: 0.625em;
+  background-color: #f2f2f2;
+  box-shadow: 0 1px 0 0 #e9e9e9, 0 1px 0 0 #e9e9e9 inset;
+}
+
+.statsTableItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  position: relative;
+  height: 100%;
+  width: 18%;
+  text-transform: uppercase;
+}
+
+.statsTableTour {
+  composes: statsTableItem;
+  width: 10%;
+}
+
+.statsTablePoints {
+  composes: statsTableItem;
+}
+
+.statsTableGoals {
+  composes: statsTableItem;
+}
+
+.statsTableCards {
+  composes: statsTableItem;
+  color: #a6a6a6;
+
+  .yellowCard {
+    margin: 0 5px;
+  }
+
+  .redCard {
+    margin: 0 5px;
+  }
+}
+
+.statsTableInfo {
+  composes: statsTableItem;
+}
+
+.statsTableTime {
+  composes: statsTableItem;
+}
+
+.statsTableContent {
+  position: relative;
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transform: translate3d(0, 0, 0);
+}
+
+.statsTableRow {
+  display: flex;
+  flex-shrink: 0;
+  align-items: stretch;
+  align-content: stretch;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  color: #191919;
+  font-size: 0.875em;
+  border-bottom: #e9e9e9 solid 1px;
+}
+
+@media (--small-viewport) {
+  .root {
+    display: none;
+    position: fixed;
+    /*height: calc(100% - 120px);*/
+    height: auto;
+    bottom: 60px;
+    left: 2%;
+    top: 110px;
+    width: 96%;
+    border-radius: 4px;
+    transition: none;
+    transform: translate3d(0, 0, 0);
+    z-index: 15;
+  }
+
+  .isActive {
+    display: block;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2), -1px 0 0 0 #eee inset;
+  }
+
+  .header {
+    margin-bottom: 15px;
+  }
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+    margin: 0 15px 0 0;
+  }
+
+  .playerNumber {
+    top: 12px;
+    font-size: 12px;
+  }
+
+  .name {
+    margin: 0 0 5px;
+    font-size: 0.75em;
+  }
+
+  .club {
+    .clubLogo {
+      height: 27px;
+    }
+
+    .playerInfo {
+      margin: 0 0 0 5px;
+    }
+  }
+
+  .clubName {
+    font-size: 0.75em;
+  }
+
+  .position {
+    margin: 0;
+  }
+
+  .description {
+    margin: 0;
+  }
+
+  .overallSection {
+    margin: 0 20px 0;
+
+    .label {
+      font-size: 0.625em;
+    }
+
+    .value {
+      font-size: 1em;
+    }
+  }
+
+  .statsSection {
+    margin: 0 0 5px;
+  }
+
+  .statsItemValue {
+    font-size: 0.875em;
+  }
+
+  .statsItemKey {
+    margin: 0 0 5px;
+    font-size: 0.5em;
+  }
+
+  .statsTable {
+    display: none;
+  }
+
+  .statsTableHeader {
+    height: 35px;
+  }
+
+  .statsTableRow {
+    height: 35px;
+  }
+}

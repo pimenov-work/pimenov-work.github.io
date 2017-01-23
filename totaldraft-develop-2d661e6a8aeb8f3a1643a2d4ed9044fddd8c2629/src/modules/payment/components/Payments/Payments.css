@@ -1,0 +1,77 @@
+@import '../../../../components/styles/variables.css';
+
+.root {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.header {
+  position: relative;
+  margin: 105px 0 80px;
+  text-align: center;
+}
+
+.menu {
+  position: relative;
+  user-select: none;
+}
+
+.menuItem {
+  margin: 0 33px;
+  color: #a6a6a6;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: #111;
+  }
+}
+
+.menuItemIsActive {
+  color: #111;
+  font-family: var(--font-family-bold);
+}
+
+.content {
+  position: relative;
+  width: 700px;
+  margin: 0 auto;
+}
+
+@media (--small-viewport) {
+  .root {
+    position: relative;
+    bottom: auto;
+    min-height: calc(100vh - 60px);
+  }
+
+  .header {
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .menuItem {
+    margin: 0 10px 10px;
+    white-space: nowrap;
+  }
+
+  .content {
+    width: 100%;
+  }
+}

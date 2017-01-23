@@ -1,0 +1,48 @@
+@import '../../../../components/styles/variables.css';
+
+.root {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.item {
+  position: relative;
+  margin-left: 25px;
+}
+
+.itemLabel {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  color: #a6a6a6;
+}
+
+.itemText {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin-top: -2px;
+  font-size: 0.875em;
+  text-transform: uppercase;
+  color: var(--blue-color);
+}
+
+@media (--small-viewport) {
+  .root {
+    justify-content: center;
+    margin: 0 0 10px;
+  }
+
+  .item {
+    margin: 0 10px;
+  }
+
+  .itemLabel {
+    display: block;
+    margin: 0 0 5px;
+    font-size: 0.625em;
+  }
+}

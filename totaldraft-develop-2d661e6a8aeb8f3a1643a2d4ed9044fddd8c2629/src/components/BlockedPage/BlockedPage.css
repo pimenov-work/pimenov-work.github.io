@@ -1,0 +1,52 @@
+@import '../styles/variables.css';
+
+.content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 120px);
+  background: #111;
+  overflow: hidden;
+
+  .backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/images/football-field.jpg');
+    background-size: cover;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(20, 20, 20, 0.9);
+    }
+  }
+
+  .svgImage {
+    position: relative;
+    height: 50%;
+    width: 50%;
+  }
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  font: var(--font-family-bold);
+  font-size: 0.875em;
+  background-color: #191919;
+  color: #717171;
+}

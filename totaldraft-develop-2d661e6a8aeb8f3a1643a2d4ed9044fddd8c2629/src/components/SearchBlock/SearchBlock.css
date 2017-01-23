@@ -1,0 +1,91 @@
+@import '../styles/variables.css';
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 25px 0 40px;
+  box-sizing: border-box;
+  background-color: #f3f3f3;
+  transition: all 0.1 ease-out;
+  user-select: none;
+}
+
+.isActive {
+  z-index: 2;
+
+  .holder {
+    opacity: 1;
+    z-index: 3;
+  }
+}
+
+.isWhite {
+  background-color: #fff;
+
+  .holder {
+    background-color: #fff;
+  }
+
+  .input {
+    background-color: #fff;
+  }
+}
+
+.isBlue {
+  background-color: #f0f9ff;
+
+  .holder {
+    background-color: #f0f9ff;
+  }
+
+  .input {
+    background-color: #f0f9ff;
+  }
+}
+
+.holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #f3f3f3;
+  opacity: 0;
+  z-index: -1;
+}
+
+.input {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: var(--font-family-base);
+  border: none;
+  background-color: #f3f3f3;
+}
+
+.closeBtn {
+  position: relative;
+  color: #222;
+  font-size: 36px;
+  font-family: var(--font-family-base);
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.showBtn {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  margin-top: -10px;
+  width: 20px;
+  cursor: pointer;
+  z-index: 1;
+}

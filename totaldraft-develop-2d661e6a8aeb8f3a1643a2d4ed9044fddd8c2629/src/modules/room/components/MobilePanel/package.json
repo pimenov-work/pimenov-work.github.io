@@ -1,0 +1,6 @@
+{
+  "name": "MobilePanel",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./MobilePanel.js"
+}

@@ -1,0 +1,30 @@
+@import '../../../../components/styles/variables.css';
+
+.root {
+  display: flex;
+  align-items: stretch;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+@media (--small-viewport) {
+  .root {
+    display: block;
+    position: relative;
+    height: 100%;
+
+    /*display: block;
+    position: relative;
+    bottom: auto;
+    height: calc(100vh - var(--header-mobile-height));
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;*/
+  }
+}

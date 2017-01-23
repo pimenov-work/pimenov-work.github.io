@@ -1,0 +1,31 @@
+@import '../../../../components/styles/variables.css';
+
+.root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  transition: all 0.25s ease-out;
+  z-index: 2;
+}
+
+.content {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+
+@media (--small-viewport) {
+  .root {
+    height: 100%;
+  }
+
+  .content {
+    padding: 0;
+  }
+}

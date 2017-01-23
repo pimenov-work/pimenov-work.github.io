@@ -1,0 +1,6 @@
+{
+  "name": "RoomWinner",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./RoomWinner.js"
+}

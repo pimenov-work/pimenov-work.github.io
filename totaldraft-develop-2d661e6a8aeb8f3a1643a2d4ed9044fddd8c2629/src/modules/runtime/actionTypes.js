@@ -1,0 +1,1 @@
+export const SET_RUNTIME_VARIABLE = 'runtime/SET_RUNTIME_VARIABLE';

@@ -1,0 +1,6 @@
+{
+  "name": "RoomUsers",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./RoomUsers.js"
+}

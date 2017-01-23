@@ -1,0 +1,6 @@
+{
+  "name": "TemplatesPanel",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./TemplatesPanel.js"
+}

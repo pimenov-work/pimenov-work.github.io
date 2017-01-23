@@ -1,0 +1,6 @@
+{
+  "name": "FutureGames",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./FutureGames.js"
+}

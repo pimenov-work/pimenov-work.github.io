@@ -1,0 +1,168 @@
+@import '../styles/variables.css';
+
+.root {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #111;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  z-index: -1;
+}
+
+.isActive {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 100;
+}
+
+.table {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 0 #e1e1e1 inset;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tableRow {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  min-height: 50px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.875em;
+  line-height: 45px;
+}
+
+.tableRowIsDisabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.tableGroup {
+  margin-bottom: 20px;
+}
+
+.tableGroupTitle {
+  margin-bottom: 5px;
+  font-family: var(--font-family-bold);
+  text-transform: uppercase;
+  font-size: 0.875em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.tableHeader {
+  composes: tableRow;
+  min-height: 40px;
+  color: #a6a6a6;
+  font-size: 0.625em;
+  text-transform: uppercase;
+  line-height: 30px;
+  box-shadow: 0 1px 0 0 #e9e9e9;
+}
+
+.winnerIcon {
+  position: absolute;
+  left: -5px;
+  top: 13px;
+
+  * {
+    stroke: var(--orange-color);
+  }
+}
+
+.winnerIcon2 {
+  margin: 0 10px;
+
+  * {
+    stroke: var(--orange-color);
+  }
+}
+
+.tableColumnPosition {
+  width: 12%;
+  color: #c6c6c6;
+  text-align: center;
+}
+
+.tableColumnClub {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  cursor: pointer;
+  user-select: none;
+
+  img {
+    flex: none;
+    margin-right: 15px;
+    height: 30px;
+    opacity: 0.5;
+    filter: grayscale(1);
+  }
+
+  &:hover {
+    color: #000;
+
+    img {
+      opacity: 1;
+      filter: grayscale(0);
+    }
+  }
+
+  &.unclickable {
+    color: rgba(0, 0, 0, 0.6);
+    cursor: default;
+
+    img {
+      opacity: 1;
+      filter: grayscale(0);
+    }
+  }
+}
+
+.tableColumnClubTitle {
+  line-height: 1em;
+}
+
+.tableColumnClubIsSelected {
+  color: #000;
+  font-family: var(--font-family-bold);
+
+  img {
+    opacity: 1;
+    filter: grayscale(0);
+  }
+}
+
+.tableColumnPoints {
+  width: 15%;
+  text-align: center;
+}
+
+.tableColumnGames {
+  width: 15%;
+  color: #c6c6c6;
+  text-align: center;
+}
+
+.tableColumnStats {
+  width: 18%;
+  color: #c6c6c6;
+  text-align: center;
+}
+
+@media (--small-viewport) {
+  .table {
+    box-shadow: none;
+  }
+
+  .tableRow {
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,271 @@
+@import '../../../../components/styles/variables.css';
+
+.playerItem {
+  position: relative;
+  height: 50px;
+  font-size: 0.875em;
+  line-height: 50px;
+  color: #616161;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 0;
+  padding-right: 20px;
+  transition: all 0.1s ease-out;
+  user-select: none;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f3f3f3;
+
+    .playerControls {
+      opacity: 1;
+    }
+
+    .playerNameLabel {
+      color: var(--blue-color);
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 35px;
+    right: 0;
+    bottom: 0;
+    border-bottom: solid 1px #f0f0f0;
+  }
+}
+
+.playerUniformImg {
+  flex: none;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.playerDisabled {
+  color: #a0a0a0;
+  pointer-events: none;
+
+  .playerUniformImg {
+    filter: grayscale(100%);
+    opacity: 0.5;
+  }
+
+  .playerPosition {
+    color: #a0a0a0;
+    font-size: 0.75em;
+  }
+
+  .playerNameLabel {
+    color: #a0a0a0;
+  }
+
+  .playerClub {
+    color: #a0a0a0;
+    text-decoration: line-through;
+  }
+
+  .playerCounts { color: #a0a0a0; }
+
+  .playerPrice { color: #a0a0a0; }
+
+  .playerControls {
+    .addBtn {
+      display: none;
+    }
+  }
+}
+
+.playerPosDisabled {
+  color: #a0a0a0;
+  pointer-events: none;
+
+  .playerUniformImg {
+    filter: grayscale(100%);
+    opacity: 0.5;
+  }
+
+  .playerPosition {
+    color: #a0a0a0;
+    text-decoration: line-through;
+    font-size: 0.75em;
+  }
+
+  .playerNameLabel { color: #a0a0a0; }
+  .playerClub { color: #a0a0a0; }
+  .playerCounts { color: #a0a0a0; }
+  .playerPrice { color: #a0a0a0; }
+
+  .playerControls {
+    .addBtn {
+      display: none;
+    }
+  }
+}
+
+.playerDisallowed {
+  .playerControls {
+    .addBtn {
+      display: none;
+    }
+  }
+}
+
+.playerPosition {
+  composes: playerItem;
+  color: #888;
+  width: 7%;
+  font-size: 0.75em;
+  text-align: center;
+}
+
+.playerName {
+  composes: playerItem;
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
+  box-sizing: border-box;
+  width: 35%;
+}
+
+.playerNameLabel {
+  overflow: hidden;
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: all 0.1s ease-out;
+}
+
+.playerAchievements {
+  svg {
+    margin: -2px 5px 0;
+  }
+}
+
+.playerClub {
+  composes: playerItem;
+  width: 21%;
+  padding-right: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.playerCounts {
+  composes: playerItem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12%;
+  text-align: center;
+}
+
+.playerPrice {
+  composes: playerItem;
+  width: 15%;
+  color: var(--blue-color);
+  text-align: right;
+}
+
+.playerControls {
+  composes: playerItem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  width: 10%;
+  padding-left: 5px;
+  text-align: center;
+}
+
+.playerStats {
+  position: relative;
+  height: 40px;
+  margin-right: 12px;
+
+  .point {
+    position: absolute;
+    bottom: 5%;
+    width: 4px;
+    background-color: rgba(0, 105, 234, 0.25);
+  }
+}
+
+.addBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  color: #60db65;
+  font-size: 1.375em;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--green-color);
+  transition: all 0.1s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--green-color);
+
+    svg * {
+      stroke: #fff;
+    }
+  }
+
+  svg * {
+    stroke: var(--green-color);
+  }
+}
+
+.statsGraph {
+  display: block;
+  position: relative;
+  margin-right: 7px;
+  height: 50px;
+}
+
+@media (--small-viewport) {
+  .playerItem {
+    height: 45px;
+    line-height: 45px;
+    font-size: 0.75em;
+  }
+
+  .playerPosition {
+    font-size: 0.625em;
+  }
+
+  .statsGraph {
+    display: none;
+  }
+
+  .playerUniformImg {
+    height: 18px;
+    margin: 0 4px;
+  }
+
+  .playerPrice {
+    width: 13%;
+  }
+
+  .playerControls {
+    width: 12%;
+  }
+
+  .playerName {
+    padding-right: 4px;
+  }
+
+  .playerClub {
+    padding-right: 4px;
+  }
+}

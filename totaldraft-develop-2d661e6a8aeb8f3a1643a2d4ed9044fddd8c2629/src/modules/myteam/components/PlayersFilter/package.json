@@ -1,0 +1,6 @@
+{
+  "name": "PlayersFilter",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./PlayersFilter.js"
+}

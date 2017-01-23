@@ -1,0 +1,3730 @@
+[
+  {
+    "id": "navigation.lobby",
+    "description": "Лобби",
+    "defaultMessage": "Лобби",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js",
+      "src/components/Navigation/messages.js"
+    ]
+  },
+  {
+    "id": "navigation.mygames",
+    "description": "Мои игры",
+    "defaultMessage": "Мои игры",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js",
+      "src/components/Navigation/messages.js"
+    ]
+  },
+  {
+    "id": "brand.title",
+    "description": "Тотал Драфт",
+    "defaultMessage": "{title}",
+    "message": "",
+    "files": [
+      "src/components/Navigation/messages.js"
+    ]
+  },
+  {
+    "id": "home.title",
+    "description": "КОГДА ЕСТЬ ФЭНТЭЗИ ФУТБОЛ,\n ПРОСТО СМОТРЕТЬ УЖЕ НЕДОСТАТОЧНО",
+    "defaultMessage": "КОГДА ЕСТЬ ФЭНТЭЗИ ФУТБОЛ,\n ПРОСТО СМОТРЕТЬ УЖЕ НЕДОСТАТОЧНО",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "home.featureOne",
+    "description": "Собери виртуальную команду из любимых футболистов и вступи в турнир",
+    "defaultMessage": "Собери виртуальную команду из любимых футболистов и вступи в турнир",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "home.featureThree",
+    "description": "Побеждай и зарабатывай реальные деньги",
+    "defaultMessage": "Побеждай и зарабатывай реальные деньги",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "home.featureTwo",
+    "description": "Следи как в реальной игре футболисты твоей команды приносят очки за успешные передачи и голы",
+    "defaultMessage": "Следи как в реальной игре футболисты твоей команды приносят очки за успешные передачи и голы",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "home.lobbyLink",
+    "description": "Лобби",
+    "defaultMessage": "Лобби",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "sportswitcher.football",
+    "description": "Футбол",
+    "defaultMessage": "Футбол",
+    "message": "",
+    "files": [
+      "src/modules/lobby/components/SportSwitcher/messages.js"
+    ]
+  },
+  {
+    "id": "lobby.columnFee",
+    "description": "Взнос",
+    "defaultMessage": "Взнос",
+    "message": "",
+    "files": [
+      "src/modules/lobby/components/Rooms/RoomList.js"
+    ]
+  },
+  {
+    "id": "lobby.columnParticipants",
+    "description": "Участники",
+    "defaultMessage": "Участники",
+    "message": "",
+    "files": [
+      "src/modules/lobby/components/Rooms/RoomList.js"
+    ]
+  },
+  {
+    "id": "lobby.columnPrizes",
+    "description": "Призы",
+    "defaultMessage": "Призы",
+    "message": "",
+    "files": [
+      "src/modules/lobby/components/Rooms/RoomList.js"
+    ]
+  },
+  {
+    "id": "lobby.columnStart",
+    "description": "Начало",
+    "defaultMessage": "Начало",
+    "message": "",
+    "files": [
+      "src/modules/lobby/components/Rooms/RoomList.js"
+    ]
+  },
+  {
+    "id": "lobby.columnTitle",
+    "description": "Название",
+    "defaultMessage": "Название",
+    "message": "",
+    "files": [
+      "src/modules/lobby/components/Rooms/RoomList.js"
+    ]
+  },
+  {
+    "id": "lobby.columnWinners",
+    "description": "Побеждают",
+    "defaultMessage": "Побеждают",
+    "message": "",
+    "files": [
+      "src/modules/lobby/components/Rooms/RoomList.js"
+    ]
+  },
+  {
+    "id": "lobby.gruarantedPrize",
+    "description": "гарантированый приз",
+    "defaultMessage": "гарантированый приз",
+    "message": "",
+    "files": [
+      "src/modules/lobby/components/Rooms/RoomList.js"
+    ]
+  },
+  {
+    "id": "lobby.minimalGruarantedPrize",
+    "description": "минимальный гарантированый приз",
+    "defaultMessage": "минимальный гарантированый приз",
+    "message": "",
+    "files": [
+      "src/modules/lobby/components/Rooms/RoomList.js"
+    ]
+  },
+  {
+    "id": "lobby.rooms",
+    "description": "Открытые комнаты",
+    "defaultMessage": "Открытые комнаты",
+    "message": "",
+    "files": [
+      "src/modules/lobby/components/Rooms/RoomList.js"
+    ]
+  },
+  {
+    "id": "lobby.specialRooms",
+    "description": "Особые комнаты",
+    "defaultMessage": "Особые комнаты",
+    "message": "",
+    "files": [
+      "src/modules/lobby/components/SpecialRooms/messages.js"
+    ]
+  },
+  {
+    "id": "lobby.specialRoomIsExpensive",
+    "description": "Недостаточно средств для игры",
+    "defaultMessage": "Недостаточно средств для игры",
+    "message": "",
+    "files": [
+      "src/modules/lobby/components/SpecialRooms/messages.js"
+    ]
+  },
+  {
+    "id": "lobby.specialRoomIsFull",
+    "description": "Комната заполнена",
+    "defaultMessage": "Комната заполнена",
+    "message": "",
+    "files": [
+      "src/modules/lobby/components/SpecialRooms/messages.js"
+    ]
+  },
+  {
+    "id": "lobby.freeRoom",
+    "description": "Без взноса",
+    "defaultMessage": "Без взноса",
+    "message": "",
+    "files": [
+      "src/modules/lobby/components/Rooms/Room.js"
+    ]
+  },
+  {
+    "id": "lobby.roomEnterLabel",
+    "description": "Войти",
+    "defaultMessage": "Войти",
+    "message": "",
+    "files": [
+      "src/modules/lobby/components/Rooms/Room.js"
+    ]
+  },
+  {
+    "id": "lobby.roomIsExpensive",
+    "description": "Недостаточно средств для игры",
+    "defaultMessage": "Недостаточно средств для игры",
+    "message": "",
+    "files": [
+      "src/modules/lobby/components/Rooms/Room.js"
+    ]
+  },
+  {
+    "id": "lobby.roomIsFull",
+    "description": "Комната заполнена",
+    "defaultMessage": "Комната заполнена",
+    "message": "",
+    "files": [
+      "src/modules/lobby/components/Rooms/Room.js"
+    ]
+  },
+  {
+    "id": "lobby.roomPlayLabel",
+    "description": "Играть",
+    "defaultMessage": "Играть",
+    "message": "",
+    "files": [
+      "src/modules/lobby/components/Rooms/Room.js"
+    ]
+  },
+  {
+    "id": "roomInfo.participantsTitle",
+    "description": "Участники",
+    "defaultMessage": "Участники",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.prizesTitle",
+    "description": "Призы",
+    "defaultMessage": "Призы",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.rulesTitle",
+    "description": "Правила",
+    "defaultMessage": "Правила",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.scoringTitle",
+    "description": "Скоринг",
+    "defaultMessage": "Скоринг",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.rulesFee",
+    "description": "Взнос",
+    "defaultMessage": "Взнос",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.rulesPrize",
+    "description": "Призовой фонд",
+    "defaultMessage": "Призовой фонд",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.rulesStart",
+    "description": "Начало игры",
+    "defaultMessage": "Начало игры",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.rulesFeeFree",
+    "description": "Участие бесплатно",
+    "defaultMessage": "Участие бесплатно",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.prizesPanelSubTitle",
+    "description": "Распределение призов зависит от позиции в рейтинге",
+    "defaultMessage": "Распределение призов зависит от позиции в рейтинге",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.prizesPanelTitle",
+    "description": "Распределение призов в комнате",
+    "defaultMessage": "Распределение призов в комнате",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.prizesPlaceLabel",
+    "description": "место",
+    "defaultMessage": "место",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.scoringPanelSubTitle",
+    "description": "Зачисление очков происходит после каждого матча",
+    "defaultMessage": "Зачисление очков происходит после каждого матча",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.scoringPanelText",
+    "description": "Очки, набранные запасными игроками, суммируются с очками игроков основного состава.",
+    "defaultMessage": "Очки, набранные запасными игроками, суммируются с очками игроков основного состава.",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.scoringPanelTitle",
+    "description": "Правила начисления очков",
+    "defaultMessage": "Правила начисления очков",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.buttonLabel",
+    "description": "В комнату",
+    "defaultMessage": "В комнату",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.participantsEmpty",
+    "description": "В комнате пока нет участников",
+    "defaultMessage": "В комнате пока нет участников",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.participantsName",
+    "description": "Пользователь",
+    "defaultMessage": "Пользователь",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.participantsPlace",
+    "description": "Место",
+    "defaultMessage": "Место",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.participantsPoints",
+    "description": "Очки",
+    "defaultMessage": "Очки",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.participantsTeam",
+    "description": "Команда",
+    "defaultMessage": "Команда",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.ruleFiveFloat",
+    "defaultMessage": "Призовой фонд собирается участниками. На данный момент составляет {prize}",
+    "message": "",
+    "description": "Призовой фонд собирается участниками. На данный момент составляет {prize}",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.ruleFiveGuarantee",
+    "defaultMessage": "Призовой фонд {prize} гарантированный",
+    "message": "",
+    "description": "Призовой фонд {prize} гарантированный",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.ruleFour",
+    "defaultMessage": "В комнате победят",
+    "message": "",
+    "description": "В комнате победят",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.ruleOne",
+    "description": "Соберите команду из 15 игроков",
+    "defaultMessage": "Соберите команду из 15 игроков",
+    "message": "",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.ruleSeven",
+    "defaultMessage": "Максимальное количество ставок от одного пользователя - {num}",
+    "message": "",
+    "description": "Максимальное количество ставок от одного пользователя - {num}",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.ruleSixFee",
+    "defaultMessage": "Стоимость ставки в комнате составляет {fee}",
+    "message": "",
+    "description": "Стоимость ставки в комнате составляет {fee}",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.ruleSixFree",
+    "defaultMessage": "Участие в комнате бесплатное",
+    "message": "",
+    "description": "Участие в комнате бесплатное",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.ruleThree",
+    "defaultMessage": "Бюджет команды не должен превышать {budget}",
+    "message": "",
+    "description": "Бюджет команды не должен превышать {budget}",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "roomInfo.ruleTwo",
+    "defaultMessage": "В вашей команде не должно быть более {num} игроков из одного клуба",
+    "message": "",
+    "description": "В вашей команде не должно быть более {num} игроков из одного клуба",
+    "files": [
+      "src/components/RoomInfo/messages.js"
+    ]
+  },
+  {
+    "id": "scoringTable.userActions",
+    "description": "Личные действия игрока",
+    "defaultMessage": "Личные действия игрока",
+    "message": "",
+    "files": [
+      "src/components/ScoringTable/messages.js"
+    ]
+  },
+  {
+    "id": "scoringTable.allowedGoal",
+    "description": "Пропущенный гол",
+    "defaultMessage": "Пропущенный гол",
+    "message": "",
+    "files": [
+      "src/components/ScoringTable/messages.js"
+    ]
+  },
+  {
+    "id": "scoringTable.assist",
+    "description": "Голевая передача",
+    "defaultMessage": "Голевая передача",
+    "message": "",
+    "files": [
+      "src/components/ScoringTable/messages.js"
+    ]
+  },
+  {
+    "id": "scoringTable.ballpossession",
+    "description": "Владение мячом >= 60%",
+    "defaultMessage": "Владение мячом >= 60%",
+    "message": "",
+    "files": [
+      "src/components/ScoringTable/messages.js"
+    ]
+  },
+  {
+    "id": "scoringTable.cleanSheet",
+    "description": "Сухой матч",
+    "defaultMessage": "Сухой матч",
+    "message": "",
+    "files": [
+      "src/components/ScoringTable/messages.js"
+    ]
+  },
+  {
+    "id": "scoringTable.every3saves",
+    "description": "Каждые 3 сейва",
+    "defaultMessage": "Каждые 3 сейва",
+    "message": "",
+    "files": [
+      "src/components/ScoringTable/messages.js"
+    ]
+  },
+  {
+    "id": "scoringTable.minLess60",
+    "description": "Минут на поле < 60",
+    "defaultMessage": "Минут на поле < 60",
+    "message": "",
+    "files": [
+      "src/components/ScoringTable/messages.js"
+    ]
+  },
+  {
+    "id": "scoringTable.minMore60",
+    "description": "Минут на поле >= 60",
+    "defaultMessage": "Минут на поле >= 60",
+    "message": "",
+    "files": [
+      "src/components/ScoringTable/messages.js"
+    ]
+  },
+  {
+    "id": "scoringTable.ownGoal",
+    "description": "Автогол",
+    "defaultMessage": "Автогол",
+    "message": "",
+    "files": [
+      "src/components/ScoringTable/messages.js"
+    ]
+  },
+  {
+    "id": "scoringTable.redCard",
+    "description": "Красная карточка",
+    "defaultMessage": "Красная карточка",
+    "message": "",
+    "files": [
+      "src/components/ScoringTable/messages.js"
+    ]
+  },
+  {
+    "id": "scoringTable.scored2goals",
+    "description": "Каждые 2 забитых гола",
+    "defaultMessage": "Каждые 2 забитых гола",
+    "message": "",
+    "files": [
+      "src/components/ScoringTable/messages.js"
+    ]
+  },
+  {
+    "id": "scoringTable.scoredGoal",
+    "description": "Забитый гол",
+    "defaultMessage": "Забитый гол",
+    "message": "",
+    "files": [
+      "src/components/ScoringTable/messages.js"
+    ]
+  },
+  {
+    "id": "scoringTable.target5shots",
+    "description": "Каждые 5 ударов в створ",
+    "defaultMessage": "Каждые 5 ударов в створ",
+    "message": "",
+    "files": [
+      "src/components/ScoringTable/messages.js"
+    ]
+  },
+  {
+    "id": "scoringTable.teamRating",
+    "description": "Командные показатели (только при игре >= 60 мин)",
+    "defaultMessage": "Командные показатели (только при игре >= 60 мин)",
+    "message": "",
+    "files": [
+      "src/components/ScoringTable/messages.js"
+    ]
+  },
+  {
+    "id": "scoringTable.yellowCard",
+    "description": "Желтая карточка",
+    "defaultMessage": "Желтая карточка",
+    "message": "",
+    "files": [
+      "src/components/ScoringTable/messages.js"
+    ]
+  },
+  {
+    "id": "roomTeams.title",
+    "description": "Ваши ставки",
+    "defaultMessage": "Ваши ставки",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomTeams/messages.js"
+    ]
+  },
+  {
+    "id": "roomTeams.betsTableBet",
+    "description": "Ставка",
+    "defaultMessage": "Ставка",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomTeams/messages.js"
+    ]
+  },
+  {
+    "id": "roomTeams.betsTablePlace",
+    "description": "Место",
+    "defaultMessage": "Место",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomTeams/messages.js"
+    ]
+  },
+  {
+    "id": "roomTeams.betsTablePoints",
+    "description": "Очки",
+    "defaultMessage": "Очки",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomTeams/messages.js"
+    ]
+  },
+  {
+    "id": "roomTeams.betsTableTeams",
+    "description": "Команда",
+    "defaultMessage": "Команда",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomTeams/messages.js"
+    ]
+  },
+  {
+    "id": "roomTeams.addTeamLabel",
+    "description": "Добавить команду",
+    "defaultMessage": "Добавить команду",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomTeams/messages.js"
+    ]
+  },
+  {
+    "id": "teamDetails.placeLabel",
+    "description": "Место",
+    "defaultMessage": "Место",
+    "message": "",
+    "files": [
+      "src/modules/room/components/TeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "teamDetails.pointsLabel",
+    "description": "Очки",
+    "defaultMessage": "Очки",
+    "message": "",
+    "files": [
+      "src/modules/room/components/TeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "teamDetails.budgetLabel",
+    "description": "Бюджет",
+    "defaultMessage": "Бюджет",
+    "message": "",
+    "files": [
+      "src/modules/room/components/TeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "teamDetails.mainTeamLabel",
+    "description": "Основной состав",
+    "defaultMessage": "Основной состав",
+    "message": "",
+    "files": [
+      "src/modules/room/components/TeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "teamDetails.reserveTeamLabel",
+    "description": "Запас",
+    "defaultMessage": "Запас",
+    "message": "",
+    "files": [
+      "src/modules/room/components/TeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "teamDetails.tableHeaderClub",
+    "description": "Клуб",
+    "defaultMessage": "Клуб",
+    "message": "",
+    "files": [
+      "src/modules/room/components/TeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "teamDetails.tableHeaderPlayer",
+    "description": "Игрок",
+    "defaultMessage": "Игрок",
+    "message": "",
+    "files": [
+      "src/modules/room/components/TeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "teamDetails.tableHeaderPoints",
+    "description": "Очки",
+    "defaultMessage": "Очки",
+    "message": "",
+    "files": [
+      "src/modules/room/components/TeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "teamDetails.tableHeaderPos",
+    "description": "Поз",
+    "defaultMessage": "Поз",
+    "message": "",
+    "files": [
+      "src/modules/room/components/TeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "teamDetails.playerDisabled",
+    "description": "Игрок отклонён",
+    "defaultMessage": "Игрок отклонён",
+    "message": "",
+    "files": [
+      "src/modules/room/components/TeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "teamDetails.playerRevoked",
+    "description": "Игрок отозван",
+    "defaultMessage": "Игрок отозван",
+    "message": "",
+    "files": [
+      "src/modules/room/components/TeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "userTeamDetails.budgetLabel",
+    "description": "Бюджет",
+    "defaultMessage": "Бюджет",
+    "message": "",
+    "files": [
+      "src/modules/room/components/UserTeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "userTeamDetails.mainTeamLabel",
+    "description": "Основной состав",
+    "defaultMessage": "Основной состав",
+    "message": "",
+    "files": [
+      "src/modules/room/components/UserTeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "userTeamDetails.placeLabel",
+    "description": "Место",
+    "defaultMessage": "Место",
+    "message": "",
+    "files": [
+      "src/modules/room/components/UserTeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "userTeamDetails.pointsLabel",
+    "description": "Очки",
+    "defaultMessage": "Очки",
+    "message": "",
+    "files": [
+      "src/modules/room/components/UserTeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "userTeamDetails.reserveTeamLabel",
+    "description": "Запас",
+    "defaultMessage": "Запас",
+    "message": "",
+    "files": [
+      "src/modules/room/components/UserTeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "userTeamDetails.tableHeaderClub",
+    "description": "Клуб",
+    "defaultMessage": "Клуб",
+    "message": "",
+    "files": [
+      "src/modules/room/components/UserTeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "userTeamDetails.tableHeaderPlayer",
+    "description": "Игрок",
+    "defaultMessage": "Игрок",
+    "message": "",
+    "files": [
+      "src/modules/room/components/UserTeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "userTeamDetails.tableHeaderPoints",
+    "description": "Очки",
+    "defaultMessage": "Очки",
+    "message": "",
+    "files": [
+      "src/modules/room/components/UserTeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "userTeamDetails.tableHeaderPos",
+    "description": "Поз",
+    "defaultMessage": "Поз",
+    "message": "",
+    "files": [
+      "src/modules/room/components/UserTeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "userTeamDetails.playerRevoked",
+    "description": "Игрок отозван",
+    "defaultMessage": "Игрок отозван",
+    "message": "",
+    "files": [
+      "src/modules/room/components/UserTeamDetails/messages.js"
+    ]
+  },
+  {
+    "id": "templatesPanel.addTeamLabel",
+    "description": "Добавить команду",
+    "defaultMessage": "Добавить команду",
+    "message": "",
+    "files": [
+      "src/modules/room/components/TemplatesPanel/messages.js"
+    ]
+  },
+  {
+    "id": "templatesPanel.collectTeamLabel",
+    "description": "Собрать команду",
+    "defaultMessage": "Собрать команду",
+    "message": "",
+    "files": [
+      "src/modules/room/components/TemplatesPanel/messages.js"
+    ]
+  },
+  {
+    "id": "templatesPanel.useTeamLabel",
+    "description": "Использовать шаблон",
+    "defaultMessage": "Использовать шаблон",
+    "message": "",
+    "files": [
+      "src/modules/room/components/TemplatesPanel/messages.js"
+    ]
+  },
+  {
+    "id": "templatesPanel.errorInvalidBudget",
+    "description": "Превышен допустимый бюджет комнаты {budget}",
+    "defaultMessage": "Превышен допустимый бюджет комнаты {budget}",
+    "message": "",
+    "files": [
+      "src/modules/room/components/TemplatesPanel/messages.js"
+    ]
+  },
+  {
+    "id": "templatesPanel.errorNumPlayersFromOneTeam",
+    "description": "Превышено максимальное количество игроков из одной команды",
+    "defaultMessage": "Превышено максимальное количество игроков из одной команды",
+    "message": "",
+    "files": [
+      "src/modules/room/components/TemplatesPanel/messages.js"
+    ]
+  },
+  {
+    "id": "templatesPanel.errorPlayersRevoked",
+    "description": "Некоторые игроки этой команды отозваны",
+    "defaultMessage": "Некоторые игроки этой команды отозваны",
+    "message": "",
+    "files": [
+      "src/modules/room/components/TemplatesPanel/messages.js"
+    ]
+  },
+  {
+    "id": "roomUsers.title",
+    "description": "Участники",
+    "defaultMessage": "Участники",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomUsers/messages.js"
+    ]
+  },
+  {
+    "id": "roomUsers.placeLabel",
+    "description": "Место",
+    "defaultMessage": "Место",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomUsers/messages.js"
+    ]
+  },
+  {
+    "id": "roomUsers.tablePoints",
+    "description": "Очки",
+    "defaultMessage": "Очки",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomUsers/messages.js"
+    ]
+  },
+  {
+    "id": "roomUsers.tablePrize",
+    "description": "Приз",
+    "defaultMessage": "Приз",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomUsers/messages.js"
+    ]
+  },
+  {
+    "id": "roomUsers.tableTeam",
+    "description": "Команда",
+    "defaultMessage": "Команда",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomUsers/messages.js"
+    ]
+  },
+  {
+    "id": "roomUsers.tableUser",
+    "description": "Пользователь",
+    "defaultMessage": "Пользователь",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomUsers/messages.js"
+    ]
+  },
+  {
+    "id": "roomPage.newsLabel",
+    "description": "Новости",
+    "defaultMessage": "Новости",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomPage/messages.js"
+    ]
+  },
+  {
+    "id": "roomPage.scheduleLabel",
+    "description": "Расписание",
+    "defaultMessage": "Расписание",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomPage/messages.js"
+    ]
+  },
+  {
+    "id": "roomPage.tournamentTableLabel",
+    "description": "Таблица",
+    "defaultMessage": "Таблица",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomPage/messages.js"
+    ]
+  },
+  {
+    "id": "schedule.allTeamsLabel",
+    "description": "Все команды",
+    "defaultMessage": "Все команды",
+    "message": "",
+    "files": [
+      "src/components/Schedule/messages.js"
+    ]
+  },
+  {
+    "id": "schedule.filterOneTeamLabel",
+    "description": "Выбрана команда: {team}",
+    "defaultMessage": "Выбрана команда: {team}",
+    "message": "",
+    "files": [
+      "src/components/Schedule/messages.js"
+    ]
+  },
+  {
+    "id": "schedule.filterTeamsLabel",
+    "description": "Выбрано ? команд",
+    "defaultMessage": "Выбрано {num} {num, plural, one {команда} few {команды} many {команд} other {команды}}",
+    "message": "",
+    "files": [
+      "src/components/Schedule/messages.js"
+    ]
+  },
+  {
+    "id": "schedule.filterReset",
+    "description": "Сбросить фильтр",
+    "defaultMessage": "Сбросить фильтр",
+    "message": "",
+    "files": [
+      "src/components/Schedule/messages.js"
+    ]
+  },
+  {
+    "id": "schedule.placeLabel",
+    "description": "место",
+    "defaultMessage": "место",
+    "message": "",
+    "files": [
+      "src/components/Schedule/messages.js"
+    ]
+  },
+  {
+    "id": "tournamentTable.gamesLabel",
+    "description": "Игры",
+    "defaultMessage": "Игры",
+    "message": "",
+    "files": [
+      "src/components/TournamentTable/messages.js"
+    ]
+  },
+  {
+    "id": "tournamentTable.pointsLabel",
+    "description": "Очки",
+    "defaultMessage": "Очки",
+    "message": "",
+    "files": [
+      "src/components/TournamentTable/messages.js"
+    ]
+  },
+  {
+    "id": "tournamentTable.resultsLabel",
+    "description": "в / н / п",
+    "defaultMessage": "в / н / п",
+    "message": "",
+    "files": [
+      "src/components/TournamentTable/messages.js"
+    ]
+  },
+  {
+    "id": "tournamentTable.teamLabel",
+    "description": "Команда",
+    "defaultMessage": "Команда",
+    "message": "",
+    "files": [
+      "src/components/TournamentTable/messages.js"
+    ]
+  },
+  {
+    "id": "userGuide.collectTeamLabel",
+    "description": "Соберите команду из {total}",
+    "defaultMessage": "Соберите команду из {total}",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/TeamBuilderProgress/messages.js"
+    ]
+  },
+  {
+    "id": "userGuide.feeLabel",
+    "description": "Оплатите вступительный взнос",
+    "defaultMessage": "Оплатите вступительный взнос",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/TeamBuilderProgress/messages.js"
+    ]
+  },
+  {
+    "id": "userGuide.limitBudgetLabel",
+    "description": "Не превышайте бюджет {budget} на команду",
+    "defaultMessage": "Не превышайте бюджет {budget} на команду",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/TeamBuilderProgress/messages.js"
+    ]
+  },
+  {
+    "id": "userGuide.limitPlayersLabel",
+    "description": "В команде должно быть не более ? игроков из одного клуба",
+    "defaultMessage": "В команде должно быть не более {num} из одного клуба",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/TeamBuilderProgress/messages.js"
+    ]
+  },
+  {
+    "id": "builderTeam.addPlayerLabel",
+    "description": "Добавить",
+    "defaultMessage": "Добавить",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/PlayersByPositionInMyTeam/messages.js"
+    ]
+  },
+  {
+    "id": "builderTeam.tablePriceLabel",
+    "description": "Цена",
+    "defaultMessage": "Цена",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/PlayersByPositionInMyTeam/messages.js"
+    ]
+  },
+  {
+    "id": "builderTeam.tableTeamLabel",
+    "description": "Команда",
+    "defaultMessage": "Команда",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/PlayersByPositionInMyTeam/messages.js"
+    ]
+  },
+  {
+    "id": "scoringTable.posDefender",
+    "description": "ЗЩ",
+    "defaultMessage": "ЗЩ",
+    "message": "",
+    "files": [
+      "src/components/ScoringTable/messages.js"
+    ]
+  },
+  {
+    "id": "scoringTable.posForward",
+    "description": "НП",
+    "defaultMessage": "НП",
+    "message": "",
+    "files": [
+      "src/components/ScoringTable/messages.js"
+    ]
+  },
+  {
+    "id": "scoringTable.posGoalkeeper",
+    "description": "ВР",
+    "defaultMessage": "ВР",
+    "message": "",
+    "files": [
+      "src/components/ScoringTable/messages.js"
+    ]
+  },
+  {
+    "id": "scoringTable.posMidfielder",
+    "description": "ПЗ",
+    "defaultMessage": "ПЗ",
+    "message": "",
+    "files": [
+      "src/components/ScoringTable/messages.js"
+    ]
+  },
+  {
+    "id": "mygames.liveMenuLabel",
+    "description": "Игры сейчас",
+    "defaultMessage": "Игры сейчас",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/MyGamesNavigation/messages.js"
+    ]
+  },
+  {
+    "id": "mygames.statsBets",
+    "description": "Всего ставок",
+    "defaultMessage": "Всего ставок",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/GamesStats/messages.js"
+    ]
+  },
+  {
+    "id": "mygames.futureMenuLabel",
+    "description": "Будущие игры",
+    "defaultMessage": "Будущие игры",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/MyGamesNavigation/messages.js"
+    ]
+  },
+  {
+    "id": "mygames.pastMenuLabel",
+    "description": "Прошлые игры",
+    "defaultMessage": "Прошлые игры",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/MyGamesNavigation/messages.js"
+    ]
+  },
+  {
+    "id": "mygames.statsEarnings",
+    "description": "Заработано",
+    "defaultMessage": "Заработано",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/GamesStats/messages.js"
+    ]
+  },
+  {
+    "id": "mygames.statsWins",
+    "description": "Победы",
+    "defaultMessage": "Победы",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/GamesStats/messages.js"
+    ]
+  },
+  {
+    "id": "futureGames.budgetLabel",
+    "description": "бюджет",
+    "defaultMessage": "бюджет",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/FutureGames/messages.js"
+    ]
+  },
+  {
+    "id": "futureGames.lobbyLinkLabel",
+    "description": "Перейти в Лобби",
+    "defaultMessage": "Перейти в Лобби",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/FutureGames/messages.js"
+    ]
+  },
+  {
+    "id": "futureGames.tableCountLabel",
+    "description": "Количество игроков",
+    "defaultMessage": "Количество игроков",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/FutureGames/messages.js"
+    ]
+  },
+  {
+    "id": "futureGames.tableFeeLabel",
+    "description": "Взнос",
+    "defaultMessage": "Взнос",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/FutureGames/messages.js"
+    ]
+  },
+  {
+    "id": "futureGames.tablePrizeLabel",
+    "description": "Главный приз",
+    "defaultMessage": "Главный приз",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/FutureGames/messages.js"
+    ]
+  },
+  {
+    "id": "futureGames.tableRoomLabel",
+    "description": "Комната",
+    "defaultMessage": "Комната",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/FutureGames/messages.js"
+    ]
+  },
+  {
+    "id": "futureGames.tableStartLabel",
+    "description": "Начало",
+    "defaultMessage": "Начало",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/FutureGames/messages.js"
+    ]
+  },
+  {
+    "id": "futureGames.feeFreeLabel",
+    "description": "Без взноса",
+    "defaultMessage": "Без взноса",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/FutureRoom/messages.js"
+    ]
+  },
+  {
+    "id": "futureGames.roomLabel",
+    "description": "В комнату",
+    "defaultMessage": "В комнату",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/FutureRoom/messages.js"
+    ]
+  },
+  {
+    "id": "liveGames.emptyLabel",
+    "description": "В данный момент у вас нет игр. Перейдите в Лобби, выберите комнату и сыграйте",
+    "defaultMessage": "В данный момент у вас нет игр. Перейдите в Лобби, выберите комнату и сыграйте",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/LiveGames/messages.js"
+    ]
+  },
+  {
+    "id": "liveGames.feeFreeLabel",
+    "description": "Без взноса",
+    "defaultMessage": "Без взноса",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/LiveGames/messages.js"
+    ]
+  },
+  {
+    "id": "liveGames.lobbyLabel",
+    "description": "Перейти в Лобби",
+    "defaultMessage": "Перейти в Лобби",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/LiveGames/messages.js"
+    ]
+  },
+  {
+    "id": "liveGames.roomLabel",
+    "description": "В комнату",
+    "defaultMessage": "В комнату",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/LiveGames/messages.js"
+    ]
+  },
+  {
+    "id": "liveGames.tablePointsLabel",
+    "description": "Очки",
+    "defaultMessage": "Очки",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/LiveGames/messages.js"
+    ]
+  },
+  {
+    "id": "liveGames.tablePosLabel",
+    "description": "Позиция",
+    "defaultMessage": "Позиция",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/LiveGames/messages.js"
+    ]
+  },
+  {
+    "id": "liveGames.tableTeamLabel",
+    "description": "Команда",
+    "defaultMessage": "Команда",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/LiveGames/messages.js"
+    ]
+  },
+  {
+    "id": "liveGames.winsLabel",
+    "description": "Побеждают",
+    "defaultMessage": "Побеждают",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/LiveGames/messages.js"
+    ]
+  },
+  {
+    "id": "profile.changePasswordLabel",
+    "description": "Сменить пароль",
+    "defaultMessage": "Сменить пароль",
+    "message": "",
+    "files": [
+      "src/components/Profile/messages.js"
+    ]
+  },
+  {
+    "id": "profile.errorShortPwd",
+    "description": "Пароль должен быть длинной от 6 до 16 символов",
+    "defaultMessage": "Пароль должен быть длинной от 6 до 16 символов",
+    "message": "",
+    "files": [
+      "src/components/Profile/messages.js"
+    ]
+  },
+  {
+    "id": "profile.namePlaceholder",
+    "description": "ИМЯ",
+    "defaultMessage": "ИМЯ",
+    "message": "",
+    "files": [
+      "src/components/Profile/messages.js"
+    ]
+  },
+  {
+    "id": "profile.newPwdPlaceholder",
+    "description": "НОВЫЙ ПАРОЛЬ",
+    "defaultMessage": "НОВЫЙ ПАРОЛЬ",
+    "message": "",
+    "files": [
+      "src/components/Profile/messages.js"
+    ]
+  },
+  {
+    "id": "profile.userDataLabel",
+    "description": "Персональные данные",
+    "defaultMessage": "Персональные данные",
+    "message": "",
+    "files": [
+      "src/components/Profile/messages.js"
+    ]
+  },
+  {
+    "id": "profile.saveButtonLabel",
+    "description": "Сохранить",
+    "defaultMessage": "Сохранить",
+    "message": "",
+    "files": [
+      "src/components/Profile/messages.js"
+    ]
+  },
+  {
+    "id": "payments.historyLabel",
+    "description": "История",
+    "defaultMessage": "История",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/Payments/messages.js"
+    ]
+  },
+  {
+    "id": "payments.withdrawalLabel",
+    "description": "Вывод средств",
+    "defaultMessage": "Вывод средств",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/Payments/messages.js"
+    ]
+  },
+  {
+    "id": "paymentHistory.creditLabel",
+    "description": "Пополнение вашего счета.",
+    "defaultMessage": "Пополнение вашего счета.",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentHistory/messages.js"
+    ]
+  },
+  {
+    "id": "paymentHistory.dateTimeLabel",
+    "description": "Дата / Время",
+    "defaultMessage": "Дата / Время",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentHistory/messages.js"
+    ]
+  },
+  {
+    "id": "paymentHistory.debitLabel",
+    "description": "Вывод средств с вашего счета.",
+    "defaultMessage": "Вывод средств с вашего счета.",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentHistory/messages.js"
+    ]
+  },
+  {
+    "id": "paymentHistory.descriptionLabel",
+    "description": "Описание",
+    "defaultMessage": "Описание",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentHistory/messages.js"
+    ]
+  },
+  {
+    "id": "paymentHistory.emptyLabel",
+    "description": "Вы не совершили ни одной транзакции",
+    "defaultMessage": "Вы не совершили ни одной транзакции",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentHistory/messages.js"
+    ]
+  },
+  {
+    "id": "paymentHistory.operationIN",
+    "description": "Пополнение в размере {money}",
+    "defaultMessage": "Пополнение в размере {money}",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentHistory/messages.js"
+    ]
+  },
+  {
+    "id": "paymentHistory.operationOUT",
+    "description": "Снятие в размере {money}",
+    "defaultMessage": "Снятие в размере {money}",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentHistory/messages.js"
+    ]
+  },
+  {
+    "id": "paymentHistory.statusLabel",
+    "description": "Статус",
+    "defaultMessage": "Статус",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentHistory/messages.js"
+    ]
+  },
+  {
+    "id": "paymentHistory.titleLabel",
+    "description": "Ниже вы можете ознакомиться с историей транзакций вашего счета.",
+    "defaultMessage": "Ниже вы можете ознакомиться с историей транзакций вашего счета.",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentHistory/messages.js"
+    ]
+  },
+  {
+    "id": "authSocial.text",
+    "description": "Мы используем социальные сети только для быстрого входа, ник и аватар вы выбираете сами.",
+    "defaultMessage": "Мы используем социальные сети только для быстрого входа, ник и аватар вы выбираете сами.",
+    "message": "",
+    "files": [
+      "src/components/SocialAuth/messages.js"
+    ]
+  },
+  {
+    "id": "authSocial.title",
+    "description": "Вход через соц. сеть",
+    "defaultMessage": "Вход через соц. сеть",
+    "message": "",
+    "files": [
+      "src/components/SocialAuth/messages.js"
+    ]
+  },
+  {
+    "id": "loginForm.invalidEmail",
+    "description": "Указан неправильный email",
+    "defaultMessage": "Указан неправильный email",
+    "message": "",
+    "files": [
+      "src/components/Login/LoginForm.js"
+    ]
+  },
+  {
+    "id": "loginForm.loginBtnLabel",
+    "description": "Войти",
+    "defaultMessage": "Войти",
+    "message": "",
+    "files": [
+      "src/components/Login/LoginForm.js"
+    ]
+  },
+  {
+    "id": "loginForm.passwordPlaceholder",
+    "description": "ПАРОЛЬ",
+    "defaultMessage": "ПАРОЛЬ",
+    "message": "",
+    "files": [
+      "src/components/Login/LoginForm.js"
+    ]
+  },
+  {
+    "id": "loginForm.restoreLabel",
+    "description": "Забыли пароль?",
+    "defaultMessage": "Забыли пароль?",
+    "message": "",
+    "files": [
+      "src/components/Login/LoginForm.js"
+    ]
+  },
+  {
+    "id": "regForm.codePlaceholder",
+    "description": "РЕФЕРАЛЬНЫЙ КОД",
+    "defaultMessage": "РЕФЕРАЛЬНЫЙ КОД",
+    "message": "",
+    "files": [
+      "src/components/Login/RegistrationForm.js"
+    ]
+  },
+  {
+    "id": "regForm.invalidEmail",
+    "description": "Указан неправильный email",
+    "defaultMessage": "Указан неправильный email",
+    "message": "",
+    "files": [
+      "src/components/Login/RegistrationForm.js"
+    ]
+  },
+  {
+    "id": "regForm.invalidPassword",
+    "description": "Пароль должен быть длинной от 6 до 16 символов",
+    "defaultMessage": "Пароль должен быть длинной от 6 до 16 символов",
+    "message": "",
+    "files": [
+      "src/components/Login/RegistrationForm.js"
+    ]
+  },
+  {
+    "id": "regForm.passwordPlaceholder",
+    "description": "ПАРОЛЬ",
+    "defaultMessage": "ПАРОЛЬ",
+    "message": "",
+    "files": [
+      "src/components/Login/RegistrationForm.js"
+    ]
+  },
+  {
+    "id": "regForm.btnLabel",
+    "description": "Присоединиться",
+    "defaultMessage": "Присоединиться",
+    "message": "",
+    "files": [
+      "src/components/Login/RegistrationForm.js"
+    ]
+  },
+  {
+    "id": "regForm.confirmLabel",
+    "description": "Я согласен с {policyLink}",
+    "defaultMessage": "Я согласен с {policyLink}",
+    "message": "",
+    "files": [
+      "src/components/Login/RegistrationForm.js"
+    ]
+  },
+  {
+    "id": "regForm.policyLabel",
+    "description": "правилами использования сайта",
+    "defaultMessage": "правилами использования сайта",
+    "message": "",
+    "files": [
+      "src/components/Login/RegistrationForm.js"
+    ]
+  },
+  {
+    "id": "regForm.refLabel",
+    "description": "Ввести реферальный код",
+    "defaultMessage": "Ввести реферальный код",
+    "message": "",
+    "files": [
+      "src/components/Login/RegistrationForm.js"
+    ]
+  },
+  {
+    "id": "restoreForm.btnLabel",
+    "description": "Восстановить пароль",
+    "defaultMessage": "Восстановить пароль",
+    "message": "",
+    "files": [
+      "src/components/Login/RestorePassword.js"
+    ]
+  },
+  {
+    "id": "restoreForm.invalidEmail",
+    "description": "Указан неправильный email",
+    "defaultMessage": "Указан неправильный email",
+    "message": "",
+    "files": [
+      "src/components/Login/RestorePassword.js"
+    ]
+  },
+  {
+    "id": "restoreForm.successMessage",
+    "description": "Письмо отправлено. Проверьте вашу электронную почту",
+    "defaultMessage": "Письмо отправлено. Проверьте вашу электронную почту",
+    "message": "",
+    "files": [
+      "src/components/Login/RestorePassword.js"
+    ]
+  },
+  {
+    "id": "restoreForm.textLabel",
+    "description": "Используйте адрес электронной почты, указанный при регистрации",
+    "defaultMessage": "Используйте адрес электронной почты, указанный при регистрации",
+    "message": "",
+    "files": [
+      "src/components/Login/RestorePassword.js"
+    ]
+  },
+  {
+    "id": "rulesConfirmation.btnLabel",
+    "description": "Присоединиться",
+    "defaultMessage": "Присоединиться",
+    "message": "",
+    "files": [
+      "src/components/RulesConfirmationForm/messages.js"
+    ]
+  },
+  {
+    "id": "rulesConfirmation.confirmLabel",
+    "description": "Я согласен с {policyLink}",
+    "defaultMessage": "Я согласен с {policyLink}",
+    "message": "",
+    "files": [
+      "src/components/RulesConfirmationForm/messages.js"
+    ]
+  },
+  {
+    "id": "rulesConfirmation.termsLabel",
+    "description": "правилами использования сайта",
+    "defaultMessage": "правилами использования сайта",
+    "message": "",
+    "files": [
+      "src/components/RulesConfirmationForm/messages.js"
+    ]
+  },
+  {
+    "id": "rulesConfirmation.title",
+    "description": "Подтвердите свое согласие с правилами сайта",
+    "defaultMessage": "Подтвердите свое согласие с правилами сайта",
+    "message": "",
+    "files": [
+      "src/components/RulesConfirmationForm/messages.js"
+    ]
+  },
+  {
+    "id": "blockedIpPage.copyright",
+    "description": "ТОТАЛ ДРАФТ. Все права защищены",
+    "defaultMessage": "ТОТАЛ ДРАФТ. Все права защищены",
+    "message": "",
+    "files": [
+      "src/components/BlockedPage/messages.js"
+    ]
+  },
+  {
+    "id": "404page.btnLabel",
+    "description": "На главную",
+    "defaultMessage": "На главную",
+    "message": "",
+    "files": [
+      "src/components/NotFoundPage/index.js"
+    ]
+  },
+  {
+    "id": "404page.note",
+    "description": "К сожалению, страница на которую вы сослались не существует",
+    "defaultMessage": "К сожалению, страница на которую вы сослались не существует",
+    "message": "",
+    "files": [
+      "src/components/NotFoundPage/index.js"
+    ]
+  },
+  {
+    "id": "confirmBidDeletePopup.cancelLabel",
+    "description": "Отмена",
+    "defaultMessage": "Отмена",
+    "message": "",
+    "files": [
+      "src/components/Popups/ConfirmBidDeletePopup/messages.js"
+    ]
+  },
+  {
+    "id": "confirmBidDeletePopup.deleteLabel",
+    "description": "Удалить",
+    "defaultMessage": "Удалить",
+    "message": "",
+    "files": [
+      "src/components/Popups/ConfirmBidDeletePopup/messages.js"
+    ]
+  },
+  {
+    "id": "confirmBidDeletePopup.title",
+    "description": "Вы уверены, что хотите удалить команду {team} из комнаты",
+    "defaultMessage": "Вы уверены, что хотите удалить команду {team} из комнаты",
+    "message": "",
+    "files": [
+      "src/components/Popups/ConfirmBidDeletePopup/messages.js"
+    ]
+  },
+  {
+    "id": "invalidBidPopup.cancelLabel",
+    "description": "Отмена",
+    "defaultMessage": "Отмена",
+    "message": "",
+    "files": [
+      "src/components/Popups/InvalidBidPopup/messages.js"
+    ]
+  },
+  {
+    "id": "invalidBidPopup.changeLabel",
+    "description": "Изменить команду",
+    "defaultMessage": "Изменить команду",
+    "message": "",
+    "files": [
+      "src/components/Popups/InvalidBidPopup/messages.js"
+    ]
+  },
+  {
+    "id": "invalidBidPopup.title",
+    "description": "Команда {team} не подходит",
+    "defaultMessage": "Команда {team} не подходит",
+    "message": "",
+    "files": [
+      "src/components/Popups/InvalidBidPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.cancelLabel",
+    "description": "Отмена",
+    "defaultMessage": "Отмена",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.codePlaceholder",
+    "description": "РЕФЕРАЛЬНЫЙ КОД",
+    "defaultMessage": "РЕФЕРАЛЬНЫЙ КОД",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.joinLabel",
+    "description": "Присоединиться",
+    "defaultMessage": "Присоединиться",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.loginBtnLabel",
+    "description": "Войти",
+    "defaultMessage": "Войти",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.loginLabel",
+    "description": "Вход",
+    "defaultMessage": "Вход",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.passwordPlaceholder",
+    "description": "ПАРОЛЬ",
+    "defaultMessage": "ПАРОЛЬ",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.playInRoomTitle",
+    "description": "Играть в комнате {title}",
+    "defaultMessage": "Играть в комнате {title}",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.regLabel",
+    "description": "Регистрация",
+    "defaultMessage": "Регистрация",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.saveLabel",
+    "description": "Сохранить",
+    "defaultMessage": "Сохранить",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.teamNamePlaceholder",
+    "description": "Название команды",
+    "defaultMessage": "Название команды",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.templateCheckLabel",
+    "description": "Сохранить команду как шаблон",
+    "defaultMessage": "Сохранить команду как шаблон",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.termsCheckboxLabel",
+    "description": "Я согласен с {termsLink}",
+    "defaultMessage": "Я согласен с {termsLink}",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.termsLabel",
+    "description": "правилами использования сайта",
+    "defaultMessage": "правилами использования сайта",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.feeNote",
+    "description": "сумма взноса будет списана с Вашего баланса",
+    "defaultMessage": "сумма взноса будет списана с Вашего баланса",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.lobbyLinkLabel",
+    "description": "Перейти в Лобби",
+    "defaultMessage": "Перейти в Лобби",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.noMoneyLabel",
+    "description": "У вас не хватает средств для игры",
+    "defaultMessage": "У вас не хватает средств для игры",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.noMoneyNote",
+    "description": "на вашем балансе недостаточно средств для совершения ставки",
+    "defaultMessage": "на вашем балансе недостаточно средств для совершения ставки",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.payAndPlayLabel",
+    "description": "Оплатить и Играть",
+    "defaultMessage": "Оплатить и Играть",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.paymentNote",
+    "description": "пополните ваш баланс и играйте",
+    "defaultMessage": "пополните ваш баланс и играйте",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.paymentTitle",
+    "description": "Пополните ваш баланс",
+    "defaultMessage": "Пополните ваш баланс",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.playLabel",
+    "description": "Играть",
+    "defaultMessage": "Играть",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.playWithFeeLabel",
+    "description": "Играть за {fee}",
+    "defaultMessage": "Играть за {fee}",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "saveTeamPopup.amountPlaceholder",
+    "description": "ВВЕДИТЕ СУММУ",
+    "defaultMessage": "ВВЕДИТЕ СУММУ",
+    "message": "",
+    "files": [
+      "src/components/Popups/SaveTeamPopup/messages.js"
+    ]
+  },
+  {
+    "id": "popup.cancelLabel",
+    "description": "Отмена",
+    "defaultMessage": "Отмена",
+    "message": "",
+    "files": [
+      "src/components/Popups/TemplateDeletePopup/messages.js"
+    ]
+  },
+  {
+    "id": "popup.deleteLabel",
+    "description": "Удалить",
+    "defaultMessage": "Удалить",
+    "message": "",
+    "files": [
+      "src/components/Popups/TemplateDeletePopup/messages.js"
+    ]
+  },
+  {
+    "id": "templateDeletePopup.title",
+    "description": "Вы уверены, что хотите удалить шаблон {name} навсегда?",
+    "defaultMessage": "Вы уверены, что хотите удалить шаблон {name} навсегда?",
+    "message": "",
+    "files": [
+      "src/components/Popups/TemplateDeletePopup/messages.js"
+    ]
+  },
+  {
+    "id": "profile.changeLangLabel",
+    "description": "Язык",
+    "defaultMessage": "Язык",
+    "message": "",
+    "files": [
+      "src/components/Profile/messages.js"
+    ]
+  },
+  {
+    "id": "home.pageTitle",
+    "description": "Тотал Драфт - ежедневные фэнтези турниры",
+    "defaultMessage": "Тотал Драфт - ежедневные фэнтези турниры",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "lobby.pageTitle",
+    "description": "Лобби",
+    "defaultMessage": "Лобби",
+    "message": "",
+    "files": [
+      "src/modules/lobby/components/Lobby/messages.js"
+    ]
+  },
+  {
+    "id": "mygames.pageTitle",
+    "description": "Мои игры",
+    "defaultMessage": "Мои игры",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/MyGames/messages.js"
+    ]
+  },
+  {
+    "id": "help.pageTitle",
+    "description": "Помощь",
+    "defaultMessage": "Помощь",
+    "message": "",
+    "files": [
+      "src/components/Help/index.js"
+    ]
+  },
+  {
+    "id": "payments.pageTitle",
+    "description": "Ваши платежи",
+    "defaultMessage": "Ваши платежи",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/Payments/messages.js"
+    ]
+  },
+  {
+    "id": "profile.pageTitle",
+    "description": "Профиль",
+    "defaultMessage": "Профиль",
+    "message": "",
+    "files": [
+      "src/components/Profile/messages.js"
+    ]
+  },
+  {
+    "id": "404page.pageTitle",
+    "description": "Страница не найдена",
+    "defaultMessage": "Страница не найдена",
+    "message": "",
+    "files": [
+      "src/components/NotFoundPage/index.js"
+    ]
+  },
+  {
+    "id": "paymentPolicy.pageTitle",
+    "description": "Политика совершения платежей",
+    "defaultMessage": "Политика совершения платежей",
+    "message": "",
+    "files": [
+      "src/components/PaymentPolicy/index.js"
+    ]
+  },
+  {
+    "id": "privacyPolicy.pageTitle",
+    "description": "Условия безопасности данных",
+    "defaultMessage": "Условия безопасности данных",
+    "message": "",
+    "files": [
+      "src/components/PrivacyPolicy/index.js"
+    ]
+  },
+  {
+    "id": "returnPolicy.pageTitle",
+    "description": "Политика возврата",
+    "defaultMessage": "Политика возврата",
+    "message": "",
+    "files": [
+      "src/components/ReturnAndRefundPolicy/index.js"
+    ]
+  },
+  {
+    "id": "termsPage.pageTitle",
+    "description": "Условия использования",
+    "defaultMessage": "Условия использования",
+    "message": "",
+    "files": [
+      "src/components/TermsAndConditions/index.js"
+    ]
+  },
+  {
+    "id": "contacts.pageTitle",
+    "description": "Контакты",
+    "defaultMessage": "Контакты",
+    "message": "",
+    "files": [
+      "src/components/Contacts/messages.js"
+    ]
+  },
+  {
+    "id": "blockedIpPage.pageTitle",
+    "description": "Сайт недоступен в вашем регионе",
+    "defaultMessage": "Сайт недоступен в вашем регионе",
+    "message": "",
+    "files": [
+      "src/components/BlockedPage/messages.js"
+    ]
+  },
+  {
+    "id": "contacts.fbText",
+    "description": "Анонсы и новости читайте на нашем канале",
+    "defaultMessage": "Анонсы и новости читайте на нашем канале",
+    "message": "",
+    "files": [
+      "src/components/Contacts/messages.js"
+    ]
+  },
+  {
+    "id": "contacts.fbTitle",
+    "description": "Официальное представительство в сети Facebook",
+    "defaultMessage": "Официальное представительство в сети Facebook",
+    "message": "",
+    "files": [
+      "src/components/Contacts/messages.js"
+    ]
+  },
+  {
+    "id": "contacts.mainTitle",
+    "description": "Контакты",
+    "defaultMessage": "Контакты",
+    "message": "",
+    "files": [
+      "src/components/Contacts/messages.js"
+    ]
+  },
+  {
+    "id": "contacts.supportText",
+    "description": "Мы будем рады получить от вас отзывы и предложения",
+    "defaultMessage": "Мы будем рады получить от вас отзывы и предложения",
+    "message": "",
+    "files": [
+      "src/components/Contacts/messages.js"
+    ]
+  },
+  {
+    "id": "contacts.supportTitle",
+    "description": "Служба поддержки пользователей",
+    "defaultMessage": "Служба поддержки пользователей",
+    "message": "",
+    "files": [
+      "src/components/Contacts/messages.js"
+    ]
+  },
+  {
+    "id": "teamBuilderPlayers.title",
+    "description": "Доступные игроки",
+    "defaultMessage": "Доступные игроки",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/TeamBuilderPlayers/messages.js"
+    ]
+  },
+  {
+    "id": "header.login",
+    "description": "Вход",
+    "defaultMessage": "Вход",
+    "message": "",
+    "files": [
+      "src/components/Header/messages.js"
+    ]
+  },
+  {
+    "id": "navigation.help",
+    "description": "Помощь",
+    "defaultMessage": "Помощь",
+    "message": "",
+    "files": [
+      "src/components/Header/messages.js"
+    ]
+  },
+  {
+    "id": "header.exit",
+    "description": "Выход",
+    "defaultMessage": "Выход",
+    "message": "",
+    "files": [
+      "src/components/HeaderUserBlock/messages.js"
+    ]
+  },
+  {
+    "id": "header.profile",
+    "description": "Профиль",
+    "defaultMessage": "Профиль",
+    "message": "",
+    "files": [
+      "src/components/HeaderUserBlock/messages.js"
+    ]
+  },
+  {
+    "id": "header.withdrawal",
+    "description": "Вывод средств",
+    "defaultMessage": "Вывод средств",
+    "message": "",
+    "files": [
+      "src/components/HeaderUserBlock/messages.js"
+    ]
+  },
+  {
+    "id": "auth.closeLabel",
+    "description": "Отмена",
+    "defaultMessage": "Отмена",
+    "message": "",
+    "files": [
+      "src/components/Login/index.js"
+    ]
+  },
+  {
+    "id": "auth.loginLabel",
+    "description": "Вход",
+    "defaultMessage": "Вход",
+    "message": "",
+    "files": [
+      "src/components/Login/index.js"
+    ]
+  },
+  {
+    "id": "auth.registrationLabel",
+    "description": "Регистрация",
+    "defaultMessage": "Регистрация",
+    "message": "",
+    "files": [
+      "src/components/Login/index.js"
+    ]
+  },
+  {
+    "id": "playerInfo.avgLabel",
+    "description": "В среднем очков за игру",
+    "defaultMessage": "В среднем очков за игру",
+    "message": "",
+    "files": [
+      "src/components/PlayerInfo/messages.js"
+    ]
+  },
+  {
+    "id": "playerInfo.statAllowedGoals",
+    "description": "Голы, пропущенные командой",
+    "defaultMessage": "Голы, пропущенные командой",
+    "message": "",
+    "files": [
+      "src/components/PlayerInfo/messages.js"
+    ]
+  },
+  {
+    "id": "playerInfo.statAssist",
+    "description": "Голевые передачи",
+    "defaultMessage": "Голевые передачи",
+    "message": "",
+    "files": [
+      "src/components/PlayerInfo/messages.js"
+    ]
+  },
+  {
+    "id": "playerInfo.statAutogoals",
+    "description": "Автоголы",
+    "defaultMessage": "Автоголы",
+    "message": "",
+    "files": [
+      "src/components/PlayerInfo/messages.js"
+    ]
+  },
+  {
+    "id": "playerInfo.statCards",
+    "description": "Карточки",
+    "defaultMessage": "Карточки",
+    "message": "",
+    "files": [
+      "src/components/PlayerInfo/messages.js"
+    ]
+  },
+  {
+    "id": "playerInfo.statGoals",
+    "description": "Голы",
+    "defaultMessage": "Голы",
+    "message": "",
+    "files": [
+      "src/components/PlayerInfo/messages.js"
+    ]
+  },
+  {
+    "id": "playerInfo.statMinutes",
+    "description": "Минут на поле",
+    "defaultMessage": "Минут на поле",
+    "message": "",
+    "files": [
+      "src/components/PlayerInfo/messages.js"
+    ]
+  },
+  {
+    "id": "playerInfo.tableAssists",
+    "description": "Передачи",
+    "defaultMessage": "Передачи",
+    "message": "",
+    "files": [
+      "src/components/PlayerInfo/messages.js"
+    ]
+  },
+  {
+    "id": "playerInfo.tableCards",
+    "description": "К-и",
+    "defaultMessage": "К-и",
+    "message": "",
+    "files": [
+      "src/components/PlayerInfo/messages.js"
+    ]
+  },
+  {
+    "id": "playerInfo.tableGoals",
+    "description": "Голы",
+    "defaultMessage": "Голы",
+    "message": "",
+    "files": [
+      "src/components/PlayerInfo/messages.js"
+    ]
+  },
+  {
+    "id": "playerInfo.tableMinutes",
+    "description": "Мин",
+    "defaultMessage": "Мин",
+    "message": "",
+    "files": [
+      "src/components/PlayerInfo/messages.js"
+    ]
+  },
+  {
+    "id": "playerInfo.tablePoints",
+    "description": "Очки",
+    "defaultMessage": "Очки",
+    "message": "",
+    "files": [
+      "src/components/PlayerInfo/messages.js"
+    ]
+  },
+  {
+    "id": "playerInfo.tableTour",
+    "description": "Тур",
+    "defaultMessage": "Тур",
+    "message": "",
+    "files": [
+      "src/components/PlayerInfo/messages.js"
+    ]
+  },
+  {
+    "id": "betPopup.amountPlaceholder",
+    "description": "ВВЕДИТЕ СУММУ",
+    "defaultMessage": "ВВЕДИТЕ СУММУ",
+    "message": "",
+    "files": [
+      "src/components/Popups/BetPopup/messages.js"
+    ]
+  },
+  {
+    "id": "betPopup.btnPlayFeeLabel",
+    "description": "Играть за {money}",
+    "defaultMessage": "Играть за {money}",
+    "message": "",
+    "files": [
+      "src/components/Popups/BetPopup/messages.js"
+    ]
+  },
+  {
+    "id": "betPopup.btnPlayLabel",
+    "description": "Играть",
+    "defaultMessage": "Играть",
+    "message": "",
+    "files": [
+      "src/components/Popups/BetPopup/messages.js"
+    ]
+  },
+  {
+    "id": "betPopup.cancelLabel",
+    "description": "Отмена",
+    "defaultMessage": "Отмена",
+    "message": "",
+    "files": [
+      "src/components/Popups/BetPopup/messages.js"
+    ]
+  },
+  {
+    "id": "betPopup.lobbyLink",
+    "description": "Перейти в Лобби",
+    "defaultMessage": "Перейти в Лобби",
+    "message": "",
+    "files": [
+      "src/components/Popups/BetPopup/messages.js"
+    ]
+  },
+  {
+    "id": "betPopup.moneyNote",
+    "description": "сумма взноса будет списана с Вашего баланса, стоимость нельзя будет вернуть",
+    "defaultMessage": "сумма взноса будет списана с Вашего баланса, стоимость нельзя будет вернуть",
+    "message": "",
+    "files": [
+      "src/components/Popups/BetPopup/messages.js"
+    ]
+  },
+  {
+    "id": "betPopup.noMoneyLabel",
+    "description": "У вас не хватает средств для игры",
+    "defaultMessage": "У вас не хватает средств для игры",
+    "message": "",
+    "files": [
+      "src/components/Popups/BetPopup/messages.js"
+    ]
+  },
+  {
+    "id": "betPopup.noMoneyNote",
+    "description": "на вашем балансе недостаточно средств для совершения ставки",
+    "defaultMessage": "на вашем балансе недостаточно средств для совершения ставки",
+    "message": "",
+    "files": [
+      "src/components/Popups/BetPopup/messages.js"
+    ]
+  },
+  {
+    "id": "betPopup.payAndPlayLabel",
+    "description": "Оплатить и Играть",
+    "defaultMessage": "Оплатить и Играть",
+    "message": "",
+    "files": [
+      "src/components/Popups/BetPopup/messages.js"
+    ]
+  },
+  {
+    "id": "betPopup.paymentNote",
+    "description": "пополните ваш  баланс и играйте",
+    "defaultMessage": "пополните ваш  баланс и играйте",
+    "message": "",
+    "files": [
+      "src/components/Popups/BetPopup/messages.js"
+    ]
+  },
+  {
+    "id": "betPopup.paymentTitle",
+    "description": "Пополните ваш баланс",
+    "defaultMessage": "Пополните ваш баланс",
+    "message": "",
+    "files": [
+      "src/components/Popups/BetPopup/messages.js"
+    ]
+  },
+  {
+    "id": "betPopup.playLabel",
+    "description": "Играть в комнате",
+    "defaultMessage": "Играть в комнате",
+    "message": "",
+    "files": [
+      "src/components/Popups/BetPopup/messages.js"
+    ]
+  },
+  {
+    "id": "betPopup.teamPlaceholder",
+    "description": "НАЗВАНИЕ КОМАНДЫ",
+    "defaultMessage": "НАЗВАНИЕ КОМАНДЫ",
+    "message": "",
+    "files": [
+      "src/components/Popups/BetPopup/messages.js"
+    ]
+  },
+  {
+    "id": "betPopup.teamTitle",
+    "description": "Ваша команда",
+    "defaultMessage": "Ваша команда",
+    "message": "",
+    "files": [
+      "src/components/Popups/BetPopup/messages.js"
+    ]
+  },
+  {
+    "id": "protectedPage.note",
+    "description": "Данная страница доступна только для зарегистрированных пользователей",
+    "defaultMessage": "Данная страница доступна только для зарегистрированных пользователей",
+    "message": "",
+    "files": [
+      "src/components/ProtectedPage/messages.js"
+    ]
+  },
+  {
+    "id": "protectedPage.title",
+    "description": "Страница недоступна",
+    "defaultMessage": "Страница недоступна",
+    "message": "",
+    "files": [
+      "src/components/ProtectedPage/messages.js"
+    ]
+  },
+  {
+    "id": "searchBlock.label",
+    "description": "Поиск...",
+    "defaultMessage": "Поиск...",
+    "message": "",
+    "files": [
+      "src/components/SearchBlock/messages.js"
+    ]
+  },
+  {
+    "id": "pastGames.emptyLabel",
+    "description": "В данный момент у вас нет игр. Перейдите в Лобби, выберите комнату и сыграйте",
+    "defaultMessage": "В данный момент у вас нет игр. Перейдите в Лобби, выберите комнату и сыграйте",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/PastGames/messages.js"
+    ]
+  },
+  {
+    "id": "pastGames.feeFreeLabel",
+    "description": "Без взноса",
+    "defaultMessage": "Без взноса",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/PastGames/messages.js"
+    ]
+  },
+  {
+    "id": "pastGames.lobbyLabel",
+    "description": "Перейти в Лобби",
+    "defaultMessage": "Перейти в Лобби",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/PastGames/messages.js"
+    ]
+  },
+  {
+    "id": "pastGames.roomLabel",
+    "description": "В комнату",
+    "defaultMessage": "В комнату",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/PastGames/messages.js"
+    ]
+  },
+  {
+    "id": "pastGames.tablePointsLabel",
+    "description": "Очки",
+    "defaultMessage": "Очки",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/PastGames/messages.js"
+    ]
+  },
+  {
+    "id": "pastGames.tablePosLabel",
+    "description": "Позиция",
+    "defaultMessage": "Позиция",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/PastGames/messages.js"
+    ]
+  },
+  {
+    "id": "pastGames.tablePrizeLabel",
+    "description": "Выигрыш",
+    "defaultMessage": "Выигрыш",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/PastGames/messages.js"
+    ]
+  },
+  {
+    "id": "pastGames.tableTeamLabel",
+    "description": "Команда",
+    "defaultMessage": "Команда",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/PastGames/messages.js"
+    ]
+  },
+  {
+    "id": "pastGames.winsLabel",
+    "description": "Победили",
+    "defaultMessage": "Победили",
+    "message": "",
+    "files": [
+      "src/modules/mygames/components/PastGames/messages.js"
+    ]
+  },
+  {
+    "id": "playersList.tableClub",
+    "description": "Клуб",
+    "defaultMessage": "Клуб",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/PlayersList/messages.js"
+    ]
+  },
+  {
+    "id": "playersList.tablePlayer",
+    "description": "Футболист",
+    "defaultMessage": "Футболист",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/PlayersList/messages.js"
+    ]
+  },
+  {
+    "id": "playersList.tablePoints",
+    "description": "Очки за игру",
+    "defaultMessage": "Очки за игру",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/PlayersList/messages.js"
+    ]
+  },
+  {
+    "id": "playersList.tablePos",
+    "description": "Поз",
+    "defaultMessage": "Поз",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/PlayersList/messages.js"
+    ]
+  },
+  {
+    "id": "playersList.tablePrice",
+    "description": "Цена",
+    "defaultMessage": "Цена",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/PlayersList/messages.js"
+    ]
+  },
+  {
+    "id": "builderTeam.availableBudget",
+    "description": "Доступный бюджет",
+    "defaultMessage": "Доступный бюджет",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/TeamBuilderTeam/messages.js"
+    ]
+  },
+  {
+    "id": "builderTeam.clearTeamLabel",
+    "description": "Очистить команду",
+    "defaultMessage": "Очистить команду",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/TeamBuilderTeam/messages.js"
+    ]
+  },
+  {
+    "id": "builderTeam.posDefenders",
+    "description": "Защитники",
+    "defaultMessage": "Защитники",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/TeamBuilderTeam/messages.js"
+    ]
+  },
+  {
+    "id": "builderTeam.posForwards",
+    "description": "Нападающие",
+    "defaultMessage": "Нападающие",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/TeamBuilderTeam/messages.js"
+    ]
+  },
+  {
+    "id": "builderTeam.posGoalkeepers",
+    "description": "Вратари",
+    "defaultMessage": "Вратари",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/TeamBuilderTeam/messages.js"
+    ]
+  },
+  {
+    "id": "builderTeam.posMidfielders",
+    "description": "Полузащитники",
+    "defaultMessage": "Полузащитники",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/TeamBuilderTeam/messages.js"
+    ]
+  },
+  {
+    "id": "builderTeam.randomCollectTeam",
+    "description": "Собрать случайно",
+    "defaultMessage": "Собрать случайно",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/TeamBuilderTeam/messages.js"
+    ]
+  },
+  {
+    "id": "builderTeam.switchLabel",
+    "description": "Переключить вид",
+    "defaultMessage": "Переключить вид",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/TeamBuilderTeam/messages.js"
+    ]
+  },
+  {
+    "id": "builderTeam.title",
+    "description": "Моя команда",
+    "defaultMessage": "Моя команда",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/TeamBuilderTeam/messages.js"
+    ]
+  },
+  {
+    "id": "teamsDropdown.allTeamsLabel",
+    "description": "Все команды",
+    "defaultMessage": "Все команды",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/TeamDropdown/messages.js"
+    ]
+  },
+  {
+    "id": "teamsDropdown.filterTeamsLabel",
+    "description": "Выбрано ? команд",
+    "defaultMessage": "Выбрано {num} {num, plural, one {команда} few {команды} many {команд} other {команды}}",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/TeamDropdown/messages.js"
+    ]
+  },
+  {
+    "id": "paymentsOut.emailPlaceholder",
+    "description": "E-MAIL АДРЕС В PAYPAL",
+    "defaultMessage": "E-MAIL АДРЕС В PAYPAL",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentsOut/messages.js"
+    ]
+  },
+  {
+    "id": "paymentsOut.minFundsLabel",
+    "description": "Минимальная сумма вывода",
+    "defaultMessage": "Минимальная сумма вывода",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentsOut/messages.js"
+    ]
+  },
+  {
+    "id": "paymentsOut.moneyPlaceholder",
+    "description": "СУММА",
+    "defaultMessage": "СУММА",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentsOut/messages.js"
+    ]
+  },
+  {
+    "id": "paymentsOut.paymentPolicyLinkText",
+    "description": "политикой совершения платежей",
+    "defaultMessage": "политикой совершения платежей",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentsOut/messages.js"
+    ]
+  },
+  {
+    "id": "paymentsOut.policyText",
+    "description": "Пожалуйста, ознакомьтесь с нашими {paymentPolicyLink} и {refundPolicyLink} для получения подробной информации.",
+    "defaultMessage": "Пожалуйста, ознакомьтесь с нашими {paymentPolicyLink} и {refundPolicyLink} для получения подробной информации.",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentsOut/messages.js"
+    ]
+  },
+  {
+    "id": "paymentsOut.refundPolicyLinkText",
+    "description": "политикой возврата",
+    "defaultMessage": "политикой возврата",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentsOut/messages.js"
+    ]
+  },
+  {
+    "id": "paymentsOut.submitLabel",
+    "description": "Отправить",
+    "defaultMessage": "Отправить",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentsOut/messages.js"
+    ]
+  },
+  {
+    "id": "paymentsOut.withdrawalRequestLabel",
+    "description": "Запрос на вывод средств",
+    "defaultMessage": "Запрос на вывод средств",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentsOut/messages.js"
+    ]
+  },
+  {
+    "id": "paymentsOut.withdrawalTimeLabel",
+    "description": "Как правило, вывод средств занимает не более 24 часов (1 рабочий день).",
+    "defaultMessage": "Как правило, вывод средств занимает не более 24 часов (1 рабочий день).",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentsOut/messages.js"
+    ]
+  },
+  {
+    "id": "roomHeader.backLabel",
+    "description": "Назад",
+    "defaultMessage": "Назад",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomHeader/messages.js"
+    ]
+  },
+  {
+    "id": "roomHeader.freeRoomStatus",
+    "description": "Без взноса",
+    "defaultMessage": "Без взноса",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomHeader/messages.js"
+    ]
+  },
+  {
+    "id": "roomHeader.playCashLabel",
+    "description": "Играть за {fee}",
+    "defaultMessage": "Играть за {fee}",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomHeader/messages.js"
+    ]
+  },
+  {
+    "id": "roomHeader.playFreeLabel",
+    "description": "Играть",
+    "defaultMessage": "Играть",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomHeader/messages.js"
+    ]
+  },
+  {
+    "id": "roomHeader.saveLabel",
+    "description": "Сохранить",
+    "defaultMessage": "Сохранить",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomHeader/messages.js"
+    ]
+  },
+  {
+    "id": "home.subtitle",
+    "description": "Собирай виртуальные футбольные команды во время настоящих турниров, и выигрывай денежные призы",
+    "defaultMessage": "Собирай виртуальные футбольные команды во время настоящих турниров, и выигрывай денежные призы",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "home.chooseLeagueButtonLabel",
+    "description": "Выбрать лигу",
+    "defaultMessage": "Выбрать лигу",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "home.howItWorks",
+    "description": "Как это работает",
+    "defaultMessage": "Как это работает",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "home.howItWorks1",
+    "description": "Выбери один из представленных футбольных турниров и собери сборную из реальных игроков, которые проявят себя наилучшим образом в ближайшей игре",
+    "defaultMessage": "Выбери один из представленных футбольных турниров и собери сборную из реальных игроков, которые проявят себя наилучшим образом в ближайшей игре",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "home.howItWorks2",
+    "description": "Во время матча футболисты будут набирать очки за полезные действия",
+    "defaultMessage": "Во время матча футболисты будут набирать очки за полезные действия",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "home.howItWorks3",
+    "description": "На основании достоверной статистики, мы рассчитаем очки для твоей сборной",
+    "defaultMessage": "На основании достоверной статистики, мы рассчитаем очки для твоей сборной",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "home.howItWorks4",
+    "description": "Если твоя команда окажется в лидерах, ты получишь денежный приз",
+    "defaultMessage": "Если твоя команда окажется в лидерах, ты получишь денежный приз",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "home.featuresLabel",
+    "description": "Особенности",
+    "defaultMessage": "Особенности",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "home.playLabel",
+    "description": "Играть",
+    "defaultMessage": "Играть",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "home.nextLabel",
+    "description": "Дальше",
+    "defaultMessage": "Дальше",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "home.startTitle",
+    "description": "Начать просто",
+    "defaultMessage": "Начать просто",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "home.startFeatureText1",
+    "description": "Начни с фрироллов - турниров, которые не требуют вложений, но разыгрывают реальные деньги.",
+    "defaultMessage": "Начни с фрироллов - турниров, которые не требуют вложений, но разыгрывают реальные деньги.",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "home.startFeatureText2",
+    "description": "Твои знания о футболе, аналитические способности и немного удачи - вот формула успешной игры.",
+    "defaultMessage": "Твои знания о футболе, аналитические способности и немного удачи - вот формула успешной игры.",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "home.startFeatureTitle1",
+    "description": "Игры без взноса",
+    "defaultMessage": "Игры без взноса",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "home.startFeatureTitle2",
+    "description": "Опыт не имеет значения",
+    "defaultMessage": "Опыт не имеет значения",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "home.leagueText",
+    "description": "Присоединись к одной из лиг, чтобы выбрать турнир и приступить к сбору команды",
+    "defaultMessage": "Присоединись к одной из лиг, чтобы выбрать турнир и приступить к сбору команды",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "home.leagueTitle",
+    "description": "С чего начать",
+    "defaultMessage": "С чего начать",
+    "message": "",
+    "files": [
+      "src/components/Home/messages.js"
+    ]
+  },
+  {
+    "id": "API_ERRORS.ACTION_UNAVAILABLE",
+    "description": "Действие невозможно совершить ввиду органичений внутренней логики",
+    "defaultMessage": "Действие невозможно совершить ввиду органичений внутренней логики",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "API_ERRORS.INTERNAL",
+    "description": "Внутренняя ошибка сервера",
+    "defaultMessage": "Внутренняя ошибка сервера",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "API_ERRORS.INVALID_PARAMS",
+    "description": "Присланы неверные или недостаточные параметры",
+    "defaultMessage": "Присланы неверные или недостаточные параметры",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "API_ERRORS.LIMIT_REACHED",
+    "description": "Запрашиваемое действие невозможно совершить ввиду достижения лимита",
+    "defaultMessage": "Запрашиваемое действие невозможно совершить ввиду достижения лимита",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "API_ERRORS.NOT_FOUND",
+    "description": "Запрашиваемый объект не найден",
+    "defaultMessage": "Запрашиваемый объект не найден",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "lobby.roomStatus1",
+    "description": "1 игрок",
+    "defaultMessage": "1 игрок",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "lobby.roomStatus10",
+    "description": "10% игроков",
+    "defaultMessage": "10% игроков",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "lobby.roomStatus20",
+    "description": "20% игроков",
+    "defaultMessage": "20% игроков",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "lobby.roomStatus50",
+    "description": "50% игроков",
+    "defaultMessage": "50% игроков",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "lobby.roomStatus5050",
+    "description": "50% игроков, приз делится равномерно",
+    "defaultMessage": "50% игроков, приз делится равномерно",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "APP_MESSAGES.ADD_FUNDS_FAILURE",
+    "description": "Ошибка пополнения счета",
+    "defaultMessage": "Ошибка пополнения счета",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "APP_MESSAGES.ADD_FUNDS_SUCCESS",
+    "description": "Ваш счет пополнен",
+    "defaultMessage": "Ваш счет пополнен",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "APP_MESSAGES.BET_FAILURE",
+    "description": "Заявка не принята",
+    "defaultMessage": "Заявка не принята",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "APP_MESSAGES.BET_SUCCESS",
+    "description": "Заявка принята",
+    "defaultMessage": "Заявка принята",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "APP_MESSAGES.EMAIL_EXIST",
+    "description": "Пользователь с таким email уже существует",
+    "defaultMessage": "Пользователь с таким email уже существует",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "APP_MESSAGES.EMAIL_NOT_EXIST",
+    "description": "Пользователь с таким email не найден",
+    "defaultMessage": "Пользователь с таким email не найден",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "APP_MESSAGES.INTERNAL_APP_ERROR",
+    "description": "Внутренняя ошибка приложения",
+    "defaultMessage": "Внутренняя ошибка приложения",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "APP_MESSAGES.PLAYER_STATS_UNAVAILABLE",
+    "description": "Статистика игрока недоступна",
+    "defaultMessage": "Статистика игрока недоступна",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "APP_MESSAGES.SERVER_IS_NOT_AVAILABLE",
+    "description": "Сервер недоступен. Попробуйте чуть позже",
+    "defaultMessage": "Сервер недоступен. Попробуйте чуть позже",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "APP_MESSAGES.TEMPLATE_DELETE_ERROR",
+    "description": "Ошибка при удалении шаблона",
+    "defaultMessage": "Ошибка при удалении шаблона",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "APP_MESSAGES.UPDATE_FAILURE",
+    "description": "Ошибка обновления",
+    "defaultMessage": "Ошибка обновления",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "APP_MESSAGES.UPDATE_SUCCES",
+    "description": "Данные успешно обновлены",
+    "defaultMessage": "Данные успешно обновлены",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "APP_MESSAGES.VIEWING_BID_DENIED",
+    "description": "Посмотреть состав чужой команды вы сможете после окончания приема заявок",
+    "defaultMessage": "Посмотреть состав чужой команды вы сможете после окончания приема заявок",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "APP_MESSAGES.WITHDRAWAL_FUNDS_FAILURE",
+    "description": "Ошибка выполнения операции",
+    "defaultMessage": "Ошибка выполнения операции",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "APP_MESSAGES.WITHDRAWAL_FUNDS_SUCCESS",
+    "description": "Ваш запрос принят. Следите за его статусом в разделе \"История\"",
+    "defaultMessage": "Ваш запрос принят. Следите за его статусом в разделе \"История\"",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "APP_MESSAGES.WRONG_EMAIL",
+    "description": "Неправильный email",
+    "defaultMessage": "Неправильный email",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "APP_MESSAGES.WRONG_PASSWORD",
+    "description": "Неправильный пароль",
+    "defaultMessage": "Неправильный пароль",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "APP_MESSAGES.WRONG_PASSWORD_OR_EMAIL",
+    "description": "Неправильный логин или пароль",
+    "defaultMessage": "Неправильный логин или пароль",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "API_ERRORS.OAUTH_INVALID_DATA",
+    "description": "Не удалось получить необходимые данные (id, e-mail) от oauth провайдера",
+    "defaultMessage": "Не удалось получить необходимые данные (id, e-mail) от oauth провайдера",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "API_ERRORS.OAUTH_MAIL_INUSE",
+    "description": "Этот e-mail уже используется. Мы отправили на него письмо, подтвердите владение почтовым ящиком",
+    "defaultMessage": "Этот e-mail уже используется. Мы отправили на него письмо, подтвердите владение почтовым ящиком",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "footer.contacts",
+    "description": "Контакты",
+    "defaultMessage": "Контакты",
+    "message": "",
+    "files": [
+      "src/components/Footer/messages.js"
+    ]
+  },
+  {
+    "id": "footer.privacy",
+    "description": "Условия безопасности данных",
+    "defaultMessage": "Условия безопасности данных",
+    "message": "",
+    "files": [
+      "src/components/Footer/messages.js"
+    ]
+  },
+  {
+    "id": "footer.terms",
+    "description": "Условия использования",
+    "defaultMessage": "Условия использования",
+    "message": "",
+    "files": [
+      "src/components/Footer/messages.js"
+    ]
+  },
+  {
+    "id": "restorePasswordPage.pageTitle",
+    "description": "Восстановление пароля",
+    "defaultMessage": "Восстановление пароля",
+    "message": "",
+    "files": [
+      "src/components/RestorePassword/messages.js"
+    ]
+  },
+  {
+    "id": "restorePasswordPage.passwordPlaceholder",
+    "description": "ВВЕДИТЕ НОВЫЙ ПАРОЛЬ",
+    "defaultMessage": "ВВЕДИТЕ НОВЫЙ ПАРОЛЬ",
+    "message": "",
+    "files": [
+      "src/components/RestorePassword/messages.js"
+    ]
+  },
+  {
+    "id": "restorePasswordPage.submitLabel",
+    "description": "Готово",
+    "defaultMessage": "Готово",
+    "message": "",
+    "files": [
+      "src/components/RestorePassword/messages.js"
+    ]
+  },
+  {
+    "id": "builderTeam.completeTeam",
+    "description": "Донабрать состав",
+    "defaultMessage": "Донабрать состав",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/TeamBuilderTeam/messages.js"
+    ]
+  },
+  {
+    "id": "APP_MESSAGES.COMPLETE_TEAM_ERROR",
+    "description": "У вас недостаточно бюджета на команду",
+    "defaultMessage": "У вас недостаточно бюджета на команду",
+    "message": "",
+    "files": [
+      "src/utils/helpers.js"
+    ]
+  },
+  {
+    "id": "userGuide.collectTeamLabelNumPlayers",
+    "description": "15 футболистов",
+    "defaultMessage": "15 футболистов",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/TeamBuilderProgress/messages.js"
+    ]
+  },
+  {
+    "id": "userGuide.limitBudgetLabelNum",
+    "description": "{budget} {budget, plural, one {миллион} few {миллиона} many {миллионов} other {миллионов} }",
+    "defaultMessage": "{budget} {budget, plural, one {миллион} few {миллиона} many {миллионов} other {миллионов}}",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/TeamBuilderProgress/messages.js"
+    ]
+  },
+  {
+    "id": "userGuide.limitPlayersLabelNum",
+    "description": "{num} {num, plural, one {игрока} few {игроков} many {игроков} other {игроков} }",
+    "defaultMessage": "{num} {num, plural, one {игрока} few {игроков} many {игроков} other {игроков}}",
+    "message": "",
+    "files": [
+      "src/modules/myteam/components/TeamBuilderProgress/messages.js"
+    ]
+  },
+  {
+    "id": "TeamLineForReserve.reserveTitle",
+    "defaultMessage": "Запас",
+    "message": "",
+    "description": "Запас",
+    "files": [
+      "src/modules/myteam/components/TeamLineForReserve/messages.js"
+    ]
+  },
+  {
+    "id": "roomWinner.title",
+    "description": "Поздравляем",
+    "defaultMessage": "Поздравляем",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomWinner/messages.js"
+    ]
+  },
+  {
+    "id": "roomWinner.won",
+    "description": "Выиграл",
+    "defaultMessage": "Выиграл",
+    "message": "",
+    "files": [
+      "src/modules/room/components/RoomWinner/messages.js"
+    ]
+  },
+  {
+    "id": "MobilePanel.addPlayersLabel",
+    "description": "Добавить игроков",
+    "defaultMessage": "Добавить игроков",
+    "message": "",
+    "files": [
+      "src/modules/room/components/MobilePanel/messages.js"
+    ]
+  },
+  {
+    "id": "MobilePanel.collectLabel",
+    "description": "Собрать команду",
+    "defaultMessage": "Собрать команду",
+    "message": "",
+    "files": [
+      "src/modules/room/components/MobilePanel/messages.js"
+    ]
+  },
+  {
+    "id": "MobilePanel.fieldLabel",
+    "description": "Вернуться на поле",
+    "defaultMessage": "Вернуться на поле",
+    "message": "",
+    "files": [
+      "src/modules/room/components/MobilePanel/messages.js"
+    ]
+  },
+  {
+    "id": "MobilePanel.playCashLabel",
+    "description": "Играть за {fee}",
+    "defaultMessage": "Играть за {fee}",
+    "message": "",
+    "files": [
+      "src/modules/room/components/MobilePanel/messages.js"
+    ]
+  },
+  {
+    "id": "MobilePanel.playFreeLabel",
+    "description": "Играть",
+    "defaultMessage": "Играть",
+    "message": "",
+    "files": [
+      "src/modules/room/components/MobilePanel/messages.js"
+    ]
+  },
+  {
+    "id": "MobilePanel.saveLabel",
+    "description": "Сохранить",
+    "defaultMessage": "Сохранить",
+    "message": "",
+    "files": [
+      "src/modules/room/components/MobilePanel/messages.js"
+    ]
+  },
+  {
+    "id": "MobileRoomNav.membersLabel",
+    "description": "Участники",
+    "defaultMessage": "Участники",
+    "message": "",
+    "files": [
+      "src/modules/room/components/MobileRoomNav/messages.js"
+    ]
+  },
+  {
+    "id": "MobileRoomNav.newsLabel",
+    "description": "Новости",
+    "defaultMessage": "Новости",
+    "message": "",
+    "files": [
+      "src/modules/room/components/MobileRoomNav/messages.js"
+    ]
+  },
+  {
+    "id": "MobileRoomNav.scheduleLabel",
+    "description": "Расписание",
+    "defaultMessage": "Расписание",
+    "message": "",
+    "files": [
+      "src/modules/room/components/MobileRoomNav/messages.js"
+    ]
+  },
+  {
+    "id": "MobileRoomNav.tableLabel",
+    "description": "Таблица",
+    "defaultMessage": "Таблица",
+    "message": "",
+    "files": [
+      "src/modules/room/components/MobileRoomNav/messages.js"
+    ]
+  },
+  {
+    "id": "MobileRoomNav.teamLabel",
+    "description": "Команда",
+    "defaultMessage": "Команда",
+    "message": "",
+    "files": [
+      "src/modules/room/components/MobileRoomNav/messages.js"
+    ]
+  },
+  {
+    "id": "payments.addPaymentLabel",
+    "description": "Пополнение счёта",
+    "defaultMessage": "Пополнение счёта",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/Payments/messages.js"
+    ]
+  },
+  {
+    "id": "paymentAdd.amountLabel",
+    "description": "Сумма",
+    "defaultMessage": "Сумма",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentAdd/messages.js"
+    ]
+  },
+  {
+    "id": "paymentAdd.buttonLabel",
+    "description": "Пополнить счёт",
+    "defaultMessage": "Пополнить счёт",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentAdd/messages.js"
+    ]
+  },
+  {
+    "id": "paymentAdd.formTitle",
+    "description": "Пополните свой баланс",
+    "defaultMessage": "Пополните свой баланс",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentAdd/messages.js"
+    ]
+  },
+  {
+    "id": "paymentAdd.paymentPolicyLinkText",
+    "description": "политикой совершения платежей",
+    "defaultMessage": "политикой совершения платежей",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentAdd/messages.js"
+    ]
+  },
+  {
+    "id": "paymentAdd.policyText",
+    "description": "Пожалуйста, ознакомьтесь с нашими {paymentPolicyLink} и {refundPolicyLink} для получения подробной информации.",
+    "defaultMessage": "Пожалуйста, ознакомьтесь с нашими {paymentPolicyLink} и {refundPolicyLink} для получения подробной информации.",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentAdd/messages.js"
+    ]
+  },
+  {
+    "id": "paymentAdd.refundPolicyLinkText",
+    "description": "политикой возврата",
+    "defaultMessage": "политикой возврата",
+    "message": "",
+    "files": [
+      "src/modules/payment/components/PaymentAdd/messages.js"
+    ]
+  },
+  {
+    "id": "footballPos.All",
+    "description": "Все",
+    "defaultMessage": "Все",
+    "message": "",
+    "files": [
+      "src/modules/myteam/constants.js"
+    ]
+  },
+  {
+    "id": "footballPos.Defenders",
+    "description": "Защитники",
+    "defaultMessage": "Защитники",
+    "message": "",
+    "files": [
+      "src/modules/myteam/constants.js"
+    ]
+  },
+  {
+    "id": "footballPos.Forwards",
+    "description": "Нападающие",
+    "defaultMessage": "Нападающие",
+    "message": "",
+    "files": [
+      "src/modules/myteam/constants.js"
+    ]
+  },
+  {
+    "id": "footballPos.Goalkeepers",
+    "description": "Вратари",
+    "defaultMessage": "Вратари",
+    "message": "",
+    "files": [
+      "src/modules/myteam/constants.js"
+    ]
+  },
+  {
+    "id": "footballPos.Midfielders",
+    "description": "Полузащитники",
+    "defaultMessage": "Полузащитники",
+    "message": "",
+    "files": [
+      "src/modules/myteam/constants.js"
+    ]
+  },
+  {
+    "id": "footballShortPos.Defenders",
+    "description": "ЗЩ",
+    "defaultMessage": "ЗЩ",
+    "message": "",
+    "files": [
+      "src/modules/myteam/constants.js"
+    ]
+  },
+  {
+    "id": "footballShortPos.Forwards",
+    "description": "НП",
+    "defaultMessage": "НП",
+    "message": "",
+    "files": [
+      "src/modules/myteam/constants.js"
+    ]
+  },
+  {
+    "id": "footballShortPos.Midfielders",
+    "description": "ПЗ",
+    "defaultMessage": "ПЗ",
+    "message": "",
+    "files": [
+      "src/modules/myteam/constants.js"
+    ]
+  },
+  {
+    "id": "footballShortPosGK.Goalkeepers",
+    "description": "ВР",
+    "defaultMessage": "ВР",
+    "message": "",
+    "files": [
+      "src/modules/myteam/constants.js"
+    ]
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "name": "ConfirmBidDeletePopup",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./ConfirmBidDeletePopup.js"
+}

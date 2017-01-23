@@ -206,16 +206,12 @@ function accessibilitySettingsInit() {
 		if ( settings_state % 2 != 0) {
 			accessibility_settings_block.classList.add('open-menu');
 			accessibility_settings.classList.add('menu-open-style');
-			alert(settings_state);
-			alert('Open!');
 			settings_state++;
 			return;
 		}
 		if ( settings_state % 2 == 0 ) {
 			accessibility_settings_block.classList.remove('open-menu');
 			accessibility_settings.classList.remove('menu-open-style');
-			alert(settings_state);
-			alert('Close!');
 			settings_state++;
 			return;
 		}

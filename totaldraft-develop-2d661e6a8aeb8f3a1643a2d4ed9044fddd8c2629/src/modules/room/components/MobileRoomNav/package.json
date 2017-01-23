@@ -1,0 +1,6 @@
+{
+  "name": "MobileRoomNav",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./MobileRoomNav.js"
+}

@@ -1,0 +1,29 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  background-color: #46c35e;
+  box-sizing: border-box;
+  transform: translate3d(0, 100%, 0);
+  transition: transform 0.2s ease-out;
+  z-index: 10000;
+}
+
+.isActive {
+  transform: translate3d(0, 0, 0);
+}
+
+.isError {
+  background-color: #e95050;
+}
+
+.message {
+  max-width: 500px;
+  color: #fff;
+  text-align: center;
+}

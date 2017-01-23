@@ -1,0 +1,246 @@
+@import '../../../../components/styles/variables.css';
+
+.teammatesSection {
+  position: relative;
+  border-bottom: #e9e9e9 solid 1px;
+}
+
+.teammatesHeader {
+  position: relative;
+  display: flex;
+  height: 40px;
+  box-sizing: border-box;
+  color: #a0a0a0;
+  font-size: 0.625em;
+  line-height: 40px;
+  text-transform: uppercase;
+  background-color: #e7e7e7;
+  box-shadow: 0 1px 0 0 #e9e9e9;
+  user-select: none;
+}
+
+.teammatesHeaderColumn {
+  position: relative;
+  height: 40px;
+  padding: 0 10px;
+  line-height: 40px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.teammatesHeaderPosition {
+  composes: teammatesHeaderColumn;
+  width: 40%;
+  padding-left: 40px;
+}
+
+.teammatesHeaderClub {
+  composes: teammatesHeaderColumn;
+  width: 25%;
+}
+
+.teammatesHeaderBadget {
+  composes: teammatesHeaderColumn;
+  width: 25%;
+  color: #a0a0a0;
+  text-align: right;
+}
+
+.teammatesHeaderControls {
+  composes: teammatesHeaderColumn;
+  width: 10%;
+}
+
+.selectedPosition {
+  background-color: #fff;
+  z-index: 1;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: all 0.1s ease-out;
+  box-sizing: border-box;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #fff;
+    z-index: 1;
+
+    .playerControls {
+      opacity: 1;
+    }
+
+    &::after {
+      border-bottom: solid 1px transparent;
+    }
+
+    .playerName {
+      color: var(--blue-color);
+    }
+
+    .playerAddBtn {
+      color: var(--green-color);
+    }
+  }
+
+  &:last-child {
+    &::after {
+      border-bottom: none;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 35px;
+    right: 0;
+    bottom: 0;
+    border-bottom: solid 1px #e7e7e7;
+  }
+}
+
+.playerUniformImg {
+  height: 24px;
+  margin-right: 10px;
+}
+
+.playerColumn {
+  position: relative;
+  height: 50px;
+  padding: 0 10px;
+  color: #191919;
+  font-size: 0.875em;
+  line-height: 50px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.playerControls {
+  composes: playerColumn;
+  opacity: 0;
+  padding: 0 10px 0 5px;
+  box-sizing: border-box;
+  width: 10%;
+  text-align: center;
+}
+
+.playerName {
+  display: flex;
+  align-items: center;
+  composes: playerColumn;
+  width: 40%;
+  padding-left: 40px;
+
+  img {
+    flex: none;
+  }
+
+  .playerNameLabel {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .playerAchievements {
+    margin: 0 0 0 5px;
+  }
+}
+
+.playerClub {
+  composes: playerColumn;
+  width: 25%;
+  color: #616161;
+}
+
+.playerPrice {
+  composes: playerColumn;
+  width: 25%;
+  color: #0069ea;
+  text-align: right;
+}
+
+.playerBadget {
+  composes: playerColumn;
+  width: 25%;
+  color: #a0a0a0;
+  text-align: right;
+}
+
+.playerAddBtn {
+  width: 67%;
+  padding-left: 40px;
+  color: #a0a0a0;
+  font-size: 0.75em;
+  line-height: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    color: #4dcc65;
+  }
+}
+
+.removeBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 11px;
+  width: 24px;
+  height: 24px;
+  color: #ed1b17;
+  font-size: 1.375em;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #ed1b17;
+  transition: all 0.1s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ed1b17;
+
+    svg * {
+      stroke: #fff;
+    }
+  }
+
+  svg * {
+    stroke: #ed1b17;
+  }
+}
+
+.addBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 11px;
+  width: 24px;
+  height: 24px;
+  color: #60bd65;
+  font-size: 1.375em;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--green-color);
+  transition: all 0.1s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--green-color);
+
+    svg * {
+      stroke: #fff;
+    }
+  }
+
+  svg * {
+    stroke: var(--green-color);
+  }
+}

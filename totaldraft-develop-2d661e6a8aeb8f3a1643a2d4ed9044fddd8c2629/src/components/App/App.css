@@ -1,0 +1,48 @@
+@import '../../../node_modules/normalize.css/normalize.css';
+@import '../styles/webfonts.css';
+@import '../styles/variables.css';
+@import '../styles/base.css';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  height: calc(100vh - var(--header-height));
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.5s ease;
+  background-color: #fff;
+}
+
+.isHidden {
+  transform: translate3d(0, 100%, 0);
+}
+
+@media (--small-viewport) {
+  .root {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .container {
+    height: calc(100% - var(--header-mobile-height));
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 10;
+    /*-webkit-overflow-scrolling: touch;*/
+  }
+
+  .isMobileMenuHidden {
+    height: 100%;
+  }
+}

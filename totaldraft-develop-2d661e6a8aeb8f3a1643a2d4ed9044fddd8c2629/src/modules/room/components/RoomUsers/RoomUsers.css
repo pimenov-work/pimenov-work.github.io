@@ -1,0 +1,333 @@
+@import '../../../../components/styles/variables.css';
+
+.background {
+  flex-grow: 1;
+  flex-shrink: 1;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  opacity: 0.15;
+}
+
+.backgroundGetready {
+  background-image: url('/images/get_ready.svg');
+}
+
+.backgroundGamefinished {
+  background-image: url('/images/game_finished.svg');
+}
+
+.root {
+  display: flex;
+  flex-grow: 2;
+  flex-direction: column;
+  position: relative;
+  background-color: #f3f3f3;
+  overflow-x: hidden;
+  z-index: 6;
+}
+
+.isActive {
+  .userPlace {
+    width: 10%;
+  }
+
+  .userTeam {
+    width: 55%;
+  }
+
+  .userName {
+    width: 35%;
+  }
+
+  .userPrize {
+    display: none;
+  }
+
+  .userCounts {
+    display: none;
+  }
+
+  .tableHeaderPlace {
+    width: 10%;
+  }
+
+  .tableHeaderTeam {
+    width: 55%;
+  }
+
+  .tableHeaderUser {
+    width: 35%;
+  }
+
+  .tableHeaderCounts {
+    display: none;
+  }
+
+  .tableHeaderPrize {
+    display: none;
+  }
+}
+
+.isInactive {
+  .userPlace {
+    width: 10%;
+  }
+
+  .userTeam {
+    width: 35%;
+  }
+
+  .userName {
+    width: 35%;
+  }
+
+  .userCounts {
+    display: block;
+    width: 20%;
+  }
+
+  .userPrize {
+    display: none;
+  }
+
+  .tableHeaderPlace {
+    width: 10%;
+  }
+
+  .tableHeaderTeam {
+    width: 35%;
+  }
+
+  .tableHeaderUser {
+    width: 35%;
+  }
+
+  .tableHeaderCounts {
+    display: block;
+    width: 20%;
+  }
+
+  .tableHeaderPrize {
+    display: none;
+  }
+}
+
+.header {
+  position: relative;
+  flex-shrink: 0;
+  text-align: left;
+  font-size: 1em;
+}
+
+.headerTitle {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 74px;
+  font-size: 1.125em;
+  color: #222;
+  font-family: var(--font-family-bold);
+  text-transform: uppercase;
+}
+
+.headerTitleText {
+  position: relative;
+  margin: 0 60px 0 40px;
+}
+
+.headerCounter {
+  margin: 0 0 0 25px;
+}
+
+.tableHeader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 20px 0 40px;
+  font-size: 0.625em;
+  color: #969696;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 0 #e1e1e1, 0 1px 0 0 #e1e1e1 inset;
+}
+
+.tableHeaderPlace {
+  width: 13%;
+  text-align: center;
+}
+
+.tableHeaderTeam {
+  width: 30%;
+}
+
+.tableHeaderUser {
+  width: 26%;
+}
+
+.tableHeaderCounts {
+  width: 12%;
+  text-align: center;
+}
+
+.tableHeaderPrize {
+  width: 19%;
+  text-align: center;
+}
+
+.table {
+  position: relative;
+  padding-top: 1px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 0 #e1e1e1 inset;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transform: translateZ(0);
+}
+
+.user {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0 20px 0 40px;
+  font-size: 0.875em;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #eee;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 40px;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    background-color: #e1e1e1;
+  }
+}
+
+.userIsLogged {
+  .userName {
+    font-family: var(--font-family-bold);
+  }
+}
+
+.userImages {
+  flex: none;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  text-align: right;
+
+  img {
+    width: 50%;
+  }
+}
+
+.userPlace {
+  width: 13%;
+  text-align: center;
+}
+
+.userTeam {
+  flex: none;
+  display: flex;
+  align-items: center;
+  width: 30%;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.userTeamTitle {
+  color: var(--blue-color);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  user-select: none;
+}
+
+.userName {
+  width: 26%;
+  padding-right: 10px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.userCounts {
+  width: 12%;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.userPrize {
+  width: 19%;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.userIsHighlight {
+  background-color: #fff9f2;
+
+  .userPrize {
+    color: var(--orange-color);
+  }
+}
+
+@media (--small-viewport) {
+  .root {
+    display: block;
+    position: static;
+    flex-grow: 0;
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .table {
+    overflow: auto;
+  }
+
+  .headerTitle {
+    height: 50px;
+    padding: 0 20px;
+    font-size: 1em;
+  }
+
+  .headerTitleText {
+    margin: 0;
+  }
+
+  .tableHeader {
+    display: none;
+  }
+
+  .user {
+    padding: 0 20px 0 10px;
+  }
+
+  .background {
+    display: none;
+  }
+
+  .userImages {
+    img {
+      width: 30%;
+      margin: 0 5px 0 0;
+    }
+  }
+}

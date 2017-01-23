@@ -1,0 +1,6 @@
+{
+  "name": "MyGamesNavigation",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./MyGamesNavigation.js"
+}

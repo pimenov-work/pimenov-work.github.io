@@ -1,0 +1,6 @@
+{
+  "name": "PastGames",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./PastGames.js"
+}

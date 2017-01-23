@@ -1,0 +1,81 @@
+.root {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.isChecked {
+  .check {
+    background: url('/images/check.svg') no-repeat center center;
+    background-size: 40%;
+  }
+}
+
+.check {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  margin-right: 25px;
+  border: #d1d1d1 solid 1px;
+  transition: border 0.1s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    border: #aaa solid 1px;
+  }
+}
+
+.label {
+  color: #111;
+  font-size: 0.875em;
+  text-align: left;
+}
+
+.isLightColored {
+  label {
+    color: #a6a6a6;
+    transition: none;
+  }
+
+  a {
+    color: #a6a6a6;
+    border-bottom: #a6a6a6 solid 1px;
+    transition: none;
+
+    &:hover {
+      border-bottom: transparent solid 1px;
+    }
+  }
+
+  .check {
+    border: #a6a6a6 solid 1px;
+    transition: none;
+
+    &:hover {
+      border: #fff solid 1px;
+    }
+  }
+
+  &.isChecked {
+    .check {
+      border: #fff solid 1px;
+      background: url('/images/check-white.svg') no-repeat center center;
+      background-size: 40%;
+    }
+
+    label {
+      color: #fff;
+    }
+
+    a {
+      color: #fff;
+      border-bottom: #fff solid 1px;
+
+      &:hover {
+        border-bottom: transparent solid 1px;
+      }
+    }
+  }
+}

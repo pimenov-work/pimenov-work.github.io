@@ -15,6 +15,43 @@
 	border-bottom: none !important;
 }
 
+.accessibility .form-container .button-holder .button {
+	width: auto;
+}
+
+.accessibility .form-container .form-item .control .attach-info {
+	width: auto;
+	position: static;
+}
+
+.accessibility .form-container .chosen-container-single .chosen-search input[type=text] {
+	display: none;
+}
+
+.accessibility ul.schedule-list li .name {
+  position: static;
+  width: auto;
+  float: none;
+  margin: 0 15px 0 0;
+}
+
+.accessibility ul.schedule-list li .time-info:empty {
+	display: none;
+}
+
+.accessibility ul.schedule-list li br {
+	display: none;
+}
+
+.accessibility ul.schedule-list li .time-info {
+	width: 100%;
+}
+
+html body.accessibility a.button {
+	width: auto !important;
+	float: none !important;
+}
+
 /* Theme global */
 
 .content-item a {
@@ -26,7 +63,18 @@
 .theme__black-on-white .main a:hover,
 .theme__black-on-white .main a:focus {
 	color: white !important;
-	background-color: black;
+	background-color: black !important;
+}
+
+.content .entity-list a.link {
+	border: none;
+}
+
+.accessibility .qs-object-list .entity-list a {
+	height: auto !important;
+	min-height: 0px !important;
+	overflow: hidden;
+	display: block;
 }
 
 .theme__white-on-black .main a {
@@ -68,7 +116,6 @@ html body.accessibility.theme__white-on-black .main a:focus {
 .accessibility .link-holder,
 .accessibility .main-content-block .button-holder,
 .accessibility .main-content-block .content-item .photo,
-/*.accessibility img,*/
 .accessibility .footer .contact,
 .accessibility .footer .about h4,
 .accessibility .main-content-block .header .icon,
@@ -124,19 +171,19 @@ html body.accessibility.theme__white-on-black .main a:focus {
 }
 
 .accessibility .page-content .aside .menu li a {
-	padding: 0 15px;
+	padding: 0 40px;
 }
 
 .accessibility .page-content .aside .title {
 	margin-left: 0 !important;
 	margin-right: 0 !important;
-	padding-left: 15px !important;
-	padding-right: 15px !important;
+	padding-left: 40px !important;
+	padding-right: 40px !important;
 }
 
 .accessibility .page-content .aside ul.event-list li .date {
 	margin: 0;
-	padding: 0 15px;
+	padding: 0 40px;
 }
 
 .accessibility .page-content .aside ul.event-list li .date * {
@@ -146,15 +193,17 @@ html body.accessibility.theme__white-on-black .main a:focus {
 }
 
 .accessibility .event-list li {
-	margin-top: 03px !important;
+	margin-top: 0px !important;
 }
 
 .accessibility .page-content .aside ul.event-list li .event-title {
-	padding: 0 15px;
+	padding: 0 40px;
 }
 
 .accessibility a:hover,
-.accessibility a:focus {
+.accessibility a:focus,
+.accessibility .page-content .aside .menu li.selected,
+.accessibility .page-content .aside .menu li.selected * {
 	text-decoration: none !important;
 	border-bottom: none;
 	background-color: black;
@@ -205,7 +254,9 @@ html body.accessibility.theme__white-on-black .main a:focus {
 }
 
 .accessibility.theme__white-on-black a:hover,
-.accessibility.theme__white-on-black a:focus {
+.accessibility.theme__white-on-black a:focus,
+.accessibility.theme__white-on-black .page-content .aside .menu li.selected,
+.accessibility.theme__white-on-black .page-content .aside .menu li.selected * {
 	background-color: white !important;
 	color: black !important;
 }
@@ -225,7 +276,11 @@ html body.accessibility.theme__lightblue-on-darkblue .footer a .logo-text {
 }
 
 .accessibility.theme__lightblue-on-darkblue a:hover,
-.accessibility.theme__lightblue-on-darkblue a:focus {
+.accessibility.theme__lightblue-on-darkblue a:hover *,
+.accessibility.theme__lightblue-on-darkblue a:focus,
+.accessibility.theme__lightblue-on-darkblue a:focus *,
+.accessibility.theme__lightblue-on-darkblue .page-content .aside .menu li.selected,
+.accessibility.theme__lightblue-on-darkblue .page-content .aside .menu li.selected * {
 	background-color: #91cdfd !important;
 	color: #003367 !important;
 }
@@ -296,10 +351,24 @@ html .accessibility.theme__lightblue-on-darkblue .menu-bar * {
 
 .accessibility .aside .title {
 	margin-top: 0 !important;
-	margin-bottom: 0px !important;
-	padding-top: 0 !important;
+	margin-bottom: 0 !important;
+	padding-top: 20px !important;
 	padding-bottom: 0 !important;
 	font-weight: bold !important;
+	border-bottom: none !important;
+}
+
+.accessibility ul.schedule-list li .photo {
+	margin-bottom: 10px;
+}
+
+.accessibility .aside .title + .menu {
+	border-top: none !important;
+}
+
+.accessibility .aside .block .title {
+	padding-top: 0 !important;
+	border: none !important;
 }
 
 .accessibility.theme__white-on-black .page-content .aside .block .title {
@@ -366,11 +435,10 @@ html .accessibility.theme__lightblue-on-darkblue .menu-bar * {
 	height: 100%;
 	display: block;
 	margin: 0;
-	padding: 0 0 0 4em;
+	padding: 0 0 0 3.2em;
 	line-height: 63px;
 	float: left;
 	cursor: pointer;
-	text-align: left;
 }
 
 .accessibility .menu-bar ul li,
@@ -400,7 +468,11 @@ html .accessibility.theme__lightblue-on-darkblue .menu-bar * {
 
 .accessibility .menu-bar > ul li:nth-of-type(3) a,
 .accessibility .menu-bar > ul li:nth-of-type(4) a {
-	padding-left: 70px;
+	padding-left: 3.3em;
+}
+
+.accessibility .menu-bar > ul li:nth-of-type(4) a {
+	padding-left: 3em;
 }
 
 .accessibility .menu-bar > ul li:nth-of-type(1) {
@@ -541,7 +613,7 @@ html .accessibility.theme__lightblue-on-darkblue .menu-bar * {
 .accessibility .page-content .aside {
 	width: 260px;
 	margin-right: 40px;
-	padding-top: 20px;
+	padding-top: 0;
 	border: 3px black solid;
 }
 
@@ -569,7 +641,9 @@ html .accessibility.theme__lightblue-on-darkblue .menu-bar * {
 	left: calc((100% - 980px) / 2);
 	top: 80px;
 	z-index: 10;
-	border-bottom: 3px black solid !important;
+	border-right: 3px #e5e5e5 solid !important;
+	border-bottom: 3px #e5e5e5 solid !important;
+	border-left: 3px #e5e5e5 solid !important;
 }
 
 html body.accessibility .main-header .menu-bar .menu-open-style {
@@ -1036,7 +1110,15 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
   color: rgba(0, 0, 0, 0);
 }
 
-.accessibility .sub-menu {
+.accessibility .nav .sub-menu {
+	display: none !important;
+}
+
+.accessibility .page-content .aside .menu * {
+	border: none !important;
+}
+
+.accessibility .page-content .aside .menu li .shape {
 	display: none !important;
 }
 
@@ -1089,10 +1171,6 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
 	padding: 5px 40px !important;
 	float: right !important;
 	display: inline-block !important;
-}
-
-.accessibility ul.schedule-list li .time-info {
-	min-height: 170px;
 }
 
 .accessibility .entity-list *:after {
@@ -1167,6 +1245,10 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
 	line-height: 1.5;
 }
 
+.accessibility.theme__black-on-white .main-content-block .content-item .date {
+	color: #808080 !important;
+}
+
 .accessibility .main-content-block .button-holder a {
 	display: none;
 	border: 3px black solid;
@@ -1179,6 +1261,11 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
 
 .accessibility .main-content-block.interview p {
 	display: block;
+	font-weight: bold;
+}
+
+.accessibility .voting-results .item {
+	margin-bottom: 20px;
 }
 
 .accessibility .voting-holder .checkbox .check {
@@ -1403,6 +1490,16 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
 	font-size: 12px !important;
 }
 
+.accessibility .entity-list .icon {
+	width: auto;
+	padding: 4px 2px;
+}
+
+.accessibilit .voting-results .item {
+	width: auto;
+}
+
+
 .accessibility .form-container .button-holder {
 	width: 620px;
 }
@@ -1412,8 +1509,25 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
 }
 
 .accessibility .form-container .button-holder .button {
-	margin-left: 0;
+	margin-left: 0 !important;
 	margin-right: 10px;
+}
+
+.accessibility .form-container .form-item .control .button {
+  color: black !important;
+}
+
+.accessibility .form-container .form-item .control .button {
+  color: black !important;
+}
+
+.accessibility.theme__white-on-black .form-container .form-item .control .button {
+  color: white !important;
+  background: black !important;
+}
+
+.accessibility.theme__lightblue-on-darkblue .form-container .form-item .control .button {
+  color: #91cdfd !important;
 }
 
 .accessibility .form-container .form-block * {
@@ -1453,13 +1567,12 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
 
 .accessibility .aside .block a {
 	width: 100%;
-	padding: 15px 20px;
+	padding: 15px 40px;
 	display: block;
 	border-bottom: 1px currentcolor solid;
 }
 
 .accessibility .aside .title {
-	border: none !important;
 }
 
 .accessibility .footer {
@@ -1470,6 +1583,226 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
 	position: absolute;
 	right: 50px;
 	top: 120px;
+}
+
+.accessibility .voting-results .item .bar {
+	margin-top: 15px;
+	border: 1px currentcolor solid !important
+}
+
+.accessibility.theme__black-on-white .voting-results .item .bar,
+.accessibility.theme__black-on-white .voting-results .item .count {
+	background: white !important;
+	color: black !important;
+}
+
+.accessibility.theme__black-on-white .voting-results .item .fill.gold,
+.accessibility.theme__black-on-white .voting-results .item .fill.blue,
+.accessibility.theme__black-on-white .voting-results .item .fill.red,
+.accessibility.theme__black-on-white .voting-results .item .fill.green {
+	background: black !important;
+}
+
+.accessibility.theme__white-on-black .voting-results .item .bar {
+	border: 1px white solid;
+}
+
+.accessibility.theme__white-on-black .voting-results .item .bar,
+.accessibility.theme__white-on-black .voting-results .item .count {
+	background: black !important;
+	color: white !important;
+}
+
+.accessibility.theme__white-on-black .voting-results .item .fill.gold,
+.accessibility.theme__white-on-black .voting-results .item .fill.blue,
+.accessibility.theme__white-on-black .voting-results .item .fill.red,
+.accessibility.theme__white-on-black .voting-results .item .fill.green {
+	background: white !important;
+}
+}
+
+.accessibility.theme__lightblue-on-darkblue .voting-results .item .bar {
+	border: 1px white solid;
+}
+
+.accessibility.theme__lightblue-on-darkblue .voting-results .item .bar,
+.accessibility.theme__lightblue-on-darkblue .voting-results .item .count {
+	background: #003367 !important;
+	color: #91cdfd !important;
+}
+
+.accessibility.theme__lightblue-on-darkblue .voting-results .item .fill.gold,
+.accessibility.theme__lightblue-on-darkblue .voting-results .item .fill.blue,
+.accessibility.theme__lightblue-on-darkblue .voting-results .item .fill.red,
+.accessibility.theme__lightblue-on-darkblue .voting-results .item .fill.green {
+	background: #91cdfd !important;
+}
+
+.accessibility .search-holder .title {
+	font-size: 20px;
+}
+
+.accessibility .aside * {
+	background-image: none !important;
+}
+
+.accessibility .aside ul,
+.accessibility .aside li,
+.accessibility .aside a,
+.accessibility .aside .menu ul li a,
+.accessibility .page-content .aside .menu.services {
+	border: none !important;
+}
+
+.accessibility .aside {
+	margin-top: 0 !important;
+	pading-top: 0 !important;
+	border-width: 1px !important;
+	border: none !important;
+}
+
+.accessibility .aside * {
+	border-color: grey !important;
+}
+
+.accessibility .aside > * {
+	margin: 0 0 30px 0 !important;
+	padding: 20px 0;
+	border: 1px currentcolor solid !important;
+}
+
+.accessibility .page-content .aside ul.event-list li .event-title {
+	margin: 0;
+}
+
+.accessibility .aside .block .event-list a {
+	margin: 0 !important;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	line-height: 1 !important;
+}
+
+.accessibility .page-content .aside ul.event-list li:last-child {
+	margin: 0 !important;
+}
+
+.accessibility .page-content .aside .menu {
+	margin: 0;
+}
+
+.accessibility .news-subscribe-button * {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.accessibility .aside .news-subscribe-button {
+	position: relative;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 20px 40px 0 40px;
+  color: #3d9af1;
+  line-height: 1.375em;
+  background-color: #fff;
+  background-image: url(../img/letter-blue.png);
+  background-repeat: no-repeat;
+  background-position: 25px 18px;
+  font-weight: bold;
+}
+
+.accessibility .main-container .news-subscribe-button a:hover {
+	background-color: transparent !important;
+}
+
+.accessibility .page-content .aside ul.photo-list li {
+    position: relative;
+    min-height: 80px;
+    padding: 0;
+}
+
+.accessibility .page-content .aside ul.vote-list {
+	padding: 0 40px;
+}
+
+.accessibility .page-content .aside ul.vote-list *:after {
+	content: '';
+	width: 100%;
+	display: block;
+	clear: both;
+}
+
+.accessibility .page-content .aside ul.vote-list .text {
+	width: 140px;
+	margin: 6px 0 0 0 !important;
+	float: right;
+	line-height: 1 !important;
+}
+
+.accessibility .page-content .aside ul.vote-list .check {
+	margin-top: 5px;
+	float: left;
+}
+
+.accessibility .page-content .aside ul.vote-list .voting-results .item .bar {
+	width: auto;
+	height: auto;
+	padding: 0 30px 0 10px;
+}
+
+.accessibility .page-content .aside ul.vote-list .voting-results .item .bar .fill {
+	display: none;
+}
+
+.accessibility .page-content .aside ul.rate-list a:hover .rate {
+	background: white !important;
+	color: black !important;
+}
+
+.accessibility.theme__white-on-black .page-content .aside ul.rate-list a:hover .rate {
+	background: black !important;
+	color: white !important;
+}
+
+.accessibility.theme__lightblue-on-darkblue .page-content .aside ul.rate-list a:hover .rate {
+	background: #003367 !important;
+	color: #91cdfd !important;
+}
+
+.accessibility .aside .news-subscribe-button a {
+	display: block !important;
+}
+
+.accessibility .page-content .aside ul.photo-list li {
+	min-height: 0;
+}
+
+.accessibility .page-content .aside ul.photo-list * {
+	background-image: none !important;
+}
+
+.accessibility .vacancy .accordion .button {
+	margin: 10px 0 0 10px;
+	float: none !important;
+}
+
+.accessibility .footer * {
+	border-color: grey !important;
+}
+
+.accessibility.theme__white-on-black .footer * {
+	border-color: white !important;
+}
+
+.accessibility.theme__lightblue-on-darkblue .footer * {
+	border-color: #91cdfd !important;
+}
+
+html body.accessibility.theme__lightblue-on-darkblue a:hover * {
+	background-color: transparent !important;
+}
+
+.question-list li:hover .figure {
+	background-color: transparent !important;
 }
 
 /****** Accessibility elements end ******/
@@ -1495,6 +1828,10 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
 .accessibility .page-content input.page-search {
 	width: 620px;
 	margin-bottom: 40px;
+}
+
+.accessibility .employee .info .photo {
+	background-color: red !important;
 }
 
 /* Default and small font-size */

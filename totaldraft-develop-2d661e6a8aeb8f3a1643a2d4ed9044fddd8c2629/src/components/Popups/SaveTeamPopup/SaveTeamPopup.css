@@ -1,0 +1,406 @@
+@import '../../styles/variables.css';
+@import '../../styles/elements.css';
+
+.root {
+  max-width: 960px;
+  padding: 20px 50px;
+  box-sizing: border-box;
+
+  input {
+    width: 320px;
+    color: #222;
+    font-size: 0.875em;
+    background-color: #fff;
+    border: solid 1px #a6a6a6;
+    box-sizing: border-box;
+
+    &:hover {
+      border: solid 1px #111;
+    }
+
+    &:focus {
+      border: solid 1px #111;
+    }
+  }
+}
+
+.btn {
+  composes: baseBtn;
+  margin: 0;
+  padding: 0 20px 0 25px;
+  color: #a6a6a6;
+  white-space: nowrap;
+  pointer-events: none;
+
+  .btnIcon {
+    * {
+      stroke: #bbb;
+    }
+  }
+}
+
+.btnIsActive {
+  color: var(--blue-color);
+  border: var(--blue-color) solid 1px;
+  pointer-events: all;
+
+  .btnIcon {
+    path {
+      stroke: var(--blue-color);
+    }
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: var(--blue-color);
+
+    .btnIcon {
+      path {
+        stroke: #fff;
+      }
+    }
+  }
+}
+
+.btnCancel {
+  color: #a6a6a6;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--blue-color);
+  }
+}
+
+.btnSubmit {
+  composes: baseBtn;
+  margin: 0;
+  white-space: nowrap;
+  color: #a6a6a6;
+  pointer-events: none;
+}
+
+.btnSubmitIsActive {
+  color: var(--green-color);
+  border: var(--green-color) solid 1px;
+  pointer-events: all;
+
+  &:hover {
+    color: #fff;
+    background-color: var(--green-color);
+  }
+}
+
+.btnIcon {
+  margin: -2px 0 0 7px;
+
+  * {
+    stroke: var(--blue-color);
+  }
+}
+
+.inputError {
+  border: var(--red-color) solid 1px !important;
+}
+
+.formSection {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 25px;
+}
+
+.formSectionButtons {
+  composes: formSection;
+  align-items: center;
+  justify-content: space-around;
+  width: 320px;
+  margin: 25px auto 0;
+}
+
+.formSectionCentered {
+  composes: formSection;
+  justify-content: center;
+  align-items: center;
+}
+
+.formCheckbox {
+  width: 320px;
+}
+
+.termsCheckbox {
+  width: 320px;
+  color: #a6a6a6;
+
+  a {
+    color: #a6a6a6;
+    border-bottom: #a6a6a6 solid 1px;
+
+    &:hover {
+      border-bottom: transparent solid 1px;
+    }
+  }
+
+  label {
+    color: #a6a6a6;
+  }
+}
+
+.note {
+  position: relative;
+  margin: 25px 0 0;
+  color: #a6a6a6;
+  text-align: center;
+  font-size: 0.75em;
+  user-select: none;
+}
+
+.guide {
+  display: flex;
+  display: none;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 70px;
+  font-size: 0.75em;
+  color: #c7c5c6;
+  text-transform: uppercase;
+  font-family: var(--font-family-bold);
+}
+
+.guideShape {
+  position: relative;
+  width: 100px;
+  height: 1px;
+  margin: -2px 15px 0;
+  background-color: #c7c5c6;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: -3px;
+    width: 7px;
+    height: 7px;
+    background-color: #c7c5c6;
+    border-radius: 50%;
+  }
+}
+
+.guideItem {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.guideBlock {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.guideItemIsActive {
+  position: relative;
+  color: #191919;
+
+  .guideShape {
+    background-color: #c7c5c6;
+
+    &::after {
+      background-color: #c7c5c6;
+    }
+  }
+
+  .guideTitle {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -19px;
+      top: 1px;
+      width: 10px;
+      height: 10px;
+      background-color: #ffae00;
+      border-radius: 50%;
+    }
+  }
+}
+
+.guideItemIsDone {
+  position: relative;
+  color: #ffae00;
+
+  .guideTitle {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -19px;
+      top: 1px;
+      width: 10px;
+      height: 10px;
+      background-color: #ffae00;
+      border-radius: 50%;
+    }
+  }
+
+  .guideShape {
+    background-color: #ffae00;
+
+    &::after {
+      background-color: #ffae00;
+    }
+  }
+}
+
+.form {
+  position: relative;
+
+  button {
+    background: #fff;
+    outline: none;
+  }
+}
+
+.sectionTitle {
+  margin-bottom: 30px;
+  color: #191919;
+  font-family: var(--font-family-bold);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sectionTeam {
+  position: relative;
+
+  input {
+    width: 320px;
+  }
+
+  .formCheckbox {
+    width: 320px;
+  }
+
+  .btnSubmit {
+    margin-right: 40px;
+  }
+
+  .btn {
+    margin-right: 20px;
+  }
+}
+
+.sectionPayment {
+  .btnSubmit {
+    padding: 0 30px;
+  }
+}
+
+.sectionAuth {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  .btn {
+    padding: 0 40px;
+  }
+}
+
+.sectionAuthLabel {
+  margin: 0 30px;
+  color: #a6a6a6;
+  font-family: var(--font-family-base);
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    color: #191919;
+  }
+}
+
+.sectionAuthLabelIsActive {
+  margin: 0 30px;
+  color: #191919;
+  font-family: var(--font-family-bold);
+}
+
+.formWarning {
+  position: relative;
+  text-align: center;
+
+  .btnIsActive {
+    margin: 0;
+  }
+}
+
+.formWarningLabel {
+  margin: 0 0 20px;
+}
+
+@media (--small-viewport) {
+  .root {
+    height: auto;
+    max-height: 100vh;
+    max-width: 90%;
+    padding: 10px 0;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+
+    input {
+      padding: 12px 15px;
+      font-size: 16px;
+    }
+  }
+
+  .formSection {
+    margin: 10px 0 0;
+  }
+
+  .formSectionButtons {
+    width: 100%;
+    margin: 15px 0 0;
+  }
+
+  .btnSubmit {
+    height: 45px;
+    margin: 0 10px 0 0;
+    padding: 0 20px;
+    line-height: 45px;
+  }
+
+  .sectionTeam {
+    .btnSubmit {
+      margin: 0 10px 0 0;
+    }
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .sectionAuth {
+    flex-direction: column-reverse;
+  }
+
+  .sectionAuthLabel {
+    margin: 0 15px;
+  }
+
+  .baseBtn {
+    height: 45px;
+    margin: 0 10px;
+    padding: 15px 20px;
+    line-height: initial;
+  }
+
+  .sectionTitle {
+    margin: 0 0 10px;
+  }
+}

@@ -1,0 +1,67 @@
+@import '../../../../components/styles/variables.css';
+
+.root {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0; bottom: 0;
+  padding: 0 30px;
+  width: 100%;
+  height: var(--mobile-panel-height);
+  background: #fff;
+  box-shadow: 0 -1px 15px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  z-index: 11;
+}
+
+.withTeamBuilder {
+  bottom: 5px;
+}
+
+.backBtn {
+  flex: none;
+  position: absolute; left: 10px; top: calc((var(--mobile-panel-height) - 20) / 2);
+  height: 20px;
+}
+
+.button {
+  padding: 0 25px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 0.875em;
+  text-align: center;
+  color: var(--blue-color);
+  text-transform: uppercase;
+  border: solid 1px var(--blue-color);
+  border-radius: 18px;
+  box-sizing: border-box;
+  transition: all 0.1s ease-out;
+  user-select: none;
+  cursor: pointer;
+}
+
+.buttonIsBlue {
+  composes: button;
+  color: #fff;
+  background-color: var(--blue-color);
+}
+
+.buttonIsGreen {
+  composes: button;
+  color: #fff;
+  background-color: var(--green-color);
+  border: solid 1px var(--green-color);
+}
+
+.buttonIsDisabled {
+  pointer-events: none;
+  color: #ccc;
+  border: solid 1px #ccc;
+}
+
+@media (--small-viewport) {
+  .root {
+    display: flex;
+  }
+}

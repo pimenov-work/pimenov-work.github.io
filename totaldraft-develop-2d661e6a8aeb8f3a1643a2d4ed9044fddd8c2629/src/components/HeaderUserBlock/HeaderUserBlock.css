@@ -1,0 +1,243 @@
+@import '../styles/variables.css';
+
+.root {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin: 0 -40px 0 20px;
+  padding: 0 30px 0 0;
+  color: #fff;
+  transform: translate3d(0, 0, 0);
+
+  &:hover {
+    background-color: #2c2c2c;
+
+    .menu {
+      display: block;
+    }
+  }
+}
+
+.isActive {
+  transform: translate3d(0, -100%, 0);
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  min-width: 200px;
+  padding: 0 0 0 15px;
+  box-sizing: border-box;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.avatar {
+  flex: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 0 12px 0 0;
+  border-radius: 50%;
+  background-color: #888;
+  background-image: url('/images/userpic.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.name {
+  position: relative;
+  max-width: 120px;
+  margin-right: 20px;
+  color: #fff;
+  font-size: 0.875em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.cash {
+  position: relative;
+  margin-right: 20px;
+  color: #fff;
+  font-size: 0.875em;
+
+  svg {
+    margin: -2px 0 0 5px;
+
+    path {
+      fill: #fff;
+    }
+  }
+}
+
+.menuBtn {
+  cursor: pointer;
+
+  svg {
+    path {
+      stroke: #fff;
+    }
+  }
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  padding: 20px 40px 20px 25px;
+  color: #acacac;
+  font-size: 0.875em;
+  background-color: #2c2c2c;
+  border-bottom: solid 1px #424242;
+  transition: all 0.1s ease-out;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover {
+    color: #fff;
+    background-color: #424242;
+
+    .menuItemArrow {
+      path {
+        stroke: #fff;
+      }
+    }
+
+    .menuPaymentIcon {
+      border: #fff solid 2px;
+
+      path {
+        fill: #fff;
+      }
+    }
+
+    .menuProfileIcon path {
+      fill: #fff;
+    }
+
+    .menuExitIcon path {
+      fill: #fff;
+    }
+  }
+
+  &:last-child {
+    border-bottom: solid 1px transparent;
+  }
+}
+
+.menuItemTitle {
+  display: flex;
+  align-items: center;
+}
+
+.menuItemArrow {
+  path {
+    stroke: #acacac;
+    transition: all 0.1s ease-out;
+  }
+}
+
+.menuPaymentIcon {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-right: 20px;
+  border-radius: 50%;
+  border: #969696 solid 2px;
+  transition: all 0.1s ease-out;
+
+  svg path {
+    fill: #969696;
+    transition: all 0.1s ease-out;
+  }
+}
+
+.menuProfileIcon {
+  margin-right: 22px;
+
+  path {
+    fill: #969696;
+    transition: all 0.1s ease-out;
+  }
+}
+
+.menuExitIcon {
+  margin-right: 22px;
+
+  path {
+    fill: #969696;
+    transition: all 0.1s ease-out;
+  }
+}
+
+@media (--small-viewport) {
+  .root {
+    margin: 0;
+    padding: 0 20px 0 0;
+  }
+
+  .main {
+    min-width: auto;
+    padding: 0 0 0 5px;
+  }
+
+  .cash {
+    margin: 0 10px 0 0;
+    white-space: nowrap;
+  }
+
+  .name {
+    display: none;
+  }
+
+  .avatar {
+    display: none;
+  }
+
+  .menuItem {
+    padding: 15px 0 15px 15px;
+    box-sizing: border-box;
+  }
+
+  .menuPaymentIcon {
+    display: none;
+    margin: 0 10px 0 0;
+  }
+
+  .menuProfileIcon {
+    display: none;
+    margin: 0 10px 0 0;
+  }
+
+  .menuExitIcon {
+    display: none;
+    margin: 0 10px 0 0;
+  }
+
+  .menuItemArrow {
+    display: none;
+  }
+}
