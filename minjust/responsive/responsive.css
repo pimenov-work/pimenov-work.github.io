@@ -1757,12 +1757,12 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
   }
 
   .photo-viewer * {
-    overflow: visible !important;
+    overflow: auto !important;
     height: auto !important;
   }
 
   .photo-viewer .scrollable {
-    overflow: visible;
+    overflow: auto;
   }
 
   .question-list li .answer {
