@@ -24,46 +24,8 @@
                 <link rel="stylesheet" type="text/css" href="./Министерство юстиции Республики Беларусь_files/chosen.css" media="screen">
                 <link rel="stylesheet" type="text/css" href="./Министерство юстиции Республики Беларусь_files/jquery-ui.min.css" media="screen">
                 <!--[if gt IE 6]><link rel="stylesheet" type="text/css" href="/static/main/css/ie.css" media="screen" /><![endif]-->
-                <script type="text/javascript" async="" src="./Министерство юстиции Республики Беларусь_files/watch.js.Без названия"></script><script type="text/javascript" async="" src="./Министерство юстиции Республики Беларусь_files/analytics.js.Без названия"></script><script async="" src="./Министерство юстиции Республики Беларусь_files/gtm.js.Без названия"></script><script src="./Министерство юстиции Республики Беларусь_files/jquery-1.8.2.min.js.Без названия"></script>
-                <script src="./Министерство юстиции Республики Беларусь_files/chosen.jquery.min.js.Без названия"></script>
-                <script src="./Министерство юстиции Республики Беларусь_files/jquery.tools.min.js.Без названия"></script>
-                <script src="./Министерство юстиции Республики Беларусь_files/raphael-min.js.Без названия"></script>
-                <script src="./Министерство юстиции Республики Беларусь_files/jquery.placeholder.js.Без названия"></script>
-                <script src="./Министерство юстиции Республики Беларусь_files/jquery-ui.custom.min.js.Без названия"></script>
-                <script src="./Министерство юстиции Республики Беларусь_files/jquery.ui.datepicker-ru.min.js.Без названия"></script>
-                <script src="./Министерство юстиции Республики Беларусь_files/main_menu.js.Без названия"></script>
-            
-            <script src="./Министерство юстиции Республики Беларусь_files/loader.js.Без названия"></script>
+                
         
-    
-        <script type="text/javascript">
-            jQuery(document).ready(function($) {
-                $('div.pagination div.load-more-button').click(function () {
-                    var pagination_link = $(this);
-                    if (pagination_link.prop('disabled'))
-                        return;
-                    $.ajax({
-                        data: {
-                            page: pagination_link.attr('data-next-page-number')
-                        },
-                        success: function (result) {
-                            $('.qs-object-list > .clear').before(result);
-                            var page_num = pagination_link.attr('data-page-num');
-                            page_num++;
-                            if (page_num >= pagination_link.attr('data-max-pages')) {
-                                pagination_link.remove();
-                            } else {
-                                pagination_link.attr('data-page-num', page_num);
-                                pagination_link.attr('data-next-page-number', (page_num + 1));
-                            }
-                        }
-                    }).done(function() {
-                        pagination_link.prop('disabled', false);
-                    });
-                    pagination_link.prop('disabled', true);
-                });
-            });
-        </script>
     
 
     <style type="text/css">/* This is not a zero-length file! */</style><style type="text/css">/* This is not a zero-length file! */</style>
@@ -116,78 +78,6 @@
         <img src="./Министерство юстиции Республики Беларусь_files/profile.png">
         <span>Регистрация</span>
       </a>
-      <script>
-        $(document).ready(function () {
-          var submit_login_form = function () {
-            var button = $(this);
-            if (button.prop('disabled'))
-              return;
-            $(".login .login-form, .login input").removeClass('error');
-            var form = $('#top_login_form');
-            var form_el = $('#top_login_form').get(0);
-            var names = ['username', 'password'];
-            for (var i = 0; i < names.length; ++i) {
-              var name = names[i];
-              if (!form_el.elements[name].value) {
-                $(form_el.elements[name]).addClass('error').focus();
-                break;
-              }
-            }
-            $.ajax({
-              url: '/ru/account/ajax/login/',
-              data: form.serialize(),
-              type: 'post',
-              success: function (output) {
-                if (output) {
-                  if (output.errors) {
-                    var errors = output.errors;
-                    if (errors.__all__ && errors.__all__[0]) {
-                      $('.login .login-form .error-message').html(errors.__all__[0]);
-                      $('.login .login-form').addClass('error');
-                      return;
-                    }
-                    for (var i = 0; i < names.length; ++i) {
-                      var name = names[i];
-                      if (errors[name]) {
-                        var input_element = form_el.elements[name];
-                        var error_message = input_element.placeholder + ' - ' + errors[name];
-                        $(input_element).addClass('error').focus();
-                        $('.login .login-form .error-message').html(error_message);
-                        return;
-                      }
-                    }
-                  }
-                  if (output.next_url) {
-                    window.location.href = output.next_url;
-                  }
-                }
-              },
-              error: function () {
-                window.location.href = '/ru/account/login/';
-              }
-            }).done(function () {
-              button.prop('disabled', false);
-            });
-            button.prop('disabled', true);
-          };
-          $('.login .button').click(submit_login_form);
-          $("#top_login_form").on("keypress", function (event) {
-            if (event.which == 13 && !event.shiftKey) {
-              event.preventDefault();
-              submit_login_form();
-            }
-          });
-          $("#top_login_form .submit-emulator").on("keypress", function (event) {
-            if ((event.which == 13 || event.which == 32) && !event.shiftKey) {
-              event.preventDefault();
-              submit_login_form();
-            }
-          }).on("click", function (e) {
-            event.preventDefault();
-            submit_login_form();
-          });
-        });
-      </script>
     
   </div>
   <div class="col-right">
@@ -664,22 +554,8 @@
     <form id="main-menu-search-form" action="http://minjust.gov.by/ru/search/" method="POST">
       <input id="main-menu-search" name="any_words" type="text" placeholder="Поиск по сайту" class="search">
     </form>
-    <script>
-      $(document).ready(function () {
-        $('#main-menu-search').keypress(function (e) {
-          if (e.which == 13) {
-            $('#main-menu-search-form').submit();
-          }
-        });
-      });
-    </script>
   </div>
 </div>
-<script>
-  activate_main_menu("hover",
-                     "400",
-                     "500");
-</script>
                     
                 </div>
             </div>
@@ -733,70 +609,9 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        var scrollable;
-        var selectedImg = 1;
-        var max = 11;
-        function nextImage() {
-            if (parseInt(selectedImg) + 1 <= max) {
-                // Deselect
-                $('.thumb[num="' + selectedImg + '"]').removeClass('selected');
-                if (selectedImg % 5 == 0) scrollable.next();
-                selectedImg++;
-                // Update Image
-                $('.viewer .photo img').attr('src', $('.thumb[num="' + selectedImg + '"]').attr('src'));
-                $('.viewer .photo .title').html($('.thumb[num="' + selectedImg + '"]').attr('title'));
-                // Select
-                $('.thumb[num="' + selectedImg + '"]').addClass('selected');
-            }
-        }
-        function prevImage() {
-            if (parseInt(selectedImg) - 1 >= 1) {
-                // Deselect
-                $('.thumb[num="' + selectedImg + '"]').removeClass('selected');
-                if (selectedImg % 5 == 1) scrollable.prev();
-                selectedImg--;
-                // Update Image
-                $('.viewer .photo img').attr('src', $('.thumb[num="' + selectedImg + '"]').attr('src'));
-                $('.viewer .photo .title').html($('.thumb[num="' + selectedImg + '"]').attr('title'));
-                // Select
-                $('.thumb[num="' + selectedImg + '"]').addClass('selected');
-            }
-        }
-        function showImage(obj) {
-            // Deselect
-            $('.thumb[num="' + selectedImg + '"]').removeClass('selected');
-            selectedImg = $(obj).attr('num');
-            // Update Image
-            $('.viewer .photo img').attr('src', $('.thumb[num="' + selectedImg + '"]').attr('src'));
-            $('.viewer .photo .title').html($('.thumb[num="' + selectedImg + '"]').attr('title'));
-            // Select
-            $(obj).addClass('selected');
-        }
-        $(document).ready(function() {
-             $(".scrollable").scrollable();
-             scrollable = $('.scrollable').data('scrollable');
-        });
-    </script>
 
         </div>
     </div>
-    <script type="text/javascript">
-        jQuery(function($) {
-            var scroll_2_menu =  function() { $(window).scrollTop($('#main-menu-nav').offset().top-5) };
-            $('div.menu-item > a.link').live('DOMActivate', scroll_2_menu);
-            scroll_2_menu()
-
-            $('.form-container .form-item .control >').focus(function() {$(this).parents('.form-item').addClass('with-focus');})
-            $('.form-container .form-item .control >').blur(function() {$(this).parents('.form-item').removeClass('with-focus');})
-        });
-        $(document).ready(function(){
-            $('.page-filter li').click(function(){
-                $('.page-filter .hover-div').removeClass('active');
-                $(this).find('.hover-div').addClass('active');
-            });
-        });
-    </script>
 
             
             
@@ -843,78 +658,7 @@
                     <div class="clear"></div>
                 </div>
             </div>
-            <script type="text/javascript">
-                $(document).ready(function(){
-                    // Enable IE jquery fix for placeholders
-                    $('input, textarea').placeholder();
-                    $(window).scroll(function() {
-                        var w = $(this).scrollTop();
-                        if (w > 550) { $('.page-up-button').addClass('show'); }
-                        else { $('.page-up-button').removeClass('show'); }
-                    });
-                    // Link Menu
-                    $('.link-menu').click(function(){
-                        $(this).find('ul').slideToggle(200);
-                    });
-                    //Scrool Page to Top
-                    $('.page-up, .page-up-button').live('click', function(){
-                        $("html, body").animate({ scrollTop: 0 }, "slow");
-                        return false;
-                    });
-                    //Sub-Menu
-                    $('.aside .menu li').click(function() {
-                        var item = $(this);
-
-                        item.find(".sub-menu").slideToggle(200);
-                        setTimeout(function(){
-                            item.toggleClass('show-sub-menu');
-                        },200);
-                    });
-                });
-            </script>
-        </div> <a href="https://metrika.yandex.ru/stat/?id=38960170&amp;from=informer" target="_blank" rel="nofollow"><img src="./Министерство юстиции Республики Беларусь_files/3_1_B9ECFFFF_99CCFFFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:38960170,lang:&#39;ru&#39;});return false}catch(e){}"></a>   <script type="text/javascript" id="">(function(d,b,a){(b[a]=b[a]||[]).push(function(){try{b.yaCounter38960170=new Ya.Metrika({id:38960170,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})}catch(a){}});var e=d.getElementsByTagName("script")[0],c=d.createElement("script");a=function(){e.parentNode.insertBefore(c,e)};c.type="text/javascript";c.async=!0;c.src="https://mc.yandex.ru/metrika/watch.js";"[object Opera]"==b.opera?d.addEventListener("DOMContentLoaded",a,!1):a()})(document,window,"yandex_metrika_callbacks");</script> <noscript>&lt;div&gt;&lt;img src="https://mc.yandex.ru/watch/38960170" style="position:absolute; left:-9999px;" alt=""&gt;&lt;/div&gt;</noscript> 
-        <script type="text/javascript">
-            // Voting Data
-            var voteResultData = [
-                { y: 2,    n: 100, u: 8 },
-                { y: 32, n: 50, u: 18 },
-                { y: 40, n: 40, u: 20 }
-            ]
-            // Init Voting
-            function voteInitialize() {
-                var results  = $('.interview .voting-results');
-                var totalW = $('.interview .voting-results .bar').outerWidth(false);
-                for (var i in voteResultData) {
-                    $(results[i]).find('#yes .count').text(voteResultData[i].y + '% (' + voteResultData[i].y + ')');
-                    $(results[i]).find('#no .count').text(voteResultData[i].n + '% (' + voteResultData[i].n + ')');
-                    $(results[i]).find('#undefined .count').text(voteResultData[i].u + '% (' + voteResultData[i].u + ')');
-
-                    $(results[i]).find('#yes .fill').width(totalW / 100 * voteResultData[i].y);
-                    $(results[i]).find('#no .fill').width(totalW / 100 * voteResultData[i].n);
-                    $(results[i]).find('#undefined .fill').width(totalW / 100 * voteResultData[i].u);
-                }
-            }
-            $(document).ready(function(){
-                // Init Voting
-                voteInitialize();
-                // Main Slider
-                $('.main-slider .item').hover(function(){
-                    $('.main-slider .item').removeClass('active');
-                    $(this).addClass('active');
-                });
-                // Search Checkboxes
-
-                $('.voting-holder .checkbox').click(function() {
-                    var parent = $(this).parents('.content-item');
-                    $('.voting-holder .checkbox').removeClass('checked');
-                    $(this).addClass('checked');
-                    setTimeout(function() {
-                        parent.find('.voting-holder').addClass('hide');
-                        parent.find('.voting-results').addClass('show');
-                    }, 500);
-                });
-            });
-        </script>
+        </div> <a href="https://metrika.yandex.ru/stat/?id=38960170&amp;from=informer" target="_blank" rel="nofollow"><img src="./Министерство юстиции Республики Беларусь_files/3_1_B9ECFFFF_99CCFFFF_0_pageviews" style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:38960170,lang:&#39;ru&#39;});return false}catch(e){}"></a>   <script type="text/javascript" id="">(function(d,b,a){(b[a]=b[a]||[]).push(function(){try{b.yaCounter38960170=new Ya.Metrika({id:38960170,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})}catch(a){}});var e=d.getElementsByTagName("script")[0],c=d.createElement("script");a=function(){e.parentNode.insertBefore(c,e)};c.type="text/javascript";c.async=!0;c.src="https://mc.yandex.ru/metrika/watch.js";"[object Opera]"==b.opera?d.addEventListener("DOMContentLoaded",a,!1):a()})(document,window,"yandex_metrika_callbacks");</script> <noscript>&lt;div&gt;&lt;img src="https://mc.yandex.ru/watch/38960170" style="position:absolute; left:-9999px;" alt=""&gt;&lt;/div&gt;</noscript>
     <!-- Accessibility scrips -->
   <script src="assets/helpers.js"></script>
   <script src="assets/main.js"></script>
