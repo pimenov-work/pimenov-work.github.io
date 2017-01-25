@@ -149,7 +149,7 @@ function accessibility() {
 
 	////// Create or clone //////
 	var menu_bar = document.createElement('section'); // Create menu element on top of the page
-	var footer_logo = logo_link.cloneNode(true); // Clone header logo
+	// var footer_logo = logo_link.cloneNode(true); // Clone header logo
 	page_up_button.innerHTML = gettext('To top');
 
 	menu_bar.classList.add('menu-bar');
@@ -170,10 +170,10 @@ function accessibility() {
 											 '</ul>';
 
 	header.insertBefore(menu_bar, header.firstChild);
-	footer.appendChild(footer_logo);
+	// footer.appendChild(footer_logo);
 	parent_of_page_up_button.insertBefore(page_up_button, first_link_footer);
 
-	footer.innerHTML += '<a href="http://minjust.gov.by" class="minf-link"> minjust.gov.by </a>';
+	// footer.innerHTML += '<a href="http://minjust.gov.by" class="minf-link"> minjust.gov.by </a>';
 
 }
 

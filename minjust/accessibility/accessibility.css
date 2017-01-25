@@ -690,8 +690,23 @@ html body.accessibility.theme__lightblue-on-darkblue .main-header .menu-bar .men
 
 .accessibility-settings-block > div li {
 	padding: 10px 25px;
-	text-align: center;
 	cursor: pointer;
+}
+
+.accessibility-settings-block > div.font-size li:nth-of-type(1) {
+	width: 60px;
+}
+
+.accessibility-settings-block > div.font-size li:nth-of-type(2) {
+	width: 63px;
+}
+
+.accessibility-settings-block > div.font-size li:nth-of-type(3) {
+	width: 65px;
+}
+
+.theme__lightblue-on-darkblue .accessibility-settings-block {
+	border-color: #104b90 !important;
 }
 
 .accessibility-settings-block > div:nth-of-type(3) {
@@ -766,27 +781,27 @@ html body.accessibility.theme__lightblue-on-darkblue .main-header .menu-bar .men
 }
 
 .accessibility-settings-block .font-size .small {
-	font-size: 16px;
+	font-size: 16px !important;
 }
 
 .accessibility-settings-block .font-size .medium {
-	font-size: 20px;
+	font-size: 20px !important;
 }
 
 .accessibility-settings-block .font-size .big {
-	font-size: 24px;
+	font-size: 24px !important;
 }
 
 .accessibility-settings-block .letter-spacing .letter-spacing-default {
-	letter-spacing: 0;
+	letter-spacing: 0 !important;
 }
 
 .accessibility-settings-block .letter-spacing .letter-spacing-medium {
-	letter-spacing: 3px;
+	letter-spacing: 3px !important;
 }
 
 .accessibility-settings-block .letter-spacing .letter-spacing-big {
-	letter-spacing: 7px;
+	letter-spacing: 7px !important;
 }
 
 /* Action styles */

@@ -1,6 +1,0 @@
-{
-  "name": "PlayersByPositionInMyTeam",
-  "version": "0.0.0",
-  "private": true,
-  "main": "./PlayersByPositionInMyTeam.js"
-}

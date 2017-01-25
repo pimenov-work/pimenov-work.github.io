@@ -1765,10 +1765,6 @@ a[href="https://metrika.yandex.ru/stat/?id=38960170&from=informer"] {
     overflow: auto !important;
   }
 
-  * {
-    overflow: auto !important;
-  }
-
   .question-list li .answer {
     margin: 0;
   }

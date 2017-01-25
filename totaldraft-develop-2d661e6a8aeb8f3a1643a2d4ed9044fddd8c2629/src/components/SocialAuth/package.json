@@ -1,6 +1,0 @@
-{
-  "name": "SocialAuth",
-  "version": "0.0.0",
-  "private": true,
-  "main": "./SocialAuth.js"
-}
