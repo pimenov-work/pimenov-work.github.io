@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title> Totaldraft widget settings </title>
+	<link rel="stylesheet" href="widget_settings.css">
+</head>
+<body>
+
+	<section class="td-wgt-settings">
+
+		<main>
+
+			<section class="preview">
+
+				<h1> Widget constructor </h1>
+
+				<iframe id="widget_component" src="../widget/widget.html"> </iframe>
+
+			</section>
+
+			<section class="options" id="options">
+
+				<form>
+					
+					<div class="field">
+						<h3> Referral code </h3>
+						<aside>
+							<input type="text">
+						</aside>
+					</div>
+
+					<div class="field double-text-input">
+						<h3> Price </h3>
+						<aside>
+							<div class="form-item">
+								<input type="text">
+								<span class="description"> min </span>
+							</div>
+							<div class="form-item">
+								<input type="text">
+								<span class="description"> max (-1 unlimited, 0 - only free) </span>
+							</div>
+						</aside>
+					</div>
+
+					<div class="field">
+						<h3> Maximum count <span class="description"> (0 - all) </span> </h3>
+						<aside>
+							<input type="text">
+						</aside>
+					</div>
+					
+					<div class="field checkboxes">
+						<h3> Columns </h3>
+						
+						<aside>
+							<div class="form-item">
+								<input type="checkbox" id="name"> <label for="name"> Name </label>
+							</div>
+
+							<div class="form-item">
+								<input type="checkbox" id="prize"> <label for="prize"> Prize </label>
+							</div>
+
+							<div class="form-item">
+								<input type="checkbox" id="start_time"> <label for="start_time"> Start time </label>
+							</div>
+
+							<div class="form-item">
+								<input type="checkbox" id="price"> <label for="price"> Price </label>
+							</div>
+
+							<div class="form-item">
+								<input type="checkbox" id="user_count"> <label for="user_count"> User count </label>
+							</div>
+
+							<div class="form-item">
+								<input type="checkbox" id="inter_button" checked disabled> <label for="inter_button"> Enter button </label>
+							</div>
+						</aside>
+					</div>
+
+					<div class="field">
+
+						<h3> Language </h3>
+
+						<select>
+						  <option> English </option>
+						  <option> Russian </option>
+						</select>
+
+					</div>
+
+				</form>
+
+			</section>
+
+		</main>
+
+		<aside>
+
+			<header>
+
+				<button class="tab active" id="iframe_tab"> Iframe code </button>
+
+				<button class="tab" id="native_tab"> Native code </button>
+
+			</header>
+
+			<div class="width-settings">
+
+				<span> Width: </span> <input type="text" value="630px" id="widget_width">
+
+			</div>
+
+			<div class="code-container">
+
+				<textarea class="iframe_code" id="iframe_code">Iframe</textarea>
+
+				<textarea class="native_code" id="native_code">Native</textarea>
+
+			</div>
+
+			<footer>
+					
+					<!-- Get second content of buttons from data-attribute -->
+					<button id="more_options" data-other_button="preview"> More options </button>
+
+					<button id="copy_code" data-copy="copied"> Copy code </button>
+
+			</footer>
+			
+		</aside>
+
+		<div class="close-icon"> </div>
+
+	</section>
+
+	<script src="widget_settings.js"> </script>
+</body>
+</html>

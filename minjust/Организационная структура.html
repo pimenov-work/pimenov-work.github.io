@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)http://minjust.gov.by/ru/departments/register_office/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
+  <meta name="yandex-verification" content="0d51fc9a01651f2b">
+  <meta name="theme-color" content="#2d66a4">
+  <title>
+    Организационная структура
+</title>
+  
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+  
+  
+    
+    
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <style> /* Please, don't delete this and don't replace */
+      body.load {
+        position: relative;
+        overflow: hidden;
+      }
+      body.load:after {
+        content: '';
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: white;
+        z-index: 1000;
+        overflow: hidden;
+      }
+    </style>
+    <link rel="shortcut icon" href="http://minjust.gov.by/static/main/img/fav.png">
+    <link rel="icon" href="http://minjust.gov.by/static/main/img/fav.png" type="image/x-icon">
+    <link rel="icon" href="http://minjust.gov.by/static/main/img/favicon.png">
+    <!--[if IE]><link rel="shortcut icon" type="image/gif" href="/static/main/img/favicon.ico"><![endif]-->
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script type="text/javascript" src="./Организационная структура_files/saved_resource"></script>
+    
+      <link rel="stylesheet" type="text/css" href="./Организационная структура_files/main.css" media="screen">
+      <link rel="stylesheet" type="text/css" href="./Организационная структура_files/chosen.css" media="screen">
+      <link rel="stylesheet" type="text/css" href="./Организационная структура_files/jquery-ui.min.css" media="screen">
+      <!--[if gt IE 6]><link rel="stylesheet" type="text/css" href="/static/main/css/ie.css" media="screen" /><![endif]-->
+      <link rel="stylesheet" type="text/css" href="./Организационная структура_files/adaptation.css">
+      <script src="./Организационная структура_files/jquery-1.8.2.min.js.Без названия"></script>
+      <script src="./Организационная структура_files/chosen.jquery.min.js.Без названия"></script>
+      <script src="./Организационная структура_files/jquery.tools.min.js.Без названия"></script>
+      <script src="./Организационная структура_files/raphael-min.js.Без названия"></script>
+      <script src="./Организационная структура_files/jquery.placeholder.js.Без названия"></script>
+      <script src="./Организационная структура_files/jquery-ui.custom.min.js.Без названия"></script>
+      <script src="./Организационная структура_files/jquery.ui.datepicker-ru.min.js.Без названия"></script>
+    
+    <script src="./Организационная структура_files/menu_switch_delay.js.Без названия"></script>
+    <script src="./Организационная структура_files/loader.js.Без названия"></script>
+  
+    
+
+  <script type="text/javascript">
+    $(document).ready(function ($) {
+      
+        // Main Slider
+        var show_trigger = "hover";
+        var hide_delay = "500";
+        var show_delay = "500";
+        if (window.innerWidth > 980) { // Hover effects only for desktop
+          activate_menu_switch_delay(".nav .menu-item", "open", show_trigger, hide_delay, show_delay);
+        }
+        // Voting Data
+        var voteResultData = [
+          { y: 2, n: 100, u: 8 },
+          { y: 32, n: 50, u: 18 },
+          { y: 40, n: 40, u: 20 }
+        ]
+        // Init Voting
+        function voteInitialize() {
+          var results = $('.interview .voting-results');
+          var totalW = $('.interview .voting-results .bar').outerWidth(false);
+          for (var i in voteResultData) {
+            $(results[i]).find('#yes .count').text(voteResultData[i].y + '% (' + voteResultData[i].y + ')');
+            $(results[i]).find('#no .count').text(voteResultData[i].n + '% (' + voteResultData[i].n + ')');
+            $(results[i]).find('#undefined .count').text(voteResultData[i].u + '% (' + voteResultData[i].u + ')');
+
+            $(results[i]).find('#yes .fill').width(totalW / 100 * voteResultData[i].y);
+            $(results[i]).find('#no .fill').width(totalW / 100 * voteResultData[i].n);
+            $(results[i]).find('#undefined .fill').width(totalW / 100 * voteResultData[i].u);
+          }
+        }
+        // Init Voting
+        voteInitialize();
+        // Search Checkboxes
+        $('.voting-holder .checkbox').click(function () {
+          var parent = $(this).parents('.content-item');
+          $('.voting-holder .checkbox').removeClass('checked');
+          $(this).addClass('checked');
+          setTimeout(function () {
+            parent.find('.voting-holder').addClass('hide');
+            parent.find('.voting-results').addClass('show');
+          }, 500);
+        });
+        // Enable IE jquery fix for placeholders
+        $('input, textarea').placeholder();
+        $(window).scroll(function () {
+          var w = $(this).scrollTop();
+          if (w > 550) {
+            $('.page-up-button').addClass('show');
+          }
+          else {
+            $('.page-up-button').removeClass('show');
+          }
+        });
+        // Link Menu
+        $('.link-menu').click(function () {
+          $(this).find('ul').slideToggle(200);
+        });
+        //Scrool Page to Top
+        $('.page-up, .page-up-button').live('click', function () {
+          $("html, body").animate({ scrollTop: 0 }, "slow");
+          return false;
+        });
+        //Sub-Menu
+        $('.aside .menu li').click(function () {
+          var item = $(this);
+
+          item.find(".sub-menu").slideToggle(200);
+          setTimeout(function () {
+            item.toggleClass('show-sub-menu');
+          }, 200);
+        });
+      
+    });
+  </script>
+<script type="text/javascript">try {
+var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
+var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
+var AG_removeElementBySelector = function(selector) { if (!document.querySelectorAll) { return; } var nodes = document.querySelectorAll(selector); if (nodes) { for (var i = 0; i < nodes.length; i++) { if (nodes[i] && nodes[i].parentNode) { nodes[i].parentNode.removeChild(nodes[i]); } } } };
+var AG_each = function(selector, fn) { if (!document.querySelectorAll) return; var elements = document.querySelectorAll(selector); for (var i = 0; i < elements.length; i++) { fn(elements[i]); }; };
+var AG_removeParent = function(el, fn) { while (el && el.parentNode) { if (fn(el)) { el.parentNode.removeChild(el); return; } el = el.parentNode; } };
+var AdFox_getCodeScript = function() {};
+AG_onLoad(function() { AG_each('iframe[id^="AdFox_iframe_"]', function(el) { if (el && el.parentNode) { el.parentNode.removeChild(el); } }); });
+try { Object.defineProperty(window, 'noAdsAtAll', { get: function() { return true; } }); } catch (ex) {}
+window.uabInject = function() {};
+} catch (ex) { console.error('Error executing AG js: ' + ex); }</script><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><script src="./Организационная структура_files/responsive.js.Без названия" type="text/javascript"></script><link rel="stylesheet" href="./Организационная структура_files/responsive.css"><style type="text/css">/* This is not a zero-length file! */</style><style type="text/css">/* This is not a zero-length file! */</style></head>
+<body class="">
+
+<div class="body">
+  
+  <div class="main-header">
+    <div class="flag"></div>
+    <div class="container">
+      
+      
+
+
+<div class="links">
+  <div class="col-1 header-user-links">
+    
+      <div class="login">
+        <span onclick="window.location=&#39;/ru/account/login/&#39;;">Вход</span>
+
+        <div class="login-form">
+          <form id="top_login_form">
+            <input type="hidden" name="csrfmiddlewaretoken" value="DOwWdC7d03zwt2DyKRzoeneWrM3dbpnw">
+            <input name="next" type="hidden" value="/ru/departments/register_office/">
+            <input name="username" type="text" placeholder="Логин"><br>
+            <input name="password" type="password" placeholder="Пароль">
+            <a href="javascript:void(0)" class="submit-emulator slim"></a>
+
+            <div class="button">Войти</div>
+            <a class="extra_link login_with_eds" href="http://minjust.gov.by/ru/account/secure_login/">Войти c ЭЦП</a>
+            <a class="extra_link restore_password" href="http://minjust.gov.by/ru/register/password/reset/">Восстановить пароль</a>
+          </form>
+          <div class="error-message"></div>
+        </div>
+      </div>
+      <a class="link registration-link" href="http://minjust.gov.by/ru/register/natural/">
+        <img src="./Организационная структура_files/profile.png">
+        <span>Регистрация</span>
+      </a>
+      <script>
+        $(document).ready(function () {
+          var submit_login_form = function () {
+            var button = $(this);
+            if (button.prop('disabled'))
+              return;
+            $(".login .login-form, .login input").removeClass('error');
+            var form = $('#top_login_form');
+            var form_el = $('#top_login_form').get(0);
+            var names = ['username', 'password'];
+            for (var i = 0; i < names.length; ++i) {
+              var name = names[i];
+              if (!form_el.elements[name].value) {
+                $(form_el.elements[name]).addClass('error').focus();
+                break;
+              }
+            }
+            $.ajax({
+              url: '/ru/account/ajax/login/',
+              data: form.serialize(),
+              type: 'post',
+              success: function (output) {
+                if (output) {
+                  if (output.errors) {
+                    var errors = output.errors;
+                    if (errors.__all__ && errors.__all__[0]) {
+                      $('.login .login-form .error-message').html(errors.__all__[0]);
+                      $('.login .login-form').addClass('error');
+                      return;
+                    }
+                    for (var i = 0; i < names.length; ++i) {
+                      var name = names[i];
+                      if (errors[name]) {
+                        var input_element = form_el.elements[name];
+                        var error_message = input_element.placeholder + ' - ' + errors[name];
+                        $(input_element).addClass('error').focus();
+                        $('.login .login-form .error-message').html(error_message);
+                        return;
+                      }
+                    }
+                  }
+                  if (output.next_url) {
+                    window.location.href = output.next_url;
+                  }
+                }
+              },
+              error: function () {
+                window.location.href = '/ru/account/login/';
+              }
+            }).done(function () {
+              button.prop('disabled', false);
+            });
+            button.prop('disabled', true);
+          };
+          $('.login .button').click(submit_login_form);
+          $("#top_login_form").on("keypress", function (event) {
+            if (event.which == 13 && !event.shiftKey) {
+              event.preventDefault();
+              submit_login_form();
+            }
+          });
+          $("#top_login_form .submit-emulator").on("keypress", function (event) {
+            if ((event.which == 13 || event.which == 32) && !event.shiftKey) {
+              event.preventDefault();
+              submit_login_form();
+            }
+          }).on("click", function (e) {
+            event.preventDefault();
+            submit_login_form();
+          });
+        });
+      </script>
+    
+  </div>
+  <div class="col-right">
+    <div class="lang">
+      
+        <a class="selected" href="http://minjust.gov.by/ru/">Ru</a>
+      
+        <a href="http://minjust.gov.by/be/">Be</a>
+      
+        <a href="http://minjust.gov.by/en/">En</a>
+      
+    </div>
+    <a class="sitemap" href="http://minjust.gov.by/ru/sitemap/">
+      <img src="./Организационная структура_files/icon-sitemap.png">
+    </a>
+  </div>
+  
+    <div class="col-right social-banners">
+      
+        <a target="_blank" href="http://vk.com/ministerstvojusticii">
+          <img src="./Организационная структура_files/0973fa5bbb988817661c703cd206284a.gif" style="height:30px;">
+        </a>
+      
+        <a target="_blank" href="https://www.facebook.com/minjust.by/">
+          <img src="./Организационная структура_files/4ffb3d2604df74e4422c76b748615285.gif" style="height:30px;">
+        </a>
+      
+        <a target="_blank" href="https://twitter.com/PressMinyust">
+          <img src="./Организационная структура_files/b58236550fad303aeb3d703a801f05f8.gif" style="height:30px;">
+        </a>
+      
+        <a target="_blank" href="https://www.youtube.com/channel/UCkFGzrP3ldtgGsQUP-Cvx0A">
+          <img src="./Организационная структура_files/393223564cd16aec8b30f90c1dcf31af.gif" style="height:30px;">
+        </a>
+      
+    </div>
+  
+  <div class="clear"></div>
+<button class="go-to-special-version" id="go-to-special-version">Версия для слабовидащих</button></div>
+<div class="header-text-line"></div>
+<div class="wrapper">
+  <a href="http://minjust.gov.by/ru/">
+    <div class="logo">
+      <div class="logo-text">
+        Министерство юстиции Республики Беларусь
+      </div>
+    </div>
+  </a>
+  <div class="info hotline">
+    <span>Горячая линия</span>
+    <p>+ 375 17 306-37-30</p>
+</div><div class="info">
+    <span>Режим работы линии</span>
+        <p>Пн. - Сб.: с 9.00 до 18.00</p>
+        <a href="http://minjust.gov.by/ru/ministry/contact/">Контакты подробно</a>
+</div>
+
+  <div class="clear"></div>
+</div>
+      
+      
+        
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#main-menu-search').keypress(function (e) {
+      if (e.which == 13) {
+        $('#main-menu-search-form').submit();
+      }
+    });
+  });
+</script>
+<div id="main-menu-nav" class="nav">
+  <div class="menu-item" style="width:0px;"></div>
+  
+  <label class="menu_button" for="menu_button"> Навигация </label>
+  <input class="menu_button_checkbox" type="checkbox" id="menu_button">
+
+  
+    <div class="menu-item
+                
+                
+                
+                ">
+
+      <a class="link" href="http://minjust.gov.by/ru/ministry/">
+        <div class="inline">О Министерстве</div>
+      </a>
+
+      <div class="sub-menu">
+        <div class="shadow"></div>
+        <div class="sub-menu-columns">
+          
+            <div class="column first">
+              <div class="title">
+                <div class="text">О Министерстве</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://minjust.gov.by/ru/ministry/sovet/">Вышестоящая организация</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/ministry/staff/">Руководство</a></li>
+                
+                  <li><a href="http://minjust.gov.by/main-structure-minjust/">Структура центрального аппарата</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/ministry/regulations/">Положение о Министерстве юстиции</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/ministry/legal/">Правовая основа деятельности</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/ministry/history/">История</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/ministry/jobs/">Вакансии</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Контактная информация</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://minjust.gov.by/ru/ministry/contact/">Схема проезда и режим работы</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/departments/">Контакты подразделений</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/ministry/reception-schedule/">Приемные дни</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/one-w/">Служба "Одно окно"</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/press/">Пресс-служба</a></li>
+                
+              </ul>
+            </div>
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="menu-item
+                
+                
+                
+                ">
+
+      <a class="link" href="http://minjust.gov.by/ru/activities-of-the-ministry/">
+        <div class="inline">Деятельность</div>
+      </a>
+
+      <div class="sub-menu">
+        <div class="shadow"></div>
+        <div class="sub-menu-columns">
+          
+            <div class="column first">
+              <div class="title">
+                <div class="text">Для граждан</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://minjust.gov.by/ru/notaries-in-notary-offices/">Список нотариусов</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/public-control/">Общественный контроль за соблюдением прав осужденных</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/egr/">Единый государственный регистр юридических лиц и индивидуальных предпринимателей</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/mediation/">Медиация</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Для юридических лиц</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://minjust.gov.by/ru/work-with-associations-foundations/">Работа с общественными объединениями, фондами</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/arbitration-registry/">Реестр третейских судей и постоянно действующих третейских судов 	</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Для государственных органов</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://minjust.gov.by/ru/international-cooperation/">Международное сотрудничество</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/implementation-of-international-law/">Комиссия по имплементации международного права</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/justice-of-belarus-journal/">Журнал «Юстиция Беларуси»</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/npa-examination/">Обязательная юридическая экспертиза нормативных правовых актов</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/archives-activities/">Архивная деятельность</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/kadr/">Кадровая служба</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/reform/">Реформы Республики Беларусь в рамках отчета Всемирного банка «Ведение бизнеса»</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Для лицензиатов</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://minjust.gov.by/ru/about-licensing/">О лицензировании</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/about-licensing/a/">Адвокатская деятельность</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/about-licensing/juridical-services/">Юридические услуги</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/about-licensing/real-estate-activities/">Риэлтерская деятельность</a></li>
+                
+              </ul>
+            </div>
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="menu-item
+                
+                
+                
+                ">
+
+      <a class="link" href="http://minjust.gov.by/ru/departments/">
+        <div class="inline">Организационная<br> структура</div>
+      </a>
+
+      <div class="sub-menu">
+        <div class="shadow"></div>
+        <div class="sub-menu-columns">
+          
+            <div class="column first">
+              <div class="title">
+                <div class="text">Центральный аппарат Министерства</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://minjust.gov.by/ru/ministry/staff/">Руководство</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/main-structure-minjust/">Структура центрального аппарата</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Территориальные органы</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://minjust.gov.by/ru/departments/guiu/">Главные управления юстиции</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/departments/registration-authorities/">Регистрирующие органы</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/departments/register_office/">Загсы</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/departments/dno/">Архивы</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Принудительное исполнение</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://minjust.gov.by/ru/departments/730/">Главное управление принудительного исполнения</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/departments/filter/kind/enforcement/">Территориальные органы принудительного исполнения</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/departments/enforcement/730/additional/41/">Права и обязанности судебного исполнителя</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/departments/enforcement/730/additional/42/">Ответственность за невыполнение требований судебного исполнителя</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/departments/enforcement/730/additional/43/">Обжалование действия (бездействия) судебного исполнителя</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/departments/enforcement/730/additional/44/">Меры по обеспечению исполнения исполнительного документа</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/departments/enforcement/730/samples/">Образцы документов</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/auctions/">Реализация имущества</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/sved-o-dolj/">Предоставление сведений о должниках</a></li>
+                
+              </ul>
+            </div>
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="menu-item
+                
+                
+                
+                ">
+
+      <a class="link" href="http://minjust.gov.by/ru/reference-information/">
+        <div class="inline">Справочная<br> информация</div>
+      </a>
+
+      <div class="sub-menu">
+        <div class="shadow"></div>
+        <div class="sub-menu-columns">
+          
+            <div class="column first">
+              <div class="title">
+                <div class="text">Документы</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://minjust.gov.by/ru/document-samples/">Образцы документов</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/departmental-reporting-forms/">Формы ведомственной отчетности</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Информация</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://minjust.gov.by/ru/question-answer/">Вопросы и ответы</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/administrative-procedures/">Административные процедуры Министерства</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/human-rights/">Права человека</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/apostil/">Апостиль, свидетельствование документов для консульской легализации</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/press/polls/">Опросы</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/projects/">Обсуждение проектов нормативных<br> правовых актов</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/legal-opinions/">Юридические заключения<br> по кредитным соглашениям<br> и гарантиям Правительства<br> Республики Беларусь</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Госпошлина</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://minjust.gov.by/ru/information-on-state-fees/">Сведения о госпошлине</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/state-duties/">Ставки госпошлины и<br> реквизиты оплаты</a></li>
+                
+              </ul>
+            </div>
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="menu-item
+                
+                
+                
+                ">
+
+      <a class="link" href="http://minjust.gov.by/ru/news-and-events/">
+        <div class="inline">Новости и<br> события</div>
+      </a>
+
+      <div class="sub-menu">
+        <div class="shadow"></div>
+        <div class="sub-menu-columns">
+          
+            <div class="column first">
+              <div class="title">
+                <div class="text">Новости</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://minjust.gov.by/ru/news/">Новости</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/actual/">Актуально</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/press_about_of_us/">СМИ о нас</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">События</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://minjust.gov.by/ru/activity/t/">Прямые телефонные линии</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/activity/s/">Семинары</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/activity/c/">Пресс-конференции</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Медиа</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://minjust.gov.by/ru/photo-blog/">Фото</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/video/">Видео</a></li>
+                
+              </ul>
+            </div>
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="menu-item
+                
+                green
+                
+                ">
+
+      <a class="link" href="http://minjust.gov.by/ru/electronic-services/">
+        <div class="inline">Электронные<br> услуги</div>
+      </a>
+
+      <div class="sub-menu">
+        <div class="shadow"></div>
+        <div class="sub-menu-columns">
+          
+            <div class="column first">
+              <div class="title">
+                <div class="text">Электронная приёмная</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://minjust.gov.by/ru/ministry/reception-schedule/">Записаться на приём</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/make/electronic/appeal/">Подать электронные обращения</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/ministry/jobs/">Подать резюме на работу в Министерстве</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Службы сайта</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://minjust.gov.by/ru/news/subscribe/">Подписаться на новости и события</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/register/natural/">Регистрация на портале для граждан</a></li>
+                
+                  <li><a href="http://minjust.gov.by/ru/register/legal/">Регистрация на портале для<br> юридических лиц</a></li>
+                
+              </ul>
+            </div>
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  
+  <div class="clear"></div>
+  <div class="nav-search-holder">
+    <form id="main-menu-search-form" action="http://minjust.gov.by/ru/search/" method="POST">
+      <input id="main-menu-search" name="any_words" type="text" placeholder="Поиск по сайту" class="search">
+    </form>
+  </div>
+</div>
+
+      
+    </div>
+  </div>
+  
+  
+    <div class="main-container">
+        
+        <div class="page-content">
+            
+    <h1>Организационная структура</h1>
+    <!-- Structure -->
+    <div class="container structure">
+        <div class="cells">
+                <div class="column">
+                    <div class="title">Центральный аппарат Министерства</div>
+                    <ul>
+                        <li><a href="http://minjust.gov.by/ru/ministry/staff/">Руководство</a></li>
+                        <li><a href="http://minjust.gov.by/ru/main-structure-minjust/">Структурные подразделения центрального аппарата</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+            
+            <div class="structure-map-holder">
+                <div class="title">Территориальные органы</div>
+                <p><b>Выберите местоположение органа:</b> любую область или город Минск</p>
+                <div class="map" id="map_canvas"><svg height="500" version="1.1" width="600" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path fill="#e5e9ee" stroke="#d4d8de" d="M197.999,178.999C197.995,177.142,197.946,152.002,197.946,152.002C197.945,151.45000000000002,197.49699999999999,151.00300000000001,196.946,151.00300000000001H179.301C179.058,151.00300000000001,178.82299999999998,151.092,178.641,151.25400000000002C178.641,151.25400000000002,172.632,156.53400000000002,172.10999999999999,156.99300000000002C171.392,156.99300000000002,149.32999999999998,156.99300000000002,148.71099999999998,156.99300000000002C148.206,156.62800000000001,135.10299999999998,147.18800000000002,135.10299999999998,147.18800000000002C134.933,147.06500000000003,134.72799999999998,146.99900000000002,134.51799999999997,146.99900000000002C134.51799999999997,146.99900000000002,105.28799999999997,146.99900000000002,104.43799999999997,146.99900000000002C103.85699999999997,146.37000000000003,82.61599999999997,123.31700000000002,82.61599999999997,123.31700000000002C82.42699999999998,123.11200000000002,82.16099999999997,122.99400000000003,81.88099999999997,122.99400000000003H74.39199999999997C74.20799999999997,122.99400000000003,74.02699999999997,123.04600000000003,73.87099999999997,123.14100000000003C73.87099999999997,123.14100000000003,69.62699999999997,125.73700000000004,69.19099999999997,126.00300000000003C68.64199999999997,126.00300000000003,11.203999999999972,126.00300000000003,10.071999999999974,126.00300000000003C9.557999999999975,125.10600000000002,4.469999999999974,116.20200000000003,4.246999999999974,115.81400000000002C4.229999999999974,115.37300000000002,4.1949999999999745,114.35700000000003,4.1949999999999745,113.12600000000002C4.1949999999999745,107.50900000000001,4.839999999999975,106.09800000000001,5.035999999999975,105.79700000000003C5.362999999999975,105.79700000000003,24.229999999999976,105.79700000000003,24.229999999999976,105.79700000000003C24.566999999999975,105.79700000000003,24.878999999999976,105.62700000000002,25.064999999999976,105.34600000000003C25.085999999999977,105.31500000000003,27.174999999999976,102.14500000000004,29.579999999999977,99.00200000000004C34.14999999999998,93.02600000000004,35.47199999999998,92.88200000000003,35.525999999999975,92.88000000000004H38.747999999999976C39.275999999999975,92.88000000000004,39.711999999999975,92.47000000000004,39.744999999999976,91.94400000000003C39.74699999999998,91.91800000000003,39.76299999999998,91.68500000000003,39.76299999999998,91.30300000000003C39.76299999999998,90.27300000000002,39.656999999999975,88.27900000000002,38.94799999999998,86.49300000000002C37.988999999999976,84.08200000000002,36.24699999999998,82.80700000000002,33.90799999999998,82.80700000000002C33.90799999999998,82.80700000000002,22.80799999999998,82.80700000000002,22.68099999999998,82.80700000000002C22.516999999999978,82.78100000000002,21.96699999999998,82.67700000000002,21.44399999999998,82.37400000000001C20.72499999999998,81.959,20.38899999999998,81.38900000000001,20.38899999999998,80.578C20.38899999999998,78.537,22.53299999999998,75.70700000000001,23.35999999999998,74.788C23.52499999999998,74.603,23.61499999999998,74.366,23.61499999999998,74.121C23.61499999999998,74.044,23.60599999999998,73.96799999999999,23.58899999999998,73.893C23.51599999999998,73.575,23.28999999999998,73.313,22.987999999999982,73.19C21.895999999999983,72.752,18.775999999999982,71.091,18.775999999999982,69.276C18.775999999999982,65.80199999999999,19.345999999999982,65.444,19.369999999999983,65.432H19.367999999999984H19.369999999999983C19.370999999999984,65.432,19.378999999999984,65.432,19.38899999999998,65.432C21.601999999999983,65.432,23.616999999999983,61.107,23.616999999999983,56.359C23.616999999999983,51.292,24.538999999999984,50.901,25.841999999999985,50.901H35.521999999999984C35.759999999999984,50.901,35.990999999999985,50.816,36.17299999999999,50.659000000000006C36.252999999999986,50.592000000000006,38.13599999999999,48.95100000000001,38.13599999999999,46.672000000000004C38.13599999999999,46.181000000000004,38.51399999999999,44.38400000000001,40.19899999999999,42.637C41.532999999999994,41.251,44.04499999999999,39.599000000000004,48.42599999999999,39.599000000000004C53.22199999999999,39.599000000000004,56.91899999999999,40.591,60.17899999999999,41.466C62.78599999999999,42.166000000000004,65.24999999999999,42.828,67.78399999999999,42.828L69.58,42.842000000000006L71.173,42.854000000000006C74.078,42.854000000000006,78.465,42.854000000000006,78.465,38.598000000000006C78.465,37.014,79.757,31.913000000000007,82.53200000000001,25.998000000000005C84.82000000000001,21.117000000000004,88.70200000000001,14.439000000000005,94.19300000000001,10.336000000000004C102.04,4.478000000000004,104.23000000000002,3.994000000000004,105.94800000000001,3.994000000000004C106.25900000000001,3.994000000000004,106.572,4.011000000000005,106.902,4.0320000000000045C107.28,4.054000000000005,107.672,4.079000000000004,108.114,4.079000000000004C109.178,4.079000000000004,110.685,6.896000000000004,111.68,8.761000000000005C113.11500000000001,11.447000000000005,114.35400000000001,13.765000000000004,116.18100000000001,13.765000000000004C117.769,13.765000000000004,119.775,12.245000000000005,122.09800000000001,10.486000000000004C123.96900000000001,9.070000000000004,126.29600000000002,7.307000000000004,127.47400000000002,7.307000000000004C127.48500000000001,7.309000000000004,127.93000000000002,7.380000000000004,129.03900000000002,8.846000000000004C129.84900000000002,9.916000000000004,130.752,11.363000000000003,131.70600000000002,12.895000000000003C134.44500000000002,17.291000000000004,137.27900000000002,21.838,140.37900000000002,21.838C143.10100000000003,21.838,145.43200000000002,19.606,147.687,17.446C149.58,15.636000000000001,151.536,13.765,153.28500000000003,13.765C155.50000000000003,13.765,157.31600000000003,14.727,158.92200000000003,15.577C160.29600000000002,16.306,161.59600000000003,16.994,162.96400000000003,16.994H172.64600000000002C172.74900000000002,16.994,172.852,16.976,172.95200000000003,16.945C172.95700000000002,16.944,173.58400000000003,16.749,174.31700000000004,16.749C175.81600000000003,16.749,176.48500000000004,17.512,176.48500000000004,19.223V27.296C176.48500000000004,27.378,176.49500000000003,27.461,176.51600000000005,27.541C176.51800000000006,27.55,176.74800000000005,28.484,176.74800000000005,29.456C176.74800000000005,30.201,176.61600000000004,30.599,176.50500000000005,30.804C176.39100000000005,31.011999999999997,176.24400000000006,31.141,175.87100000000007,31.141C175.21100000000007,31.141,174.01600000000008,31.416999999999998,173.40900000000008,33.259C173.13400000000007,34.101,172.99200000000008,35.230000000000004,172.99200000000008,36.615C172.99200000000008,38.531,173.25700000000006,40.291000000000004,173.2680000000001,40.365C173.32100000000008,40.705000000000005,173.5440000000001,40.995000000000005,173.86100000000008,41.133C174.02100000000007,41.201,177.82500000000007,42.828,180.71100000000007,42.828C181.75300000000007,42.828,183.04900000000006,41.862,186.14300000000006,39.484C189.19700000000006,37.135000000000005,193.38000000000005,33.92,198.31900000000005,31.285000000000004C204.09000000000003,28.207000000000004,209.62600000000003,26.645000000000003,214.77100000000004,26.645000000000003C215.23700000000005,26.645000000000003,215.70100000000005,26.657000000000004,216.14800000000005,26.681000000000004C223.31900000000005,27.065000000000005,226.68200000000004,31.111000000000004,226.71700000000004,31.153000000000006C226.90700000000004,31.389000000000006,227.19700000000003,31.527000000000005,227.49800000000005,31.527000000000005C227.55200000000005,31.527000000000005,227.60500000000005,31.522000000000006,227.66000000000005,31.513000000000005C227.67200000000005,31.512000000000004,228.88100000000006,31.311000000000003,230.19400000000005,31.311000000000003C231.46400000000006,31.311000000000003,232.94600000000005,31.528000000000002,232.94600000000005,32.142C232.94600000000005,36.047000000000004,235.70800000000006,36.370000000000005,238.78600000000006,36.370000000000005C240.29600000000005,36.370000000000005,241.25500000000005,36.62200000000001,241.80600000000007,37.164C242.36500000000007,37.716,242.62500000000006,38.686,242.62500000000006,40.214C242.62500000000006,42.082,242.62500000000006,43.842999999999996,243.35600000000005,45.245C244.20800000000006,46.879999999999995,245.87800000000004,47.674,248.46400000000006,47.674L250.08300000000006,47.647999999999996C250.63800000000006,47.635999999999996,251.20900000000006,47.623999999999995,251.77100000000004,47.623999999999995C256.19500000000005,47.623999999999995,258.75700000000006,48.522999999999996,258.75700000000006,53.129999999999995V64.43199999999999C258.75700000000006,64.454,258.75900000000007,64.47699999999999,258.7610000000001,64.49999999999999C258.7610000000001,64.50299999999999,258.7750000000001,64.72799999999998,258.7750000000001,65.08299999999998C258.7750000000001,65.78999999999998,258.7150000000001,67.14499999999998,258.3180000000001,68.26699999999998C257.7450000000001,69.88999999999999,256.8640000000001,69.88999999999999,256.5320000000001,69.88999999999999C254.4370000000001,69.88999999999999,253.0300000000001,71.48799999999999,253.0300000000001,73.86799999999998C253.0300000000001,76.07099999999998,254.3400000000001,78.34999999999998,256.5320000000001,78.34999999999998C259.3640000000001,78.34999999999998,260.3710000000001,81.16899999999998,260.3710000000001,83.80799999999998C260.3710000000001,86.00199999999998,261.9630000000001,86.74899999999998,263.2410000000001,87.34699999999998C265.0030000000001,88.17199999999998,266.8230000000001,89.02699999999999,266.8230000000001,93.49399999999999C266.8230000000001,98.45899999999999,263.3300000000001,104.83099999999999,260.5220000000001,109.95199999999998C258.5610000000001,113.52599999999998,257.1430000000001,116.10899999999998,257.1430000000001,117.71299999999998V124.17199999999998C257.1430000000001,124.57299999999998,257.3830000000001,124.93499999999999,257.7530000000001,125.09299999999999C257.8330000000001,125.127,265.8430000000001,128.56699999999998,268.6000000000001,132.791C270.20400000000006,135.248,273.3200000000001,135.489,276.0680000000001,135.703C279.8160000000001,135.994,281.3430000000001,136.348,281.3430000000001,138.703C281.3430000000001,141.927,280.0110000000001,143.165,278.72400000000005,144.362C277.63200000000006,145.37699999999998,276.50300000000004,146.424,276.50300000000004,148.39C276.50300000000004,150.91199999999998,279.96500000000003,152.938,283.31300000000005,154.896C284.55300000000005,155.62199999999999,285.72600000000006,156.308,286.59600000000006,156.94699999999997C287.74100000000004,157.78999999999996,287.79800000000006,158.15099999999998,287.80000000000007,158.16499999999996C287.9650000000001,160.03999999999996,287.9940000000001,163.33899999999997,287.99800000000005,164.99899999999997C286.09900000000005,164.99899999999997,249.00500000000005,164.99899999999997,249.00500000000005,164.99899999999997C248.80000000000004,164.99899999999997,248.60000000000005,165.06299999999996,248.43200000000004,165.17999999999998C248.43200000000004,165.17999999999998,229.18600000000004,178.647,228.68200000000004,178.99899999999997C228.087,178.999,199.854,178.999,197.999,178.999M5.091,105.727C5.09,105.729,5.088,105.73100000000001,5.086,105.733C5.09,105.729,5.09,105.729,5.091,105.727" stroke-width="1" transform="matrix(1,0,0,1,170,-1)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: pointer;"></path><path fill="#e5e9ee" stroke="#d4d8de" d="M23.513,165.176C24.305000000000003,164.284,25.928,162.458,25.928,162.458C26.089000000000002,162.275,26.179000000000002,162.042,26.179000000000002,161.798C26.179000000000002,161.796,26.179000000000002,161.792,26.179000000000002,161.791L26.111,142.99699999999999C26.111,142.767,26.031000000000002,142.545,25.886,142.36599999999999C25.886,142.36599999999999,17.537999999999997,132.165,17.110999999999997,131.641C17.110999999999997,130.95499999999998,17.110999999999997,115.999,17.110999999999997,115.999C17.110999999999997,115.734,17.004999999999995,115.479,16.817999999999998,115.292C16.817999999999998,115.292,4.670999999999998,103.146,4.110999999999997,102.586C4.110999999999997,102.106,4.110999999999997,100.97,4.110999999999997,99.999C5.915999999999997,99.999,23.110999999999997,99.999,23.110999999999997,99.999C23.519999999999996,99.999,23.884999999999998,99.75099999999999,24.037999999999997,99.374C24.037999999999997,99.374,29.409,86.036,29.874999999999996,84.88C31.120999999999995,84.887,49.321999999999996,84.99499999999999,50.143,85C50.660000000000004,85.574,54.351,89.671,54.351,89.671C54.542,89.882,54.812,90.00200000000001,55.095,90.00200000000001L65.112,90C65.38199999999999,90,65.642,89.891,65.829,89.697L98.829,55.697C99.017,55.503,99.11099999999999,55.252,99.11099999999999,55.001000000000005C99.11099999999999,54.746,99.014,54.49,98.82,54.295C98.82,54.295,92.64999999999999,48.098,92.115,47.561C92.115,46.785,92.115,31.439,92.115,31.039C92.26599999999999,30.689,97.29899999999999,19.084000000000003,97.768,18C99.033,18,130.753,18.005,130.753,18.005C130.956,18.005,131.15499999999997,17.942999999999998,131.32299999999998,17.829C131.32299999999998,17.829,150.80199999999996,4.346,151.29799999999997,4.001000000000001C151.90499999999997,4.001000000000001,187.03199999999998,4.0150000000000015,188.53199999999998,4.0150000000000015C188.796,5.110000000000001,189.54999999999998,8.23,189.54999999999998,8.23C189.612,8.49,189.777,8.713000000000001,190.00699999999998,8.852L206.14,18.54C210.861,21.372999999999998,213.36499999999998,21.91,216.333,21.91H216.722C218.743,21.91,219.056,21.91,222.091,24.857C224.931,27.615,225.017,28.929,225.017,28.942C225.017,28.94,225.017,28.932,225.017,28.923000000000002C225.015,28.947000000000003,225.015,28.971,225.015,28.984V40.286C225.015,44.692,223.546,45.308,222.253,45.852000000000004C221.374,46.220000000000006,220.17299999999997,46.726000000000006,220.17299999999997,48.357000000000006C220.17299999999997,49.67600000000001,220.78799999999998,50.34100000000001,221.30599999999998,50.669000000000004C221.85699999999997,51.017,222.56199999999998,51.17100000000001,223.59099999999998,51.17100000000001C224.15499999999997,51.17100000000001,224.765,51.126000000000005,225.41299999999998,51.07900000000001C226.13,51.02700000000001,226.87199999999999,50.97200000000001,227.62599999999998,50.97200000000001L228.83899999999997,50.97700000000001L229.45199999999997,50.98100000000001C231.64299999999997,50.98100000000001,233.31099999999998,50.839000000000006,234.84699999999998,48.99900000000001C235.82699999999997,47.82800000000001,237.93699999999998,47.73600000000001,238.56199999999998,47.73600000000001L238.85899999999998,47.74300000000001C238.86499999999998,47.74300000000001,238.914,47.74400000000001,238.92,47.74400000000001H245.373C247.768,47.74400000000001,249.926,48.99000000000001,252.426,50.43300000000001C253.619,51.11900000000001,254.85,51.83100000000001,256.23699999999997,52.49000000000001C257.018,52.86300000000001,257.76399999999995,53.19000000000001,258.48499999999996,53.50700000000001C261.93399999999997,55.02300000000001,263.73299999999995,55.91200000000001,263.73299999999995,58.04700000000001C263.73299999999995,60.28000000000001,262.90099999999995,60.28000000000001,262.018,60.28000000000001H262.03H262.01399999999995L261.506,60.275000000000006C258.893,60.275000000000006,258.893,63.132000000000005,258.893,64.504C258.893,67.25500000000001,260.614,68.378,260.99499999999995,68.593C261.679,69.051,270.2699999999999,74.799,272.11199999999997,76.533C273.93199999999996,78.246,276.323,78.432,277.26599999999996,78.432L277.72499999999997,78.416L277.63699999999994,78.419H282.4789999999999C282.61999999999995,78.419,282.7679999999999,78.419,282.9199999999999,78.776C283.0469999999999,79.077,283.1189999999999,79.53099999999999,283.1189999999999,80.04899999999999C283.1189999999999,80.335,283.0959999999999,80.538,283.0959999999999,80.53899999999999C283.0939999999999,80.57399999999998,283.09199999999987,80.61199999999998,283.09199999999987,80.64799999999998V87.10699999999999C283.09199999999987,88.72499999999998,282.7399999999999,89.26099999999998,282.61699999999985,89.34399999999998H282.61299999999983C282.5819999999998,89.34099999999998,282.50899999999984,89.33499999999998,282.47799999999984,89.33499999999998H277.63599999999985C275.22599999999983,89.33499999999998,273.7429999999999,91.18099999999998,273.62199999999984,91.33599999999998C273.62599999999986,91.33299999999998,273.62599999999986,91.32699999999998,273.62599999999986,91.32699999999998C273.62399999999985,91.33099999999999,273.62199999999984,91.33499999999998,273.6179999999999,91.33799999999998C272.8309999999999,92.32699999999998,257.12599999999986,112.07699999999998,255.83499999999987,113.99599999999998C255.15499999999986,115.00699999999998,254.30799999999988,115.18999999999998,253.85499999999988,115.20199999999998C253.71599999999987,115.19899999999998,253.58199999999988,115.17999999999998,253.57999999999987,115.17999999999998C253.53499999999988,115.17299999999997,253.48599999999988,115.16899999999998,253.43899999999988,115.16899999999998H237.30799999999988C235.48599999999988,115.16899999999998,235.0189999999999,114.20299999999999,234.99899999999988,114.16299999999998L235.00899999999987,114.18699999999998C234.97599999999989,114.10699999999999,234.92699999999988,114.01499999999999,234.87399999999988,113.94799999999998C234.84499999999989,113.90799999999997,231.84499999999989,109.97099999999998,230.0479999999999,107.50599999999997C228.74299999999988,105.71499999999997,227.19999999999987,105.44799999999998,226.3999999999999,105.44799999999998C226.19499999999988,105.44799999999998,226.0309999999999,105.46499999999997,225.9229999999999,105.47999999999998C225.7449999999999,105.47999999999998,209.8819999999999,105.47999999999998,209.8819999999999,105.47999999999998C209.4439999999999,105.47999999999998,209.05799999999988,105.76599999999998,208.92699999999988,106.18399999999997C208.92699999999988,106.18399999999997,208.05199999999988,109.00799999999997,207.74099999999987,110.01299999999996C206.46199999999988,110.01299999999996,196.6369999999999,110.01099999999997,196.21399999999988,110.01099999999997C195.8099999999999,109.81199999999997,180.19399999999987,102.11399999999996,180.19399999999987,102.11399999999996C180.05699999999987,102.04699999999997,179.90699999999987,102.01199999999996,179.75299999999987,102.01199999999996H171.57299999999987C171.47499999999985,102.01199999999996,171.37999999999985,102.02599999999995,171.28799999999987,102.05299999999995C171.28799999999987,102.05299999999995,160.00099999999986,105.39899999999996,159.72699999999986,105.47999999999996C159.54699999999985,105.47999999999996,159.01599999999985,105.47999999999996,158.62699999999987,105.47999999999996C158.08799999999988,105.01799999999996,144.35899999999987,93.24399999999996,144.35899999999987,93.24399999999996C144.17699999999988,93.08799999999995,143.94699999999986,93.00299999999996,143.70799999999986,93.00299999999996H134.11299999999986C133.82499999999985,93.00299999999996,133.55099999999985,93.12599999999996,133.36099999999985,93.34299999999996L125.23999999999985,102.59099999999997C125.07999999999986,102.77299999999997,124.99199999999985,103.00899999999997,124.99199999999985,103.25099999999996V107.09599999999996C124.99199999999985,107.27599999999997,125.04099999999985,107.45399999999997,125.13399999999984,107.60899999999997C125.13399999999984,107.60899999999997,128.29599999999985,112.90199999999997,128.95599999999985,114.00499999999997C127.92899999999985,115.01699999999997,113.24499999999985,129.46199999999996,112.69899999999984,129.99899999999997C111.92799999999984,129.99899999999997,99.10899999999984,129.99899999999997,99.10899999999984,129.99899999999997C98.89299999999984,129.99899999999997,98.68299999999984,130.06699999999998,98.50899999999984,130.19799999999998C98.50899999999984,130.19799999999998,75.27699999999984,147.60099999999997,74.75699999999985,147.99099999999999C74.12999999999985,147.99099999999999,63.85799999999985,147.99099999999999,63.85799999999985,147.99099999999999C63.56699999999985,147.99099999999999,63.291999999999845,148.118,63.10099999999985,148.338C63.10099999999985,148.338,38.37499999999985,177.002,37.049999999999855,178.537C35.749,177.25,24.681,166.328,23.513,165.176M261.059,68.626C261.06100000000004,68.628,261.06300000000005,68.629,261.065,68.629L261.059,68.626M225.02,28.894C225.02,28.898999999999997,225.02,28.906,225.02,28.912999999999997C225.02,28.905,225.02,28.9,225.02,28.894M225.02,28.873C225.02,28.876,225.02,28.880000000000003,225.02,28.883000000000003C225.02,28.876,225.02,28.873,225.02,28.87" stroke-width="1" transform="matrix(1,0,0,1,270,164)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: pointer;"></path><path fill="#e5e9ee" stroke="#d4d8de" d="M71.489,249.954C72.71300000000001,248.773,77.19200000000001,244.454,77.19200000000001,244.454C77.38300000000001,244.267,77.495,244.011,77.49600000000001,243.744C77.49600000000001,243.74,77.49600000000001,243.735,77.49600000000001,243.731C77.49600000000001,243.46699999999998,77.39000000000001,243.212,77.20500000000001,243.02599999999998L64.31500000000001,230.10199999999998C64.12800000000001,229.91499999999996,63.87400000000001,229.80899999999997,63.60800000000001,229.80899999999997C63.60100000000001,229.80899999999997,63.59600000000001,229.80899999999997,63.58900000000001,229.80899999999997C63.58900000000001,229.80899999999997,53.27300000000001,229.97899999999996,52.436000000000014,229.99299999999997C51.84500000000001,229.34599999999998,31.739000000000015,207.32599999999996,31.739000000000015,207.32599999999996C31.549000000000014,207.11899999999997,31.280000000000015,207.00099999999998,31.000000000000014,207.00099999999998C31.000000000000014,207.00099999999998,13.804000000000013,206.99699999999999,12.000000000000014,206.99699999999999C12.000000000000014,205.404,12.000000000000014,197.77599999999998,12.000000000000014,197.041C12.609000000000014,196.478,24.673000000000016,185.317,24.673000000000016,185.317C24.877000000000017,185.12800000000001,24.993000000000016,184.862,24.993000000000016,184.584L25.012000000000015,141.483C25.012000000000015,141.213,24.904000000000014,140.95600000000002,24.711000000000016,140.767C24.711000000000016,140.767,5.966000000000015,122.46,4.486000000000015,121.01599999999999C6.069000000000015,119.719,23.645000000000014,105.32199999999999,23.645000000000014,105.32199999999999C23.877000000000013,105.13199999999999,24.011000000000013,104.847,24.011000000000013,104.54899999999999V102.00999999999999C24.011000000000013,101.901,23.994000000000014,101.79299999999999,23.959000000000014,101.69099999999999C23.959000000000014,101.69099999999999,14.593000000000014,73.93999999999998,14.199000000000014,72.77199999999999C15.101000000000013,71.92299999999999,38.683000000000014,49.72999999999999,38.683000000000014,49.72999999999999C38.88500000000001,49.53999999999999,38.99800000000001,49.27599999999999,38.99800000000001,49.00099999999999L38.99500000000001,20.40399999999999C38.99500000000001,20.10799999999999,38.86500000000001,19.82699999999999,38.63800000000001,19.63699999999999C38.63800000000001,19.63699999999999,26.63600000000001,9.59599999999999,25.943000000000012,9.01599999999999C25.95100000000001,8.53699999999999,25.96500000000001,7.815999999999989,25.981000000000012,6.99799999999999C27.880000000000013,6.99799999999999,86.00000000000001,6.99799999999999,86.00000000000001,6.99799999999999C86.18000000000002,6.99799999999999,86.35800000000002,6.9499999999999895,86.51400000000001,6.8569999999999895C86.51400000000001,6.8569999999999895,90.855,4.26399999999999,91.28000000000002,4.0109999999999895C91.70200000000001,4.00899999999999,93.91400000000002,4.00099999999999,94.56000000000002,3.9989999999999895C95.14100000000002,4.631999999999989,116.26400000000001,27.67399999999999,116.26400000000001,27.67399999999999C116.453,27.88099999999999,116.721,27.99699999999999,117.001,27.99699999999999C117.001,27.99699999999999,147.151,28.012999999999987,147.78300000000002,28.012999999999987C148.286,28.375999999999987,161.311,37.75199999999999,161.311,37.75199999999999C161.481,37.874999999999986,161.684,37.93999999999999,161.895,37.93999999999999H189.899C190.16,37.93999999999999,190.41,37.83899999999999,190.596,37.657999999999994C190.596,37.657999999999994,195.892,32.519999999999996,196.419,32.00899999999999C197.12800000000001,32.00899999999999,207.329,32.00099999999999,208.99900000000002,31.99899999999999C208.99800000000002,33.84199999999999,208.985,58.242999999999995,208.985,58.67799999999999C208.794,59.07599999999999,203.10700000000003,70.877,203.10700000000003,70.877C203.04000000000002,71.012,203.00700000000003,71.161,203.00700000000003,71.312V91.645C203.00700000000003,91.929,203.12900000000005,92.202,203.34100000000004,92.39099999999999C203.34100000000004,92.39099999999999,207.35400000000004,95.97899999999998,208.54300000000003,97.041C207.13000000000002,98.454,178.14700000000005,127.439,177.58500000000004,128.001C176.91700000000003,128.001,173.01700000000002,128.001,172.38800000000003,128.001C171.87200000000004,127.528,167.23000000000005,123.259,167.23000000000005,123.259C167.04600000000005,123.09,166.80300000000005,122.995,166.55300000000005,122.995L142.1,123C141.69299999999998,123,141.327,123.246,141.174,123.623C141.174,123.623,135.793,136.85500000000002,135.328,138C134.071,138,116,138,116,138C115.447,138,115,138.447,115,139V147C115,147.266,115.104,147.521,115.293,147.707C115.293,147.707,127.44000000000001,159.85399999999998,128,160.414C128,161.19899999999998,128,175.999,128,175.999C128,176.246,128.091,176.48499999999999,128.257,176.66899999999998C128.257,176.66899999999998,136.51600000000002,185.84499999999997,137,186.384C137,187.1,137,201.81599999999997,137,202.58599999999998C136.497,203.08899999999997,133.293,206.29399999999998,133.293,206.29399999999998C133.106,206.481,133,206.73199999999997,133,206.99599999999998C133,206.99699999999999,133,207.00099999999998,133,207.003C133,207.26799999999997,133.106,207.523,133.295,207.70899999999997C133.295,207.70899999999997,148.54299999999998,222.87199999999999,149.73,224.05299999999997C148.679,225.34999999999997,132.5,245.30999999999997,131.93599999999998,246.00499999999997C131.04999999999998,246.00299999999996,116.10999999999999,245.96699999999996,115.49799999999998,245.96499999999997C115.02299999999998,245.61899999999997,110.31499999999997,242.176,110.31499999999997,242.176C110.14399999999996,242.051,109.93699999999997,241.98499999999999,109.72499999999997,241.98499999999999H90.971C90.718,241.98499999999999,90.473,242.081,90.286,242.25599999999997C90.286,242.25599999999997,78.224,253.56299999999996,77.042,254.67199999999997C76.077,253.852,72.654,250.943,71.489,249.954" stroke-width="1" transform="matrix(1,0,0,1,155,122)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: pointer;"></path><path fill="#e5e9ee" stroke="#d4d8de" d="M45.164,217.015C44.629000000000005,216.338,38.343,208.38299999999998,38.343,208.38299999999998C38.153000000000006,208.14199999999997,37.865,208.00199999999998,37.55800000000001,208.00199999999998C37.55800000000001,208.00199999999998,25.842000000000006,208.00199999999998,24.04200000000001,208.00199999999998C24.25200000000001,205.69899999999998,25.172000000000008,204.243,25.92600000000001,203.045C26.524000000000008,202.09599999999998,27.03900000000001,201.27499999999998,27.03900000000001,200.30399999999997L27.04600000000001,199.75599999999997L27.05100000000001,199.37999999999997C27.05100000000001,197.98599999999996,26.553000000000008,197.56399999999996,25.07200000000001,196.31199999999995C23.30000000000001,194.81399999999996,20.58600000000001,190.94199999999995,20.58600000000001,189.00199999999995C20.58600000000001,187.93999999999994,21.52500000000001,185.73499999999996,22.28100000000001,183.96199999999996C23.10200000000001,182.03299999999996,23.81300000000001,180.36699999999996,23.81300000000001,179.31499999999997C23.81300000000001,176.97699999999998,21.864000000000008,173.96999999999997,17.08600000000001,168.93899999999996C15.97000000000001,167.76399999999995,13.55300000000001,163.29799999999997,9.907000000000009,146.58599999999996C7.717000000000009,136.55499999999995,6.170000000000009,127.00499999999995,6.062000000000008,125.93499999999996C5.995000000000008,125.26799999999996,5.8580000000000085,124.26199999999996,5.6850000000000085,122.98799999999996C5.195000000000008,119.38699999999996,4.455000000000009,113.94499999999996,4.455000000000009,109.88999999999996C4.455000000000009,107.42899999999996,5.142000000000009,106.01799999999996,6.337000000000009,106.01799999999996C6.416000000000008,106.01799999999996,6.471000000000009,106.02699999999996,6.486000000000009,106.02799999999996C6.548000000000009,106.03999999999996,6.621000000000008,106.04699999999997,6.681000000000009,106.04699999999997H22.81200000000001C26.14500000000001,106.04699999999997,27.296000000000006,107.26699999999997,28.45500000000001,108.86299999999997C29.75500000000001,110.64899999999997,30.40800000000001,110.88899999999997,30.87600000000001,110.88899999999997C31.14200000000001,110.88899999999997,31.399000000000008,110.78299999999997,31.58600000000001,110.59699999999997L33.19900000000001,108.98199999999997C33.201000000000015,108.98199999999997,33.59500000000001,108.56499999999997,33.59500000000001,108.56499999999997C34.35400000000001,107.74899999999997,35.93700000000001,106.04599999999996,37.332000000000015,106.04599999999996C38.08400000000002,106.04599999999996,38.63500000000001,106.07099999999997,38.87400000000002,106.19599999999997C39.067000000000014,106.29699999999997,39.274000000000015,106.57999999999997,39.68700000000002,107.15999999999997L39.74400000000002,107.24099999999997C40.761000000000024,108.66499999999998,43.33300000000002,109.25399999999998,48.62200000000002,109.27399999999997C52.45200000000002,109.27399999999997,56.20500000000002,105.64499999999997,59.04800000000002,102.48299999999998C59.62200000000002,101.84499999999997,60.03100000000002,101.31999999999998,60.361000000000026,100.89799999999998C60.83600000000003,100.28699999999998,61.07600000000003,99.98499999999999,61.36600000000003,99.83099999999999C61.68000000000003,99.65899999999999,62.21300000000003,99.58699999999999,63.14300000000003,99.58699999999999C64.73400000000002,99.58699999999999,65.31000000000003,100.124,65.39200000000002,100.40799999999999L65.38200000000002,100.35599999999998C65.40400000000002,100.46999999999998,65.45500000000001,100.61799999999998,65.51300000000002,100.71799999999998C65.64400000000002,100.93499999999997,68.77500000000002,106.04599999999998,72.82200000000002,106.04599999999998C75.94700000000002,106.04599999999998,77.05600000000001,103.86799999999998,77.05600000000001,102.00299999999997L77.04400000000001,101.71899999999997L77.049,101.81699999999996V87.285C77.049,85.762,77.625,85.021,78.80600000000001,85.021C78.97900000000001,85.021,79.09600000000002,85.04,79.09600000000002,85.042C79.15700000000002,85.052,79.21400000000001,85.057,79.27400000000002,85.057H88.95300000000002L89.45100000000002,85.069L89.70200000000003,85.07600000000001C89.71200000000003,85.07600000000001,89.71100000000003,85.07600000000001,89.72100000000003,85.07600000000001C90.99100000000003,85.07600000000001,91.37200000000003,84.569,93.49200000000003,81.76C94.18000000000004,80.849,95.03400000000003,79.715,96.19900000000003,78.212C100.77900000000002,72.293,103.02700000000003,72.122,103.26700000000002,72.122L103.29400000000003,72.123C103.29400000000003,72.123,103.25500000000002,72.11500000000001,103.23300000000002,72.11C103.30100000000002,72.123,103.41100000000002,72.14,103.47300000000001,72.14H111.537C111.71100000000001,72.14,111.846,72.165,111.985,72.483C112.113,72.777,112.18299999999999,73.22200000000001,112.18299999999999,73.732C112.18299999999999,74.035,112.15799999999999,74.249,112.15799999999999,74.252C112.15299999999999,74.289,112.15199999999999,74.33099999999999,112.15199999999999,74.36999999999999V82.44299999999998C112.15199999999999,86.69999999999999,119.69099999999999,88.28599999999999,124.44299999999998,88.28599999999999C126.93599999999998,88.28599999999999,128.71099999999998,87.10799999999999,129.57199999999997,84.87699999999998C130.283,83.04199999999999,130.283,80.73699999999998,130.283,79.21199999999997C130.283,75.90799999999997,126.98299999999999,73.43499999999997,125.57499999999999,72.37799999999997C125.42199999999998,72.26399999999997,125.231,72.11899999999997,125.16799999999999,72.06399999999998C125.03899999999999,71.92899999999997,124.826,71.73499999999999,124.47399999999999,71.41899999999998C122.71799999999999,69.83399999999999,117.377,65.00699999999998,117.377,61.45399999999998C117.377,54.09799999999998,125.048,47.34999999999998,127.56899999999999,45.13299999999998C127.939,44.80599999999998,128.20899999999997,44.56899999999998,128.378,44.40099999999998L129.992,42.78499999999998C130.179,42.597999999999985,130.283,42.34399999999998,130.283,42.079999999999984V40.46599999999999C130.283,39.255999999999986,129.46699999999998,38.68999999999998,128.677,38.14299999999999C128.156,37.780999999999985,127.50599999999999,37.329999999999984,126.794,36.557999999999986C126.792,36.557999999999986,126.348,36.09299999999998,126.348,36.09299999999998C125.839,35.57299999999998,125.718,35.44999999999998,125.611,34.86099999999998C125.46300000000001,34.05399999999998,125.437,32.582999999999984,125.437,29.785999999999984L125.441,27.652999999999984L125.444,24.319999999999986C125.444,13.485999999999986,137.339,8.654999999999987,143.055,6.332999999999988L144.18800000000002,5.868999999999987C147.58800000000002,4.447999999999987,149.15200000000002,4.2709999999999875,149.69100000000003,4.265999999999988C150.12900000000002,4.893999999999988,153.70100000000002,10.014999999999986,154.00600000000003,10.451999999999988C154.01700000000002,10.990999999999987,154.09800000000004,15.353999999999989,154.09800000000004,15.353999999999989C154.10300000000004,15.646999999999988,154.23800000000003,15.922999999999988,154.46400000000006,16.10999999999999C154.46400000000006,16.10999999999999,166.09500000000006,25.62299999999999,166.77900000000005,26.18299999999999C166.78800000000004,27.07199999999999,167.00200000000007,50.30199999999999,167.00900000000004,51.12099999999999C166.39300000000003,51.70699999999999,141.29300000000003,75.588,141.29300000000003,75.588C141.09100000000004,75.77999999999999,140.98100000000002,76.04299999999999,140.98100000000002,76.312C140.98100000000002,76.419,140.99800000000002,76.53099999999999,141.03500000000003,76.637C141.03500000000003,76.637,150.76200000000003,104.907,150.86700000000002,105.217C150.86700000000002,105.473,150.86700000000002,107.173,150.86700000000002,107.813C150.18200000000002,108.391,130.86400000000003,124.658,130.86400000000003,124.658C130.64900000000003,124.83800000000001,130.52100000000004,125.102,130.51000000000002,125.384C130.51000000000002,125.396,130.51000000000002,125.409,130.51000000000002,125.421C130.51000000000002,125.68900000000001,130.615,125.94600000000001,130.80800000000002,126.135C130.80800000000002,126.135,147.955,143.005,149.94400000000002,144.961C147.45000000000002,145.905,130.025,152.50900000000001,129.05900000000003,152.87400000000002C128.26800000000003,152.223,122.22800000000002,147.24500000000003,122.22800000000002,147.24500000000003C122.04900000000002,147.09700000000004,121.82400000000003,147.01600000000002,121.59300000000002,147.01600000000002L113.002,147C112.73599999999999,147,112.482,147.104,112.294,147.293C112.106,147.48000000000002,112.00099999999999,147.733,112.00099999999999,148C112.00099999999999,148,112.00099999999999,164.074,112.00099999999999,164.684C111.65899999999999,165.171,105.17999999999999,174.427,105.17999999999999,174.427C105.06299999999999,174.595,104.99999999999999,174.795,104.99999999999999,175V186.001C104.99999999999999,186.38,105.21399999999998,186.727,105.55199999999999,186.895C105.55199999999999,186.895,106.42099999999999,187.33,106.99999999999999,187.619C106.99999999999999,188.384,106.99999999999999,189.956,106.99999999999999,190.547C106.35899999999998,191.105,94.36799999999998,201.54399999999998,93.83899999999998,202.004C93.10899999999998,202.004,63.00099999999998,202.00199999999998,63.00099999999998,202.00199999999998C62.746999999999986,202.00199999999998,62.50099999999998,202.1,62.31599999999998,202.27399999999997C62.31599999999998,202.27399999999997,47.20699999999998,216.50999999999996,46.62799999999998,217.05499999999998C46.203,217.043,45.63,217.026,45.164,217.015M125.159,72.054C125.159,72.054,125.16300000000001,72.057,125.164,72.059C125.163,72.058,125.161,72.056,125.159,72.054" stroke-width="1" transform="matrix(1,0,0,1,23,118)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: pointer;"></path><path fill="#e5e9ee" stroke="#d4d8de" d="M49.812,185.083C48.723,185.083,48.067,184.971,47.861999999999995,184.74699999999999C47.62,184.48,47.586999999999996,183.641,47.586999999999996,182.85399999999998C47.586999999999996,181.74499999999998,47.142999999999994,180.237,45.034,179.36399999999998C43.835,178.86699999999996,42.232,178.62499999999997,40.132999999999996,178.62499999999997C38.090999999999994,178.62499999999997,36.714999999999996,179.58299999999997,35.498999999999995,180.42899999999997C34.397,181.19399999999996,33.446999999999996,181.85499999999996,32.06699999999999,181.85499999999996C30.56299999999999,181.85499999999996,29.691999999999993,181.56799999999996,29.153999999999993,180.89499999999995C28.529999999999994,180.11299999999994,28.227999999999994,178.64299999999994,28.227999999999994,176.39699999999996C28.227999999999994,174.11099999999996,28.434999999999995,173.03399999999996,28.586999999999996,172.54999999999995C28.709999999999997,172.59399999999997,28.838999999999995,172.61599999999996,28.972999999999995,172.61599999999996C30.026999999999994,172.61599999999996,30.515999999999995,171.36599999999996,30.927999999999997,169.49099999999996C31.252999999999997,168.01499999999996,31.453999999999997,166.33199999999997,31.453999999999997,165.09399999999997C31.453999999999997,163.31499999999997,33.837999999999994,162.85299999999995,33.864,162.84899999999996C34.336999999999996,162.75999999999996,34.681999999999995,162.34699999999995,34.681999999999995,161.86599999999996V140.87699999999995C34.681999999999995,134.58799999999997,26.514999999999993,131.42899999999995,18.615999999999996,128.37399999999997C16.190999999999995,127.43599999999996,13.681999999999995,126.46699999999997,11.523999999999997,125.44199999999996C4.5829999999999975,122.14399999999996,4.008999999999998,119.42499999999997,4.008999999999998,116.70199999999997L4.0189999999999975,115.88099999999997L4.030999999999997,115.04499999999997C4.030999999999997,112.23499999999997,6.4389999999999965,109.40899999999998,12.259999999999996,102.58299999999997L13.470999999999997,101.16199999999996C19.636999999999997,93.91599999999997,27.694999999999997,89.35699999999997,29.092,88.59799999999996C29.572,88.59799999999996,41.747,88.59799999999996,41.747,88.59799999999996C42.012,88.59799999999996,42.266,88.49199999999996,42.454,88.30399999999996L50.521,80.23099999999997C50.702,80.04999999999997,50.806,79.80899999999997,50.813,79.55499999999996C50.813,79.55499999999996,51.112,69.66299999999997,51.161,68.01299999999996C52.756,68.01199999999996,62.002,68.00299999999996,62.817,68.00299999999996C63.37,68.67899999999996,69.888,76.64699999999996,69.888,76.64699999999996C70.077,76.87899999999996,70.363,77.01399999999997,70.665,77.01399999999997L75.004,77C75.256,76.998,75.49900000000001,76.903,75.685,76.729C75.685,76.729,90.836,62.525,91.39500000000001,62.001C92.165,62.001,122.33900000000001,62.013,122.33900000000001,62.013C122.57300000000001,62.013,122.80000000000001,61.931,122.98000000000002,61.781L137.56600000000003,49.614C137.79500000000004,49.422999999999995,137.92600000000004,49.143,137.92600000000004,48.845V40.772C137.92600000000004,40.492,137.80800000000005,40.226,137.60400000000004,40.036C137.60400000000004,40.036,136.44800000000004,38.972,136.00000000000003,38.56C136.00000000000003,37.848,136.00000000000003,33.837,136.00000000000003,33.314C136.34300000000002,32.824,142.81800000000004,23.572,142.81800000000004,23.572C142.937,23.405,143,23.205,143,23C143,23,142.988,8.776,142.986,7.003C144.11499999999998,7.003,145.908,7.003,146.37199999999999,7.003C146.88799999999998,7.418,154.433,13.49,154.433,13.49C154.614,13.635,154.833,13.712,155.059,13.712C155.177,13.712,155.295,13.690999999999999,155.41,13.649C155.41,13.649,177.557,5.363999999999999,179.987,4.454999999999998C179.98499999999999,7.109999999999998,179.95499999999998,42.375,179.95499999999998,43.192C179.35299999999998,43.755,167.302,55.071,167.302,55.071C167.1,55.26,166.986,55.524,166.986,55.8V69.99C166.986,70.25699999999999,167.093,70.512,167.28199999999998,70.69999999999999C167.46999999999997,70.886,167.72199999999998,70.99099999999999,167.987,70.99099999999999C167.989,70.99099999999999,167.992,70.99099999999999,167.994,70.99099999999999C167.994,70.99099999999999,187.277,70.84499999999998,188.119,70.83899999999998C188.703,71.46599999999998,209.404,93.73499999999999,209.404,93.73499999999999C209.593,93.93799999999999,209.858,94.05399999999999,210.136,94.05399999999999C210.136,94.05399999999999,220.248,94.05399999999999,221.015,94.05399999999999C221.533,94.57099999999998,229.5,102.54399999999998,230.696,103.74099999999999C229.576,104.86299999999999,224.95,109.49199999999999,224.95,109.49199999999999C224.762,109.67999999999999,224.65599999999998,109.93399999999998,224.65599999999998,110.19899999999998C224.65599999999998,110.21499999999999,224.658,110.23099999999998,224.658,110.24699999999999C224.672,110.52699999999999,224.80399999999997,110.78999999999999,225.01999999999998,110.96899999999998C225.01999999999998,110.96899999999998,233.319,117.84199999999998,233.98999999999998,118.39799999999998C233.992,119.26099999999998,234.00199999999998,130.00199999999998,234.00199999999998,130.00199999999998C234.004,130.22899999999998,234.081,130.44899999999998,234.22299999999998,130.62499999999997C234.22299999999998,130.62499999999997,240.581,138.55499999999998,240.99399999999997,139.07099999999997C240.99399999999997,139.74499999999998,241.00699999999998,156.54299999999998,241.00699999999998,156.54299999999998C241.00699999999998,156.74399999999997,241.069,156.94199999999998,241.18299999999996,157.10699999999997C241.18299999999996,157.10699999999997,249.66099999999997,169.47199999999998,249.99899999999997,169.96499999999997C249.99899999999997,170.36299999999997,249.99899999999997,172.54199999999997,249.99899999999997,174.24899999999997C245.69499999999996,171.72199999999998,244.12499999999997,170.56699999999998,244.12499999999997,169.97799999999998C244.12499999999997,169.86599999999999,244.14599999999996,169.71699999999998,244.16899999999998,169.54199999999997C244.20499999999998,169.27199999999996,244.253,168.93699999999998,244.253,168.52399999999997C244.253,166.76199999999997,242.93699999999998,165.66599999999997,240.81699999999998,165.66599999999997C240.50099999999998,165.66599999999997,240.248,165.69099999999997,240.117,165.70699999999997C240.00099999999998,165.70699999999997,220.816,165.70699999999997,220.816,165.70699999999997C218.859,165.70699999999997,217.235,163.96499999999997,215.663,162.28099999999998C214.208,160.71999999999997,212.83100000000002,159.24699999999999,211.138,159.24699999999999C209.16400000000002,159.24699999999999,207.577,160.47,206.304,161.45C205.773,161.85899999999998,204.97,162.476,204.685,162.476C203.89600000000002,162.476,203.266,161.757,202.365,159.824C201.506,157.982,197.872,157.622,191.887,157.622L190.078,157.62900000000002L188.552,157.63400000000001C186.63899999999998,157.63400000000001,183.962,156.25600000000003,181.12699999999998,154.79600000000002C177.671,153.01700000000002,174.099,151.17600000000002,170.807,151.17600000000002C167.89499999999998,151.17600000000002,165.75199999999998,150.29600000000002,163.67899999999997,149.44600000000003C161.80299999999997,148.67600000000002,160.03099999999998,147.94700000000003,157.90099999999998,147.94700000000003C153.95899999999997,147.94700000000003,150.42999999999998,151.58500000000004,149.36999999999998,152.79000000000002C148.50799999999998,152.79000000000002,136.92899999999997,152.79000000000002,136.92899999999997,152.79000000000002C133.25999999999996,152.79000000000002,131.46299999999997,150.79100000000003,129.87699999999998,149.026C128.63199999999998,147.64100000000002,127.45499999999998,146.33200000000002,125.63699999999999,146.33200000000002C122.71399999999998,146.33200000000002,120.63599999999998,147.58200000000002,118.62599999999999,148.79100000000003C118.127,149.092,117.60999999999999,149.40200000000002,117.094,149.68500000000003C114.335,151.18600000000004,110.04499999999999,152.79000000000002,106.27799999999999,152.79000000000002C103.93499999999999,152.79000000000002,101.43599999999999,153.686,99.01899999999999,154.55400000000003C96.91699999999999,155.30800000000002,94.93299999999999,156.02000000000004,93.37199999999999,156.02000000000004C91.69899999999998,156.02000000000004,89.78299999999999,154.62400000000005,88.09199999999998,153.39300000000003C86.45999999999998,152.20500000000004,85.05099999999999,151.17700000000002,83.69399999999999,151.17700000000002C81.621,151.17700000000002,79.31099999999999,152.96300000000002,77.07499999999999,154.69000000000003C76.365,155.24000000000004,75.695,155.75600000000003,75.05599999999998,156.199C73.09399999999998,157.56,72.82899999999998,160.693,72.82899999999998,163.578C72.82899999999998,164.737,72.87999999999998,165.917,72.92799999999998,167.059C72.96999999999998,168.094,73.01099999999998,169.071,73.01099999999998,169.938C73.01099999999998,170.618,72.33499999999998,172.849,66.06799999999998,178.89399999999998C63.073999999999984,181.77999999999997,60.04399999999998,184.32799999999997,59.134999999999984,185.08199999999997C58.47,185.083,49.812,185.083,49.812,185.083M28.746,172.188L28.744,172.19L28.746,172.188" stroke-width="1" transform="matrix(1,0,0,1,-4,262)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: pointer;"></path><path fill="#e5e9ee" stroke="#d4d8de" d="M198.926,191.083C198.926,188.35999999999999,197.214,186.734,194.34699999999998,186.734C193.72799999999998,186.734,193.22899999999998,186.812,193.00199999999998,186.853C192.82,186.853,157.653,186.853,157.653,186.853C154.446,186.853,152.773,187.19500000000002,151.69299999999998,188.06900000000002C150.45899999999997,189.068,150.20999999999998,190.58100000000002,150.20999999999998,192.698C150.20999999999998,194.219,149.63199999999998,194.959,148.439,194.959C148.273,194.959,148.162,194.941,148.16,194.941C148.103,194.93,148.048,194.925,147.989,194.925H138.322C136.81300000000002,194.925,136.079,194.32000000000002,136.079,193.072C136.079,192.93,136.091,192.843,136.091,192.841C136.096,192.798,136.101,192.74200000000002,136.101,192.697V184.625C136.101,181.99,133.797,181.99,133.04,181.99L132.45,182.001L131.879,182.01C131.737,182.01,131.421,181.658,131.14,181.349C130.22099999999998,180.326,128.831,178.78,125.43599999999999,178.78C119.60199999999999,178.78,119.60199999999999,183.026,119.60199999999999,184.626C119.60199999999999,184.707,119.60199999999999,184.859,118.98799999999999,185.02100000000002C118.18699999999998,185.23100000000002,116.91799999999999,185.258,115.66599999999998,185.258L114.49799999999998,185.251L112.54899999999998,185.239C109.61299999999997,185.239,107.87899999999998,186.248,106.93999999999998,187.094C105.77499999999998,188.14499999999998,105.10499999999999,189.599,105.10499999999999,191.082C105.10499999999999,192.517,104.60799999999999,194.92499999999998,101.27199999999999,194.92499999999998C99.693,194.91099999999997,98.71499999999999,194.66699999999997,98.201,194.16099999999997C97.681,193.64699999999996,97.439,192.66899999999998,97.439,191.08199999999997C97.439,187.24399999999997,95.74799999999999,186.82899999999995,95.02099999999999,186.82899999999995C94.90899999999999,186.82899999999995,94.80999999999999,186.83899999999994,94.72899999999998,186.85199999999995C94.53199999999998,186.85199999999995,86.77499999999999,186.85199999999995,86.77499999999999,186.85199999999995C84.25999999999999,186.85199999999995,81.49499999999999,183.91399999999996,79.475,181.76999999999995C77.78,179.96999999999994,76.66,178.77899999999994,75.499,178.77899999999994C73.401,178.77899999999994,70.792,181.16099999999994,66.71199999999999,185.55799999999994C64.22599999999998,188.23799999999994,62.80999999999999,188.45399999999992,62.64899999999999,188.46899999999994C62.64199999999999,188.46899999999994,62.615999999999985,188.46699999999993,62.61099999999999,188.46699999999993H56.16799999999999C55.77499999999999,188.46699999999993,55.63099999999999,188.38999999999993,55.61099999999999,188.36199999999994C55.58099999999999,188.32199999999995,55.51399999999999,188.17499999999993,55.51399999999999,187.67599999999993L55.53299999999999,187.03399999999993L55.55699999999999,186.23699999999994C55.55699999999999,184.39699999999993,54.10299999999999,183.67999999999995,53.05899999999999,183.62699999999992C53.03299999999999,183.62499999999991,53.00499999999999,183.62399999999994,52.97899999999999,183.62399999999994H51.33399999999999C49.38299999999999,183.62399999999994,48.68999999999999,184.85699999999994,48.68999999999999,185.91399999999993C48.68999999999999,186.08199999999994,48.70799999999999,186.22399999999993,48.72299999999999,186.32599999999994C48.72299999999999,186.49699999999993,48.72299999999999,194.31099999999995,48.72299999999999,194.31099999999995C48.72299999999999,194.41499999999996,48.72299999999999,194.58699999999996,48.24199999999999,194.76899999999995C47.81299999999999,194.93399999999994,47.17899999999999,195.01899999999995,46.41199999999999,195.01899999999995C46.169999999999995,195.01499999999996,45.86699999999999,195.00099999999995,45.66199999999999,194.98799999999994C45.550999999999995,194.94599999999994,45.431999999999995,194.92399999999995,45.306999999999995,194.92399999999995H43.27799999999999C41.60799999999999,194.92399999999995,41.11099999999999,194.45299999999995,41.05699999999999,194.26999999999995C41.05699999999999,194.17999999999995,41.05699999999999,184.62399999999997,41.05699999999999,184.62399999999997C41.05699999999999,181.49099999999996,39.05299999999999,180.37399999999997,37.17599999999999,180.37399999999997C36.999999999999986,180.37399999999997,36.86099999999999,180.38499999999996,36.77599999999999,180.39399999999998C36.65999999999999,180.39399999999998,30.39199999999999,180.39399999999998,30.39199999999999,180.39399999999998H30.143999999999988C29.52899999999999,180.39399999999998,28.832999999999988,180.39399999999998,28.32499999999999,180.92C27.820999999999987,181.44099999999997,27.779999999999987,182.206,27.779999999999987,183.009C27.779999999999987,183.28099999999998,26.752999999999986,183.624,25.598999999999986,183.624H25.558999999999987H20.725999999999985C20.095999999999986,183.624,20.095999999999986,183.441,20.095999999999986,183.266C20.095999999999986,183.266,20.098999999999986,183.20399999999998,20.098999999999986,183.19299999999998C20.108999999999988,183.136,20.115999999999985,183.06699999999998,20.115999999999985,183.009V173.32199999999997C20.115999999999985,173.11099999999996,20.048999999999985,172.90499999999997,19.923999999999985,172.73499999999999C19.923999999999985,172.73499999999999,11.390999999999986,160.981,11.024999999999986,160.475C11.022999999999985,159.856,10.984999999999987,142.89499999999998,10.984999999999987,142.89499999999998C10.983999999999988,142.66599999999997,10.904999999999987,142.445,10.761999999999986,142.266C10.761999999999986,142.266,4.482999999999986,134.523,4.067999999999986,134.01299999999998C4.064999999999986,133.37999999999997,4.013999999999986,124.83099999999997,4.008999999999986,124.07499999999997C4.579999999999986,123.51699999999997,16.898999999999987,111.53199999999998,17.445999999999984,110.99899999999997C18.201999999999984,110.99899999999997,32.819999999999986,111.01299999999996,33.466999999999985,111.01299999999996C33.954999999999984,111.39899999999996,38.225999999999985,114.77499999999996,38.225999999999985,114.77499999999996C38.40199999999999,114.91499999999996,38.62099999999999,114.99099999999996,38.84599999999998,114.99099999999996L58.75099999999998,114.99999999999996C59.04699999999998,114.99999999999996,59.328999999999986,114.86799999999995,59.51999999999998,114.63999999999996C59.51999999999998,114.63999999999996,105.20999999999998,59.78599999999996,105.80199999999998,59.07499999999996C106.66199999999998,59.07499999999996,116.38199999999998,59.07499999999996,116.38199999999998,59.07499999999996C116.58999999999997,59.07499999999996,116.79299999999998,59.00899999999996,116.95999999999998,58.88999999999996C116.95999999999998,58.88999999999996,141.659,41.36499999999996,142.16899999999998,41.00299999999996C142.773,41.00299999999996,154.938,40.99599999999996,154.938,40.99599999999996C155.207,40.99599999999996,155.45999999999998,40.88899999999996,155.649,40.69799999999996L174.252,21.870999999999956C174.442,21.678999999999956,174.53900000000002,21.424999999999955,174.53900000000002,21.167999999999957C174.53900000000002,20.990999999999957,174.49200000000002,20.812999999999956,174.39700000000002,20.653999999999957C174.39700000000002,20.653999999999957,170.199,13.654999999999959,169.92900000000003,13.204999999999957C169.92900000000003,12.854999999999958,169.92900000000003,12.008999999999958,169.92900000000003,11.591999999999958C170.29700000000003,11.110999999999958,175.22900000000004,4.698999999999958,175.75500000000002,4.012999999999958C176.57700000000003,4.012999999999958,182.23800000000003,4.012999999999958,182.90600000000003,4.012999999999958C183.46000000000004,4.532999999999959,197.23900000000003,17.44099999999996,197.23900000000003,17.44099999999996C197.42700000000002,17.61799999999996,197.67400000000004,17.71099999999996,197.92300000000003,17.71099999999996C198.03700000000003,17.71099999999996,198.15300000000002,17.68999999999996,198.26400000000004,17.64999999999996C198.26400000000004,17.64999999999996,210.76100000000002,13.10899999999996,211.08600000000004,12.991999999999958C211.40800000000004,12.991999999999958,218.07200000000003,12.991999999999958,218.53800000000004,12.991999999999958C218.97500000000005,13.230999999999959,232.88400000000004,20.81599999999996,232.88400000000004,20.81599999999996C233.03100000000003,20.895999999999958,233.19400000000005,20.93799999999996,233.36000000000004,20.93899999999996C233.36000000000004,20.93899999999996,243.92200000000005,20.983999999999963,246.42600000000004,20.994999999999962C245.80500000000004,22.49099999999996,244.99900000000005,24.963999999999963,244.99900000000005,27.75299999999996C244.99900000000005,30.02599999999996,243.38100000000006,31.27599999999996,242.08100000000005,32.27999999999996C241.18700000000004,32.966999999999956,240.41700000000006,33.56299999999996,240.41700000000006,34.469999999999956C240.41700000000006,35.869999999999955,241.86400000000006,37.711999999999954,250.43800000000005,44.92399999999996C256.874,50.33399999999996,261.357,57.37199999999996,261.357,60.30399999999996C261.357,62.27399999999996,259.985,63.95099999999996,259.076,65.06099999999996C258.49100000000004,65.77599999999997,258.137,66.20799999999997,258.137,66.76099999999997C258.137,67.98499999999997,258.682,68.58899999999997,261.777,70.80499999999996C264.49899999999997,72.74999999999996,264.582,78.01799999999996,264.582,78.07199999999996V94.20899999999996C264.582,101.60399999999996,270.768,107.40499999999996,275.282,111.64099999999996C276.99899999999997,113.24999999999996,278.48199999999997,114.64199999999997,279.256,115.76599999999996C280.69199999999995,117.84799999999996,280.99199999999996,119.31799999999997,280.99199999999996,120.18499999999996C280.99199999999996,120.36899999999996,280.97999999999996,120.52499999999996,280.96099999999996,120.65599999999996C279.58899999999994,120.65599999999996,257.52799999999996,120.65599999999996,257.52799999999996,120.65599999999996C254.10899999999995,120.65599999999996,252.56599999999997,123.77199999999996,251.43799999999996,126.04899999999996C250.81499999999997,127.30599999999997,250.10999999999996,128.73099999999997,249.47299999999996,128.73099999999997C249.03299999999996,128.73099999999997,248.74499999999995,128.34599999999998,248.09799999999996,127.32699999999997C246.81899999999996,125.31399999999996,244.88699999999994,122.27199999999996,238.19699999999995,122.27199999999996C234.26399999999995,122.27199999999996,230.28299999999996,125.05699999999996,226.02599999999995,130.78599999999997C222.53399999999996,135.48399999999998,219.48199999999994,141.31199999999998,217.03099999999995,145.99499999999998C216.21599999999995,147.55199999999996,215.44699999999995,149.01999999999998,214.76999999999995,150.23399999999998C212.16999999999996,154.90499999999997,210.57499999999996,160.59799999999998,209.69099999999995,164.54899999999998C208.66699999999994,169.14399999999998,208.19999999999993,173.15399999999997,208.19999999999993,174.938C208.19999999999993,176.795,210.02599999999993,180.31799999999998,212.81199999999993,185.48C214.26499999999993,188.17,216.25299999999993,191.856,216.25299999999993,192.69899999999998L216.27899999999994,193.54399999999998C216.29699999999994,193.98199999999997,216.31499999999994,194.47699999999998,216.31499999999994,195.023C216.31499999999994,197.307,215.93399999999994,199.035,215.14999999999995,200.305C214.02999999999994,202.118,212.08499999999995,203,209.19899999999996,203C200.093,203,198.926,196.631,198.926,191.083" stroke-width="1" transform="matrix(1,0,0,1,230,257)" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: pointer;"></path><circle cx="235" cy="224" r="8" fill="none" stroke="#1e89ff" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: pointer;"></circle><circle cx="420" cy="220" r="8" fill="none" stroke="#aaaaaa" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: pointer;"></circle><circle cx="400" cy="87" r="8" fill="none" stroke="#aaaaaa" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: pointer;"></circle><circle cx="50" cy="245" r="8" fill="none" stroke="#aaaaaa" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: pointer;"></circle><circle cx="45" cy="400" r="8" fill="none" stroke="#aaaaaa" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: pointer;"></circle><circle cx="445" cy="350" r="8" fill="none" stroke="#aaaaaa" stroke-width="2" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: pointer;"></circle></svg>
+                    <div class="city" id="minsk">Минск</div>
+                    <div class="city" id="mogilev">Могилёв</div>
+                    <div class="city" id="grodno">Гродно</div>
+                    <div class="city" id="brest">Брест</div>
+                    <div class="city" id="vitebsk">Витебск</div>
+                    <div class="city" id="gomel">Гомель</div>
+                </div>
+            </div>
+        
+<div class="content main-center-content">
+    <input id="page-search-form-query" type="text" name="search_query" class="page-search" placeholder="Найти по точному совпадению">
+    <div class="qs-object-list">
+        
+  <div class="entity-list">
+    
+    <div class="item">
+        <a href="http://minjust.gov.by/ru/departments/48/" class="inner-link">
+            Отдел загса Брестского горисполкома
+            <div class="icon orange">ЗАГС</div>
+        </a>
+        <br>
+        
+        <div class="description">
+            224023,&nbsp;г. Брест, ул. Московская, 273<br>
+            тел.:&nbsp;т.8 (0162) 40-95-44
+
+        </div>
+    </div>
+
+    <div class="item">
+        <a href="http://minjust.gov.by/ru/departments/50/" class="inner-link">
+            Отдел загса Барановичского горисполкома
+            <div class="icon green">ЗАГС</div>
+        </a>
+        <br>
+        
+        <div class="description">
+            225409,&nbsp;г. Барановичи, ул. Советская, 100<br>
+            тел.:&nbsp;т.8 (0163) 45-42-54
+
+        </div>
+    </div>
+
+    <div class="item">
+        <a href="http://minjust.gov.by/ru/departments/51/" class="inner-link">
+            Отдел загса Барановичского райисполкома
+            <div class="icon red">ЗАГС</div>
+        </a>
+        <br>
+        
+        <div class="description">
+            225409,&nbsp;г. Барановичи ул. Советская, 79<br>
+            тел.:&nbsp;т.8 (0163) 42-29-58
+
+        </div>
+    </div>
+
+    <div class="item">
+        <a href="http://minjust.gov.by/ru/departments/52/" class="inner-link">
+            Отдел загса Березовского райисполкома
+            <div class="icon orange">ЗАГС</div>
+        </a>
+        <br>
+        
+        <div class="description">
+            225209,&nbsp;г. Береза ул. Любарского, 32<br>
+            тел.:&nbsp;т.8 (01643) 4-42-13
+
+        </div>
+    </div>
+
+    <div class="item">
+        <a href="http://minjust.gov.by/ru/departments/53/" class="inner-link">
+            Отдел загса Ганцевичского райисполкома
+            <div class="icon orange">ЗАГС</div>
+        </a>
+        <br>
+        
+        <div class="description">
+            225432,&nbsp;г. Ганцевичи, ул. Октябрьская, 34а<br>
+            тел.:&nbsp;т.8 (01646) 2-16-58
+
+        </div>
+    </div>
+
+    <div class="item">
+        <a href="http://minjust.gov.by/ru/departments/54/" class="inner-link">
+            Отдел загса Дрогичинского райисполкома
+            <div class="icon orange">ЗАГС</div>
+        </a>
+        <br>
+        
+        <div class="description">
+            225612,&nbsp;г. Дрогичин, ул. Ленина, д. 138<br>
+            тел.:&nbsp;т.8 (01644) 3-06-58
+
+        </div>
+    </div>
+
+    <div class="item">
+        <a href="http://minjust.gov.by/ru/departments/55/" class="inner-link">
+            Отдел загса Жабинковского райисполкома
+            <div class="icon red">ЗАГС</div>
+        </a>
+        <br>
+        
+        <div class="description">
+            225101,&nbsp;г. Жабинка, ул. Кирова, д. 47<br>
+            тел.:&nbsp;т.8 (01641) 2-16-58
+
+        </div>
+    </div>
+
+    <div class="item">
+        <a href="http://minjust.gov.by/ru/departments/57/" class="inner-link">
+            Отдел загса Ивацевичского райисполкома
+            <div class="icon green">ЗАГС</div>
+        </a>
+        <br>
+        
+        <div class="description">
+            225295,&nbsp;г. Ивацевичи, ул. Комсомольская, 21<br>
+            тел.:&nbsp;т.8 (01645) 2-11-58
+
+        </div>
+    </div>
+
+    <div class="item">
+        <a href="http://minjust.gov.by/ru/departments/58/" class="inner-link">
+            Отдел загса Каменецкого райисполкома
+            <div class="icon blue">ЗАГС</div>
+        </a>
+        <br>
+        
+        <div class="description">
+            225050,&nbsp;г. Каменец ул. Советская, 11<br>
+            тел.:&nbsp;т.8 (01631) 2-36-58
+
+        </div>
+    </div>
+
+    <div class="item">
+        <a href="http://minjust.gov.by/ru/departments/59/" class="inner-link">
+            Отдел загса Кобринского райисполкома
+            <div class="icon red">ЗАГС</div>
+        </a>
+        <br>
+        
+        <div class="description">
+            225306,&nbsp;г. Кобрин, пл. Замковая,1<br>
+            тел.:&nbsp;т.8 (01642) 2-11-58
+
+        </div>
+    </div>
+
+    <div class="pagination-marker" style="display: none;"></div>
+  </div>
+  
+<div class="pagination">
+    
+        <div class="load-more-button" data-form="&quot;&quot;" data-next-page-number="2" data-max-pages="16" data-page-num="1">
+        Показать ещё
+        </div>
+    
+    <div class="page-up">
+        <span>В начало страницы</span>&nbsp;↑
+    </div>
+</div>
+<div class="clear"></div>
+
+
+
+    </div>
+</div>
+
+<div class="aside">
+    
+    <div class="title">
+        Тип подразделения:
+    </div>
+    <div class="menu" data="fk_field">
+        <ul>
+            
+                <li>
+                    <a class="aside-menu-objects-filter" href="http://minjust.gov.by/ru/departments/">
+                        Все&nbsp;
+                        <span>(501)</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a class="aside-menu-objects-filter" href="http://minjust.gov.by/ru/departments/filter/kind/ministry/" data="ministry">
+                        Министерство&nbsp;
+                        <span>(1)</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a class="aside-menu-objects-filter" href="http://minjust.gov.by/ru/departments/filter/kind/guiu/" data="guiu">
+                        Главные управления юстиции&nbsp;
+                        <span>(7)</span>
+                    </a>
+                </li>
+            
+                <li class="selected">
+                    <a class="aside-menu-objects-filter" href="http://minjust.gov.by/ru/departments/filter/kind/register_office/" data="register_office">
+                        ЗАГС&nbsp;
+                        <span>(152)</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a class="aside-menu-objects-filter" href="http://minjust.gov.by/ru/departments/filter/kind/dno/" data="dno">
+                        Архивы&nbsp;
+                        <span>(40)</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a class="aside-menu-objects-filter" href="http://minjust.gov.by/ru/departments/filter/kind/registration-authorities/" data="registration-authorities">
+                        Регистрирующие органы&nbsp;
+                        <span>(142)</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a class="aside-menu-objects-filter" href="http://minjust.gov.by/ru/departments/filter/kind/enforcement/" data="enforcement">
+                        Принудительное исполнение&nbsp;
+                        <span>(159)</span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+    
+
+<div class="block">
+    <div class="title">Образцы документов</div>
+    <ul class="doc-list">
+        
+        <li>
+            <a href="http://minjust.gov.by/ru/document-samples/">
+                <div class="icon blue">DOC</div>
+                <span>Образец</span> запроса юридического лица о предоставлении информации из ЕГР
+            </a>
+        </li>
+        
+        <li>
+            <a href="http://minjust.gov.by/ru/document-samples/">
+                <div class="icon blue">DOC</div>
+                <span>Образец</span> заявления физического лица о предоставлении информации из ЕГР
+            </a>
+        </li>
+        
+        <li>
+            <a href="http://minjust.gov.by/ru/document-samples/">
+                <div class="icon orange">ZIP</div>
+                <span>Заявление</span> о возвращении ребенка (Конвенция о гражданских аспектах международного похищения детей, принятая на Четырнадцатой сессии Гаагской конференции по международному частному праву 25.10.1980 года).
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+</div>
+<div class="clear"></div>
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        var last_ajax;
+        var dep_filter_ajax = function(url, data){
+            if (last_ajax)
+                last_ajax.abort();
+            last_ajax = $.ajax({
+                url: url,
+                data: data,
+                success: function(output) {
+                   if (output) {
+                       $('div.structure-map-holder ~ *').remove();
+                       $('div.structure-map-holder').after(output);
+                   }
+                }
+            });
+            return false;
+        };
+        $('a.aside-menu-objects-filter').live('click', function(){dep_filter_ajax($(this).attr('href')); return false});
+        var paper;
+        var mapWidth  = 600; // canvas width
+        var mapHeight = 500; // canvas height
+        var svgElement;
+        var raw_ajax_url = "/ru/departments/";
+
+        var region_options = { fill: '#e5e9ee', stroke: '#d4d8de', 'stroke-width': 1, cursor: 'pointer' }; // normal state
+        var region_hover_options = { fill: '#d9ebff', stroke: '#1e89ff', 'stroke-width': 2 }; // hover state
+        var minsk_city_options = { stroke: '#1e89ff', 'stroke-width': 2, cursor: 'pointer' }; // minsk city state
+        var city_options = { stroke: '#aaa', 'stroke-width': 2, cursor: 'pointer' }; // city state
+
+        var minsk_city;
+
+        var regions = {}; // Regions object
+        var region_names = {
+            4: '1',
+            0: '2',
+            5: '3',
+            3: '4',
+            6: '7',
+            2: '5',
+            1: '6'
+        };
+
+        function getSelectedRegionId() {
+            for (var region in regions) {
+                if (regions[region].clicked) {
+                    return regions[region].getRegionId;
+                }
+            }
+            if (minsk_city.clicked)
+                return region_names[minsk_city.id];
+        };
+
+        function getFkFilter() {
+            return $('li.selected > a.aside-menu-objects-filter').attr('data');
+        };
+
+        function ajaxPageData() {
+            return {
+                fk_field: getFkFilter(),
+                filter_by: getSelectedRegionId()
+            };
+        };
+
+        function clearMapSelection(except) {
+            for (var region in regions) {
+                if (except !== regions[region])
+                    regions[region].setSelection(false);
+            }
+            if (except !== minsk_city) {
+                minsk_city.attr({ fill: 'none' });
+                minsk_city.clicked = false;
+            }
+        }
+
+        // Region
+        function Region(x, y, path) {
+            var element = undefined;
+            var region  = this;
+
+            function init() {
+                element = paper.path(path);
+                element.attr(region_options);
+                element.translate(x, y);
+                region.clicked = false;
+
+                element.hover(
+                    function(e) {
+                        this.attr(region_hover_options);
+                    },
+                    function(e) {
+                        if (region.clicked == false) {
+                            this.attr(region_options);
+                        }
+                    }
+                );
+
+                element.click(function(e) {
+                    region.setOnClick();
+
+                    // code
+                });
+
+            };
+
+            this.getRegionId = function() {
+                return region_names[element.id];
+            };
+
+            this.setSelection = function(new_val) {
+                if (this.clicked == new_val)
+                    return;
+                this.clicked = new_val;
+                if (this.clicked)
+                    element.attr(region_hover_options);
+                else
+                    element.attr(region_options);
+            };
+
+            this.setOnMouseOver = function() {
+                element.attr(region_hover_options);
+            };
+
+            this.setOnMouseOut = function() {
+                element.attr(region_options);
+            };
+
+            this.setOnClick = function() {
+                var my_state = !this.clicked;
+                clearMapSelection(this);
+                this.setSelection(my_state);
+                dep_filter_ajax(raw_ajax_url, ajaxPageData());
+            };
+
+            init();
+        }
+
+        // Set Event Listeners For City Label
+        function bindEventOnLabel(name, el) {
+
+            $('.map .city#' + name).click(function(){
+                el.setOnClick();
+            });
+
+            $('.map .city#' + name).hover(
+                function(e) { el.setOnMouseOver(); },
+                function(e) { el.setOnMouseOut();  }
+            );
+        }
+
+        window.onload = function() {
+            svgElement = document.getElementById('map_canvas');
+
+            // Create Raphael Canvas
+            paper = new Raphael(svgElement, mapWidth, mapHeight);
+
+            // Create new regions
+            regions.vitebsk = new Region(170, -1,  'M197.999 178.999 c-0.004-1.857-0.053-26.997-0.053-26.997c-0.001-0.552-0.449-0.999-1-0.999h-17.645 c-0.243,0-0.478,0.089-0.66,0.251c0,0-6.009,5.28-6.531,5.739c-0.718,0-22.78,0-23.399,0c-0.505-0.365-13.608-9.805-13.608-9.805 c-0.17-0.123-0.375-0.189-0.585-0.189c0,0-29.23,0-30.08,0c-0.581-0.629-21.822-23.682-21.822-23.682 c-0.189-0.205-0.455-0.323-0.735-0.323h-7.489c-0.184,0-0.365,0.052-0.521,0.147c0,0-4.244,2.596-4.68,2.862 c-0.549,0-57.987,0-59.119,0c-0.514-0.897-5.602-9.801-5.825-10.189c-0.017-0.441-0.052-1.457-0.052-2.688 c0-5.617,0.645-7.028,0.841-7.329c0.327,0,19.194,0,19.194,0c0.337,0,0.649-0.17,0.835-0.451c0.021-0.031,2.11-3.201,4.515-6.344 c4.57-5.976,5.892-6.12,5.946-6.122h3.222c0.528,0,0.964-0.41,0.997-0.936c0.002-0.026,0.018-0.259,0.018-0.641 c0-1.03-0.106-3.024-0.815-4.81c-0.959-2.411-2.701-3.686-5.04-3.686c0,0-11.1,0-11.227,0c-0.164-0.026-0.714-0.13-1.237-0.433 c-0.719-0.415-1.055-0.985-1.055-1.796c0-2.041,2.144-4.871,2.971-5.79c0.165-0.185,0.255-0.422,0.255-0.667 c0-0.077-0.009-0.153-0.026-0.228c-0.073-0.318-0.299-0.58-0.601-0.703c-1.092-0.438-4.212-2.099-4.212-3.914 c0-3.474,0.57-3.832,0.594-3.844h-0.002h0.002c0.001,0,0.009,0,0.019,0c2.213,0,4.228-4.325,4.228-9.073 c0-5.067,0.922-5.458,2.225-5.458h9.68c0.238,0,0.469-0.085,0.651-0.242c0.08-0.067,1.963-1.708,1.963-3.987 c0-0.491,0.378-2.288,2.063-4.035c1.334-1.386,3.846-3.038,8.227-3.038c4.796,0,8.493,0.992,11.753,1.867 c2.607,0.7,5.071,1.362,7.605,1.362l1.796,0.014l1.593,0.012c2.905,0,7.292,0,7.292-4.256c0-1.584,1.292-6.685,4.067-12.6 c2.288-4.881,6.17-11.559,11.661-15.662c7.847-5.858,10.037-6.342,11.755-6.342c0.311,0,0.624,0.017,0.954,0.038 c0.378,0.022,0.77,0.047,1.212,0.047c1.064,0,2.571,2.817,3.566,4.682c1.435,2.686,2.674,5.004,4.501,5.004 c1.588,0,3.594-1.52,5.917-3.279c1.871-1.416,4.198-3.179,5.376-3.179c0.011,0.002,0.456,0.073,1.565,1.539 c0.81,1.07,1.713,2.517,2.667,4.049c2.739,4.396,5.573,8.943,8.673,8.943c2.722,0,5.053-2.232,7.308-4.392 c1.893-1.81,3.849-3.681,5.598-3.681c2.215,0,4.031,0.962,5.637,1.812c1.374,0.729,2.674,1.417,4.042,1.417h9.682 c0.103,0,0.206-0.018,0.306-0.049c0.005-0.001,0.632-0.196,1.365-0.196c1.499,0,2.168,0.763,2.168,2.474v8.073 c0,0.082,0.01,0.165,0.031,0.245c0.002,0.009,0.232,0.943,0.232,1.915c0,0.745-0.132,1.143-0.243,1.348 c-0.114,0.208-0.261,0.337-0.634,0.337c-0.66,0-1.855,0.276-2.462,2.118c-0.275,0.842-0.417,1.971-0.417,3.356 c0,1.916,0.265,3.676,0.276,3.75c0.053,0.34,0.276,0.63,0.593,0.768c0.16,0.068,3.964,1.695,6.85,1.695 c1.042,0,2.338-0.966,5.432-3.344c3.054-2.349,7.237-5.564,12.176-8.199c5.771-3.078,11.307-4.64,16.452-4.64 c0.466,0,0.93,0.012,1.377,0.036c7.171,0.384,10.534,4.43,10.569,4.472c0.19,0.236,0.48,0.374,0.781,0.374 c0.054,0,0.107-0.005,0.162-0.014c0.012-0.001,1.221-0.202,2.534-0.202c1.27,0,2.752,0.217,2.752,0.831 c0,3.905,2.762,4.228,5.84,4.228c1.51,0,2.469,0.252,3.02,0.794c0.559,0.552,0.819,1.522,0.819,3.05c0,1.868,0,3.629,0.731,5.031 c0.852,1.635,2.522,2.429,5.108,2.429l1.619-0.026c0.555-0.012,1.126-0.024,1.688-0.024c4.424,0,6.986,0.899,6.986,5.506v11.302 c0,0.022,0.002,0.045,0.004,0.068c0,0.003,0.014,0.228,0.014,0.583c0,0.707-0.06,2.062-0.457,3.184 c-0.573,1.623-1.454,1.623-1.786,1.623c-2.095,0-3.502,1.598-3.502,3.978c0,2.203,1.31,4.482,3.502,4.482 c2.832,0,3.839,2.819,3.839,5.458c0,2.194,1.592,2.941,2.87,3.539c1.762,0.825,3.582,1.68,3.582,6.147 c0,4.965-3.493,11.337-6.301,16.458c-1.961,3.574-3.379,6.157-3.379,7.761v6.459c0,0.401,0.24,0.763,0.61,0.921 c0.08,0.034,8.09,3.474,10.847,7.698c1.604,2.457,4.72,2.698,7.468,2.912c3.748,0.291,5.275,0.645,5.275,3 c0,3.224-1.332,4.462-2.619,5.659c-1.092,1.015-2.221,2.062-2.221,4.028c0,2.522,3.462,4.548,6.81,6.506 c1.24,0.726,2.413,1.412,3.283,2.051c1.145,0.843,1.202,1.204,1.204,1.218c0.165,1.875,0.194,5.174,0.198,6.834 c-1.899,0-38.993,0-38.993,0c-0.205,0-0.405,0.064-0.573,0.181c0,0-19.246,13.467-19.75,13.819 C228.087,178.999,199.854,178.999,197.999,178.999 M5.091,105.727c-0.001,0.002-0.003,0.004-0.005,0.006 C5.09,105.729,5.09,105.729,5.091,105.727');
+            regions.mogilev = new Region(270, 164, 'M23.513,165.176c0.792-0.892,2.415-2.718,2.415-2.718c0.161-0.183,0.251-0.416,0.251-0.66 c0-0.002,0-0.006,0-0.007l-0.068-18.794c0-0.23-0.08-0.452-0.225-0.631c0,0-8.348-10.201-8.775-10.725c0-0.686,0-15.642,0-15.642 c0-0.265-0.106-0.52-0.293-0.707c0,0-12.147-12.146-12.707-12.706c0-0.48,0-1.616,0-2.587c1.805,0,19,0,19,0 c0.409,0,0.774-0.248,0.927-0.625c0,0,5.371-13.338,5.837-14.494c1.246,0.007,19.447,0.115,20.268,0.12 c0.517,0.574,4.208,4.671,4.208,4.671c0.191,0.211,0.461,0.331,0.744,0.331L65.112,90c0.27,0,0.53-0.109,0.717-0.303l33-34 c0.188-0.194,0.282-0.445,0.282-0.696c0-0.255-0.097-0.511-0.291-0.706c0,0-6.17-6.197-6.705-6.734c0-0.776,0-16.122,0-16.522 c0.151-0.35,5.184-11.955,5.653-13.039c1.265,0,32.985,0.005,32.985,0.005c0.203,0,0.402-0.062,0.57-0.176 c0,0,19.479-13.483,19.975-13.828c0.607,0,35.734,0.014,37.234,0.014c0.264,1.095,1.018,4.215,1.018,4.215 c0.062,0.26,0.227,0.483,0.457,0.622l16.133,9.688c4.721,2.833,7.225,3.37,10.193,3.37h0.389c2.021,0,2.334,0,5.369,2.947 c2.84,2.758,2.926,4.072,2.926,4.085c0-0.002,0-0.01,0-0.019c-0.002,0.024-0.002,0.048-0.002,0.061v11.302 c0,4.406-1.469,5.022-2.762,5.566c-0.879,0.368-2.08,0.874-2.08,2.505c0,1.319,0.615,1.984,1.133,2.312 c0.551,0.348,1.256,0.502,2.285,0.502c0.564,0,1.174-0.045,1.822-0.092c0.717-0.052,1.459-0.107,2.213-0.107l1.213,0.005 l0.613,0.004c2.191,0,3.859-0.142,5.395-1.982c0.98-1.171,3.09-1.263,3.715-1.263l0.297,0.007c0.006,0,0.055,0.001,0.061,0.001 h6.453c2.395,0,4.553,1.246,7.053,2.689c1.193,0.686,2.424,1.398,3.811,2.057c0.781,0.373,1.527,0.7,2.248,1.017 c3.449,1.516,5.248,2.405,5.248,4.54c0,2.233-0.832,2.233-1.715,2.233h0.012h-0.016l-0.508-0.005 c-2.613,0-2.613,2.857-2.613,4.229c0,2.751,1.721,3.874,2.102,4.089c0.684,0.458,9.275,6.206,11.117,7.94 c1.82,1.713,4.211,1.899,5.154,1.899l0.459-0.016l-0.088,0.003h4.842c0.141,0,0.289,0,0.441,0.357 c0.127,0.301,0.199,0.755,0.199,1.273c0,0.286-0.023,0.489-0.023,0.49c-0.002,0.035-0.004,0.073-0.004,0.109v6.459 c0,1.618-0.352,2.154-0.475,2.237h-0.004c-0.031-0.003-0.104-0.009-0.135-0.009h-4.842c-2.41,0-3.893,1.846-4.014,2.001 c0.004-0.003,0.004-0.009,0.004-0.009c-0.002,0.004-0.004,0.008-0.008,0.011c-0.787,0.989-16.492,20.739-17.783,22.658 c-0.68,1.011-1.527,1.194-1.98,1.206c-0.139-0.003-0.273-0.022-0.275-0.022c-0.045-0.007-0.094-0.011-0.141-0.011h-16.131 c-1.822,0-2.289-0.966-2.309-1.006l0.01,0.024c-0.033-0.08-0.082-0.172-0.135-0.239c-0.029-0.04-3.029-3.977-4.826-6.442 c-1.305-1.791-2.848-2.058-3.648-2.058c-0.205,0-0.369,0.017-0.477,0.032c-0.178,0-16.041,0-16.041,0 c-0.438,0-0.824,0.286-0.955,0.704c0,0-0.875,2.824-1.186,3.829c-1.279,0-11.104-0.002-11.527-0.002 c-0.404-0.199-16.02-7.897-16.02-7.897c-0.137-0.067-0.287-0.102-0.441-0.102h-8.18c-0.098,0-0.193,0.014-0.285,0.041 c0,0-11.287,3.346-11.561,3.427c-0.18,0-0.711,0-1.1,0c-0.539-0.462-14.268-12.236-14.268-12.236 c-0.182-0.156-0.412-0.241-0.651-0.241h-9.595c-0.288,0-0.562,0.123-0.752,0.34l-8.121,9.248c-0.16,0.182-0.248,0.418-0.248,0.66 v3.845c0,0.18,0.049,0.358,0.142,0.513c0,0,3.162,5.293,3.822,6.396c-1.027,1.012-15.711,15.457-16.257,15.994 c-0.771,0-13.59,0-13.59,0c-0.216,0-0.426,0.068-0.6,0.199c0,0-23.232,17.403-23.752,17.793c-0.627,0-10.899,0-10.899,0 c-0.291,0-0.566,0.127-0.757,0.347c0,0-24.726,28.664-26.051,30.199C35.749,177.25,24.681,166.328,23.513,165.176 M261.059,68.626c0.002,0.002,0.004,0.003,0.006,0.003L261.059,68.626 M225.02,28.894c0,0.005,0,0.012,0,0.019 C225.02,28.905,225.02,28.9,225.02,28.894 M225.02,28.873c0,0.003,0,0.007,0,0.01C225.02,28.876,225.02,28.873,225.02,28.87');
+            regions.minsk   = new Region(155, 122, 'M71.489,249.954c1.224-1.181,5.703-5.5,5.703-5.5c0.191-0.187,0.303-0.443,0.304-0.71 c0-0.004,0-0.009,0-0.013c0-0.264-0.106-0.519-0.291-0.705l-12.89-12.924c-0.187-0.187-0.441-0.293-0.707-0.293 c-0.007,0-0.012,0-0.019,0c0,0-10.316,0.17-11.153,0.184c-0.591-0.647-20.697-22.667-20.697-22.667 c-0.19-0.207-0.459-0.325-0.739-0.325c0,0-17.196-0.004-19-0.004c0-1.593,0-9.221,0-9.956 c0.609-0.563,12.673-11.724,12.673-11.724c0.204-0.189,0.32-0.455,0.32-0.733l0.019-43.101c0-0.27-0.108-0.527-0.301-0.716 c0,0-18.745-18.307-20.225-19.751c1.583-1.297,19.159-15.694,19.159-15.694c0.232-0.19,0.366-0.475,0.366-0.773v-2.539 c0-0.109-0.017-0.217-0.052-0.319c0,0-9.366-27.751-9.76-28.919c0.902-0.849,24.484-23.042,24.484-23.042 c0.202-0.19,0.315-0.454,0.315-0.729l-0.003-28.597c0-0.296-0.13-0.577-0.357-0.767c0,0-12.002-10.041-12.695-10.621 c0.008-0.479,0.022-1.2,0.038-2.018c1.899,0,60.019,0,60.019,0c0.18,0,0.358-0.048,0.514-0.141c0,0,4.341-2.593,4.766-2.846 c0.422-0.002,2.634-0.01,3.28-0.012c0.581,0.633,21.704,23.675,21.704,23.675c0.189,0.207,0.457,0.323,0.737,0.323 c0,0,30.15,0.016,30.782,0.016c0.503,0.363,13.528,9.739,13.528,9.739c0.17,0.123,0.373,0.188,0.584,0.188h28.004 c0.261,0,0.511-0.101,0.697-0.282c0,0,5.296-5.138,5.823-5.649c0.709,0,10.91-0.008,12.58-0.01 c-0.001,1.843-0.014,26.244-0.014,26.679c-0.191,0.398-5.878,12.199-5.878,12.199c-0.067,0.135-0.1,0.284-0.1,0.435v20.333 c0,0.284,0.122,0.557,0.334,0.746c0,0,4.013,3.588,5.202,4.65c-1.413,1.413-30.396,30.398-30.958,30.96c-0.668,0-4.568,0-5.197,0 c-0.516-0.473-5.158-4.742-5.158-4.742c-0.184-0.169-0.427-0.264-0.677-0.264L142.1,123c-0.407,0-0.773,0.246-0.926,0.623 c0,0-5.381,13.232-5.846,14.377c-1.257,0-19.328,0-19.328,0c-0.553,0-1,0.447-1,1v8c0,0.266,0.104,0.521,0.293,0.707 c0,0,12.147,12.147,12.707,12.707c0,0.785,0,15.585,0,15.585c0,0.247,0.091,0.486,0.257,0.67c0,0,8.259,9.176,8.743,9.715 c0,0.716,0,15.432,0,16.202c-0.503,0.503-3.707,3.708-3.707,3.708c-0.187,0.187-0.293,0.438-0.293,0.702c0,0.001,0,0.005,0,0.007 c0,0.265,0.106,0.52,0.295,0.706c0,0,15.248,15.163,16.435,16.344c-1.051,1.297-17.23,21.257-17.794,21.952 c-0.886-0.002-15.826-0.038-16.438-0.04c-0.475-0.346-5.183-3.789-5.183-3.789c-0.171-0.125-0.378-0.191-0.59-0.191H90.971 c-0.253,0-0.498,0.096-0.685,0.271c0,0-12.062,11.307-13.244,12.416C76.077,253.852,72.654,250.943,71.489,249.954');
+            regions.grodno  = new Region(23, 118,  'M45.164,217.015c-0.535-0.677-6.821-8.632-6.821-8.632c-0.19-0.241-0.478-0.381-0.785-0.381 c0,0-11.716,0-13.516,0c0.21-2.303,1.13-3.759,1.884-4.957c0.598-0.949,1.113-1.77,1.113-2.741l0.007-0.548l0.005-0.376 c0-1.394-0.498-1.816-1.979-3.068c-1.772-1.498-4.486-5.37-4.486-7.31c0-1.062,0.939-3.267,1.695-5.04 c0.821-1.929,1.532-3.595,1.532-4.647c0-2.338-1.949-5.345-6.727-10.376c-1.116-1.175-3.533-5.641-7.179-22.353 c-2.19-10.031-3.737-19.581-3.845-20.651c-0.067-0.667-0.204-1.673-0.377-2.947c-0.49-3.601-1.23-9.043-1.23-13.098 c0-2.461,0.687-3.872,1.882-3.872c0.079,0,0.134,0.009,0.149,0.01c0.062,0.012,0.135,0.019,0.195,0.019h16.131 c3.333,0,4.484,1.22,5.643,2.816c1.3,1.786,1.953,2.026,2.421,2.026c0.266,0,0.523-0.106,0.71-0.292l1.613-1.615 c0.002,0,0.396-0.417,0.396-0.417c0.759-0.816,2.342-2.519,3.737-2.519c0.752,0,1.303,0.025,1.542,0.15 c0.193,0.101,0.4,0.384,0.813,0.964l0.057,0.081c1.017,1.424,3.589,2.013,8.878,2.033c3.83,0,7.583-3.629,10.426-6.791 c0.574-0.638,0.983-1.163,1.313-1.585c0.475-0.611,0.715-0.913,1.005-1.067c0.314-0.172,0.847-0.244,1.777-0.244 c1.591,0,2.167,0.537,2.249,0.821l-0.01-0.052c0.022,0.114,0.073,0.262,0.131,0.362c0.131,0.217,3.262,5.328,7.309,5.328 c3.125,0,4.234-2.178,4.234-4.043l-0.012-0.284l0.005,0.098V87.285c0-1.523,0.576-2.264,1.757-2.264 c0.173,0,0.29,0.019,0.29,0.021c0.061,0.01,0.118,0.015,0.178,0.015h9.679l0.498,0.012l0.251,0.007c0.01,0,0.009,0,0.019,0 c1.27,0,1.651-0.507,3.771-3.316c0.688-0.911,1.542-2.045,2.707-3.548c4.58-5.919,6.828-6.09,7.068-6.09l0.027,0.001 c0,0-0.039-0.008-0.061-0.013c0.068,0.013,0.178,0.03,0.24,0.03h8.064c0.174,0,0.309,0.025,0.448,0.343 c0.128,0.294,0.198,0.739,0.198,1.249c0,0.303-0.025,0.517-0.025,0.52c-0.005,0.037-0.006,0.079-0.006,0.118v8.073 c0,4.257,7.539,5.843,12.291,5.843c2.493,0,4.268-1.178,5.129-3.409c0.711-1.835,0.711-4.14,0.711-5.665 c0-3.304-3.3-5.777-4.708-6.834c-0.153-0.114-0.344-0.259-0.407-0.314c-0.129-0.135-0.342-0.329-0.694-0.645 c-1.756-1.585-7.097-6.412-7.097-9.965c0-7.356,7.671-14.104,10.192-16.321c0.37-0.327,0.64-0.564,0.809-0.732l1.614-1.616 c0.187-0.187,0.291-0.441,0.291-0.705v-1.614c0-1.21-0.816-1.776-1.606-2.323c-0.521-0.362-1.171-0.813-1.883-1.585 c-0.002,0-0.446-0.465-0.446-0.465c-0.509-0.52-0.63-0.643-0.737-1.232c-0.148-0.807-0.174-2.278-0.174-5.075l0.004-2.133 l0.003-3.333c0-10.834,11.895-15.665,17.611-17.987l1.133-0.464c3.4-1.421,4.964-1.598,5.503-1.603 c0.438,0.628,4.01,5.749,4.315,6.186c0.011,0.539,0.092,4.902,0.092,4.902c0.005,0.293,0.14,0.569,0.366,0.756 c0,0,11.631,9.513,12.315,10.073c0.009,0.889,0.223,24.119,0.23,24.938c-0.616,0.586-25.716,24.467-25.716,24.467 c-0.202,0.192-0.312,0.455-0.312,0.724c0,0.107,0.017,0.219,0.054,0.325c0,0,9.727,28.27,9.832,28.58c0,0.256,0,1.956,0,2.596 c-0.685,0.578-20.003,16.845-20.003,16.845c-0.215,0.18-0.343,0.444-0.354,0.726c0,0.012,0,0.025,0,0.037 c0,0.268,0.105,0.525,0.298,0.714c0,0,17.147,16.87,19.136,18.826c-2.494,0.944-19.919,7.548-20.885,7.913 c-0.791-0.651-6.831-5.629-6.831-5.629c-0.179-0.148-0.404-0.229-0.635-0.229L113.002,147c-0.266,0-0.52,0.104-0.708,0.293 c-0.188,0.187-0.293,0.44-0.293,0.707c0,0,0,16.074,0,16.684c-0.342,0.487-6.821,9.743-6.821,9.743 c-0.117,0.168-0.18,0.368-0.18,0.573v11.001c0,0.379,0.214,0.726,0.552,0.894c0,0,0.869,0.435,1.448,0.724 c0,0.765,0,2.337,0,2.928c-0.641,0.558-12.632,10.997-13.161,11.457c-0.73,0-30.838-0.002-30.838-0.002 c-0.254,0-0.5,0.098-0.685,0.272c0,0-15.109,14.236-15.688,14.781C46.203,217.043,45.63,217.026,45.164,217.015 M125.159,72.054 c0,0,0.004,0.003,0.005,0.005C125.163,72.058,125.161,72.056,125.159,72.054');
+            regions.brest   = new Region(-4, 262,  'M49.812,185.083c-1.089,0-1.745-0.112-1.95-0.336c-0.242-0.267-0.275-1.106-0.275-1.893 c0-1.109-0.444-2.617-2.553-3.49c-1.199-0.497-2.802-0.739-4.901-0.739c-2.042,0-3.418,0.958-4.634,1.804 c-1.102,0.765-2.052,1.426-3.432,1.426c-1.504,0-2.375-0.287-2.913-0.96c-0.624-0.782-0.926-2.252-0.926-4.498 c0-2.286,0.207-3.363,0.359-3.847c0.123,0.044,0.252,0.066,0.386,0.066c1.054,0,1.543-1.25,1.955-3.125 c0.325-1.476,0.526-3.159,0.526-4.397c0-1.779,2.384-2.241,2.41-2.245c0.473-0.089,0.818-0.502,0.818-0.983v-20.989 c0-6.289-8.167-9.448-16.066-12.503c-2.425-0.938-4.934-1.907-7.092-2.932c-6.941-3.298-7.515-6.017-7.515-8.74l0.01-0.821 l0.012-0.836c0-2.81,2.408-5.636,8.229-12.462l1.211-1.421c6.166-7.246,14.224-11.805,15.621-12.564c0.48,0,12.655,0,12.655,0 c0.265,0,0.519-0.106,0.707-0.294l8.067-8.073c0.181-0.181,0.285-0.422,0.292-0.676c0,0,0.299-9.892,0.348-11.542 c1.595-0.001,10.841-0.01,11.656-0.01c0.553,0.676,7.071,8.644,7.071,8.644c0.189,0.232,0.475,0.367,0.777,0.367L75.004,77 c0.252-0.002,0.495-0.097,0.681-0.271c0,0,15.151-14.204,15.71-14.728c0.77,0,30.944,0.012,30.944,0.012 c0.234,0,0.461-0.082,0.641-0.232l14.586-12.167c0.229-0.191,0.36-0.471,0.36-0.769v-8.073c0-0.28-0.118-0.546-0.322-0.736 c0,0-1.156-1.064-1.604-1.476c0-0.712,0-4.723,0-5.246c0.343-0.49,6.818-9.742,6.818-9.742C142.937,23.405,143,23.205,143,23 c0,0-0.012-14.224-0.014-15.997c1.129,0,2.922,0,3.386,0c0.516,0.415,8.061,6.487,8.061,6.487c0.181,0.145,0.4,0.222,0.626,0.222 c0.118,0,0.236-0.021,0.351-0.063c0,0,22.147-8.285,24.577-9.194c-0.002,2.655-0.032,37.92-0.032,38.737 c-0.602,0.563-12.653,11.879-12.653,11.879c-0.202,0.189-0.316,0.453-0.316,0.729v14.19c0,0.267,0.107,0.522,0.296,0.71 c0.188,0.186,0.44,0.291,0.705,0.291c0.002,0,0.005,0,0.007,0c0,0,19.283-0.146,20.125-0.152 c0.584,0.627,21.285,22.896,21.285,22.896c0.189,0.203,0.454,0.319,0.732,0.319c0,0,10.112,0,10.879,0 c0.518,0.517,8.485,8.49,9.681,9.687c-1.12,1.122-5.746,5.751-5.746,5.751c-0.188,0.188-0.294,0.442-0.294,0.707 c0,0.016,0.002,0.032,0.002,0.048c0.014,0.28,0.146,0.543,0.362,0.722c0,0,8.299,6.873,8.97,7.429 c0.002,0.863,0.012,11.604,0.012,11.604c0.002,0.227,0.079,0.447,0.221,0.623c0,0,6.358,7.93,6.771,8.446 c0,0.674,0.013,17.472,0.013,17.472c0,0.201,0.062,0.399,0.176,0.564c0,0,8.478,12.365,8.816,12.858c0,0.398,0,2.577,0,4.284 c-4.304-2.527-5.874-3.682-5.874-4.271c0-0.112,0.021-0.261,0.044-0.436c0.036-0.27,0.084-0.605,0.084-1.018 c0-1.762-1.316-2.858-3.436-2.858c-0.316,0-0.569,0.025-0.7,0.041c-0.116,0-19.301,0-19.301,0c-1.957,0-3.581-1.742-5.153-3.426 c-1.455-1.561-2.832-3.034-4.525-3.034c-1.974,0-3.561,1.223-4.834,2.203c-0.531,0.409-1.334,1.026-1.619,1.026 c-0.789,0-1.419-0.719-2.32-2.652c-0.859-1.842-4.493-2.202-10.478-2.202l-1.809,0.007l-1.526,0.005 c-1.913,0-4.59-1.378-7.425-2.838c-3.456-1.779-7.028-3.62-10.32-3.62c-2.912,0-5.055-0.88-7.128-1.73 c-1.876-0.77-3.648-1.499-5.778-1.499c-3.942,0-7.471,3.638-8.531,4.843c-0.862,0-12.441,0-12.441,0 c-3.669,0-5.466-1.999-7.052-3.764c-1.245-1.385-2.422-2.694-4.24-2.694c-2.923,0-5.001,1.25-7.011,2.459 c-0.499,0.301-1.016,0.611-1.532,0.894c-2.759,1.501-7.049,3.105-10.816,3.105c-2.343,0-4.842,0.896-7.259,1.764 c-2.102,0.754-4.086,1.466-5.647,1.466c-1.673,0-3.589-1.396-5.28-2.627c-1.632-1.188-3.041-2.216-4.398-2.216 c-2.073,0-4.383,1.786-6.619,3.513c-0.71,0.55-1.38,1.066-2.019,1.509c-1.962,1.361-2.227,4.494-2.227,7.379 c0,1.159,0.051,2.339,0.099,3.481c0.042,1.035,0.083,2.012,0.083,2.879c0,0.68-0.676,2.911-6.943,8.956 c-2.994,2.886-6.024,5.434-6.933,6.188C58.47,185.083,49.812,185.083,49.812,185.083 M28.746,172.188l-0.002,0.002 L28.746,172.188');
+            regions.gomel   = new Region(230, 257, 'M198.926,191.083c0-2.723-1.712-4.349-4.579-4.349c-0.619,0-1.118,0.078-1.345,0.119 c-0.182,0-35.349,0-35.349,0c-3.207,0-4.88,0.342-5.96,1.216c-1.234,0.999-1.483,2.512-1.483,4.629 c0,1.521-0.578,2.261-1.771,2.261c-0.166,0-0.277-0.018-0.279-0.018c-0.057-0.011-0.112-0.016-0.171-0.016h-9.667 c-1.509,0-2.243-0.605-2.243-1.853c0-0.142,0.012-0.229,0.012-0.231c0.005-0.043,0.01-0.099,0.01-0.144v-8.072 c0-2.635-2.304-2.635-3.061-2.635l-0.59,0.011l-0.571,0.009c-0.142,0-0.458-0.352-0.739-0.661 c-0.919-1.023-2.309-2.569-5.704-2.569c-5.834,0-5.834,4.246-5.834,5.846c0,0.081,0,0.233-0.614,0.395 c-0.801,0.21-2.07,0.237-3.322,0.237l-1.168-0.007l-1.949-0.012c-2.936,0-4.67,1.009-5.609,1.855 c-1.165,1.051-1.835,2.505-1.835,3.988c0,1.435-0.497,3.843-3.833,3.843c-1.579-0.014-2.557-0.258-3.071-0.764 c-0.52-0.514-0.762-1.492-0.762-3.079c0-3.838-1.691-4.253-2.418-4.253c-0.112,0-0.211,0.01-0.292,0.023 c-0.197,0-7.954,0-7.954,0c-2.515,0-5.28-2.938-7.3-5.082c-1.695-1.8-2.815-2.991-3.976-2.991c-2.098,0-4.707,2.382-8.787,6.779 c-2.486,2.68-3.902,2.896-4.063,2.911c-0.007,0-0.033-0.002-0.038-0.002h-6.443c-0.393,0-0.537-0.077-0.557-0.105 c-0.03-0.04-0.097-0.187-0.097-0.686l0.019-0.642l0.024-0.797c0-1.84-1.454-2.557-2.498-2.61 c-0.026-0.002-0.054-0.003-0.08-0.003h-1.645c-1.951,0-2.644,1.233-2.644,2.29c0,0.168,0.018,0.31,0.033,0.412 c0,0.171,0,7.985,0,7.985c0,0.104,0,0.276-0.481,0.458c-0.429,0.165-1.063,0.25-1.83,0.25c-0.242-0.004-0.545-0.018-0.75-0.031 c-0.111-0.042-0.23-0.064-0.355-0.064h-2.029c-1.67,0-2.167-0.471-2.221-0.654c0-0.09,0-9.646,0-9.646 c0-3.133-2.004-4.25-3.881-4.25c-0.176,0-0.315,0.011-0.4,0.02c-0.116,0-6.384,0-6.384,0h-0.248c-0.615,0-1.311,0-1.819,0.526 c-0.504,0.521-0.545,1.286-0.545,2.089c0,0.272-1.027,0.615-2.181,0.615h-0.04h-4.833c-0.63,0-0.63-0.183-0.63-0.358 c0,0,0.003-0.062,0.003-0.073c0.01-0.057,0.017-0.126,0.017-0.184v-9.687c0-0.211-0.067-0.417-0.192-0.587 c0,0-8.533-11.754-8.899-12.26c-0.002-0.619-0.04-17.58-0.04-17.58c-0.001-0.229-0.08-0.45-0.223-0.629 c0,0-6.279-7.743-6.694-8.253c-0.003-0.633-0.054-9.182-0.059-9.938c0.571-0.558,12.89-12.543,13.437-13.076 c0.756,0,15.374,0.014,16.021,0.014c0.488,0.386,4.759,3.762,4.759,3.762c0.176,0.14,0.395,0.216,0.62,0.216l19.905,0.009 c0.296,0,0.578-0.132,0.769-0.36c0,0,45.69-54.854,46.282-55.565c0.86,0,10.58,0,10.58,0c0.208,0,0.411-0.066,0.578-0.185 c0,0,24.699-17.525,25.209-17.887c0.604,0,12.769-0.007,12.769-0.007c0.269,0,0.522-0.107,0.711-0.298l18.603-18.827 c0.19-0.192,0.287-0.446,0.287-0.703c0-0.177-0.047-0.355-0.142-0.514c0,0-4.198-6.999-4.468-7.449c0-0.35,0-1.196,0-1.613 c0.368-0.481,5.3-6.893,5.826-7.579c0.822,0,6.483,0,7.151,0c0.554,0.52,14.333,13.428,14.333,13.428 c0.188,0.177,0.435,0.27,0.684,0.27c0.114,0,0.23-0.021,0.341-0.061c0,0,12.497-4.541,12.822-4.658c0.322,0,6.986,0,7.452,0 c0.437,0.239,14.346,7.824,14.346,7.824c0.147,0.08,0.31,0.122,0.476,0.123c0,0,10.562,0.045,13.066,0.056 c-0.621,1.496-1.427,3.969-1.427,6.758c0,2.273-1.618,3.523-2.918,4.527c-0.894,0.687-1.664,1.283-1.664,2.19 c0,1.4,1.447,3.242,10.021,10.454c6.436,5.41,10.919,12.448,10.919,15.38c0,1.97-1.372,3.647-2.281,4.757 c-0.585,0.715-0.939,1.147-0.939,1.7c0,1.224,0.545,1.828,3.64,4.044c2.722,1.945,2.805,7.213,2.805,7.267v16.137 c0,7.395,6.186,13.196,10.7,17.432c1.717,1.609,3.2,3.001,3.974,4.125c1.436,2.082,1.736,3.552,1.736,4.419 c0,0.184-0.012,0.34-0.031,0.471c-1.372,0-23.433,0-23.433,0c-3.419,0-4.962,3.116-6.09,5.393 c-0.623,1.257-1.328,2.682-1.965,2.682c-0.44,0-0.728-0.385-1.375-1.404c-1.279-2.013-3.211-5.055-9.901-5.055 c-3.933,0-7.914,2.785-12.171,8.514c-3.492,4.698-6.544,10.526-8.995,15.209c-0.815,1.557-1.584,3.025-2.261,4.239 c-2.6,4.671-4.195,10.364-5.079,14.315c-1.024,4.595-1.491,8.605-1.491,10.389c0,1.857,1.826,5.38,4.612,10.542 c1.453,2.69,3.441,6.376,3.441,7.219l0.026,0.845c0.018,0.438,0.036,0.933,0.036,1.479c0,2.284-0.381,4.012-1.165,5.282 c-1.12,1.813-3.065,2.695-5.951,2.695C200.093,203,198.926,196.631,198.926,191.083');
+
+            // Draw Minsk city pin
+            minsk_city = paper.circle(235, 224, 8);
+            minsk_city.clicked = false;
+            minsk_city.attr(minsk_city_options);
+            minsk_city.hover(
+                function(e) { this.attr({ fill: '#1e89ff' }); },
+                function(e) {
+                    if (this.clicked == false) {
+                        this.attr({ fill: 'none' });
+                    }
+                }
+            );
+            minsk_city.click(function(e){
+                var my_state = !this.clicked;
+                clearMapSelection(this);
+                this.clicked = my_state;
+                if (my_state) {
+                    this.attr({ fill: '#1e89ff' });
+                } else {
+                    this.attr({ fill: 'none' });
+                }
+                dep_filter_ajax(raw_ajax_url, ajaxPageData());
+            });
+
+            // Draw other cities
+            paper.circle(420, 220, 8).attr(city_options); // Mogilev pin
+            paper.circle(400, 87, 8).attr(city_options);  // Vitebsk pin
+            paper.circle(50, 245, 8).attr(city_options);  // Grodno pin
+            paper.circle(45, 400, 8).attr(city_options);  // Brest pin
+            paper.circle(445, 350, 8).attr(city_options); // Gomel pin
+
+            // Bind Events On City Labels
+            bindEventOnLabel('gomel',     regions.gomel);
+            bindEventOnLabel('minsk',     regions.minsk);
+            bindEventOnLabel('grodno',     regions.grodno);
+            bindEventOnLabel('vitebsk', regions.vitebsk);
+            bindEventOnLabel('brest',     regions.brest);
+            bindEventOnLabel('mogilev', regions.mogilev);
+        };
+
+        $('div.pagination div.load-more-button').live('click', function() {
+            if (last_ajax)
+                last_ajax.abort();
+            var pagination_link = $(this);
+            if (pagination_link.prop('disabled'))
+                return;
+            last_ajax = $.ajax({
+                url: raw_ajax_url,
+                data: $.extend({
+                    page: pagination_link.attr('data-next-page-number'),
+                    search_query: $("#page-search-form-query").val()
+                }, ajaxPageData()),
+                success: function(output) {
+                    if (!output)
+                        return;
+                    $('div.content div.entity-list .pagination-marker').before(output);
+                    var page_num = pagination_link.attr('data-page-num');
+                    page_num++;
+                    if (page_num >= pagination_link.attr('data-max-pages')) {
+                        pagination_link.remove();
+                    } else {
+                        pagination_link.attr('data-page-num', page_num);
+                        pagination_link.attr('data-next-page-number', (page_num + 1));
+                    }
+                }
+            }).done(function() {
+                pagination_link.prop('disabled', false);
+            });
+            pagination_link.prop('disabled', true);
+        });
+
+        var change_timer;
+        var search_on_index = function() {
+            var search_input = $("#page-search-form-query");
+            if ($(search_input).val() == $(search_input).attr('data')) {
+                $(search_input).attr('data', $(search_input).val());
+                $('div.qs-object-list').html('<div style="width:100%; text-align:center; margin-top:20px;"><img src="/static/main/img/loader.gif"></div>');
+                if (last_ajax)
+                    last_ajax.abort();
+                last_ajax = $.ajax({
+                    url: raw_ajax_url,
+                    data:  $.extend({
+                        search_query: search_input.val()
+                    }, ajaxPageData()),
+                    success: function(output) {
+                       if (output) {
+                           $('div.qs-object-list').html(output);
+                       }
+                    }
+                });
+            }
+        };
+        $("#page-search-form-query").live("change paste keyup", function(){
+            var search_input = "#page-search-form-query";
+            if ($(search_input).val() != $(search_input).attr('data')) {
+                $(search_input).attr('data', $(search_input).val());
+                clearTimeout(change_timer);
+                change_timer = setTimeout(search_on_index, 1000)
+            }
+        });
+    });
+</script>
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        jQuery(function($) {
+            var scroll_2_menu =  function() { $(window).scrollTop($('#main-menu-nav').offset().top-5) };
+            $('div.menu-item > a.link').live('DOMActivate', scroll_2_menu);
+            scroll_2_menu()
+
+            $('.form-container .form-item .control >').focus(function() {$(this).parents('.form-item').addClass('with-focus');})
+            $('.form-container .form-item .control >').blur(function() {$(this).parents('.form-item').removeClass('with-focus');})
+        });
+        $(document).ready(function(){
+            $('.page-filter li').click(function(){
+                $('.page-filter .hover-div').removeClass('active');
+                $(this).find('.hover-div').addClass('active');
+            });
+        });
+    </script>
+
+  
+  
+  
+  <div class="footer">
+    <div class="content">
+      <div class="page-up-button"></div>
+      <div class="holder">
+        Министерство юстиции Республики Беларусь
+        <a href="http://minjust.gov.by/ru/make/electronic/appeal/">
+          <span>Электронное обращение</span>
+        </a>
+        <div class="clear"></div>
+      </div>
+      
+<div class="contact">
+        <h4>Адрес и режим работы</h4>
+    <div class="text">
+        220004, г.Минск, ул. Коллекторная, 10<br>
+        Пн. - Пт. с 9.00 до 18.00<br>
+        Перерыв: с 13:00 до 14:00
+    </div>
+    <a href="http://minjust.gov.by/ru/ministry/contact/">Подробнее</a>
+</div>
+<div class="contact">
+    <h4>Контакты</h4>
+    <div class="text">
+        <div class="label">E – mail:</div> kanc@minjust.by <br>
+        <div class="label">Тел/Факс:</div> + 375 17 200 86 87 <br>
+        <div class="label">Горячая линия:</div> + 375 17 306 37 30
+    </div>
+    <a href="http://minjust.gov.by/ru/ministry/contact/">Подробнее</a>
+</div>
+<div class="about">
+<h4>О портале</h4>
+    <ul>
+        <li><a href="http://minjust.gov.by/citizens/">Гражданам</a></li>
+        <li><a href="http://minjust.gov.by/organizations/">Организациям</a></li>
+        <li><a href="http://minjust.gov.by/authorities/">Органам власти</a></li>
+        <li><a href="http://minjust.gov.by/licensees/">Лицензиатам</a></li>
+        <li><a href="http://minjust.gov.by/mass-media/">СМИ</a></li>
+    </ul>
+</div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<script src="./Организационная структура_files/adaptation.js.Без названия"> </script>
+
+</body></html>

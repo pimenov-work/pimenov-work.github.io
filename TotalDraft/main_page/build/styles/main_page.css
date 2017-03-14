@@ -1,0 +1,356 @@
+/***** Variables *****/
+/***** Variables end *****/
+/**** Reset styles *****/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+/***** Reset styles end *****/
+/***** Basic *****/
+button {
+  outline: none; }
+
+::-webkit-scrollbar {
+  width: 8px; }
+
+::-webkit-scrollbar-track {
+  background-color: transparent; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #a4a4a4; }
+
+/***** Basic end ****
+/***** Tupography *****/
+@font-face {
+  font-family: 'ProximaNova-Regular';
+  src: url("../fonts/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Regular.otf") format("opentype"), url("../fonts/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova-Regular.ttf") format("truetype"), url("../fonts/ProximaNova-Regular.svg#ProximaNova-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ProximaNova-Bold';
+  src: url("../fonts/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Bold.otf") format("opentype"), url("../fonts/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova-Bold.ttf") format("truetype"), url("../fonts/ProximaNova-Bold.svg#ProximaNova-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ProximaNova-Light';
+  src: url("../fonts/ProximaNova-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Light.otf") format("opentype"), url("../fonts/ProximaNova-Light.woff") format("woff"), url("../fonts/ProximaNova-Light.ttf") format("truetype"), url("../fonts/ProximaNova-Light.svg#ProximaNova-Light") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  font-family: 'ProximaNova-Regular', sans-serif;
+  color: white; }
+
+/***** Tupography end *****/
+/***** Header *****/
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1; }
+  .header .logoWrapper {
+    display: flex;
+    align-items: center; }
+  .header .logoTitle {
+    margin-left: 30px; }
+  .header .logo {
+    min-width: 50px; }
+  .header .lobby {
+    margin-left: 60px;
+    color: #a4a4a4; }
+  .header .enter {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    color: #a4a4a4; }
+    .header .enter::before {
+      content: url('\a 				data:image/svg+xml;utf8,\a 				<svg viewBox="0 0 30 30" width="20" height="20" stroke="white" xmlns="http://www.w3.org/2000/svg">\a 					<polyline fill="none" stroke-width="2" points="6.9 19.6 6.9 26.6 28.9 \a 					26.6 28.9 3.4 6.9 3.4 6.9 10.4 "/>\a 					<polygon fill="#ffffff" points="11.6 20.3 13.1 22 19.6 15.1 19.6 15.1 \a 					19.6 15.1 13.1 8 11.6 9.7 15.4 13.9 1.1 13.9 1.1 16.2 15 16.2 "/>\a 				</svg>');
+      margin-right: 13px; }
+
+/***** Header end *****/
+/***** Init screen *****/
+.initScreen {
+  width: 100%;
+  height: 100vh;
+  background-color: lightpink;
+  background: black url(../images/initScreen-bg.png) no-repeat center bottom;
+  background-size: 100% auto;
+  position: fixed;
+  top: 0;
+  transform: translateZ(0); }
+  .initScreen .textBlock {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 110px 0 auto;
+    padding-top: 200px;
+    position: relative;
+    z-index: 5; }
+  .initScreen .textTitle {
+    margin-bottom: 30px;
+    font-size: 26px;
+    text-transform: uppercase;
+    line-height: 1.6;
+    letter-spacing: 4px; }
+  .initScreen .textDescription {
+    margin-bottom: 60px;
+    line-height: 1.8;
+    color: #a4a4a4; }
+  .initScreen .howToButton {
+    min-height: 52px;
+    padding: 0 50px;
+    text-align: center;
+    background-color: transparent;
+    font-family: ProximaNova-Light;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 0.9;
+    color: white;
+    border-radius: 50px/50px;
+    outline: none;
+    border: 1px #fead00 solid;
+    cursor: pointer; }
+  .initScreen .parallax {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    perspective: 900px; }
+    .initScreen .parallax * {
+      position: absolute;
+      background-repeat: no-repeat;
+      transform-origin: 50% 50%; }
+    .initScreen .parallax:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 2; }
+  .initScreen .player-1 {
+    width: 513px;
+    height: 700px;
+    left: 235px;
+    top: 66px;
+    background-image: url(../images/initScreen-player-1.png);
+    z-index: 1; }
+  .initScreen .player-2 {
+    width: 417px;
+    height: 717px;
+    right: 255px;
+    top: 18px;
+    background-image: url(../images/initScreen-player-2.png);
+    z-index: 1; }
+  .initScreen .ball {
+    width: 161px;
+    height: 161px;
+    left: 354px;
+    top: 639px;
+    background-image: url(../images/initScreen-ball.png);
+    z-index: 1; }
+  .initScreen .bg-players {
+    width: 836px;
+    height: 664px;
+    right: -20px;
+    top: -2px;
+    background-image: url(../images/initScreen-bg-players.png); }
+  .initScreen .scrollIcon {
+    width: 11px;
+    height: 33px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAhCAMAAAA4RaFEAAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMA4iMg6Zh++Ug6v2MJBmdlcdQQkAAAAGlJREFUeAG9zkEOAjEIheEfaMtMpyr3P60JaZTERHe+RfuxgQdYF5duAEcbetPRDrB2AnA2ow/IjI7otgoOEACe334+zXf7y/7eb1Lv1j61Z+n/p8Qvr/RKz4vgmmmVR9xF2UMkMzYN4Al7lwLt4bj80gAAAABJRU5ErkJggg==") no-repeat;
+    position: absolute;
+    left: calc(50% - 5px);
+    bottom: 30px; }
+
+/***** Init screen end *****/
+/***** Init slider *****/
+.initSlider {
+  height: 90vh;
+  margin-top: 300vh;
+  display: flex;
+  position: relative; }
+  .initSlider .sliderPicture {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #161616; }
+  .initSlider .sliderIcon:not(.currentIcon) {
+    opacity: 0; }
+  .initSlider .sliderContent {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1b1b1b; }
+  .initSlider .contentTitle {
+    width: 320px;
+    margin: 200px 0 65px 0;
+    font-size: 26px;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(-70px);
+    transition: opacity 4s, transform 1s; }
+  .initSlider .sliderDescriptions {
+    width: 320px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-70px);
+    transition: opacity 4s, transform 1s; }
+  .initSlider .showSlideContent {
+    opacity: 1;
+    transform: translateY(0); }
+  .initSlider .descriptionBlock {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: opacity 0.15s 0.15s linear; }
+  .initSlider .descriptionBlock:not(.currentDescription) {
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.15s linear; }
+  .initSlider .descriptionTitle {
+    margin-bottom: 30px;
+    font-size: 22px;
+    color: #a4a4a4; }
+  .initSlider .description {
+    color: #a4a4a4;
+    line-height: 1.5; }
+  .initSlider .sliderControls {
+    position: relative;
+    top: 230px;
+    font-size: 0; }
+  .initSlider .sliderControl {
+    width: 11px;
+    height: 11px;
+    margin-right: 16px;
+    display: inline-block;
+    font-size: 0;
+    background-color: #fead00;
+    border-radius: 50%;
+    transition: background-color 0.15s, border 0.15s; }
+    .initSlider .sliderControl:last-of-type {
+      margin-right: 0; }
+    .initSlider .sliderControl:not(.active) {
+      background-color: transparent;
+      border: 1px #594313 solid;
+      cursor: pointer; }
+    .initSlider .sliderControl:not(.active):hover {
+      border: 1px #ad8225 solid; }
+
+/***** Init slider end *****/
+/***** Select tournaments *****/
+.selectTournament {
+  height: 270px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+  @media all and (min-width: 769px) {
+    .selectTournament {
+      background-image: url(../images/selectTournamentBg.jpg); } }
+  @media all and (max-width: 768px) {
+    .selectTournament {
+      background-image: url(../images/selectTournamentBg-mob.jpg); } }
+  .selectTournament .selectButton {
+    max-width: 305px;
+    min-height: 52px;
+    padding: 0 50px;
+    background: linear-gradient(to right, #fead00, #e16f1a);
+    border: none;
+    border-radius: 50px/50px;
+    font-size: 16px;
+    text-align: center;
+    font-family: ProximaNova-Light;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer; }
+
+/***** Select tournaments end *****/
+/***** Footer *****/
+.footer {
+  height: 55px;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #1f1f1f;
+  text-transform: uppercase;
+  color: #565656;
+  font-size: 12px; }
+  .footer .owner {
+    margin-right: 40px; }
+  .footer img {
+    height: 24px;
+    margin-right: 33px; }
+    .footer img:last-of-type {
+      margin-right: 0; }
+    .footer img.getSmaller {
+      height: 19px; }
+  .footer .navigation {
+    margin-left: auto; }
+    .footer .navigation a {
+      margin-right: 29px; }
+    .footer .navigation :last-child {
+      margin-right: 0; }
+
+/***** Footer end *****/

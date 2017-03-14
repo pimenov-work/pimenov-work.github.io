@@ -1,0 +1,46 @@
+/***** Footer *****/
+
+.footer {
+	height: 55px;
+	padding: 0 $main-indent;
+	display: flex;
+	align-items: center;
+	position: relative;
+	background-color: #1f1f1f;
+	text-transform: uppercase;
+	color: #565656;
+	font-size: 12px;
+	//transform: translateZ(0);
+
+	.owner {
+		margin-right: 40px;
+	}
+
+	img {
+		height: 24px;
+		margin-right: 33px;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		&.getSmaller {
+			height: 19px;
+		}
+	}
+
+	.navigation {
+		margin-left: auto;
+
+		a {
+			margin-right: 29px;
+		}
+
+		& :last-child {
+			margin-right: 0;
+		}
+	}
+
+}
+
+/***** Footer end *****/

@@ -1,0 +1,112 @@
+/***** Init slider *****/
+
+.initSlider {
+	height: 90vh;
+	margin-top: 300vh;
+	display: flex;
+	position: relative;
+
+	.sliderPicture {
+		width: 50%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #161616;
+	}
+
+	.sliderIcon:not(.currentIcon) {
+		opacity: 0;
+	}
+
+	.sliderContent {
+		width: 50%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: #1b1b1b;
+	}
+
+	.contentTitle {
+		width: 320px;
+		margin: 200px 0 65px 0;
+		font-size: $big-title;
+		text-transform: uppercase;
+		opacity: 0;
+		transform: translateY(-70px);
+		transition: opacity 4s, transform 1s;
+	}
+
+	.sliderDescriptions {
+		width: 320px;
+		position: relative;
+		opacity: 0;
+		transform: translateY(-70px);
+		transition: opacity 4s, transform 1s;
+	}
+
+	.showSlideContent {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.descriptionBlock {
+		position: absolute;
+		left: 0;
+		top: 0;
+		transition: opacity 0.15s 0.15s linear;
+	}
+
+	.descriptionBlock:not(.currentDescription) {
+		opacity: 0;
+		z-index: -1;
+		transition: opacity 0.15s linear;
+	}
+
+	.descriptionTitle {
+		margin-bottom: 30px;
+		font-size: 22px;
+		color: $secondary-color;
+	}
+
+	.description {
+		color: $secondary-color;
+		line-height: 1.5;
+	}
+
+	.sliderControls {
+		position: relative;
+		top: 230px;
+		font-size: 0;
+	}
+
+	.sliderControl {
+		width: 11px;
+		height: 11px;
+		margin-right: 16px;
+		display: inline-block;
+		font-size: 0;
+		background-color: $elements-color;
+		border-radius: 50%;
+		transition: background-color 0.15s, border 0.15s;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		&:not(.active) {
+			background-color: transparent;
+			border: 1px $inactive-color solid;
+			cursor: pointer;
+		}
+
+		&:not(.active):hover {
+			border: 1px lighten($inactive-color, 20%) solid;
+		}
+
+	}
+
+}
+
+/***** Init slider end *****/

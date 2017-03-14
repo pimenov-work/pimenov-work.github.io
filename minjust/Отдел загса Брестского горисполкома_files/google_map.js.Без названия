@@ -1,0 +1,26 @@
+var initGoogleMap = function(holder, location) {
+  var mapHolder = $(holder).show();
+  var map = new google.maps.Map(mapHolder.get(0), {
+    center: location,
+    zoom: 17
+  });
+  var marker = new google.maps.Marker({
+    map: map,
+    position: location
+  });
+};
+
+var initGoogleMapByGeocode = function(holder, geocodeOptions) {
+  var geocoder = new google.maps.Geocoder();
+  geocoder.geocode(geocodeOptions, function (results, status) {
+    if (status == 'OK') {
+      if (results.length == 1) {
+        initGoogleMap(holder, results[0].geometry.location);
+      } else {
+        console.log('Geocode returned ' + results.length + ' location(s)');
+      }
+    } else {
+      console.log('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+};

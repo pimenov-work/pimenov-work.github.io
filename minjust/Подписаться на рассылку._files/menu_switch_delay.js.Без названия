@@ -1,0 +1,45 @@
+function activate_menu_switch_delay(selector, css_class, type, hide_delay, show_delay) {
+  var hide_timer;
+  var show_timer;
+  if (type == "click") {
+    $(document).ready(function () {
+      if (hide_delay !== null) {
+        $(window).click(function () {
+          clearTimeout(show_timer);
+          hide_timer = setTimeout(function () {
+            $(selector).removeClass(css_class);
+          }, hide_delay);
+        });
+      }
+      $(selector).click(function(event) {
+        event.stopPropagation();
+        var self = this;
+        clearTimeout(show_timer);
+        show_timer = setTimeout(function () {
+          clearTimeout(hide_timer);
+          $(selector).removeClass(css_class);
+          $(self).addClass(css_class);
+        }, show_delay);
+      });
+    });
+  } else if (type == "hover") {
+    $(selector).on("mouseenter", function () {
+      var self = this;
+      clearTimeout(show_timer);
+      show_timer = setTimeout(function () {
+        clearTimeout(hide_timer);
+        $(selector).removeClass(css_class);
+        $(self).addClass(css_class);
+      }, show_delay);
+    });
+    if (hide_delay !== null) {
+      $(selector).on("mouseleave", function () {
+        var self = this;
+        clearTimeout(show_timer);
+        hide_timer = setTimeout(function () {
+          $(self).removeClass(css_class);
+        }, hide_delay);
+      });
+    }
+  }
+}

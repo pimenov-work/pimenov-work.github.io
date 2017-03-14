@@ -1,0 +1,76 @@
+function initialize_photoblog_image_slider() {
+  $(".scrollable").scrollable();
+  var scrollable = $('.scrollable').data('scrollable');
+  var selectedImg = 1;
+  var holder = $('.page-content .photo-viewer');
+  var total = holder.find(".photos .scrollable .items .thumb").click(showImage).length;
+
+  hideDetailImageScrollButtons();
+  hideBatchImageScrollButtons();
+
+  holder.find('.detail-scroll.control-left').click(prevImage);
+  holder.find('.detail-scroll.control-right').click(nextImage);
+
+  holder.find(".batch-scroll.control-left").click(prevImageBatch);
+  holder.find(".batch-scroll.control-right").click(nextImageBatch);
+
+  function nextImageBatch() {
+    scrollable.next();
+    hideBatchImageScrollButtons();
+  }
+  function prevImageBatch() {
+    scrollable.prev();
+    hideBatchImageScrollButtons();
+  }
+  function nextImage() {
+    if (selectedImg + 1 <= total) {
+      // Deselect
+      $('.thumb[num="' + selectedImg + '"]').removeClass('selected');
+      if (selectedImg % 5 == 0) {
+        nextImageBatch();
+      }
+      selectedImg++;
+      // Update Image
+      $('.viewer .photo img').attr('src', $('.thumb[num="' + selectedImg + '"]').attr('src'));
+      $('.viewer .photo .title').html($('.thumb[num="' + selectedImg + '"]').attr('title'));
+      // Select
+      $('.thumb[num="' + selectedImg + '"]').addClass('selected');
+    }
+    hideDetailImageScrollButtons();
+  }
+  function prevImage() {
+    if (selectedImg - 1 >= 1) {
+      // Deselect
+      $('.thumb[num="' + selectedImg + '"]').removeClass('selected');
+      if (selectedImg % 5 == 1) {
+        prevImageBatch();
+      }
+      selectedImg--;
+      // Update Image
+      $('.viewer .photo img').attr('src', $('.thumb[num="' + selectedImg + '"]').attr('src'));
+      $('.viewer .photo .title').html($('.thumb[num="' + selectedImg + '"]').attr('title'));
+      // Select
+      $('.thumb[num="' + selectedImg + '"]').addClass('selected');
+    }
+    hideDetailImageScrollButtons();
+  }
+  function showImage() {
+    // Deselect
+    $('.thumb[num="' + selectedImg + '"]').removeClass('selected');
+    selectedImg = parseInt($(this).attr('num'));
+    // Update Image
+    $('.viewer .photo img').attr('src', $('.thumb[num="' + selectedImg + '"]').attr('src'));
+    $('.viewer .photo .title').html($('.thumb[num="' + selectedImg + '"]').attr('title'));
+    // Select
+    $(this).addClass('selected');
+    hideDetailImageScrollButtons();
+  }
+  function hideBatchImageScrollButtons() {
+    holder.find('.batch-scroll.control-left')[scrollable.getIndex() < 1 ? "hide" : "show"]();
+    holder.find('.batch-scroll.control-right')[scrollable.getIndex() + 1 >= scrollable.getSize() ? "hide" : "show"]();
+  }
+  function hideDetailImageScrollButtons() {
+    holder.find('.detail-scroll.control-left')[selectedImg <= 1 ? "hide" : "show"]();
+    holder.find('.detail-scroll.control-right')[selectedImg >= total ? "hide" : "show"]();
+  }
+};

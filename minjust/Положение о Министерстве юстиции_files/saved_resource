@@ -1,0 +1,113 @@
+
+/* gettext library */
+
+var catalog = new Array();
+
+function pluralidx(n) {
+  var v=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);
+  if (typeof(v) == 'boolean') {
+    return v ? 1 : 0;
+  } else {
+    return v;
+  }
+}
+catalog['Displayed %s organization'] = ['','',''];
+catalog['All'] = '\u0412\u0441\u0435';
+catalog['Big'] = '\u0411\u043e\u043b\u044c\u0448\u043e\u0439';
+catalog['Black on white'] = '\u0427\u0451\u0440\u043d\u044b\u043c \u043f\u043e \u0431\u0435\u043b\u043e\u043c\u0443';
+catalog['Contacts and schedule'] = '\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u044b \u0438 \u0440\u0430\u0441\u043f\u0438\u0441\u0430\u043d\u0438\u0435';
+catalog['Default'] = '\u041e\u0431\u044b\u0447\u043d\u044b\u0439';
+catalog['Displayed %s organization'][0] = '\u041f\u043e\u043a\u0430\u0437\u0430\u043d\u0430 %s \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0446\u0438\u044f';
+catalog['Displayed %s organization'][1] = '\u041f\u043e\u043a\u0430\u0437\u0430\u043d\u043e %s \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0446\u0438\u0438';
+catalog['Displayed %s organization'][2] = '\u041f\u043e\u043a\u0430\u0437\u0430\u043d\u044b %s \u043e\u0440\u0433\u0430\u043d\u0438\u0437\u0430\u0446\u0438\u0439';
+catalog['Font size'] = '\u0420\u0430\u0437\u043c\u0435\u0440 \u0448\u0440\u0438\u0444\u0442\u0430';
+catalog['Font'] = '\u0428\u0440\u0438\u0444\u0442';
+catalog['Letter spacing'] = '\u0418\u043d\u0442\u0435\u0440\u0432\u0430\u043b';
+catalog['Lightblue on darkblue'] = '\u0413\u043e\u043b\u0443\u0431\u044b\u043c \u043d\u0430 \u0441\u0438\u043d\u0435\u043c';
+catalog['Loading...'] = '\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430...';
+catalog['Make an appointment possible only after registration on the full version of the site'] = '\u0417\u0430\u043f\u0438\u0441\u0430\u0442\u044c\u0441\u044f \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e \u043b\u0438\u0448\u044c \u043f\u043e\u0441\u043b\u0435 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0438 \u043d\u0430 \u043f\u043e\u043b\u043d\u043e\u0439 \u0432\u0435\u0440\u0441\u0438\u0438 \u0441\u0430\u0439\u0442\u0430';
+catalog['Middle'] = '\u0421\u0440\u0435\u0434\u043d\u0438\u0439';
+catalog['Page %s from %s'] = '\u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430 %s \u0438\u0437 %s';
+catalog['Regular version'] = '\u041e\u0431\u044b\u0447\u043d\u0430\u044f \u0432\u0435\u0440\u0441\u0438\u044f';
+catalog['Sans-serif'] = '\u0421 \u0437\u0430\u0441\u0435\u0447\u043a\u0430\u043c\u0438';
+catalog['Search'] = '\u041f\u043e\u0438\u0441\u043a';
+catalog['Serif'] = '\u0411\u0435\u0437 \u0437\u0430\u0441\u0435\u0447\u0435\u043a';
+catalog['Settings'] = '\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438';
+catalog['Site map'] = '\u041a\u0430\u0440\u0442\u0430 \u0441\u0430\u0439\u0442\u0430';
+catalog['Special version'] = '\u0412\u0435\u0440\u0441\u0438\u044f \u0434\u043b\u044f \u0441\u043b\u0430\u0431\u043e\u0432\u0438\u0434\u0430\u0449\u0438\u0445';
+catalog['Theme'] = '\u0426\u0432\u0435\u0442\u043e\u0432\u0430\u044f \u0441\u0445\u0435\u043c\u0430';
+catalog['To top'] = '\u041d\u0430\u0432\u0435\u0440\u0445';
+catalog['White on black'] = '\u0411\u0435\u043b\u044b\u043c \u043f\u043e \u0447\u0451\u0440\u043d\u043e\u043c\u0443';
+
+
+function gettext(msgid) {
+  var value = catalog[msgid];
+  if (typeof(value) == 'undefined') {
+    return msgid;
+  } else {
+    return (typeof(value) == 'string') ? value : value[0];
+  }
+}
+
+function ngettext(singular, plural, count) {
+  value = catalog[singular];
+  if (typeof(value) == 'undefined') {
+    return (count == 1) ? singular : plural;
+  } else {
+    return value[pluralidx(count)];
+  }
+}
+
+function gettext_noop(msgid) { return msgid; }
+
+function pgettext(context, msgid) {
+  var value = gettext(context + '\x04' + msgid);
+  if (value.indexOf('\x04') != -1) {
+    value = msgid;
+  }
+  return value;
+}
+
+function npgettext(context, singular, plural, count) {
+  var value = ngettext(context + '\x04' + singular, context + '\x04' + plural, count);
+  if (value.indexOf('\x04') != -1) {
+    value = ngettext(singular, plural, count);
+  }
+  return value;
+}
+
+function interpolate(fmt, obj, named) {
+  if (named) {
+    return fmt.replace(/%\(\w+\)s/g, function(match){return String(obj[match.slice(2,-2)])});
+  } else {
+    return fmt.replace(/%s/g, function(match){return String(obj.shift())});
+  }
+}
+
+/* formatting library */
+
+var formats = new Array();
+
+formats['DATETIME_FORMAT'] = 'j E Y \u0433. G:i:s';
+formats['DATE_FORMAT'] = 'j E Y \u0433.';
+formats['DECIMAL_SEPARATOR'] = ',';
+formats['MONTH_DAY_FORMAT'] = 'j F';
+formats['NUMBER_GROUPING'] = '3';
+formats['TIME_FORMAT'] = 'G:i:s';
+formats['FIRST_DAY_OF_WEEK'] = '1';
+formats['TIME_INPUT_FORMATS'] = ['%H:%M:%S', '%H:%M'];
+formats['THOUSAND_SEPARATOR'] = '\u00a0';
+formats['DATE_INPUT_FORMATS'] = ['%d.%m.%Y', '%d.%m.%y', '%Y-%m-%d'];
+formats['YEAR_MONTH_FORMAT'] = 'F Y \u0433.';
+formats['SHORT_DATE_FORMAT'] = 'd.m.Y';
+formats['SHORT_DATETIME_FORMAT'] = 'd.m.Y H:i';
+formats['DATETIME_INPUT_FORMATS'] = ['%d.%m.%Y %H:%M:%S', '%d.%m.%Y %H:%M', '%d.%m.%Y', '%d.%m.%y %H:%M:%S', '%d.%m.%y %H:%M', '%d.%m.%y', '%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S.%f', '%Y-%m-%d %H:%M', '%Y-%m-%d'];
+
+function get_format(format_type) {
+    var value = formats[format_type];
+    if (typeof(value) == 'undefined') {
+      return format_type;
+    } else {
+      return value;
+    }
+}

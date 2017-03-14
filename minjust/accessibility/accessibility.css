@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'TrebuchetMS';
+  src: url('fonts/TrebuchetMS.eot?#iefix') format('embedded-opentype'),  url('fonts/TrebuchetMS.woff') format('woff'), url('fonts/TrebuchetMS.ttf')  format('truetype'), url('fonts/TrebuchetMS.svg#TrebuchetMS') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Georgia';
+  src: url('../fonts/Georgia.eot?#iefix') format('embedded-opentype'),  url('../fonts/Georgia.woff') format('woff'), url('../fonts/Georgia.ttf')  format('truetype'), url('../fonts/Georgia.svg#Georgia') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 /****** Reset or hide basic-version elements ******/
 
 /*** Basic ***/
@@ -5,6 +20,14 @@
 .accessibility * {
 	box-sizing: border-box;
 	color: black !important;
+}
+
+.accessibility .page-content .container .content {
+	width: 550px;
+}
+
+.accessibility .aside .appoint-button {
+	padding: 20px 30px !important;
 }
 
 .accessibility {
@@ -24,8 +47,16 @@
 	position: static;
 }
 
+.accessibility table {
+    max-width: 100% !important;
+}
+
 .accessibility .form-container .chosen-container-single .chosen-search input[type=text] {
-	display: none;
+	display: none !important;
+}
+
+.chosen-container.chosen-container-single.chosen-with-drop.chosen-container-active {
+	width: auto !important;
 }
 
 .accessibility ul.schedule-list li .name {
@@ -66,6 +97,15 @@ html body.accessibility a.button {
 	background-color: black !important;
 }
 
+html body.accessibility .aside .appoint-button a {
+	background-color: transparent !important;
+}
+
+.theme__black-on-white .aside .appoint-button:hover {
+	color: white !important;
+	background-color: black;
+}
+
 .content .entity-list a.link {
 	border: none;
 }
@@ -82,6 +122,37 @@ html body.accessibility a.button {
 	border-bottom: 1px white solid !important;
 }
 
+.accessibility .aside .news-subscribe-button {
+	margin-top: 10px !important;
+	padding-bottom: 20px !important;
+}
+
+.accessibility.theme__black-on-white .aside .news-subscribe-button:hover {
+	background: black;
+	color: white !important;
+}
+
+.accessibility.theme__lightblue-on-darkblue .aside .news-subscribe-button:hover {
+	background: #91cdfd !important;
+	color: #003367 !important;
+}
+
+.accessibility.theme__white-on-black .aside .news-subscribe-button:hover {
+	background: white !important;
+	color: black !important;
+}
+
+.accessibility .page-content .aside ul.vote-list .check,
+.accessibility .page-content .aside ul.rate-list .rate {
+	border-color: currentColor !important;
+}
+
+
+
+.page-content .aside ul.rate-list .rate {
+	border-color: currentColor;
+}
+
 html body.accessibility .main a {
 	border-bottom: none !important;
 }
@@ -90,6 +161,11 @@ html body.accessibility.theme__white-on-black .main a:hover,
 html body.accessibility.theme__white-on-black .main a:focus {
 	color: black !important;
 	background-color: white !important;
+}
+
+.theme__white-on-black .aside .appoint-button:hover {
+    color: black !important;
+    background-color: white !important;
 }
 
 .theme__lightblue-on-darkblue .main a {
@@ -102,6 +178,11 @@ html body.accessibility.theme__white-on-black .main a:focus {
 	background: #91cdfd !important;
 	color: #003367 !important;
 	border-bottom: 1px #91cdfd solid !important;
+}
+
+.theme__lightblue-on-darkblue .aside .appoint-button:hover {
+    background-color: #91cdfd !important;
+    color: #003367 !important;
 }
 
 /*** Basic end ***/
@@ -171,19 +252,29 @@ html body.accessibility.theme__white-on-black .main a:focus {
 }
 
 .accessibility .page-content .aside .menu li a {
-	padding: 0 40px;
+	padding: 0 30px;
 }
 
 .accessibility .page-content .aside .title {
 	margin-left: 0 !important;
 	margin-right: 0 !important;
-	padding-left: 40px !important;
-	padding-right: 40px !important;
+	padding-left: 30px !important;
+	padding-right: 30px !important;
 }
 
 .accessibility .page-content .aside ul.event-list li .date {
+	width: auto;
 	margin: 0;
-	padding: 0 40px;
+	padding: 0 30px;
+}
+
+.accessibility .news-page-list .news .date {
+	float: none;
+	margin-bottom: 15px;
+}
+
+.accessibility .news-page-list .news .description {
+	float: none;
 }
 
 .accessibility .page-content .aside ul.event-list li .date * {
@@ -197,7 +288,7 @@ html body.accessibility.theme__white-on-black .main a:focus {
 }
 
 .accessibility .page-content .aside ul.event-list li .event-title {
-	padding: 0 40px;
+	padding: 0 30px;
 }
 
 .accessibility a:hover,
@@ -412,6 +503,18 @@ html .accessibility.theme__lightblue-on-darkblue .menu-bar * {
 	transform: translateZ(0);
 }
 
+.accessibility .menu-bar *,
+.accessibility .accessibility-settings-block *,
+.accessibility .footer *,
+.accessibility .main-header * {
+	font-family: 'TrebuchetMS', sans-serif !important;
+}
+
+.accessibility img {
+	width: 100% !important;
+	height: auto !important;
+}
+
 .accessibility.theme__white-on-black .menu-bar * {
 	background-color: white !important;
 	color: black !important;
@@ -611,8 +714,8 @@ html .accessibility.theme__lightblue-on-darkblue .menu-bar * {
 }
 
 .accessibility .page-content .aside {
-	width: 260px;
-	margin-right: 40px;
+	width: 330px;
+	margin-right: 30px;
 	padding-top: 0;
 	border: 3px black solid;
 }
@@ -1479,9 +1582,19 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
 }
 
 .accessibility table {
-	overflow: hidden;
+	width: 100%;
+	max-height: 90vh;
+	height: auto !important;
+	display: block !important;
 	letter-spacing: 0 !important;
+	overflow-x: scroll;
+	border: 1px currentcolor solid !important;
 }
+
+.accessibility table tbody {
+	display: table !important;
+}
+
 
 .accessibility .aside * {
 	word-wrap: break-word;
@@ -1506,17 +1619,25 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
 }
 
 .accessibility .entity-list .icon {
-	width: auto;
-	padding: 4px 2px;
+	display: none;
+}
+
+.accessibility .entity-list.rates .item {
+	padding: 0;
+}
+
+.accessibility .entity-list.rates .price {
+	width: auto !important;
+	margin-top: 20px;
+	position: static;
 }
 
 .accessibilit .voting-results .item {
 	width: auto;
 }
 
-
 .accessibility .form-container .button-holder {
-	width: 620px;
+	width: 550px;
 }
 
 .accessibility .form-container .double-aligned.button-holder {
@@ -1526,6 +1647,25 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
 .accessibility .form-container .button-holder .button {
 	margin-left: 0 !important;
 	margin-right: 10px;
+	padding: 17px 10px;
+}
+
+.accessibility .form-container .form-item .hint {
+  position: absolute;
+  right: -300px;
+  top: 30px;
+ }
+
+.accessibility .form-container .form-item .triangle {
+	display: none;
+}
+
+.accessibility .form-container .form-item .control .button {
+	float: none !important;
+}
+
+.accessibility .form-container .form-item .control .attach-info {
+	float: none !important;
 }
 
 .accessibility .form-container .form-item .control .button {
@@ -1556,8 +1696,8 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
 
 .accessibility .form-container .form-item .control input,
 .accessibility .form-container .form-item textarea {
-	width: 620px !important;
-	max-width: 620px !important;
+	width: 550px !important;
+	max-width: 550px !important;
 }
 
 .accessibility .form-container .button-holder {
@@ -1582,7 +1722,7 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
 
 .accessibility .aside .block a {
 	width: 100%;
-	padding: 15px 40px;
+	padding: 15px 30px;
 	display: block;
 	border-bottom: 1px currentcolor solid;
 }
@@ -1594,6 +1734,22 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
 	position: relative;
 }
 
+.accessibility .search-options-holder .options .button {
+	background-color: transparent !important;
+}
+
+.accessibility .container search-result .item {
+	margin-bottom: 50px !important;
+}
+
+.accessibility #profile-form-id input {
+	padding: 15px !important;
+	box-sizing: border-box;
+	box-shadow: none !important;
+	border-color: #3d9af1 !important;
+	text-align: left !important;
+}
+
 .accessibility .minf-link {
 	position: absolute;
 	right: 50px;
@@ -1603,6 +1759,12 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
 .accessibility .voting-results .item .bar {
 	margin-top: 15px;
 	border: 1px currentcolor solid !important
+}
+
+body.accessibility .body .voting-results .bar,
+body.accessibility .body .voting-results .bar  * {
+	box-sizing: content-box !important;
+	line-height: 1 !important;
 }
 
 .accessibility.theme__black-on-white .voting-results .item .bar,
@@ -1669,6 +1831,10 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
 	border: none !important;
 }
 
+.search-result .entity-list .item {
+	margin-bottom: 40px !important;
+}
+
 .accessibility .aside {
 	margin-top: 0 !important;
 	pading-top: 0 !important;
@@ -1715,7 +1881,7 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
   width: auto;
   height: auto;
   margin: 0;
-  padding: 20px 40px 0 40px;
+  padding: 20px 30px 0 30px;
   color: #3d9af1;
   line-height: 1.375em;
   background-color: #fff;
@@ -1736,7 +1902,7 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
 }
 
 .accessibility .page-content .aside ul.vote-list {
-	padding: 0 40px;
+	padding: 0 30px;
 }
 
 .accessibility .page-content .aside ul.vote-list *:after {
@@ -1747,7 +1913,7 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
 }
 
 .accessibility .page-content .aside ul.vote-list .text {
-	width: 140px;
+	width: 180px;
 	margin: 6px 0 0 0 !important;
 	float: right;
 	line-height: 1 !important;
@@ -1761,7 +1927,7 @@ html .accessibility.theme__lightblue-on-darkblue .nav .menu-item a:focus * {
 .accessibility .page-content .aside ul.vote-list .voting-results .item .bar {
 	width: auto;
 	height: auto;
-	padding: 0 30px 0 10px;
+	padding: 10px 30px;
 }
 
 .accessibility .page-content .aside ul.vote-list .voting-results .item .bar .fill {
@@ -1837,11 +2003,11 @@ html body.accessibility.theme__lightblue-on-darkblue a:hover * {
 .accessibility .form-container,
 .accessibility .form-container .button-holder,
 .accessibility .page-description ul {
-	max-width: 620px; /* Content width */
+	max-width: 550px; /* Content width */
 }
 
 .accessibility .page-content input.page-search {
-	width: 620px;
+	width: 550px;
 	margin-bottom: 40px;
 }
 
@@ -1858,7 +2024,8 @@ html body.accessibility.theme__lightblue-on-darkblue a:hover * {
 }
 
 .accessibility .header,
-.accessibility .font-small .header {
+.accessibility .font-small .header,
+.accessibility.font-small .body .breadcrumb a {
 	font-size: 20px !important;
 }
 
@@ -1880,7 +2047,8 @@ html body.accessibility.theme__lightblue-on-darkblue a:hover * {
 	line-height: 40px !important;
 }
 
-.accessibility .font-medium .header {
+.accessibility .font-medium .header,
+.accessibility.font-medium .body .breadcrumb a {
 	font-size: 24px !important;
 }
 
@@ -1904,7 +2072,8 @@ html body.accessibility.theme__lightblue-on-darkblue a:hover * {
 	line-height: 40px !important;
 }
 
-.accessibility .font-big .header {
+.accessibility .font-big .header,
+.accessibility.font-big .body .breadcrumb a {
 	font-size: 28px !important;
 }
 
@@ -1951,6 +2120,35 @@ html body.accessibility.theme__lightblue-on-darkblue a:hover * {
 	margin-right: 95px;
 }
 
+body.accessibility .body .breadcrumb {
+	font-size: 0 !important;
+	line-height: 1 !important;
+}
+
+body.accessibility .body .breadcrumb * {
+	line-height: 1 !important;
+	color: currentColor !important;
+	background-color: transparent !important;
+}
+
+body.accessibility .body .breadcrumb a {
+	margin-right: 8px;
+	position: relative;
+	border-bottom: none;
+	font-size: 14px !important;
+}
+
+body.accessibility .body .breadcrumb a:after {
+	content: '/';
+	position: absolute;
+	color: currentColor;
+	line-height: 1 !important;
+}
+
+body.accessibility .body .breadcrumb a {
+	background: none;
+}
+
 
 
 /* Fixes end */
@@ -1961,13 +2159,16 @@ html body.accessibility.theme__lightblue-on-darkblue a:hover * {
 /****** Accessibility settings rules ******/
 
 /* Font-family */
-.accessibility.font-family__sans-serif {
-	font-family: sans-serif;
+.font-family__sans-serif *,
+.font-family__sans-serif .page-content * {
+	font-family: 'TrebuchetMS', sans-serif !important;
 }
 
-.accessibility.font-family__serif {
-	font-family: serif;
+.font-family__serif *,
+.font-family__serif .page-content * {
+	font-family: 'Georgia', serif !important;
 }
+
 
 /* Font-size */
 .accessibility.font-size__small {
@@ -1993,6 +2194,97 @@ html body.accessibility.theme__lightblue-on-darkblue a:hover * {
 
 .accessibility.letter-spacing__big {
 	letter-spacing: 5px; 
+}
+
+.accessibility .add-attach-formset-item * {
+	float: none;
+	display: block;
+}
+
+.accessibility .add-attach-formset-item .attach-info {
+	margin-top: 10px;
+}
+
+.accessibility .form-container .block-title {
+  border-left: 1px currentcolor solid;
+}
+
+.accessibility [href^="mailto"] {
+	font-size: inherit !important;
+	line-height: inherit !important;
+	font-family: inherit !important;
+}
+
+.accessibility .form-container .form-item .control select {
+    width: 100%;
+    padding: 15px 10px;
+    display: block !important;
+  }
+
+.accessibility .chosen-container {
+  display: none;
+}
+
+.accessibility .form-container .form-item .label {
+  display: block;
+  zoom: 1;
+  vertical-align: middle;
+  position: relative;
+  width: 100%;
+  margin: 0 20px 0 0;
+  text-align: left;
+}
+
+.accessibility .voting-results .item {
+	width: auto;
+}
+
+.accessibility .aside .news-subscribe-button a {
+    background: transparent !important;
+}
+
+.accessibility .entity-list .photo + a + p,
+.accessibility .entity-list .photo + a + p * {
+	float: none !important;
+	width: auto !important;
+	height: auto !important;
+}
+
+.accessibility .entity-list .photo + a + p {
+	width: calc(100% - 140px) !important;
+	float: right !important;
+}
+
+.accessibility #email-form-id * {
+	text-decoration: none !important;
+}
+
+.accessibility #email-form-id .button {
+	margin-top: 15px;
+}
+
+.accessibility #email-form-id .button:hover {
+	background: black !important;
+	color: white !important;
+}
+
+.accessibility.theme__black-on-white #email-form-id .button:hover {
+	background: black !important;
+	color: white !important;
+}
+
+.accessibility.theme__white-on-black #email-form-id .button:hover {
+	background: white !important;
+	color: black !important;
+}
+
+.accessibility.theme__lightblue-on-darkblue #email-form-id .button:hover {
+	background: #91cdfd !important;
+	color: #003367 !important;
+}
+
+.font-small #registration-form {
+	font-size: 0.8rem
 }
 
 /****** Accessibility settings rules end ******/

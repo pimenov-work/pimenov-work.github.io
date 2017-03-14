@@ -1,0 +1,31 @@
+function Loader() {
+    this.url = window.location.href;
+    this.on_load_functions = [];
+}
+
+Loader.prototype.load = function(handler, data) {
+    var data = data || {};
+    $.each(this.on_load_functions, function(i, fn) {
+        $.extend(data, fn());
+    });
+    var request = $.ajax({
+        url: this.url,
+        data: data,
+        success: function(output) {
+            if (!output)
+                return;
+            handler(output);
+        }
+    });
+    return request;
+};
+
+Loader.prototype.on_before_load = function(fn) {
+    this.on_load_functions.push(fn);
+};
+
+Loader.get_loader = function() {
+    if (!Loader.default_loader)
+        Loader.default_loader = new Loader();
+    return Loader.default_loader;
+};

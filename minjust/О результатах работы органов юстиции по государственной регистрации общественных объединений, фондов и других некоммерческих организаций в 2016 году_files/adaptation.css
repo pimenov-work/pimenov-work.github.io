@@ -1,0 +1,39 @@
+/* Global */
+
+.menu_button,
+.menu_button_checkbox {
+  display: none;
+}
+
+.go-to-special-version {
+	width: auto;
+	padding: 2px 0 2px 25px;
+	position: absolute;
+	left: 400px;
+	top: 9px;
+	font-size: 14px;
+	color: white;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: transparent;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAQAAACxD+fXAAABE0lEQVQoFQXBT2sOAADA4R+xvTuKxckuDi4TUZqctnbaanMhH4CbIifhoB128iclonbaxcmNm8u+AKGmlAMxrB2svKE8nidJkgm3vAHrlh2WJCVJLgE2fAFck6QkuQcuOyDZ66J/WJWU5AY+OiRJkv1e446UHMEfeyTHXHfTlGTEd8woWces5CqAJckkNu3IHF5KJvHbWYt+YFryFBfyCeOSx5iTHMdzyZi/fu5srPpV1Wi1XdV2tbuqYRrkHJ5JTuKbaae9x4LkCa4kn3FCsgzgkeQghkaSKWwZlcy474F5ST7gjJLcxiv7JEkysIYVKUlWMXTeQLLLog28kJQkWQK88xZwV5KSJDnqoa9g04pTkqT/N6d7jdHPaFQAAAAASUVORK5CYII=');
+	background-repeat: no-repeat;
+	background-position: left 3px;
+}
+
+.go-to-special-version:after {
+	content: '';
+	width: calc(100% - 25px);
+	height: 1px;
+	background-color: white;
+	position: absolute;
+	right: 0;
+	bottom: -1px;
+}
+
+.go-to-special-version:hover:after {
+	display: none;
+}
+
+/* Global end */

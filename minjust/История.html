@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://192.168.32.68/ru/ministry/history/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
+  <meta name="yandex-verification" content="0d51fc9a01651f2b">
+  <meta name="theme-color" content="#2d66a4">
+  <title>
+    История
+</title>
+  
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+  
+  
+    
+    
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <style> /* Please, don't delete this and don't replace */
+      body.load {
+        position: relative;
+        overflow: hidden;
+      }
+      body.load:after {
+        content: '';
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: white;
+        z-index: 1000;
+        overflow: hidden;
+      }
+    </style>
+    <link rel="shortcut icon" href="http://192.168.32.68/static/main/img/fav.png">
+    <link rel="icon" href="http://192.168.32.68/static/main/img/fav.png" type="image/x-icon">
+    <link rel="icon" href="http://192.168.32.68/static/main/img/favicon.png">
+    <!--[if IE]><link rel="shortcut icon" type="image/gif" href="/static/main/img/favicon.ico"><![endif]-->
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script type="text/javascript" src="./История_files/saved_resource"></script>
+    
+      <link rel="stylesheet" type="text/css" href="./История_files/main.css" media="screen">
+      <link rel="stylesheet" type="text/css" href="./История_files/chosen.css" media="screen">
+      <link rel="stylesheet" type="text/css" href="./История_files/jquery-ui.min.css" media="screen">
+      <!--[if gt IE 6]><link rel="stylesheet" type="text/css" href="/static/main/css/ie.css" media="screen" /><![endif]-->
+      <link rel="stylesheet" type="text/css" href="./История_files/adaptation.css">
+      <script src="./История_files/jquery-1.8.2.min.js.Без названия"></script>
+      <script src="./История_files/chosen.jquery.min.js.Без названия"></script>
+      <script src="./История_files/jquery.tools.min.js.Без названия"></script>
+      <script src="./История_files/raphael-min.js.Без названия"></script>
+      <script src="./История_files/jquery.placeholder.js.Без названия"></script>
+      <script src="./История_files/jquery-ui.custom.min.js.Без названия"></script>
+      <script src="./История_files/jquery.ui.datepicker-ru.min.js.Без названия"></script>
+    
+    <script src="./История_files/menu_switch_delay.js.Без названия"></script>
+    <script src="./История_files/loader.js.Без названия"></script>
+  
+    
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $('div.pagination div.load-more-button').click(function () {
+                    var pagination_link = $(this);
+                    if (pagination_link.prop('disabled'))
+                        return;
+                    $.ajax({
+                        data: {
+                            page: pagination_link.attr('data-next-page-number')
+                        },
+                        success: function (result) {
+                            $('.qs-object-list > .clear').before(result);
+                            var page_num = pagination_link.attr('data-page-num');
+                            page_num++;
+                            if (page_num >= pagination_link.attr('data-max-pages')) {
+                                pagination_link.remove();
+                            } else {
+                                pagination_link.attr('data-page-num', page_num);
+                                pagination_link.attr('data-next-page-number', (page_num + 1));
+                            }
+                        }
+                    }).done(function() {
+                        pagination_link.prop('disabled', false);
+                    });
+                    pagination_link.prop('disabled', true);
+                });
+            });
+        </script>
+    
+
+  <script type="text/javascript">
+    $(document).ready(function ($) {
+      
+        // Main Slider
+        var show_trigger = "hover";
+        var hide_delay = "500";
+        var show_delay = "500";
+        if (window.innerWidth > 980) { // Hover effects only for desktop
+          activate_menu_switch_delay(".nav .menu-item", "open", show_trigger, hide_delay, show_delay);
+        }
+        // Voting Data
+        var voteResultData = [
+          { y: 2, n: 100, u: 8 },
+          { y: 32, n: 50, u: 18 },
+          { y: 40, n: 40, u: 20 }
+        ]
+        // Init Voting
+        function voteInitialize() {
+          var results = $('.interview .voting-results');
+          var totalW = $('.interview .voting-results .bar').outerWidth(false);
+          for (var i in voteResultData) {
+            $(results[i]).find('#yes .count').text(voteResultData[i].y + '% (' + voteResultData[i].y + ')');
+            $(results[i]).find('#no .count').text(voteResultData[i].n + '% (' + voteResultData[i].n + ')');
+            $(results[i]).find('#undefined .count').text(voteResultData[i].u + '% (' + voteResultData[i].u + ')');
+
+            $(results[i]).find('#yes .fill').width(totalW / 100 * voteResultData[i].y);
+            $(results[i]).find('#no .fill').width(totalW / 100 * voteResultData[i].n);
+            $(results[i]).find('#undefined .fill').width(totalW / 100 * voteResultData[i].u);
+          }
+        }
+        // Init Voting
+        voteInitialize();
+        // Search Checkboxes
+        $('.voting-holder .checkbox').click(function () {
+          var parent = $(this).parents('.content-item');
+          $('.voting-holder .checkbox').removeClass('checked');
+          $(this).addClass('checked');
+          setTimeout(function () {
+            parent.find('.voting-holder').addClass('hide');
+            parent.find('.voting-results').addClass('show');
+          }, 500);
+        });
+        // Enable IE jquery fix for placeholders
+        $('input, textarea').placeholder();
+        $(window).scroll(function () {
+          var w = $(this).scrollTop();
+          if (w > 550) {
+            $('.page-up-button').addClass('show');
+          }
+          else {
+            $('.page-up-button').removeClass('show');
+          }
+        });
+        // Link Menu
+        $('.link-menu').click(function () {
+          $(this).find('ul').slideToggle(200);
+        });
+        //Scrool Page to Top
+        $('.page-up, .page-up-button').live('click', function () {
+          $("html, body").animate({ scrollTop: 0 }, "slow");
+          return false;
+        });
+        //Sub-Menu
+        $('.aside .menu li').click(function () {
+          var item = $(this);
+
+          item.find(".sub-menu").slideToggle(200);
+          setTimeout(function () {
+            item.toggleClass('show-sub-menu');
+          }, 200);
+        });
+      
+    });
+  </script>
+<script type="text/javascript">try {
+window.AG_onLoad = function(func) { if (window.addEventListener) { window.addEventListener('DOMContentLoaded', func); } };
+window.AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
+window.AG_removeElementBySelector = function(selector) { if (!document.querySelectorAll) { return; } var nodes = document.querySelectorAll(selector); if (nodes) { for (var i = 0; i < nodes.length; i++) { if (nodes[i] && nodes[i].parentNode) { nodes[i].parentNode.removeChild(nodes[i]); } } } };
+window.AG_each = function(selector, fn) { if (!document.querySelectorAll) return; var elements = document.querySelectorAll(selector); for (var i = 0; i < elements.length; i++) { fn(elements[i]); }; };
+var AG_removeParent = function(el, fn) { while (el && el.parentNode) { if (fn(el)) { el.parentNode.removeChild(el); return; } el = el.parentNode; } };
+var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
+var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
+var AG_removeElementBySelector = function(selector) { if (!document.querySelectorAll) { return; } var nodes = document.querySelectorAll(selector); if (nodes) { for (var i = 0; i < nodes.length; i++) { if (nodes[i] && nodes[i].parentNode) { nodes[i].parentNode.removeChild(nodes[i]); } } } };
+var AG_each = function(selector, fn) { if (!document.querySelectorAll) return; var elements = document.querySelectorAll(selector); for (var i = 0; i < elements.length; i++) { fn(elements[i]); }; };
+var AdFox_getCodeScript = function() {};
+AG_onLoad(function() { AG_each('iframe[id^="AdFox_iframe_"]', function(el) { if (el && el.parentNode) { el.parentNode.removeChild(el); } }); });
+try { Object.defineProperty(window, 'noAdsAtAll', { get: function() { return true; } }); } catch (ex) {}
+navigator.getBattery = undefined;
+(function() { window.Ya = window.Ya || {}; window.Ya.Metrika = function() { var noop = function() {}; this.addFileExtension = noop; this.extLink = noop; this.file = noop; this.hit = noop; this.notBounce = noop; this.params = noop; this.reachGoal = noop; this.replacePhones = noop; this.clickmap = noop; this.trackLinks = noop; }; })();
+var _gaq = []; var _gat = { _getTracker: function() { return { _initData: function(){}, _trackPageview: function(){}, _trackEvent: function(){}, _setAllowLinker: function() {}, _setCustomVar: function() {} } }, _createTracker: function() { return this._getTracker(); }, _anonymizeIp: function() {} };
+function urchinTracker() {};
+var addthis = { init: function() {}, addEventListener: function() {}, button: function() {}, counter: function() {}, update: function() {}, toolbox: function() {}, layers: function() {} };
+window.uabInject = function() {};
+} catch (ex) { console.error('Error executing AG js: ' + ex); }</script>
+<body class="">
+
+<div class="body">
+  
+  <div class="main-header">
+    <div class="flag"></div>
+    <div class="container">
+      
+      
+
+
+<div class="links">
+  <div class="col-1 header-user-links">
+    
+      <div class="login">
+        <span onclick="window.location=&#39;/ru/account/login/&#39;;">Вход</span>
+
+        <div class="login-form">
+          <form id="top_login_form">
+            <input type="hidden" name="csrfmiddlewaretoken" value="FqLIszH6iSJGMlqfa93ScomBj3VP0Ugw">
+            <input name="next" type="hidden" value="/ru/ministry/history/">
+            <input name="username" type="text" placeholder="Логин"><br>
+            <input name="password" type="password" placeholder="Пароль">
+            <a href="javascript:void(0)" class="submit-emulator slim"></a>
+
+            <div class="button">Войти</div>
+            <a class="extra_link login_with_eds" href="http://192.168.32.68/ru/account/secure_login/">Войти c ЭЦП</a>
+            <a class="extra_link restore_password" href="http://192.168.32.68/ru/register/password/reset/">Восстановить пароль</a>
+          </form>
+          <div class="error-message"></div>
+        </div>
+      </div>
+      <a class="link registration-link" href="http://192.168.32.68/ru/register/natural/">
+        <img src="./История_files/profile.png">
+        <span>Регистрация</span>
+      </a>
+      <script>
+        $(document).ready(function () {
+          var submit_login_form = function () {
+            var button = $(this);
+            if (button.prop('disabled'))
+              return;
+            $(".login .login-form, .login input").removeClass('error');
+            var form = $('#top_login_form');
+            var form_el = $('#top_login_form').get(0);
+            var names = ['username', 'password'];
+            for (var i = 0; i < names.length; ++i) {
+              var name = names[i];
+              if (!form_el.elements[name].value) {
+                $(form_el.elements[name]).addClass('error').focus();
+                break;
+              }
+            }
+            $.ajax({
+              url: '/ru/account/ajax/login/',
+              data: form.serialize(),
+              type: 'post',
+              success: function (output) {
+                if (output) {
+                  if (output.errors) {
+                    var errors = output.errors;
+                    if (errors.__all__ && errors.__all__[0]) {
+                      $('.login .login-form .error-message').html(errors.__all__[0]);
+                      $('.login .login-form').addClass('error');
+                      return;
+                    }
+                    for (var i = 0; i < names.length; ++i) {
+                      var name = names[i];
+                      if (errors[name]) {
+                        var input_element = form_el.elements[name];
+                        var error_message = input_element.placeholder + ' - ' + errors[name];
+                        $(input_element).addClass('error').focus();
+                        $('.login .login-form .error-message').html(error_message);
+                        return;
+                      }
+                    }
+                  }
+                  if (output.next_url) {
+                    window.location.href = output.next_url;
+                  }
+                }
+              },
+              error: function () {
+                window.location.href = '/ru/account/login/';
+              }
+            }).done(function () {
+              button.prop('disabled', false);
+            });
+            button.prop('disabled', true);
+          };
+          $('.login .button').click(submit_login_form);
+          $("#top_login_form").on("keypress", function (event) {
+            if (event.which == 13 && !event.shiftKey) {
+              event.preventDefault();
+              submit_login_form();
+            }
+          });
+          $("#top_login_form .submit-emulator").on("keypress", function (event) {
+            if ((event.which == 13 || event.which == 32) && !event.shiftKey) {
+              event.preventDefault();
+              submit_login_form();
+            }
+          }).on("click", function (e) {
+            event.preventDefault();
+            submit_login_form();
+          });
+        });
+      </script>
+    
+  </div>
+  <div class="col-right">
+    <div class="lang">
+      
+        <a class="selected" href="http://192.168.32.68/ru/">Ru</a>
+      
+        <a href="http://192.168.32.68/be/">Be</a>
+      
+        <a href="http://192.168.32.68/en/">En</a>
+      
+    </div>
+    <a class="sitemap" href="http://192.168.32.68/ru/sitemap/">
+      <img src="./История_files/icon-sitemap.png">
+    </a>
+  </div>
+  
+    <div class="col-right social-banners">
+      
+        <a target="_blank" href="https://www.facebook.com/minjust.by/" title="минюст">
+          <img src="./История_files/9eff987073186fe1fb6bdeed2822711d.png" style="height:30px;" alt="минюст">
+        </a>
+      
+        <a target="_blank" href="https://twitter.com/PressMinyust" title="минюст">
+          <img src="./История_files/d90390c468ecb0fb1ea62f4d865a12d9.png" style="height:30px;" alt="минюст">
+        </a>
+      
+    </div>
+  
+  <div class="clear"></div>
+<button class="go-to-special-version" id="go-to-special-version">Версия для слабовидащих</button></div>
+<div class="header-text-line">тут был вася<br><strike>он лох</strike></div>
+<div class="wrapper">
+  <a href="http://192.168.32.68/ru/">
+    <div class="logo">
+      <div class="logo-text">
+        Министерство юстиции Республики Беларусь
+      </div>
+    </div>
+  </a>
+  <div class="info hotline">
+    <span>Очень горячая линия</span>
+    <p>101</p>
+</div><div class="info">
+    <span>Режим работы линии </span>
+        <p>как пьяный электрик проснется</p>
+</div>
+
+  <div class="clear"></div>
+</div>
+      
+      
+        
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#main-menu-search').keypress(function (e) {
+      if (e.which == 13) {
+        $('#main-menu-search-form').submit();
+      }
+    });
+  });
+</script>
+<div id="main-menu-nav" class="nav">
+  <div class="menu-item" style="width:0px;"></div>
+  
+  <label class="menu_button" for="menu_button"> Навигация </label>
+  <input class="menu_button_checkbox" type="checkbox" id="menu_button">
+
+  
+    <div class="menu-item
+                action-open-menu
+                
+                
+                ">
+
+      <a class="link">
+        <div class="inline">О Министерстве</div>
+      </a>
+
+      <div class="sub-menu">
+        <div class="shadow"></div>
+        <div class="sub-menu-columns">
+          
+            <div class="column first">
+              <div class="title">
+                <div class="text">О Министерстве</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://192.168.32.68/ru/ministry/regulations/">Положение о Министерстве юстиции</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/ministry/legal/">Правовая основа деятельности</a></li>
+                
+                  <li><a href="http://192.168.32.68/main-structure-minjust/">Структура центрального аппарата</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/ministry/staff/">Руководство</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/ministry/history/">История</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/ministry/jobs/">Вакансии</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Контактная информация</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://192.168.32.68/ru/ministry/contact/">Схема проезда и режим работы</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/departments/">Контакты подразделений</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/ministry/reception-schedule/">Приемные дни</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/one-w/">Служба "Одно окно"</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/press/">Пресс-служба</a></li>
+                
+              </ul>
+            </div>
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="menu-item
+                
+                
+                
+                ">
+
+      <a class="link" href="http://192.168.32.68/ru/activities-of-the-ministry/">
+        <div class="inline">Деятельность</div>
+      </a>
+
+      <div class="sub-menu">
+        <div class="shadow"></div>
+        <div class="sub-menu-columns">
+          
+            <div class="column first">
+              <div class="title">
+                <div class="text">Для граждан</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://192.168.32.68/ru/notaries-in-notary-offices/">Список нотариусов</a></li>
+                
+                  <li><a href="http://center.gov.by/debur/index.php">Дебюрократизация административных процедур</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/public-control/">Общественный контроль за соблюдением прав осужденных</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/implementing-the-decree-number-18/">Практический опыт реализации декрета №18 о защите прав детей в неблагополучных семьях</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/mediation/">Медиация</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Для юридических лиц</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://192.168.32.68/ru/egr/">Единый государственный регистр юридических лиц и индивидуальных предпринимателей</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/work-with-associations-foundations/">Работа с общественными объединениями, фондами</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/arbitration-registry/">Реестр третейских судей и постоянно действующих третейских судов 	</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Для государственных органов</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://192.168.32.68/ru/international-cooperation/">Международное сотрудничество</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/implementation-of-international-law/">Комиссия по имплементации международного права</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/justice-of-belarus-journal/">Журнал “Юстиция Беларусь”</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/npa-examination/">Обязательная юридическая экспертиза нормативных правовых актов</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/archives-activities/">Архивная деятельность</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/kadr/">Кадровая служба</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/reform/">Реформы Республики Беларусь в рамках отчета Всемирного банка «Ведение бизнеса»</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Для лицензиатов</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://192.168.32.68/ru/about-licensing/">О лицензировании</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/about-licensing/advocacy/">Адвокатская деятельность</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/about-licensing/juridical-services/">Юридические услуги</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/about-licensing/real-estate-activities/">Риэлторская деятельность</a></li>
+                
+              </ul>
+            </div>
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="menu-item
+                
+                
+                
+                ">
+
+      <a class="link" href="http://192.168.32.68/ru/departments/">
+        <div class="inline">Организационная<br>структура</div>
+      </a>
+
+      <div class="sub-menu">
+        <div class="shadow"></div>
+        <div class="sub-menu-columns">
+          
+            <div class="column first">
+              <div class="title">
+                <div class="text">Центральный аппарат Министерства</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://192.168.32.68/ru/ministry/staff/">Руководство</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/main-structure-minjust/">Структура центрального аппарата</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Территориальные органы</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://192.168.32.68/ru/departments/guiu/">Главные управления юстиции</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/departments/registration-authorities/">Регистрирующие органы</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/departments/register_office/">ЗАГСы</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/departments/dno/">Архивы</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Принудительное исполнение</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://192.168.32.68/ru/departments/730/">Главное управление принудительного исполнения</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/departments/filter/kind/enforcement/">Территориальные органы принудительного исполнения</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/departments/enforcement/730/additional/41/">Права и обязанности судебного исполнителя</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/departments/enforcement/730/additional/42/">Ответственность за невыполнение требований судебного исполнителя</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/departments/enforcement/730/additional/43/">Обжалование действия (бездействия) судебного исполнителя</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/departments/enforcement/730/additional/44/">Меры по обеспечению исполнения исполнительного документа</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/departments/enforcement/730/samples/">Образцы документов</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/auctions/">Реализация имущества</a></li>
+                
+              </ul>
+            </div>
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="menu-item
+                action-open-menu
+                
+                
+                ">
+
+      <a class="link">
+        <div class="inline">Справочная<br>информация</div>
+      </a>
+
+      <div class="sub-menu">
+        <div class="shadow"></div>
+        <div class="sub-menu-columns">
+          
+            <div class="column first">
+              <div class="title">
+                <div class="text">Документы</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://192.168.32.68/ru/document-samples/">Образцы документов</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/departmental-reporting-forms/">Формы ведомственной отчетности</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Информация</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://192.168.32.68/ru/question-answer/">Вопросы и ответы</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/administrative-procedures/">Административные процедуры Министерства</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/human-rights/">Права человека</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/apostil/">Апостиль</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/press/polls/">Опросы</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/projects/">Проекты нормативных<br>правовых актов</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/legal-opinions/">Юридические заключения<br>по кредитным соглашениям<br>и гарантиям Правительства<br>Республики Беларусь</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Госпошлина</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://192.168.32.68/ru/information-on-state-fees/">Сведения о госпошлине</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/state-duties/">Ставки госпошлины и<br>реквизиты оплаты</a></li>
+                
+              </ul>
+            </div>
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="menu-item
+                action-open-menu
+                
+                
+                ">
+
+      <a class="link">
+        <div class="inline">Новости и<br>события</div>
+      </a>
+
+      <div class="sub-menu">
+        <div class="shadow"></div>
+        <div class="sub-menu-columns">
+          
+            <div class="column first">
+              <div class="title">
+                <div class="text">Новости</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://192.168.32.68/ru/news/">Новости</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/actual/">Актуально</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">События</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://192.168.32.68/ru/activity/t/">Прямые телефонные линии</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/activity/s/">Семинары</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/activity/c/">Пресс конференции</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Фото</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://192.168.32.68/ru/photo-blog/">События Министерства в фотографиях</a></li>
+                
+              </ul>
+            </div>
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="menu-item
+                action-open-menu
+                green
+                
+                ">
+
+      <a class="link">
+        <div class="inline">Электронные<br>услуги</div>
+      </a>
+
+      <div class="sub-menu">
+        <div class="shadow"></div>
+        <div class="sub-menu-columns">
+          
+            <div class="column first">
+              <div class="title">
+                <div class="text">Электронная приемная</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://192.168.32.68/ru/ministry/reception-schedule/">Записаться на приём</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/make/electronic/appeal/">Подать электронное обращение</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/ministry/jobs/">Подать резюме на работу в Министерстве</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Заявление в принудительное исполнение</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://192.168.32.68/ru/applications/request-for-issuing-certificates/add/">Запрос на выдачу справок по исполнительному производству</a></li>
+                
+              </ul>
+            </div>
+          
+            <div class="column ">
+              <div class="title">
+                <div class="text">Службы сайта</div>
+                <div class="line"></div>
+              </div>
+              <ul>
+                
+                  <li><a href="http://192.168.32.68/ru/news/subscribe/">Подписаться на новости и события</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/register/natural/">Регистрация на портале для граждан</a></li>
+                
+                  <li><a href="http://192.168.32.68/ru/register/legal/">Регистрация на портале для<br>юридических лиц</a></li>
+                
+              </ul>
+            </div>
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  
+  <div class="clear"></div>
+  <div class="nav-search-holder">
+    <form id="main-menu-search-form" action="http://192.168.32.68/ru/search/" method="POST">
+      <input id="main-menu-search" name="any_words" type="text" placeholder="Поиск по сайту" class="search">
+    </form>
+  </div>
+</div>
+
+      
+    </div>
+  </div>
+  
+  
+    <div class="main-container">
+        
+            
+                <div class="breadcrumb">
+    
+        
+            <a href="http://192.168.32.68/ru/">Главная</a>
+        
+        /
+    
+        
+            <a href="http://192.168.32.68/ru/ministry/">О министерстве</a>
+        
+        /
+    
+        
+            История
+        
+        
+    
+</div>
+            
+        
+        <div class="page-content">
+            
+    <h1>История</h1>
+    <div class="container text-page">
+        <div class="content">
+            
+                
+<style>
+        span.b-share{
+            height: 20px;
+            padding: 0 !important;
+        }
+        .b-share__handle {
+            padding: 0 !important;
+        }
+        .b-share__link {
+            display: block;
+            height: 20px;
+            overflow: hidden;
+            position: relative;
+            margin: 0 0 0 8px !important;
+            padding: 0 0 10px 0 !important;
+        }
+        .b-share-icon {
+            background: url("/static/main/img/social-sprite.png") no-repeat scroll 0 0 transparent !important;
+            height: 18px;
+            width: 19px;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        .b-share-icon_twitter {
+            background-position: -327px 0 !important;
+            width: 21px !important;
+            height: 18px !important;
+            padding: 0 0 10px 0 !important;
+        }
+        .b-share-icon_twitter:hover {
+            background-position: -258px 0 !important;
+            width: 21px !important;
+            height: 18px !important;
+            padding: 0 0 10px 0 !important;
+        }
+        .b-share-icon_facebook {
+            background-position: -59px 1px !important;
+            width: 11px !important;
+            height: 17px !important;
+            padding: 0 0 2px 0 !important;
+        }
+        .b-share-icon_facebook:hover {
+            background-position: 0 1px !important;
+            width: 11px !important;
+            height: 17px !important;
+            padding: 0 0 2px 0 !important;
+        }
+        .b-share-icon_vkontakte {
+            background-position: -460px 0 !important;
+            width: 14px !important;
+            height: 17px !important;
+            padding: 0 0 10px 0 !important;
+        }
+        .b-share-icon_vkontakte:hover {
+            background-position: -396px 0 !important;
+            width: 14px !important;
+            height: 17px !important;
+            padding: 0 0 10px 0 !important;
+        }
+    </style>
+<div class="social-block">
+    <a href="http://192.168.32.68/ru/ministry/history/?print=ipp" class="print">
+        <img src="./История_files/ic_print.png">
+        <span>Версия для печати</span>
+    </a>
+    <div class="social-links" style="float: left; right: 75px; overflow: hidden">
+        <span>Поделиться:</span>
+        <a class="sprite-tp-letter" href="mailto:?subject=%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F&amp;body=http://192.168.32.68/ru/ministry/history/"></a>
+    </div>
+    <div class="yashare-auto-init" style="float: right; height: 20px" data-yasharel10n="" data-yasharetype="none" data-yasharelink="http://192.168.32.68/ru/ministry/history/" data-yasharetitle="История" data-yasharequickservices="twitter,facebook,vkontakte"><span class="b-share"><a rel="nofollow" target="_blank" title="Twitter" class="b-share__handle b-share__link b-share-btn__twitter" href="http://share.yandex.ru/go.xml?service=twitter&amp;url=http%3A%2F%2F192.168.32.68%2Fru%2Fministry%2Fhistory%2F&amp;title=%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F" data-service="twitter"><span class="b-share-icon b-share-icon_twitter"></span></a><a rel="nofollow" target="_blank" title="Facebook" class="b-share__handle b-share__link b-share-btn__facebook" href="http://share.yandex.ru/go.xml?service=facebook&amp;url=http%3A%2F%2F192.168.32.68%2Fru%2Fministry%2Fhistory%2F&amp;title=%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F" data-service="facebook"><span class="b-share-icon b-share-icon_facebook"></span></a><a rel="nofollow" target="_blank" title="ВКонтакте" class="b-share__handle b-share__link b-share-btn__vkontakte" href="http://share.yandex.ru/go.xml?service=vkontakte&amp;url=http%3A%2F%2F192.168.32.68%2Fru%2Fministry%2Fhistory%2F&amp;title=%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F" data-service="vkontakte"><span class="b-share-icon b-share-icon_vkontakte"></span></a></span></div>
+    <script src="./История_files/share.js.Без названия"></script>
+</div>
+                <p style="text-align:center"><strong><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">История развития учреждений юстиции</span></span></strong></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">Формирование органов власти и управления Социалистической Советской Республики Белоруссии определяло пути становления органов юстиции.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">На I съезде Советов рабочих, крестьянских и красноармейских депутатов Белоруссии, состоявшемся 2-4 февраля 1919 г., была принята Конституция Социалистической Советской Республики Белоруссии, которая устанавливала верховенство власти съезда Советов Белоруссии, а в период между съездами - Центрального Исполнительного Комитета. В соответствии с Конституцией ЦИК Белоруссии являлся высшим законодательным, распорядительным и контролирующим органом.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">На своем первом послесъездовском заседании 5 февраля 1919 г. Центральный Исполнительный Комитет образовал Большой и Малый Президиум. В Большой Президиум входили все Комиссары и данный орган фактически являлся Советом Комиссаров. Был утвержден список Комиссаров, в котором Комиссаром Юстиции значился Гетнер А.Х.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">В это же время в Белоруссии проводилась политика сближения власти и объединения территорий Белоруссии и Литвы. В связи с образованием 6 февраля 1919 г. Советской Социалистической Республики Литвы и Белоруссии вопросы юстиции были возложены на образованный в марте 1919 г. Народный Комиссариат Юстиции Литбел, а на территории Минской губернии - Минский губернский отдел юстиции.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">После изгнания из Белоруссии белопольских оккупантов постепенно меняя статус и подчиненность, возобновилась деятельность Наркомюста Социалистической Советской Республики Белоруссия: с июля 1920 г. - как отдела юстиции Мингубревкома, с 1 августа 1920 г. - отдела юстиции Военревкома ССРБ, с 26 августа 1920 г. - Комиссариата Юстиции Военревкома ССРБ.</span></span><span style="font-family:arial,helvetica,sans-serif; font-size:14px">&nbsp;</span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">II съезд Советов ССР Белоруссии, проходивший 14-20 декабря 1920 г., внес дополнения в Конституцию Социалистической Советской Республики Белоруссии, устанавливающие образование Центральным Исполнительным Комитетом Белоруссии Совета Народных Комиссаров. СНК принадлежало общее управление делами Социалистической Советской Республики Белоруссия, которое осуществлялось посредством создания 15 народных комиссариатов, в том числе и Народный комиссариат юстиции. При каждом народном комиссаре под его председательством образовывались коллегии, члены которой утверждались СНК.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">Впервые наиболее полно и конкретно были определены задачи и структура Наркомюста в Положении о Народном Комиссариате Юстиции ССРБ в 1922 г.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">Многофункциональность Наркомюста определила разветвленную структуру органов юстиции.<br>
+В состав Народного Комиссариата Юстиции вошли Общий отдел, отдел Охраны Революционной Законности, Законодательно-Кодификационный отдел, Исправительно-Трудовой отдел.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">Основными функциями отдела Охраны Революционной Законности являлись организация обвинения, наблюдение за производством дознания и следствия, предварительное рассмотрение и дача заключений по делам, направляемым в Верховный Трибунал (как в порядке кассационном, так и в порядке Высшего Судебного контроля), рассмотрение жалоб о незаконных действиях и возбуждение уголовного преследования, наблюдение за местами заключения.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">Прокуроры из штата данного отдела возглавляли Верховный Трибунал, Революционный Трибунал, Совет Народных Судей.</span></span><span style="font-family:arial,helvetica,sans-serif; font-size:14px">&nbsp;</span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">В течение 1922 г. структура органов юстиции претерпела некоторые изменения: Совет Народных Судей и Революционный Трибунал были объединены в единый Высший Суд Республики, при Наркомюсте учрежден отдел Прокуратуры.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">В аппарате Народного Комиссариата Юстиции был сформирован Отдел культов, стал самостоятельным структурным подразделением Нотариальный отдел. Комиссар Юстиции одновременно стал Прокурором Республики.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif; font-size:14px">&nbsp;<img alt="" src="./История_files/339beaab77e90d882f172f541e892ede.jpg" style="height:327px; width:443px"></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">Постановлением III сессии Центрального Исполнительного Комитета БССР VI созыва 3 ноября 1924 г. были утверждены и введены в действие Общее Положение о Народных Комиссариатах БССР и положения об отдельных Народных Комиссариатах, в том числе и Положение о Народном Комиссариате Юстиции БССР.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">В структуру Наркомюста входили Верховный Суд Республики и Высший Суд Республики. Организация и инструктирование судебных органов осуществлялось Верховным и Высшим Судами в соответствии с Положением о судоустройстве под общим руководством Наркомюста.<br>
+Немного позднее в систему Народного Комиссариата Юстиции официально вошло Всебелорусское Объединение Защитников.</span></span><span style="font-family:arial,helvetica,sans-serif; font-size:14px">&nbsp;</span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">В результате обследования работы серединных и высших звеньев Прокуратуры и судебно-следственных органов Наркомюста, которое было проведено Народным Комиссариатом Рабоче-Крестьянской Инспекции в феврале-марте 1928 г., Нарком Рабоче-Крестьянской Инспекции СССР постановил Наркомат Юстиции ликвидировать.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">Такая инициатива в высших правительственных органах не была поддержана и 15 июня 1929 г. было принято Постановление Центрального Исполнительного Комитета и Совета Народных Комиссаров БССР об утверждении Положения о Народном Комиссариате Юстиции БССР, определившего Наркомюст БССР в составе Прокуратуры Республики и при ней следователей по важнейшим делам, Верховного Суда и Юридической Консультации. Положение о комиссариате 1929 г. действовало в течение десяти лет.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">В связи с преобразованием органов государственной власти и управления, а также с принятием в августе 1938 г. Закона Верховного Совета СССР "О судоустройстве СССР, союзных и автономных республик" был подготовлен проект и принято новое Положение о Народном Комиссариате Юстиции БССР, утвержденное Постановлением Совета Народных комиссаров БССР от 8 октября 1939 г.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">На Народный Комиссариат Юстиции БССР возлагалось руководство деятельностью управлений юстиции при областных Советах Депутатов Трудящихся, организация деятельности судов, руководство деятельностью нотариальных органов, организация и руководство деятельностью адвокатуры, подготовка и переподготовка кадров органов юстиции, суда, прокуратуры, нотариата, адвокатуры и арбитража, систематизация и подготовка материалов по кодификации законодательства Белорусской ССР.</span></span><span style="font-family:arial,helvetica,sans-serif; font-size:14px">&nbsp;</span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">В июне 1941 г. в связи с немецко-фашистской оккупацией территории Белоруссии Народный Комиссариат Юстиции БССР был эвакуирован из г. Минска в г. Москву, где продолжал свою деятельность.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">С освобождением части территории Белоруссии от немецко-фашистских оккупантов Наркомюст БССР в декабре 1943 г. переехал из г. Москвы в г. Ново-Белицу, а в июле 1944 г. - в г. Минск.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">На основании Закона СССР "О преобразовании Совета Народных Комиссаров ССР в Совет Министров СССР и Советов Народных Комиссаров союзных и автономных республик в Советы Министров союзных и автономных республик" Указом Президиума Верховного Совета БССР от 26 марта 1946 г. Народный Комиссариат Юстиции БССР был преобразован в Министерство юстиции БССР.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif; font-size:14px">&nbsp;<img alt="" src="./История_files/dee6769deb4e0f81ca013c237fc3af44.jpg" style="height:338px; width:446px"></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">Положение 1939 года, регулирующее деятельность Министерства юстиции БССР, практически не изменялось, сохраняя основные функции министерства. Расширение функций Министерства юстиции БССР произошло в соответствии с постановлением Совета Министров БССР от 25 апреля 1953 г. № 500 "О Государственном арбитраже при Совете Министров БССР", когда в состав министерства был передан Государственный арбитраж.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">В июле 1953 г. была утверждена новая структура и штаты Министерства юстиции БССР. Помимо ранее существовавших структурных подразделений министерства, в его состав вошло Управление исправительно-трудовых лагерей и колоний (на союзном бюджете) и Госарбитраж (на правах управления). К органам, непосредственно подчиненным Министерству юстиции, были отнесены двенадцать Управлений Министерства юстиции БССР при областных Советах депутатов трудящихся (Барановичском, Бобруйском, Брестском, Витебском, Гомельском, Гродненском, Могилевском, Молодечненском, Минском, Пинском, Полесском, Полоцком), такое же количество областных судов и Президиумов коллегий адвокатов, постояннодействующие 3-месячные курсы по переподготовке судебных исполнителей и секретарей народных судов в г. Минске и Научно-исследовательская криминалистическая лаборатория в г. Минске.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">На основании Указа Президиума Верховного Совета СССР от 4 августа 1956 г. "О расширении прав краевых, областных судов и упразднении управлений министерств союзных республик при краевых, областных Советах депутатов трудящихся" Совет Министров БССР издал постановление от 7 сентября 1956 г. № 541, в соответствии с которым все управления Министерства юстиции БССР при областных Советах депутатов трудящихся были упразднены.<br>
+Структура Министерства юстиции БССР согласно данного постановления состояла из руководства, управления судебных органов, отдела кадров,отдела кодификации,отдела нотариата, отдела адвокатуры, финансово-хозяйственного отдела и канцелярии. А через год на министерство было возложено руководство органами ЗАГС и в аппарате Минюста был организован соответствующий отдел, который спустя два месяца был объединен с отделом нотариата.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">В целях обеспечения судебных и следственных органов республики квалифицированной криминалистической экспертизой и дальнейшего развития научно-исследовательской работы в области судебной экспертизы и криминалистики постановлением Совета Министров Белорусской ССР от 18 ноября 1958 г. № 750 принято решение об организации научно-исследовательского института судебной экспертизы Министерства юстиции БССР на базе Минской научно-исследовательской криминалистической лаборатории.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">Не смотря на достаточно отлаженную систему Министерства юстиции, широкий спектр его деятельности, Указом Президиума Верховного Совета БССР от 20 февраля 1960 г. Министерство юстиции БССР было упразднено. Его функции по руководству районными (городскими) народными и областными судами, государственными нотариальными конторами, а также по ведению судебной статистики были возложены на Верховный Суд БССР.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">В соответствии с названным Указом Совет Министров Белорусской ССР принял постановление от 9 марта 1960 г. № 116, в котором установил образование Юридической комиссии при Совете Министров Белорусской ССР. Основной задачей Юридической комиссии являлось выполнение работы, связанной с кодификацией и систематизацией законодательства Белорусской ССР, а также разработка по поручениям Правительства и предварительное рассмотрение вносимых в Совет Министров БССР проектов законодательных актов и решений Правительства по вопросам нормативного характера.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">В апреле 1963 г. на Юридическую комиссию было возложено методическое руководство органами ЗАГС на территории Белорусской ССР.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">Во исполнение Указа Президиума Верховного Совета Белорусской ССР от 15 февраля 1965 г. Юридическая комиссия при Совете Министров БССР стала осуществлять руководство и контроль за деятельностью коллегий адвокатов в Белорусской ССР, в ее составе был организован отдел адвокатуры, в связи с чем были внесены изменения в Положение об адвокатуре Белорусской ССР.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif; font-size:14px">&nbsp;</span><img alt="" src="./История_files/d5652a14ee911e3803c9480c3eb5642a.jpg" style="font-family:arial,helvetica,sans-serif; font-size:13.63636302948px; height:335px; line-height:20.8000011444092px; width:449px"></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">Во исполнение постановления ЦК КПСС и СМ СССР постановлением ЦК КПБ и Совета Министров БССР от 17 сентября 1970 г. № 290 "О мерах по улучшению работы судебных и прокурорских органов" было признано целесообразным образование союзно-республиканского Министерства юстиции БССР, отделов юстиции в областях и упразднение Юридической комиссии при Совете Министров БССР.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">Министерство юстиции было создано вновь на основании Указа Президиума Верховного Совета БССР от 5 ноября 1970 года № 32 "Об образовании союзно-республиканского Министерства юстиции Белорусской ССР".</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">В соответствии с Положением о Министерстве юстиции, утвержденным, постановлением Совета Министров БССР от 19 октября 1972г., определялись основные задачи министерства:</span></span></p>
+
+<ul>
+	<li style="text-align:justify">всемерное укрепление социалистической законности;</li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">обеспечение организационного руководства судами;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">систематизация и подготовка предложений по кодификации законодательства;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">совершенствование деятельности нотариата, органов записи актов гражданского состояния, адвокатуры, судебно-экспертных учреждений;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">совершенствование правовой работы в народном хозяйстве;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">пропаганда правовых знаний среди населения;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">содействие развитию правовой науки;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">обеспечение учреждений и организаций системы министерства и судебных органов квалифицированными кадрами.</span></span></li>
+</ul>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">В ноябре 1976 года в связи с началом работ по подготовке и изданию Свода законов Белорусской ССР на Министерство юстиции было возложено формирование материалов Свода законов Белорусской ССР и ответственность за качество подготовки и полноту помещаемых в Своде правовых актов. Работа по исполнению данной функции осуществлялась Минюстом до момента приостановления работы по обновлению Свода законов Белорусской ССР в 1989 году.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">Постановлением Совета Министров Республики Беларусь от 25 мая 1992 г. № 308 была установлена новая структура центрального аппарата Минюста.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">На основе законопроектного управления были сформированы два управления, специализирующиеся в области законодательства о государственном и социальном строительстве и хозяйственного законодательства. Вопросы правовой пропаганды, нотариата, ЗАГСов и адвокатуры были отнесены к компетенции управления правового обслуживания граждан и организаций. В структуре появились управление по делам общественных объединений и управление правового обеспечения внешних связей. Кроме того, в структуру вошли управление обеспечения деятельности судов, планово-финансовое управление, отдел кадров и общий отдел. При Минюсте состояли Научно-исследовательский институт проблем криминологии, криминалистики и судебной экспертизы и Белинюрколлегия.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">Этим же постановлением было дано поручение Министерству юстиции создать в 1992-1995 годах республиканский центр правовой информации.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">Произошедшие изменения предопределили принятие нового Положения о Министерстве юстиции Республики Беларусь, утвержденного постановлением Совета Министров Республики Беларусь от 25 ноября 1992 г. № 708, в систему министерства вошли:</span></span></p>
+
+<ul>
+	<li style="text-align:justify"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">управления юстиции исполкомов областных и Миниского городского Советов народных депутатов;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">государственные нотариальные конторы;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">Научно-исследовательский институт проблем криминологии, криминалистики и судебной экспертизы;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">Специализированная коллегия адвокатов Республики Беларусь - Белинюрколлегия.</span></span></li>
+</ul>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">Наряду с ранее определенными, были сформулированы новые задачи министерства:</span></span></p>
+
+<ul>
+	<li style="text-align:justify"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">правовое обеспечение внешних связей и правовая защита интересов Республики Беларусь, ее граждан и организаций за рубежом;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">государственная регистрация общественных объединений и осуществление контроля за соблюдением этими объединениями их уставов;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">координация деятельности исполнительных органов государственной власти по осуществлению судебно-правовой реформы и проведению в жизнь правовой политики.</span></span></li>
+</ul>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">С августа 1993 года задачи Министерства юстиции были дополнены лицензированием отдельных видов профессиональной юридической деятельности и государственной регистрацией ведомственных нормативных актов.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">Министерством юстиции в целях создания единой государственной системы правовой информации и во исполнение поручения Совета Министров Республики Беларусь был сформирован в структуре Научно-исследовательского института проблем криминологии, криминалистики и судебной экспертизы Республиканский центр правовой информации. Для оперативного обеспечения государственных органов, субъектов хозяйствования и граждан достоверной и полной правовой информацией была проведена работа по формированию в центре единого эталонного банка данных правовой информации на бумажных и электронных носителях. В соответствии с Указом Президента Республики Беларусь от 30 июня 1997 г. № 338 Республиканский центр правовой информации был преобразован в Национальный центр правовой информации Республики Беларусь.</span></span><span style="font-family:arial,helvetica,sans-serif; font-size:14px">&nbsp;</span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif; font-size:14px"><img alt="" src="./История_files/03dc7ff63651d23812b343b82ab15829.jpg" style="height:319px; width:454px"></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">Изменения действующего законодательства Республики Беларусь вызвали необходимость принятия нового Положения о Министерстве юстиции, которое было утверждено постановлением Кабинета Министров Республики Беларусь от 1 декабря 1995 г. № 656. В систему Минюста вошли управления юстиции областных и Минского городского исполкомов, государственные нотариальные конторы, Научно-исследовательский институт проблем криминологии криминалистики и судебной экспертизы.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">С января 1997 г. по октябрь 2001 г. в систему Минюста входил Комитет по авторским и смежным правам. Министерство юстиции осуществляло проведение единой государственной политики в республике по вопросам авторского права и смежных прав.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">С 19 февраля 2001 г. перед Министерством юстиции была поставлена задача проведения единой государственной политики по вопросам урегулирования коллективных трудовых споров. В систему Минюста был введен Республиканский трудовой арбитраж.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">В соответствии с ныне действующим Положением о Министерстве юстиции Республики Беларусь, утвержденным постановлением Совета Министров от 31 октября 2001 г. №1605, Минюст является республиканским органом государственного управления и подчиняется Совету Министров Республики Беларусь, а по отдельным вопросам деятельности, предусмотренным законодательными актами Республики Беларусь, - непосредственно Президенту Республики Беларусь.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">На Минюст возлагаются следующие основные задачи:</span></span></p>
+
+<ul>
+	<li style="text-align:justify"><span style="font-size:14px"><span style="font-family:arial,helvetica,sans-serif">реализация государственной политики в сфере юстиции, в том числе урегулирование коллективных трудовых споров, а также в сфере архивного дела и делопроизводства;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">участие в правовом обеспечении нормотворческой деятельности Президента Республики Беларусь, Национального собрания Республики Беларусь и Совета Министров Республики Беларусь, обеспечение скоординированности нормотворческой работы в Правительстве Республики Беларусь (в системе республиканских органов государственного управления, подчиненных Правительству Республики Беларусь);</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">обязательная юридическая экспертиза нормативных правовых актов Национального банка, Национальной академии наук Беларуси, министерств, иных республиканских органов государственного управления, областных, Минского городского Советов депутатов, облисполкомов и Минского горисполкома;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">организация методологического руководства и координации деятельности главных управлений юстиции облисполкомов по вопросам проведения ими обязательной юридической экспертизы нормативных правовых актов местных Советов депутатов, исполнительных и распорядительных органов базового уровня, а также осуществление контроля за этой деятельностью;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">организация работы по развитию и совершенствованию системы получения, хранения и распространения полной, достоверной и своевременной правовой информации в судах и организациях системы Минюста;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">руководство нотариатом и государственный контроль за нотариальной деятельностью;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">руководство регистрацией актов гражданского состояния отделами записи актов гражданского состояния райгорисполкомов и местных администраций районов в городах, Домами (Дворцами) гражданских обрядов горисполкомов, поселковыми и сельскими исполнительными и распорядительными органами, а также контроль за регистрацией актов гражданского состояния этими органами;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">государственная регистрация политических партий, республиканских профессиональных союзов, международных и республиканских общественных объединений, их союзов (ассоциаций), республиканских государственно-общественных объединений, республиканских и международных фондов, созданных на территории Республики Беларусь, Белорусской торгово-промышленной палаты, Белорусской нотариальной палаты, организационных структур международных общественных объединений, созданных на территории иностранных государств, постоянно действующих международных арбитражных (третейских) судов, осуществление контроля за соблюдением ими учредительных документов, государственная регистрация иных некоммерческих организаций в случаях, предусмотренных законодательными актами Республики Беларусь;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">организационно-методологическое обеспечение и координация государственной регистрации и ликвидации (прекращения деятельности) коммерческих и некоммерческих организаций, индивидуальных предпринимателей (за исключением регистрации и ликвидации банков, небанковских кредитно-финансовых организаций, страховых организаций, включая страховые организации с иностранными инвестициями), а также контроль за этой деятельностью;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">ведение Единого государственного регистра юридических лиц и индивидуальных предпринимателей;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">материально-техническое, финансовое, организационное и кадровое обеспечение областных, Минского городского, районных (городских) судов и организаций системы Минюста, повышение квалификации кадров этих органов и организаций;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">организационное и кадровое обеспечение Белорусского военного суда и межгарнизонных военных судов;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">организационное и материально-техническое обеспечение органов судейского сообщества;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">организация научно-исследовательской работы в области криминалистики, судебной экспертизы, документоведения, архивоведения, археографии, электронного документирования, контроль за сроками и порядком проведения экспертиз и специальных исследований, содействие развитию правовой, документоведческой и архивоведческой науки, обеспечение внедрения научно-методических рекомендаций в практику судов, учреждений Государственной архивной службы Республики Беларусь и иных организаций;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">организация и развитие системы юридических услуг;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">представление в пределах своей компетенции интересов Республики Беларусь на международном уровне;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">рассмотрение отдельных вопросов, связанных с исчислением стажа государственной службы;</span></span></li>
+	<li style="text-align:justify"><span style="font-family:arial,helvetica,sans-serif"><span style="font-size:14px">распространение положительного опыта правовой работы юридических служб государственных организаций</span></span></li>
+</ul>
+
+            
+        </div>
+        
+        <div class="aside">
+            <div class="title">Подробнее</div>
+            <div class="menu">
+                <ul>
+                    
+                        <li><a href="http://192.168.32.68/ru/ministry/">О министерстве</a></li>
+                    
+                    
+                        <li class="selected">
+                            <a href="http://192.168.32.68/ru/ministry/history/">История</a>
+                        </li>
+                    
+                        <li>
+                            <a href="http://192.168.32.68/ru/ministry/regulations/">Положение о Министерстве юстиции</a>
+                        </li>
+                    
+                        <li>
+                            <a href="http://192.168.32.68/ru/ministry/legal/">Правовая основа деятельности</a>
+                        </li>
+                    
+                        <li>
+                            <a href="http://192.168.32.68/ru/ministry/contact/">Схема проезда и режим работы </a>
+                        </li>
+                    
+                </ul>
+            </div>
+            
+
+    <div class="block">
+        <div class="title">Последние новости</div>
+        <ul>
+            
+                <li><a href="http://192.168.32.68/ru/news/72/">Новость 4</a></li>
+            
+                <li><a href="http://192.168.32.68/ru/news/71/">Новость 3</a></li>
+            
+                <li><a href="http://192.168.32.68/ru/news/70/">Новость 2</a></li>
+            
+        </ul>
+    </div>
+
+
+    <div class="block">
+        <div class="title">Актуально</div>
+        <ul>
+            
+                <li><a href="http://192.168.32.68/ru/actual/49/">Актуально 2</a></li>
+            
+                <li><a href="http://192.168.32.68/ru/actual/48/">Актуально 1</a></li>
+            
+                <li><a href="http://192.168.32.68/ru/actual/47/">1111111111 1111111111 1111111111
+1111111111 1111111111 1111111111
+1111111111 1111111111 1111111111
+1111111111 1111111111 1111111111
+1111111111 1111111111 1111111111
+1111111111 1111111111 1111111111
+1111111111 1111111111 1111111111
+1111111111 1111111111 1111111111
+1111111111 1111111111 1111111111
+1111111111 1111111111 1111111111
+</a></li>
+            
+        </ul>
+    </div>
+
+
+<div class="block">
+    <div class="title">Образцы документов</div>
+    <ul class="doc-list">
+        
+        <li>
+            <a href="http://192.168.32.68/ru/document-samples/">
+                <div class="icon blue">JPG</div>
+                <span>test</span> test test
+            </a>
+        </li>
+        
+        <li>
+            <a href="http://192.168.32.68/ru/document-samples/">
+                <div class="icon blue">DOC</div>
+                <span>Образец</span> запроса о предоставлении информации из ЕГР
+            </a>
+        </li>
+        
+        <li>
+            <a href="http://192.168.32.68/ru/document-samples/">
+                <div class="icon blue">DOC</div>
+                <span>Образец</span> заявления о предоставлении информации из ЕГР
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+<div style="margin-bottom: 30px">
+    <div class="title">Электронные услуги</div>
+    <div class="menu services">
+        <ul>
+            
+                <li>
+                    <a>Министерство<div class="shape"></div></a>
+                    <div class="sub-menu"><ul>
+                        
+                            <li>
+                                <a href="http://192.168.32.68/ru/applications/test/add/">test</a>
+                            </li>
+                        
+                    </ul></div>
+                </li>
+            
+                <li>
+                    <a>Принудительное исполнение<div class="shape"></div></a>
+                    <div class="sub-menu"><ul>
+                        
+                            <li>
+                                <a href="http://192.168.32.68/ru/applications/database-of-enforcement-proceedings/add/">Банк данных исполнительных производств</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://192.168.32.68/ru/applications/request-for-issuing-certificates/add/">Запрос на выдачу справок по исполнительному производству</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://192.168.32.68/ru/applications/travel-restrictions/add/">Ограничение выезда</a>
+                            </li>
+                        
+                    </ul></div>
+                </li>
+            
+                <li>
+                    <a>ЗАГС<div class="shape"></div></a>
+                    <div class="sub-menu"><ul>
+                        
+                            <li>
+                                <a href="http://192.168.32.68/ru/applications/application-for-a-certificate-of-civil-status-act/add/">Заявление на выдачу справки о записи акта гражданского состояния</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://192.168.32.68/ru/applications/app-cert-info-record-of-the-marriage-act/add/">Заявление на выдачу справки, содержащей сведения из записи акта о заключении брака</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://192.168.32.68/ru/applications/app-for-issuance-of-a-certificate-of-name-change/add/">Заявление на выдачу справки, содержащей сведения из записи акта о перемене имени</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://192.168.32.68/ru/applications/statement-entries-act-of-divorce/add/">Заявление на выдачу справки, содержащей сведения из записи акта о расторжении брака</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://192.168.32.68/ru/applications/application-for-a-death-certificate/add/">Заявление на выдачу справки, содержащей сведения из записи акта о смерти</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://192.168.32.68/ru/applications/app-issuance-cert-contain-details-of-the-birth-cer/add/">Заявление на выдачу справки, содержащей сведения из записи акта о рождении</a>
+                            </li>
+                        
+                    </ul></div>
+                </li>
+            
+            <li>
+                <a href="http://192.168.32.68/ru/account/appointments/add/">Запись на приём</a>
+            </li>
+            <li>
+                <a href="http://192.168.32.68/ru/make/electronic/appeal/">Электронное обращение</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    <div class="block">
+        <div class="title">События</div>
+        <ul class="event-list">
+            
+                <li>
+                    <div class="date">
+                        
+                            <span class="event-date">18.02.2016</span>
+                            &nbsp;в 11.21
+                        
+                    </div>
+                    <div class="event-title">Событие 3</div>
+                    <a href="http://192.168.32.68/ru/activity/26/"><p>Событие 3</p>
+</a>
+                </li>
+            
+                <li>
+                    <div class="date">
+                        
+                            <span class="event-date">18.02.2016</span>
+                            &nbsp;в 11.21
+                        
+                    </div>
+                    <div class="event-title">Событие 2</div>
+                    <a href="http://192.168.32.68/ru/activity/25/"><p>Событие 2</p>
+</a>
+                </li>
+            
+        </ul>
+    </div>
+
+
+    
+        <div class="block">
+            <div class="title">Вакансии</div>
+            <ul>
+                
+                    <li><a href="http://192.168.32.68/ru/ministry/jobs/">тест 1</a></li>
+                
+                    <li><a href="http://192.168.32.68/ru/ministry/jobs/">тест 1.1</a></li>
+                
+                    <li><a href="http://192.168.32.68/ru/ministry/jobs/">тест 2</a></li>
+                
+            </ul>
+        </div>
+    
+
+
+    <div style="margin-bottom: 30px">
+        <div class="title">Узнавайте о событиях Министерства первым</div>
+        <div class="news-subscribe-button">
+            Подписаться на новости и события
+            <a href="http://192.168.32.68/ru/news/subscribe/"></a>
+        </div>
+    </div>
+
+
+    
+        <div class="block">
+            <div class="title">Фото</div>
+            <ul class="photo-list">
+                
+                    <li>
+                        <a href="http://192.168.32.68/ru/photo-blog/14/">
+                            <div style="background-image: url(/media/jpg/e4/db/e4dbdb8b6db2a813b56187d1811e752f.jpg);"></div>
+                            Фотохроника 2012
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="http://192.168.32.68/ru/photo-blog/24/">
+                            <div style="background-image: url(/media/);"></div>
+                            тест1
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="http://192.168.32.68/ru/photo-blog/25/">
+                            <div style="background-image: url(/media/);"></div>
+                            тест2
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+<div class="block">
+<div class="title">Опросы</div>
+<ul class="vote-list">
+    
+    
+        <li data-poll-id="4" class="li-content-item">
+            <p>кто из перечисленных животных больше нравится?</p>
+            
+                <div class="voting-holder">
+                    
+                        <div data-vote-id="8" class="checkbox">
+                            <div class="check">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="text">Котейки^_^</div>
+                        </div>
+                    
+                        <div data-vote-id="9" class="checkbox">
+                            <div class="check">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="text">Собачки^.^</div>
+                        </div>
+                    
+                </div>
+            
+            <div id="poll_result_4" class="voting-results ">
+                
+                    <div class="item">
+                        <div class="label">Котейки^_^</div>
+                        <div class="bar">
+                            <div class="fill gold" style="width: 78%;"></div>
+                            <div class="count">78%</div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                
+                    <div class="item">
+                        <div class="label">Собачки^.^</div>
+                        <div class="bar">
+                            <div class="fill green" style="width: 21%;"></div>
+                            <div class="count">21%</div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                
+            </div>
+        </li>
+    
+    <script>
+        $('.voting-holder .checkbox').click(function() {
+            var parent = $(this).parents('.li-content-item');
+            $('.voting-holder .checkbox').removeClass('checked');
+            $(this).addClass('checked');
+            $.ajax({
+                type: "POST",
+                url: "/ru/press/polls/vote/",
+                data: 'poll_pk=' + parent.attr('data-poll-id') + '&item_pk=' + $(this).attr('data-vote-id') + "&csrfmiddlewaretoken=" +  $('input[name="csrfmiddlewaretoken"]').val(),
+                success: function(data){
+                    console.log(data);
+                    parent.find('.voting-results').html(data);
+                }
+            });
+            setTimeout(function() {
+                parent.find('.voting-holder').addClass('hide');
+                parent.find('.voting-results').addClass('show');
+            }, 500);
+        });
+    </script>
+</ul>
+</div>
+
+    <div class="block">
+        <div class="title">Вопросы</div>
+        <ul>
+            
+                <li><a href="http://192.168.32.68/ru/question-answer/">Как получить справку о трудовом стаже и заработной плате за период работы за пределами Республики Беларусь?</a></li>
+            
+                <li><a href="http://192.168.32.68/ru/question-answer/">Как получить алименты на содержание ребенка от лица, проживающего в Германии?</a></li>
+            
+                <li><a href="http://192.168.32.68/ru/question-answer/">Может ли для государственной регистрации быть представлен не прошитый устав организации?</a></li>
+            
+        </ul>
+    </div>
+
+
+    <div class="block">
+        <div class="title">Ставки госпошлины</div>
+        <ul class="rate-list">
+            
+                <li>
+                    <a href="http://192.168.32.68/ru/state-duties/4/">
+                        Государственная регистрация политических партий, их союзов (ассоциаций) и их символики ...
+                        <div class="rate">20</div>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="http://192.168.32.68/ru/state-duties/3/">
+                        Государственная регистрация местных общественных объединений, территориальных профессиональных союзов, профессиональных союзов ...
+                        <div class="rate">5</div>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="http://192.168.32.68/ru/state-duties/6/">
+                        Предоставление информации по каждому субъекту, содержащейся в Едином государственном регистре ...
+                        <div class="rate">1</div>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+        </div>
+        <div class="clear"></div>
+        
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        jQuery(function($) {
+            var scroll_2_menu =  function() { $(window).scrollTop($('#main-menu-nav').offset().top-5) };
+            $('div.menu-item > a.link').live('DOMActivate', scroll_2_menu);
+            scroll_2_menu()
+
+            $('.form-container .form-item .control >').focus(function() {$(this).parents('.form-item').addClass('with-focus');})
+            $('.form-container .form-item .control >').blur(function() {$(this).parents('.form-item').removeClass('with-focus');})
+        });
+        $(document).ready(function(){
+            $('.page-filter li').click(function(){
+                $('.page-filter .hover-div').removeClass('active');
+                $(this).find('.hover-div').addClass('active');
+            });
+        });
+    </script>
+
+  
+  
+  
+  <div class="footer">
+    <div class="content">
+      <div class="page-up-button show"></div>
+      <div class="holder">
+        Министерство юстиции Республики Беларусь
+        <a href="http://192.168.32.68/ru/make/electronic/appeal/">
+          <span>Электронное обращение</span>
+        </a>
+        <div class="clear"></div>
+      </div>
+      
+<div class="contact">
+        <h4>Адрес и режим работы</h4>
+    <div class="text">
+        220004, г.Минск, ул. Коллекторная, 10<br>
+        Пн. - Пт. с 9.00 до 18.00<br>
+        Перерыв: с 13:00 до 14:00
+    </div>
+    <a href="http://192.168.32.68/ru/ministry/contact/">Подробнее</a>
+</div>
+<div class="contact">
+    <h4>Контакты</h4>
+    <div class="text">
+        <div class="label">E – mail:</div> kanc@minjust.by <br>
+        <div class="label">Тел/Факс:</div> + 375 17 200 86 87 <br>
+        <div class="label">Горячая линия:</div> + 375 17 306 37 30
+    </div>
+    <a href="http://192.168.32.68/ru/ministry/contact/">Подробнее</a>
+</div>
+<div class="about">
+<h4>О портале</h4>
+    <ul>
+        <li><a href="http://192.168.32.68/citizens/">Гражданам</a></li>
+        <li><a href="http://192.168.32.68/organizations/">Организациям</a></li>
+        <li><a href="http://192.168.32.68/authorities/">Органам власти</a></li>
+        <li><a href="http://192.168.32.68/licensees/">Лицензиатам</a></li>
+        <li><a href="http://192.168.32.68/mass-media/">СМИ</a></li>
+    </ul>
+</div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Accessibility scrips -->
+<script src="assets/helpers.js"></script>
+<script src="assets/main.js"></script>
+
+</body></html>

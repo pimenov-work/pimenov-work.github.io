@@ -14,6 +14,8 @@ function initSettings() {
 			font_family[i].classList.remove('selected');
 		}
 		root.style.fontFamily = 'sans-serif';
+		root.classList.remove('font-family__serif');
+		root.classList.add('font-family__sans-serif');
 		document.getElementsByClassName('sans-serif')[0].classList.add('selected');
 	}
 
@@ -22,6 +24,8 @@ function initSettings() {
 			font_family[i].classList.remove('selected');
 		}
 		root.style.fontFamily = 'serif';
+		root.classList.remove('font-family__sans-serif');
+		root.classList.add('font-family__serif');
 		document.getElementsByClassName('serif')[0].classList.add('selected');
 	}
 
@@ -163,7 +167,7 @@ function accessibility() {
 											 			gettext('Settings')  +
 											 		'</li>' +
 											 		'<li>' +
-											 			'<a href="#">' + gettext('Site map') + '</a> </li>' +
+											 			'<a href="http://minjust.gov.by/sitemap/">' + gettext('Site map') + '</a> </li>' +
 											 		'<li>' +
 											 			'<a href="http://minjust.gov.by/search/">' + gettext('Search')  + '</a>'
 											 		'</li>' +
@@ -310,11 +314,15 @@ function accessibilitySettingsInit() {
 				}
 				if(target.classList.contains('sans-serif')) {
 					target.classList.add('selected');
-					root.style.fontFamily = 'sans-serif';
+					root.style.fontFamily = 'TrebuchetMS, sans-serif';
+					root.classList.remove('font-family__serif');
+					root.classList.add('font-family__sans-serif');
 					localStorage.setItem('font_family_state', 'sans-serif');
 				} else if(target.classList.contains('serif')) {
 					target.classList.add('selected');
-					root.style.fontFamily = 'serif';
+					root.style.fontFamily = 'Georgia, serif';
+					root.classList.remove('font-family__sans-serif');
+					root.classList.add('font-family__serif');
 					localStorage.setItem('font_family_state', 'serif');
 				}
 			}

@@ -1,0 +1,53 @@
+/***** Header *****/
+
+.header {
+	width: 100%;
+	display: flex; 
+	align-items: center;
+	padding: 20px $main-indent;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1;
+
+	.logoWrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	.logoTitle {
+		margin-left: 30px;
+	}
+
+	.logo {
+		min-width: 50px;
+	}
+
+	.lobby {
+		margin-left: 60px;
+		color: $secondary-color;
+	}
+
+	.enter {
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+		color: $secondary-color;
+
+		&::before { // Inter icon
+			content: url('
+				data:image/svg+xml;utf8,
+				<svg viewBox="0 0 30 30" width="20" height="20" stroke="white" xmlns="http://www.w3.org/2000/svg">
+					<polyline fill="none" stroke-width="2" points="6.9 19.6 6.9 26.6 28.9 
+					26.6 28.9 3.4 6.9 3.4 6.9 10.4 "/>
+					<polygon fill="#ffffff" points="11.6 20.3 13.1 22 19.6 15.1 19.6 15.1 
+					19.6 15.1 13.1 8 11.6 9.7 15.4 13.9 1.1 13.9 1.1 16.2 15 16.2 "/>
+				</svg>');
+			margin-right: 13px;
+		}
+
+	}
+
+}
+
+/***** Header end *****/
