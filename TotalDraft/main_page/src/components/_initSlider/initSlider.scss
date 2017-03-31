@@ -2,7 +2,7 @@
 
 .initSlider {
 	height: 90vh;
-	margin-top: 300vh;
+	margin-top: 400vh;
 	display: flex;
 	position: relative;
 
@@ -15,9 +15,65 @@
 		background-color: #161616;
 	}
 
-	.sliderIcon:not(.currentIcon) {
-		opacity: 0;
+	/***** Svg ******/
+
+	.sliderIcon {
+		transition: opacity 0.15s 0.15s;
 	}
+
+	.iconWraper {
+		transition: opacity 1s;
+
+		& * {
+			opacity: 0;
+		}
+
+		&.showWraper * {
+			opacity: 1;
+		}
+	}
+
+	.showIcon * {
+		animation: animPath 1s forwards;
+	}
+
+	@keyframes animPath {
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.sliderIcon:not(.showIcon) {
+		opacity: 0;
+		transition: opacity 0.15s;
+	}
+
+	.circles path:nth-of-type(1) {
+		transition: opacity linear 1s 1.2s;
+	}
+
+	.circles path:nth-of-type(2) {
+		transition: opacity linear 1s 1.5s;
+	}
+
+	.circles path:nth-of-type(3) {
+		transition: opacity linear 1s 1.8s;
+	}
+
+	.circles path:nth-of-type(4) {
+		transition: opacity linear 1s 2.1s;
+	}
+
+	.showVerticalLines * {
+		animation: animPath 0.5s 2.3s forwards;
+	}
+
+	.starsAndCircles * {
+		transition: all 2.5s 3s;
+	}
+
+
+	/***** Svg end ******/
 
 	.sliderContent {
 		width: 50%;
@@ -34,7 +90,7 @@
 		font-size: $big-title;
 		text-transform: uppercase;
 		opacity: 0;
-		transform: translateY(-70px);
+		transform: translateZ(0) translateY(70px);
 		transition: opacity 4s, transform 1s;
 	}
 
@@ -42,13 +98,13 @@
 		width: 320px;
 		position: relative;
 		opacity: 0;
-		transform: translateY(-70px);
+		transform: translateZ(0) translateY(70px);
 		transition: opacity 4s, transform 1s;
 	}
 
 	.showSlideContent {
 		opacity: 1;
-		transform: translateY(0);
+		transform: translateZ(0) translateY(0);
 	}
 
 	.descriptionBlock {
@@ -84,12 +140,15 @@
 	.sliderControl {
 		width: 11px;
 		height: 11px;
-		margin-right: 16px;
+		margin-right: 12px;
+		padding: 0 !important;
 		display: inline-block;
 		font-size: 0;
 		background-color: $elements-color;
+		border: 1px transparent solid;
 		border-radius: 50%;
 		transition: background-color 0.15s, border 0.15s;
+		cursor: pointer;
 
 		&:last-of-type {
 			margin-right: 0;
@@ -105,6 +164,16 @@
 			border: 1px lighten($inactive-color, 20%) solid;
 		}
 
+	}
+
+	.scrollPos {
+		width: 10px;
+		height: 10px;
+		position: absolute;
+		left: 0;
+		top: -100vh;
+		background-color: red;
+		z-index: 300;
 	}
 
 }

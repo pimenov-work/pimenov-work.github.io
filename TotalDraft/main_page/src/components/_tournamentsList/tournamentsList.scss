@@ -1,0 +1,174 @@
+/***** Tournament list *****/
+
+// body {
+// 	overflow: hidden;
+// }
+
+.tournamentList {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 5;
+	//display: flex !important;
+	display: none;
+
+	&.showTournamentList {
+		display: flex;
+	}
+
+	.introduction {
+		min-width: 40%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		background: url(../images/tournamentsList-bg.jpg) no-repeat center bottom;
+		background-size: 100% auto;
+	}
+
+	.logo {
+		position: absolute;
+		left: 40px;
+		top: 20px;
+	}
+
+	.title {
+		margin-bottom: 40px;
+		font-size: 26px;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	.description {
+		line-height: 1.7;
+		text-align: center;
+		color: $secondary-color;
+	}
+
+	.list {
+		flex: 1;
+		position: relative;
+		background-color: #191919;
+		overflow: auto;
+		transform: translateZ(0);
+	}
+
+	.tournament {
+		height: 20vh;
+		padding-left: 15%;
+		display: flex;
+		align-items: center;
+		position: relative;
+		border-bottom: 1px #222222 solid;
+		text-transform: uppercase;
+		font-family: $font-light;
+		letter-spacing: 1px;
+
+		&:last-of-type {
+			border-bottom: none;
+		}
+
+		&:hover {
+			background: url('
+				data:image/svg+xml;utf8,
+				<svg xmlns="http://www.w3.org/2000/svg"
+						 width="10.5px" height="18.5px">
+				<path stroke="rgb(255, 174, 0)" fill="none" d="M1.925,0.500 L9.500,9.000 L1.925,17.500 "/>
+				</svg>') 
+			no-repeat calc(100% - 100px) center;
+
+			&:before {
+				background-color: $elements-color;
+			}
+		}
+
+		&::before {
+			content: '';
+			width: 1px;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			background-color: transparent;
+		}
+	}
+
+	.tournamentIcon {
+		max-width: 63px;
+		margin-right: 10%;
+		object-fit: contain;
+	}
+
+	.closeTournaments {
+		width: 20px;
+		height: 20px;
+		display: block;
+		border: none;
+		position: absolute;
+		right: 40px;
+		top: 30px;
+		background: url('
+				data:image/svg+xml;utf8,
+				<svg stroke="rgb(255, 174, 0)" fill="none" 
+						 xmlns="http://www.w3.org/2000/svg">
+					<path d="M1.521,1.268 L20.500,20.500 "/>
+					<path d="M20.500,1.268 L1.236,20.500 "/>
+				</svg>');
+		cursor: pointer;
+		z-index: 5;
+
+		&:focus {
+			-webkit-filter: drop-shadow(0 0 10px white) drop-shadow(0 0 15px rgb(255, 174, 0));
+			filter: drop-shadow(0 0 10px white) drop-shadow(0 0 10px rgb(255, 174, 0));
+		}
+	}
+
+	.tournamentTitle {
+		font-size: 16px;
+		text-transform: uppercase;
+		font-family: $font-light;
+		text-align: center;
+
+		.icon {
+			width: 120px;
+			height: 120px;
+		}
+
+		.name {
+			margin-top: 40px;
+		}
+	}
+
+	.goBack {
+		width: 50px;
+		height: 21px;
+		display: none;
+		position: absolute;
+		left: 40px;
+		top: 120px;
+		border: none;
+		background:  url('
+				data:image/svg+xml;utf8,
+				<svg stroke="rgb(255, 174, 0)" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path stroke-width="1.3" d="M8.638,20.500 L0.500,10.500 L8.638,0.500 "/>
+				</svg>')
+				no-repeat left center;
+		cursor: pointer;
+		z-index: 6;
+		transition: transform 0.15s;
+
+		&:hover {
+			transform: translateX(-3px);
+		}
+
+		&:focus {
+			transform: translateX(-3px);
+		}
+
+	}
+
+}
+/***** Tournament list end *****/

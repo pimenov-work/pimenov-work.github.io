@@ -1,0 +1,104 @@
+/***** Variables *****/
+
+// Layout
+$main-indent: 40px;
+
+// Typography
+$big-title: 26px;
+
+$font-normal: 'ProximaNova-regular';
+$font-bold: 'ProximaNova-Bold';
+$font-light: 'ProximaNova-Light'; 
+
+// Colors
+$basic-color: white;
+$secondary-color: #a4a4a4;
+
+$elements-color: #fead00;
+$inactive-color: #594313;
+
+/***** Variables end *****/
+
+
+/***** Icons *****/
+
+$scroll: url('
+				data:image/svg+xml;utf8,
+				<svg fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			    <path d="M5.5,2.84217094e-14 C2.462,2.84217094e-14 0,2.462 0,5.5 L0,11.5 C0,14.538
+			    2.462,17 5.5,17 C8.538,17 11,14.538 11,11.5 L11,5.5 C11,2.462 8.538,2.84217094e-14
+			    5.5,2.84217094e-14 M5.5,1 C7.981,1 10,3.019 10,5.5 L10,11.5 C10,13.981 7.981,16
+			    5.5,16 C3.019,16 1,13.981 1,11.5 L1,5.5 C1,3.019 3.019,1 5.5,1" fill="white"/>
+			    <polyline stroke="white" points="9 28 5.5 31.467 2 28"/>
+			    <path d="M5.5,23.5 L5.5,31.5" stroke="white"/>
+			    <path d="M5.5,4.5 L5.5,8.5" stroke="white"/>
+				</svg>');
+
+$borderGradient: url('
+				data:image/svg+xml;utf8,
+				<svg 
+				 xmlns="http://www.w3.org/2000/svg"
+				 xmlns:xlink="http://www.w3.org/1999/xlink"
+				 width="238.5px" height="53.5px">
+				<path fill-rule="evenodd"  stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" fill="rgb(255, 255, 255)"
+				 d="M26.236,0.500 L211.765,0.500 C225.977,0.500 237.500,12.141 237.500,26.500 C237.500,40.859 225.977,52.500 211.765,52.500 L26.236,52.500 C12.022,52.500 0.500,40.859 0.500,26.500 C0.500,12.141 12.022,0.500 26.236,0.500 Z"/>
+				</svg>');
+
+/***** Icons end *****/
+
+
+/***** Extends *****/
+
+@mixin setButton {
+	min-height: 52px;
+	padding: 0 50px;
+	text-align: center;
+	font-family: $font-light;
+	font-size: 16px;
+	text-transform: uppercase;
+	line-height: 0.9;
+	border-radius: 50px/50px;
+	outline: none;
+	cursor: pointer;
+}
+
+/***** Extends end *****/
+
+/***** Mixins *****/
+
+// Satanic mixin for border-gradient
+
+@mixin setBordergradient($element, $bgColor) {
+	#{$element}:before {
+		content: "";
+	  position: absolute;
+	  top: -1px;
+	  left: -1px;
+	  right: -1px;
+	  bottom: -1px;
+	  border-radius: 50px/50px;
+	  background-image: -webkit-gradient(radial, right top, 10, 90% 0%, 150, from(#d86a1a), to(#ebac28));
+	  background-image: radial-gradient(right top, 150px 230px, #d86a1a, #ebac28);
+	  background-image: -moz-radial-gradient(right top, farthest-corner, #d86a1a 0%, #ebac28 72%);
+	  z-index: -2;
+	}
+
+	#{$element}:after {
+		content: "";
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  bottom: 0;
+	  right: 0;
+	  background-color: $bgColor;
+	  z-index: -1;
+	  border-radius: 50px/50px;
+	  transition: background-color 0.1s;
+	}
+
+	#{$element}:hover:after {
+		background-color: transparent;
+	}
+}
+
+/***** Mixins end *****/

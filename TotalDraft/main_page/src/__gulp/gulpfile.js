@@ -23,11 +23,15 @@ var components = [
 // Final components = basic components + special components
 var template_components = ['../components/svg/'];
 var sass_components = [
-												'../components/basic/styles/variables.scss',
+												'../components/basic/styles/variables&helpers.scss',
 												'../components/basic/styles/reset&basic.scss',
 												'../components/basic/styles/typography.scss'
 											];
-var js_components = ['../components/vendors/detectVisibility.js'];
+var js_components = [
+											'../components/vendors/detectVisibility.js',
+											'../components/vendors/doScrolling.js',
+											'../components/vendors/disableScroll.js'
+										];
 
 // Set paths for all components
 // path = main components directory + component folder + component name + component type

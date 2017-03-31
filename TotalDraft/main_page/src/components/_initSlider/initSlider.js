@@ -1,8 +1,8 @@
 /**** Slider script *****/
 
-window.addEventListener('load', initSlider);
+window.addEventListener('load', initSliders);
 
-function initSlider() {
+function initSliders() {
 
 	var initSlider = document.getElementById('initSlider');
 
@@ -11,7 +11,7 @@ function initSlider() {
 			descriptionBlock = document.getElementsByClassName('descriptionBlock'),
 			sliderIcon = document.getElementsByClassName('sliderIcon');
 
-	// Arrays for slider noder
+	// Arrays for slider nodes
 	var sliderControls = [],
 			descriptionBlocks = [],
 			sliderIcons = [];
@@ -62,18 +62,23 @@ function initSlider() {
 		// Remove active/visible state from last checked slide
 		activeControl.classList.remove('active');
     activeDescription.classList.remove('currentDescription');
-    activeIcon.classList.remove('currentIcon');
+    activeIcon.classList.remove('showIcon');
 
 		// Add active state for control and show new slide content
 		this.classList.add('active');
     descriptionBlocks[currentSlider].classList.add('currentDescription');
-    sliderIcons[currentSlider].classList.add('currentIcon');
+
+    // sliderIcons[currentSlider].classList.add('currentIcon');
+    sliderIcon[currentSlider].classList.add('showIcon');
 
 		// Remember checked slide control and slide content
 		activeControl = this;
     activeDescription = descriptionBlocks[currentSlider];
     activeIcon = sliderIcons[currentSlider];
 	}
+
+	// Slider left-aside background
+	var initSliderBg = document.getElementsByClassName('initSliderBg')[0];
 
 	// Slider content nodes
 	var sliderContent = document.querySelectorAll('.contentTitle, .sliderDescriptions')
@@ -83,14 +88,41 @@ function initSlider() {
 	detectVisibility(sliderControls, animateInitSlider, 'sliderControlsListener');
 
 	function animateInitSlider() {
-		console.log('animate')
 		for( i = 0; i < sliderContent.length; i++ ) {
-			sliderContent[i].classList.add('showSlideContent')
+			sliderContent[i].classList.add('showSlideContent');
 		}
+		// initSliderBg.classList.add('showSliderBg');
+		sliderIcon[0].classList.add('showIcon');
+		verticalLines[0].classList.add('showVerticalLines');
+		iconWraper.classList.add('showWraper');
+
 	}
 
-	console.log(sliderControls.getBoundingClientRect())
-	console.log(Math.max(document.documentElement.clientHeight, window.innerHeight))
+	// Slider animation
+	var sliderIcon = document.getElementsByClassName('sliderIcon'),
+			verticalLines = document.getElementsByClassName('verticalLines'),
+			iconWraper = document.getElementsByClassName('iconWraper')[0],
+			sliderIconPaths = document.querySelectorAll('.sliderIcon *'),
+			verticalLinesPaths = document.querySelectorAll('.verticalLines *'),
+			pathLength;
+
+	for( i = 0; i < sliderIconPaths.length; i++ ) {
+		pathLength = sliderIconPaths[i].getTotalLength();
+		sliderIconPaths[i].style.strokeDasharray = pathLength;
+		sliderIconPaths[i].style.strokeDashoffset = pathLength;
+	}
+
+	for( i = 0; i < verticalLinesPaths.length; i++ ) {
+		pathLength = verticalLinesPaths[i].getTotalLength();
+		verticalLinesPaths[i].style.strokeDasharray = pathLength;
+		verticalLinesPaths[i].style.strokeDashoffset = pathLength;
+	}
+
+	// document.addEventListener('click', function() {
+	// 	for( i = 0; i < verticalLines.length; i++ ) {
+	// 		verticalLines[i].classList.add('showVerticalLines');
+	// 	}
+	// });
 
 }
 

@@ -2,7 +2,7 @@
 
 <section class="initSlider" id="initSlider">
 
-	<aside class="sliderPicture">
+	<aside class="sliderPicture" role="presentation">
 		
 		{{> initSliderBg }}
 
@@ -40,12 +40,14 @@
 
 		</section>
 
-		<footer class="sliderControls" id="sliderControls">
-			<div class='sliderControl'> </div>
-			<div class='sliderControl'> </div>
-		</footer>
+		<nav class="sliderControls" id="sliderControls">
+			<button class="sliderControl" aria-label="go to slide 1"></button>
+			<button class="sliderControl" aria-label="go to slide 2"></button>
+		</nav>
 		
 	</aside>
+
+	<div class="scrollPos" id="scrollPos"></div>
 
 </section>
 

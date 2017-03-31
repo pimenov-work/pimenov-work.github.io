@@ -1,0 +1,308 @@
+.tutorial {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: #191919;
+	// z-index: 6;
+	// opacity: 1;
+	z-index: -1;
+	opacity: 0;
+
+	&.showTutorial {
+		z-index: 6;
+		opacity: 1;
+	}
+
+	.icons {
+		width: 50%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	.icon {
+		z-index: 2;
+	}
+
+	.circleWrapper path {
+		opacity: 0;
+
+		&:nth-of-type(1) {
+			transition: all 1s 1s;
+		}
+
+		&:nth-of-type(2) {
+			transition: all 1s 1.5s;
+		}
+	}
+
+	.showCircleWrapper path {
+		opacity: 1;
+	}
+
+	.tutorialIcon:not(.currentIcon) {
+		opacity: 0;
+	}
+
+	.showIcon * {
+		animation: animPath 1s forwards;
+	}
+
+	.showLinesWrapper * {
+		animation: animPath 0.5s 2s forwards;
+	}
+
+	@keyframes animPath {
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.slideBg {
+		width: 100%;
+		height: 100vh;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center bottom;
+		opacity: 0;
+		transform: translateZ(0);
+		transition: opacity 1s;
+
+		&.show {
+			z-index: 1;
+			opacity: 1;
+		}
+	}
+
+	.selectTornament {
+		background-image: url(../images/tutorialBg-1.jpg);
+		opacity: 1;
+	}
+
+	.assembleTeam {
+		background-image: url(../images/tutorialBg-2.jpg);
+	}
+
+	.getPoints {
+		background-image: url(../images/tutorialBg-3.jpg);
+	}
+
+	.goToLeaders {
+		background-image: url(../images/tutorialBg-4.jpg);
+	}
+
+	.track {
+		width: calc( 50% + 17px );
+		height: 400vh;
+		position: relative;
+		background-color: #1b1b1b;
+		transform: translateZ(0);
+		transition: all 1s;
+	}
+
+	.slideContent {
+		width: 100%;
+		height: 100vh;
+		padding: 40px 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		letter-spacing: 1px;
+		position: absolute;
+		opacity: 0;
+		transform: translateZ(0) translateY(0px);
+		transition: all 0.5s;
+
+		&:first-of-type {
+			justify-content: flex-end;
+		}
+	}
+
+	.show {
+		opacity: 1;
+		transform: translateZ(0) translateY(0);
+	}
+
+	.mainTitle {
+		font-size: 26px;
+		text-transform: uppercase;
+	}
+
+	.sliderNumber {
+		min-width: 66px;
+		min-height: 66px;
+		margin-top: 60px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCCAMAAADUivDaAAABy1BMVEUAAAD/lwD/eAD/qAD/rQD/rgD/rAD/cQD/dAD/qAD/dwD/iQD/cAD/dQD/mgD/qgD/rQD/cgD/rAD/jwD/cQD/iQD/cgD/pQD/cAD/dAD/fgD/mgD/bwD/dgD/qgD/cgD/iAD/qgD/qAD/dwD/cAD/dwD/qAD/kAD/cAD/hQD/egD/pAD/bwD/lgD/eQD/ogD/fQD/rAD/qAD/mwD/fgD/qwD/qQD/qAD/dgD/oAD/lgD/rgD/bwD/qAD/nwD/igD/fwD/fQD/qAD/rQD/pwD/kgD/gQD/pAD/egD/qgD/jwD/eAD/cwD/pgD/jwD/bwD/rgD/ggD/rQD/cAD/rgD/iQD/bwD/qgD/cwD/hwD/rQD/bwD/pQD/egD/qwD/cgD/mgD/hAD/ngD/cAD/cAD/ogD/iAD/gAD/rAD/oAD/lgD/iAD/fgD/cQD/rQD/bwD/qQD/mgD/hAD/cAD/lwD/lQD/dwD/rQD/pwD/dQD/rQD/mwD/ggD/qgD/owD/dQD/qAD/rQD/kwD/iwD/jwD/cwD/jgD/oQD/oQD/mAD/jAD/jAD/mwD/mwD/lAD/ogD/ogD/pQD/qAD/qAD/bwD/bwD/hQD/jwD/bwC4X3hfAAAAl3RSTlMADQsL7eKcnFIdEwXt6uPhijElIiAcHBPj4I2IiHZ0WllYUT0nJCLz6OTj4uGtnZybjS8tLCgbFhYQCPn27e3t7evp6Obl5N3c0NDQ0M/Pzs3Nx8ewsLCvr6yrqqeloqKbm46NjIuJiIODgoKCgnt7eHRzclpZVlJQUEhERD49NzUzMzMoEPrs6+vk3c7MsKKYk1xbSUcv1CE2VwAAAgxJREFUeNqt2IdSE2EUhuE3TdN7ISQQEAgQCEV6RFEECyr23gUbVhTsBRG7YhcvV3eEGcyk7O7Z5wJ2ds/+5XyHokKziez4aOPSUuP78cOXakJo9Pic9112amY+YgJT5GXNteNDzeefoFpvwvtxuos8v+7s33Y5ghrp9k0Xuiiou3JzRwPlWC6+uRqjKOf1LZVmSlrX8iVGSc6OjJ3icu3bn1FW3Y62HEU49pwyoYLp9K4oBa0fqUalqkyAAuaGa1Htnud5gXfY+AANHnoC5HH4vqFJKp5XD8vO22hUtdvMamuOotmxtf+tKN8Amr2K21d9hu8pOtRVmFnhP4MuZydZFrT2oUu/u2GlllfQ6cZyRR3WGDo53VEU/k50m0gCuLYG0a2+yQU8OoDAwZ9KMasRuKsU1NaDQH0rpG2IVISpPYHIyRT+m4jcSnLoPiL2I+x7gUhgL7ZeRKJNWE2ImAfZgNBv8SNcg+IPcbrF5Qy3GvFT5UvLiAUu32ZGbHb5kSM/+OTH7w8DLgHpVTSZNOBClF/LxjUHdOptUSYMaJTk7Zq8aTS6dSU9/B1NUp6w8W08zI1IwwT0tKiPNPFucbAKU0Tuq8p4Zy4ZMj/3UVJ/W8ZeLuq+lUVdRVAauBWOhPfT9AJ5Fv7Ffi3DB292anY+YsE1EFKGD83K8EGj0ExicezvCOT10IexkiOQP3AWXF2M9gOLAAAAAElFTkSuQmCC') center center;
+		background-size: 100% auto;
+		font-family: $font-light;
+	}
+
+	.slideTitle {
+		max-width: 300px;
+		margin: 60px 0 56px 0;
+		text-transform: uppercase;
+		font-size: 16px;
+		line-height: 1.5;
+		text-align: center;
+		font-family: $font-light;
+	}
+
+	.trackLine {
+		width: 1px;
+		height: 170px;
+		background-color: grey;
+		position: relative;
+
+		$arrow: url('
+				data:image/svg+xml;utf8,
+				<svg xmlns="http://www.w3.org/2000/svg" width="7" height="8">
+				<path fill-rule="evenodd"  fill="grey"
+				 d="M7.000,4.533 L3.500,8.000 L-0.000,4.533 L3.000,4.533 L3.000,-0.000 L4.000,-0.000 L4.000,4.533 L7.000,4.533 Z"/>
+				</svg>');
+
+		&.downArrow {
+			margin-bottom: 60px;
+		}
+
+		&.downArrow::after {
+			content: $arrow;
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			left: -15px;
+			bottom: -60px;
+			text-align: center;
+		}
+
+		&.upArrow {
+			margin-top: 60px;
+		}
+
+		&.upArrow::before {
+			content: $arrow;
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			left: -15px;
+			top: -60px;
+			text-align: center;
+			transform: rotateZ(180deg);
+		}
+	}
+
+	.scrollIcon {
+		width: 11px;
+		height: 33px;
+		margin-top: 30px;
+		font-size: 0;
+		background: $scroll;
+	}
+
+	.select {
+		@include setButton;
+		position: relative; // For pseudo-element
+		margin: 60px 0 30px 0;
+		background-color: transparent;
+		border: none;
+		color: $basic-color;
+	}
+
+	@include setBordergradient('.select', #1b1b1b);
+
+	.progressLine {
+		width: 2px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		z-index: 1;
+	}
+
+	.progressStep {
+		width: 100%;
+		margin-bottom: 2px;
+		flex: 1;
+		display: flex;
+		position: relative;
+		align-items: center;
+		text-indent: 22px;
+		font-size: 11px;
+		font-family: $font-light;
+		background-color: #2f2f2f;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+	}
+
+	.indicator {
+		width: 100%;
+		height: 100%;
+		background-color: $elements-color;
+		position: absolute;
+		left: 0;
+		top: 0;
+		transform: scaleY(0);
+		transform-origin: 0 0;
+		transition: transform 1s, background-color 1s;
+
+		&.active {
+			transform: scaleY(1);
+		}
+
+		&.previous {
+			background-color: #8b5808;
+		}
+
+		& + .slideNumber {
+			transition: color 1s;
+			color: $secondary-color;
+		}
+
+		&.active + .slideNumber {
+			color: $basic-color;
+		}
+
+		&.previous + .slideNumber {
+			color: $secondary-color;
+		}
+	}
+
+	.close {
+		width: 20px;
+		height: 20px;
+		display: block;
+		border: none;
+		position: absolute;
+		right: 40px;
+		top: 30px;
+		background:  url('
+				data:image/svg+xml;utf8,
+				<svg stroke="rgb(255, 174, 0)" fill="none" 
+						 xmlns="http://www.w3.org/2000/svg">
+				<path d="M1.521,1.268 L20.500,20.500 "/>
+				<path d="M20.500,1.268 L1.236,20.500 "/>
+				</svg>');
+		cursor: pointer;
+		z-index: 1;
+
+		&:focus {
+	    -webkit-filter: drop-shadow(0 0 10px white) drop-shadow(0 0 15px #ffae00);
+	    filter: drop-shadow(0 0 10px white) drop-shadow(0 0 10px #ffae00);
+		}
+	}
+
+}
